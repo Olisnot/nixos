@@ -8,6 +8,7 @@
 		./hardware-configuration.nix
 		./nvidia.nix
 		./packages.nix
+        ./alias.nix
 		inputs.home-manager.nixosModules.default
 		];
 
