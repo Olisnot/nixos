@@ -1,8 +1,8 @@
 { pkgs, config, libs, ... }:
 
 {
-    environment.interactiveShellInit = ''
-        alias c='clear'
-        '';
+    programs.bash.shellAliases = {
+        c = "clear"
+    };
 
 }
