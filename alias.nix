@@ -2,7 +2,7 @@
 
 {
     programs.bash.shellAliases = {
-        c = "clear"
+        c = "clear";
     };
 
 }
