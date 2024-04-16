@@ -6,10 +6,10 @@
 	imports =
 		[ # Include the results of the hardware scan.
 		./hardware-configuration.nix
-		./nvidia.nix
+		./modules/nvidia.nix
 		./packages.nix
         ./alias.nix
-        ./tmux.nix
+        ./modules/tmux.nix
 		inputs.home-manager.nixosModules.default
 		];
 
