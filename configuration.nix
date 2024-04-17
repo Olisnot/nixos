@@ -156,10 +156,4 @@ services.flatpak.enable = true;
 # Before changing this value read the documentation for this option
 # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
 	system.stateVersion = "23.11"; # Did you read the comment?
-
-		nix.settings = {
-			substituters = [ "https://ezkea.cachix.org" ];
-			trusted-public-keys = [ "ezkea.cachix.org-1:ioBmUbJTZIKsHmWWXPe1FSFbeVe+afhfgqgTSNd34eI=" ];
-		};
-
 }
