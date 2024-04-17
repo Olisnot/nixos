@@ -29,6 +29,7 @@ nix.settings.experimental-features = ["nix-command" "flakes"];
 # Enable networking
 		networking.networkmanager.enable = true;
 # Enable IWD
+    networking.wireless.iwd.enable = true;
     networking.wireless.iwd.settings = {
         IPv6 = {
             Enabled = true;
