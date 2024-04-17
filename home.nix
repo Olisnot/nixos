@@ -1,11 +1,5 @@
 { config, pkgs, ... }:
 
-let
-  aagl-gtk-on-nix = import (builtins.fetchTarball "https://github.com/ezKEa/aagl-gtk-on-nix/archive/main.tar.gz");
-in
-{
-  home.packages = aagl-gtk-on-nix.the-honkers-railway-launcher;
-}
 
 {
   # Home Manager needs a bit of information about you and the paths it should
@@ -75,6 +69,13 @@ in
   #
   home.sessionVariables = {
     # EDITOR = "emacs";
+  };
+
+  let
+      aagl-gtk-on-nix = import (builtins.fetchTarball "https://github.com/ezKEa/aagl-gtk-on-nix/archive/main.tar.gz");
+  in
+  {
+      home.packages = [ aagl-gtk-on-nix.the-honkers-railway-launcher ];
   };
 
   # Let Home Manager install and manage itself.
