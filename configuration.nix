@@ -28,6 +28,15 @@ nix.settings.experimental-features = ["nix-command" "flakes"];
 
 # Enable networking
 		networking.networkmanager.enable = true;
+# Enable IWD
+    networking.wireless.iwd.settings = {
+        IPv6 = {
+            Enabled = true;
+        };
+        Settings = {
+            AutoConnect = true;
+        };
+    };
 
 # Set your time zone.
 	time.timeZone = "Europe/London";
