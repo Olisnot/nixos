@@ -10,6 +10,8 @@
 			pavucontrol
 			spotify
 			tree
+            iwd
+            neofetch
 
 			#UI
 			polybar
