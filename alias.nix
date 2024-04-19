@@ -6,7 +6,7 @@
         vim = "nvim .";
         tb = "cd /mnt/1tb";
         config = "cd ~/nixos";
-        rebuild = "~/nixos/rebuild.sh";
+        rebuild = "/nixos/rebuild.sh";
     };
 
 }

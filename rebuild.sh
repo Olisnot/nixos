@@ -2,4 +2,4 @@
 cd ~/nixos
 git add .
 git commit -m "rebuild"
-sudo nixos-rebuild switch --flake ~/nixos#default
+sudo nixos-rebuild switch --flake /nixos#default
