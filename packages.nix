@@ -12,6 +12,7 @@
 			tree
             iwd
             neofetch
+            keymapp
 
 			#UI
 			polybar
