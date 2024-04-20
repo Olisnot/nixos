@@ -30,6 +30,7 @@
 			#Coding Languages
 			dotnet-sdk_8
 			rustc
+            cmake
             cargo
             rustup
 			python3
