@@ -32,12 +32,6 @@
 			rustc
 			python3
 
-			#Gaming
-			steam
-			lutris
-			heroic
-			protonup-qt
-
 			#Fonts
 			gnome.gucharmap
 			font-awesome
