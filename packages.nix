@@ -30,6 +30,8 @@
 			#Coding Languages
 			dotnet-sdk_8
 			rustc
+            cargo
+            rustup
 			python3
 
 			#Fonts
