@@ -5,7 +5,7 @@
         c = "clear";
         vim = "nvim .";
         tb = "cd /mnt/1tb";
-        config = "cd ~/nixos";
+        config = "cd /nixos";
         rebuild = "/nixos/rebuild.sh";
     };
 

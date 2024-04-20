@@ -6,9 +6,10 @@
 	imports =
 		[ # Include the results of the hardware scan.
 		./hardware-configuration.nix
-		./modules/nvidia.nix
 		./packages.nix
         ./alias.nix
+        ./users/oliver.nix
+		./modules/nvidia.nix
         ./modules/tmux.nix
 		inputs.home-manager.nixosModules.default
 		];
@@ -114,21 +115,6 @@ nix.settings.experimental-features = ["nix-command" "flakes"];
 # Enable flatpak
 services.flatpak.enable = true;
 
-# Define a user account. Don't forget to set a password with ‘passwd’.
-	users.users.oliver = {
-		isNormalUser = true;
-		description = "Oliver";
-		extraGroups = [ "networkmanager" "wheel" ];
-		packages = with pkgs; [
-		];
-	};
-
-	home-manager = { 
-		extraSpecialArgs = {inherit inputs;};
-		users = {
-			"oliver" = import ./home.nix;
-		};
-	};
 
 # Some programs need SUID wrappers, can be configured further or are
 # started in user sessions.
