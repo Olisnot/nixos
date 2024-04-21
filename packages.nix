@@ -13,6 +13,7 @@
             iwd
             neofetch
             keymapp
+            ranger
 
 			#UI
 			polybar
