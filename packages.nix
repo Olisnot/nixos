@@ -14,6 +14,7 @@
             neofetch
             keymapp
             ranger
+            rofi
 
 			#UI
 			polybar
