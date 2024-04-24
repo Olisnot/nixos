@@ -15,6 +15,7 @@
             keymapp
             ranger
             rofi
+            redshift
 
 			#UI
 			polybar
