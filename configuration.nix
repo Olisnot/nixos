@@ -67,6 +67,7 @@ nix.settings.experimental-features = ["nix-command" "flakes"];
 	};
 
 # Enable and Configure Redshift
+    location.provider = "geoclue2";
     services.redshift = {
         enable = true;
         brightness = {
