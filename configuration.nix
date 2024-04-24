@@ -11,7 +11,6 @@
         ./users/oliver.nix
 		./modules/nvidia.nix
         ./modules/tmux.nix
-        ./modules/redshift.nix
 		inputs.home-manager.nixosModules.default
 		];
 
@@ -66,6 +65,19 @@ nix.settings.experimental-features = ["nix-command" "flakes"];
 	environment.variables = {
 		GDK_SCALE = "0.5";
 	};
+
+# Enable and Configure Redshift
+    services.redshift = {
+        enable = true;
+        brightness = {
+            day = "1";
+            night = "1";
+        };
+        temperature = {
+            day = 5500;
+            night = 3700;
+        };
+    };
 
 # Enable the KDE Plasma Desktop Environment.
 	services.xserver.displayManager.sddm.enable = true;
