@@ -6,6 +6,7 @@
 			firefox
 			thunderbird
 			feh
+            vlc
 			lshw
 			pavucontrol
 			spotify
