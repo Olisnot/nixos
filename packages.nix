@@ -44,5 +44,6 @@
 			gnome.gucharmap
 			font-awesome
 			material-design-icons
+            cascadia-code
 	];
 }
