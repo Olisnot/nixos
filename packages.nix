@@ -17,6 +17,7 @@
             ranger
             rofi
             redshift
+            unzip
 
 			#UI
 			polybar
