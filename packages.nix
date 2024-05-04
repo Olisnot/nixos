@@ -18,6 +18,7 @@
             rofi
             redshift
             unzip
+            steam-run
 
 			#UI
 			polybar
