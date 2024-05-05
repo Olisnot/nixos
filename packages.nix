@@ -42,6 +42,10 @@
             rustup
 			python3
 
+            #Art
+            blender
+            krita
+
 			#Fonts
 			gnome.gucharmap
 			font-awesome
