@@ -6,6 +6,7 @@
 			firefox
 			thunderbird
 			feh
+            htop
             vlc
 			lshw
 			pavucontrol
@@ -27,6 +28,7 @@
 			picom
 			libsForQt5.bismuth
 			i3
+            eww
 
 			#Coding
 			neovim
