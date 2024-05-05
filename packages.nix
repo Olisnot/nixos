@@ -10,6 +10,7 @@
 			lshw
 			pavucontrol
 			spotify
+            spot
 			tree
             iwd
             neofetch
