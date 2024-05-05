@@ -96,6 +96,18 @@ nix.settings.experimental-features = ["nix-command" "flakes"];
 		xkbVariant = "";
 	};
 
+    services.xserver.displayManager = {
+        sddm.enable = true;
+        defaultSession = "plasma5+i3";
+        session = [
+        {
+            manage = "desktop";
+            name = "plasma5+i3+whatever";
+            start = ''exec env KDEWM=${pkgs.i3}/bin/i3 ${pkgs.plasma-workspace}/bin/startplasma-x11'';
+        }
+        ];
+    };
+
 # Enable CUPS to print documents.
 	services.printing.enable = true;
 
