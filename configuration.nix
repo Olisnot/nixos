@@ -97,7 +97,6 @@ nix.settings.experimental-features = ["nix-command" "flakes"];
 	};
 
     services.xserver.displayManager = {
-        sddm.enable = true;
         defaultSession = "plasma5+i3";
         session = [
         {
