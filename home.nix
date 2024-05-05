@@ -81,7 +81,7 @@
             Restart="on-failure";
         };
         Install = {
-            WantedBy="plasma-workspace.target";
+            WantedBy=["plasma-workspace.target"];
         };
   };
 
