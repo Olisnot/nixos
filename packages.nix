@@ -20,6 +20,7 @@
             redshift
             unzip
             steam-run
+            dunst
 
 			#UI
 			polybar

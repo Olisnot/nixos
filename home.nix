@@ -71,20 +71,6 @@
     # EDITOR = "emacs";
   };
 
-  systemd.user.services.plasma-i3 = {
-        Unit = {
-            Description="Launch Plasma with i3";
-            Before="plasma-workspace.target";
-        };
-        Service = {
-            ExecStart="/usr/bin/i3";
-            Restart="on-failure";
-        };
-        Install = {
-            WantedBy=["plasma-workspace.target"];
-        };
-  };
-
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }
