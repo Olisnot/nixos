@@ -3,7 +3,6 @@
 {
 	environment.systemPackages = with pkgs; [
 			#General
-            environment.systemPackages
 			firefox
 			thunderbird
 			feh
