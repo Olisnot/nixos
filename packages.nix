@@ -49,6 +49,7 @@
             #Art
             blender
             krita
+            gimp
 
 			#Fonts
 			gnome.gucharmap
