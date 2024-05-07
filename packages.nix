@@ -22,6 +22,7 @@
             unzip
             steam-run
             dunst
+            flameshot
 
 			#UI
 			polybar
