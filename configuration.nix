@@ -129,6 +129,9 @@ nix.settings.experimental-features = ["nix-command" "flakes"];
 # Enable flatpak
 services.flatpak.enable = true;
 
+environment.sessionVariables = rec {
+    DOTNET_CLI_TELEMETRY_OPTOUT = 1;
+  };
 
 # Some programs need SUID wrappers, can be configured further or are
 # started in user sessions.
