@@ -40,8 +40,8 @@
 			obsidian
 
 			#Coding Languages
-			dotnet-sdk_8
-            dotnet-runtime_8
+			dotnet-sdk
+            dotnet-runtime
             dotnetPackages.Nuget
 			rustc
             cmake
