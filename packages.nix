@@ -41,6 +41,7 @@
 
 			#Coding Languages
 			dotnet-sdk_8
+            dotnetPackages.Nuget
 			rustc
             cmake
             cargo
