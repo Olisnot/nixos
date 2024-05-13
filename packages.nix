@@ -60,8 +60,4 @@
 			material-design-icons
             cascadia-code
 	];
-
-    environment.sessionVariables = {
-        DOTNET_ROOT = "${pkgs.dotnet-sdk_8}";
-    };
 }
