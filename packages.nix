@@ -40,9 +40,6 @@
 			obsidian
 
 			#Coding Languages
-			dotnet-sdk
-            dotnet-runtime
-            dotnetPackages.Nuget
 			rustc
             cmake
             cargo
