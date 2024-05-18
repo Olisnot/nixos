@@ -11,6 +11,7 @@
         ./users/oliver.nix
 		./modules/nvidia.nix
         ./modules/tmux.nix
+        ./modules/virt-manager.nix
 		inputs.home-manager.nixosModules.default
 		];
 
