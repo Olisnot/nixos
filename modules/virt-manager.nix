@@ -11,5 +11,5 @@
         };
     };
 
-    users.users.<oliver>.extraGroups = [ "libvirtd" ];
+    users.users.oliver.extraGroups = [ "libvirtd" ];
 }
