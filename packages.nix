@@ -23,7 +23,7 @@
             steam-run
             dunst
             flameshot
-            nixos.pciutils
+            pciutils
 
 			#UI
 			polybar
