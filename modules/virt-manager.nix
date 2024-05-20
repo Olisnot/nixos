@@ -6,4 +6,8 @@
 
 
     users.users.oliver.extraGroups = [ "libvirtd" ];
+
+    boot.kernelParams = [ 
+        intel_iommu=on
+    ];
 }
