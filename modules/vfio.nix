@@ -51,7 +51,7 @@
   # VFIO Packages installed
   environment.systemPackages = with pkgs; [
     virt-manager
-    gnome3.dconf # needed for saving settings in virt-manager
+    #gnome3.dconf # needed for saving settings in virt-manager
     libguestfs # needed to virt-sparsify qcow2 files
   ];
 
