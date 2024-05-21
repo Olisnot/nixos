@@ -101,6 +101,8 @@
       ''
         VIRSH_GPU_VIDEO=pci_0000_01_00_0
         VIRSH_GPU_AUDIO=pci_0000_01_00_1
+        VIRSH_GPU_USB=pci_0000_01_00_2
+        VIRSH_GPU_USBC=pci_0000_01_00_3
       '';
       mode = "0755";
     };
@@ -126,11 +128,8 @@
         systemctl set-property --runtime -- system.slice AllowedCPUs=0
         systemctl set-property --runtime -- init.scope AllowedCPUs=0
 
-        # Logout
-        source "/home/owner/Desktop/Sync/Files/Tools/logout.sh"
-
         # Stop display manager
-        systemctl stop display-manager.service
+        systemctl stop sddm.service
 
         # Unbind VTconsoles
         echo 0 > /sys/class/vtconsole/vtcon0/bind
@@ -143,11 +142,13 @@
         # sleep 5
 
         # Unload NVIDIA kernel modules
-        modprobe -r nvidia_drm nvidia_modeset nvidia_uvm nvidia
+        modprobe -r nvidia_drm nvidia_modeset nvidia_uvm nvidia i2c_nvidia_gpu i2c_ccgx_ucsi video backlight firmware_class
 
         # Detach GPU devices from host
         virsh nodedev-detach $VIRSH_GPU_VIDEO
         virsh nodedev-detach $VIRSH_GPU_AUDIO
+        virsh nodedev-detach $VIRSH_GPU_USB
+        virsh nodedev-detach $VIRSH_GPU_USBC
 
         # Load vfio module
         modprobe vfio-pci
@@ -174,12 +175,14 @@
         # Attach GPU devices from host
         virsh nodedev-reattach $VIRSH_GPU_VIDEO
         virsh nodedev-reattach $VIRSH_GPU_AUDIO
+        virsh nodedev-reattach $VIRSH_GPU_USB
+        virsh nodedev-reattach $VIRSH_GPU_USBC
 
         # Read nvidia x config
         nvidia-xconfig --query-gpu-info > /dev/null 2>&1
 
         # Load NVIDIA kernel modules
-        modprobe nvidia_drm nvidia_modeset nvidia_uvm nvidia
+        modprobe nvidia_drm nvidia_modeset nvidia_uvm nvidia i2c_nvidia_gpu i2c_ccgx_ucsi video backlight firmware_class
 
         # Avoid race condition
         # sleep 5
@@ -192,7 +195,7 @@
         echo 1 > /sys/class/vtconsole/vtcon1/bind
 
         # Start display manager
-        systemctl start display-manager.service
+        systemctl start sddm.service
 
         # Return host to all cores
         systemctl set-property --runtime -- user.slice AllowedCPUs=0-3
@@ -205,6 +208,6 @@
       mode = "0755";
     };
 
-    "libvirt/vgabios/patched.rom".source = /home/oliver/Desktop/Sync/Files/Linux_Config/symlinks/patch.rom;
+    "libvirt/vgabios/patch.rom".source = /home/oliver/Desktop/Sync/Files/Linux_Config/symlinks/patch.rom;
   };
 }
