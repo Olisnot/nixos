@@ -205,6 +205,6 @@
       mode = "0755";
     };
 
-    "libvirt/vgabios/patched.rom".source = /home/oliver/Desktop/Sync/Files/Linux_Config/symlinks/patched.rom;
+    "libvirt/vgabios/patched.rom".source = /home/oliver/Desktop/Sync/Files/Linux_Config/symlinks/patch.rom;
   };
 }
