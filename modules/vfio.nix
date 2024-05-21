@@ -105,7 +105,7 @@
       mode = "0755";
     };
 
-    "libvirt/hooks/qemu.d/win10/prepare/begin/start.sh" = {
+    "libvirt/hooks/qemu.d/win10-GPU/prepare/begin/start.sh" = {
       text =
       ''
         #!/run/current-system/sw/bin/bash
@@ -155,7 +155,7 @@
       mode = "0755";
     };
 
-    "libvirt/hooks/qemu.d/win10/release/end/stop.sh" = {
+    "libvirt/hooks/qemu.d/win10-GPU/release/end/stop.sh" = {
       text =
       ''
         #!/run/current-system/sw/bin/bash
@@ -205,6 +205,6 @@
       mode = "0755";
     };
 
-    "libvirt/vgabios/patched.rom".source = /home/owner/Desktop/Sync/Files/Linux_Config/symlinks/patched.rom;
+    "libvirt/vgabios/patched.rom".source = /home/oliver/Desktop/Sync/Files/Linux_Config/symlinks/patched.rom;
   };
 }
