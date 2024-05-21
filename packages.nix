@@ -24,6 +24,7 @@
             dunst
             flameshot
             pciutils
+            element-desktop
 
 			#UI
 			polybar
