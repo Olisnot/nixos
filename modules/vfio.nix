@@ -107,26 +107,16 @@
       mode = "0755";
     };
 
-    "libvirt/hooks/qemu.d/win10-GPU/prepare/begin/start.sh" = {
+    "libvirt/hooks/qemu.d/win10/prepare/begin/start.sh" = {
       text =
       ''
         #!/run/current-system/sw/bin/bash
 
         # Debugging
-        # exec 19>/home/owner/Desktop/startlogfile
-        # BASH_XTRACEFD=19
-        # set -x
+        set -x
 
         # Load variables we defined
         source "/etc/libvirt/hooks/kvm.conf"
-
-        # Change to performance governor
-        echo performance | tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
-
-        # Isolate host to core 0
-        systemctl set-property --runtime -- user.slice AllowedCPUs=0
-        systemctl set-property --runtime -- system.slice AllowedCPUs=0
-        systemctl set-property --runtime -- init.scope AllowedCPUs=0
 
         # Stop display manager
         systemctl stop sddm.service
@@ -151,12 +141,14 @@
         virsh nodedev-detach $VIRSH_GPU_USBC
 
         # Load vfio module
-        modprobe vfio-pci
+        modprobe vfio
+        modprobe vfio_pci
+        modprobe vfio_iommu
       '';
       mode = "0755";
     };
 
-    "libvirt/hooks/qemu.d/win10-GPU/release/end/stop.sh" = {
+    "libvirt/hooks/qemu.d/win10/release/end/stop.sh" = {
       text =
       ''
         #!/run/current-system/sw/bin/bash
@@ -170,7 +162,9 @@
         source "/etc/libvirt/hooks/kvm.conf"
 
         # Unload vfio module
-        modprobe -r vfio-pci
+        modprobe -r vfio
+        modprobe -r vfio_pci
+        modprobe -r vfio_iommu
 
         # Attach GPU devices from host
         virsh nodedev-reattach $VIRSH_GPU_VIDEO
@@ -196,14 +190,6 @@
 
         # Start display manager
         systemctl start sddm.service
-
-        # Return host to all cores
-        systemctl set-property --runtime -- user.slice AllowedCPUs=0-3
-        systemctl set-property --runtime -- system.slice AllowedCPUs=0-3
-        systemctl set-property --runtime -- init.scope AllowedCPUs=0-3
-
-        # Change to powersave governor
-        echo powersave | tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
       '';
       mode = "0755";
     };
