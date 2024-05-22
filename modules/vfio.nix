@@ -143,6 +143,7 @@
         # Load vfio module
         modprobe vfio
         modprobe vfio_pci
+        modprobe vfio_pci_core
         modprobe vfio_iommu
       '';
       mode = "0755";
@@ -164,6 +165,7 @@
         # Unload vfio module
         modprobe -r vfio
         modprobe -r vfio_pci
+        modprobe -r vfio_pci_core
         modprobe -r vfio_iommu
 
         # Attach GPU devices from host
