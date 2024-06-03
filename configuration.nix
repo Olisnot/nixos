@@ -65,6 +65,7 @@ nix.settings.experimental-features = ["nix-command" "flakes"];
 	services.xserver.dpi = 96;
 	environment.variables = {
 		GDK_SCALE = "0.5";
+        QT_STYLE_OVERRIDE ="kvantum";
 	};
 
 # Enable and Configure Redshift
