@@ -11,7 +11,6 @@
 			lshw
 			pavucontrol
 			spotify
-            spot
 			tree
             iwd
             neofetch
@@ -29,9 +28,9 @@
 			#UI
 			polybar
 			picom
-			libsForQt5.bismuth
 			i3
             eww
+            libsForQt5.qtstyleplugin-kvantum
 
 			#Coding
 			neovim
@@ -47,6 +46,7 @@
             cargo
             rustup
 			python3
+            gcc
 
             #Art
             blender
