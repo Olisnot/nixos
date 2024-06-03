@@ -30,7 +30,9 @@
 			picom
 			i3
             eww
+            lxappearance
             libsForQt5.qtstyleplugin-kvantum
+            libsForQt5.qt5ct
 
 			#Coding
 			neovim
