@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 cd /nixos
 sudo git add .
-sudo git commit -m "rebuild-"$(date +"%d-%m-%Y")
+sudo git commit -m "rebuild-$(date +"%d-%m-%Y %H:%M:%S")"
 sudo nixos-rebuild switch --flake /nixos#default
