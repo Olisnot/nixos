@@ -24,6 +24,7 @@
             flameshot
             pciutils
             element-desktop
+            cinnamon.nemo
 
 			#UI
 			polybar
