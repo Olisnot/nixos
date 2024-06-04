@@ -84,6 +84,7 @@ nix.settings.experimental-features = ["nix-command" "flakes"];
 
 # Enable the KDE Plasma Desktop Environment.
 	services.xserver.displayManager.sddm.enable = true;
+    xdg.portal.enable = true;
 
 # Enable i3WM
 	services.xserver.windowManager.i3.enable = true;
