@@ -12,6 +12,7 @@
 		./modules/nvidia.nix
         ./modules/tmux.nix
         ./modules/virt-manager.nix
+        ./modules/hsr.nix
 		inputs.home-manager.nixosModules.default
 		];
 
