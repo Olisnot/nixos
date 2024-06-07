@@ -8,11 +8,12 @@
 		./hardware-configuration.nix
 		./packages.nix
         ./alias.nix
+        ./cachix.nix
         ./users/oliver.nix
 		./modules/nvidia.nix
         ./modules/tmux.nix
         ./modules/virt-manager.nix
-        ./modules/hsr.nix
+        #./modules/hsr.nix
 		inputs.home-manager.nixosModules.default
 		];
 
