@@ -6,7 +6,7 @@
         sudovim = "sudo -E nvim .";
         vim = "nvim .";
         tb = "cd /mnt/1tb";
-        config = "cd /nixos";
+        config = "/nixos/OpenConfig.sh";
         rebuild = "/nixos/rebuild.sh";
         cleanGenerations = "/nixos/trim-generations.sh";
     };
