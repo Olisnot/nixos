@@ -68,7 +68,26 @@ nix.settings.experimental-features = ["nix-command" "flakes"];
 	environment.variables = {
 		GDK_SCALE = "0.5";
         QT_STYLE_OVERRIDE ="kvantum";
+        WLR_NO_HARDWARE_CURSORS = "1";
+        NIXOS_OZONE_WL = "1";
 	};
+
+# Enable wayland
+    programs.hyprland = {
+        enable = true;
+        nvidiaPatches = true;
+        xwayland.enable = true;
+    };
+
+    hardware = {
+        opengl.enable = true;
+
+        nvidia.modesetting.enable = true;
+    };
+
+    xdg.portal.enable = true;
+    xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+
 
 # Enable and Configure Redshift
     location.provider = "geoclue2";
@@ -105,15 +124,20 @@ nix.settings.experimental-features = ["nix-command" "flakes"];
 
 # Enable sound with pipewire.
 	sound.enable = true;
-	hardware.pulseaudio.enable = false;
 	security.rtkit.enable = true;
 	services.pipewire = {
 		enable = true;
 		alsa.enable = true;
 		alsa.support32Bit = true;
 		pulse.enable = true;
-# If you want to use JACK applications, uncomment this
-#jack.enable = true;
+        jack.enable = true;
+
+# Enable Hyprland
+    programs.hyprland = {
+        enable = true;
+        nvidiaPatches = true;
+        xwayland.enable = true;
+    }
 
 # use the example session manager (no others are packaged yet so this is enabled by default,
 # no need to redefine it in your config for now)
