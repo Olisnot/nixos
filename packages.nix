@@ -26,7 +26,7 @@
             pciutils
             element-desktop
             cinnamon.nemo
-            inputs.swww.packages.${pkgs.system}.swww
+            swww
 
 			#UI
 			polybar

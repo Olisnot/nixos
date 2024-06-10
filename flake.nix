@@ -3,7 +3,6 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    inputs.swww.url = "github:LGFae/swww";
 
     home-manager = {
       url = "github:nix-community/home-manager";
