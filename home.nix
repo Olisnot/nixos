@@ -81,4 +81,8 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+  gtk.enable = true;
+  gtk.theme.package = pkgs.kanagawa-gtk-theme;
+  gtk.iconTheme.package = pkgs.kanagawa-icon-theme;
 }
