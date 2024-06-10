@@ -129,7 +129,7 @@ nix.settings.experimental-features = ["nix-command" "flakes"];
 # Enable Hyprland
     programs.hyprland = {
         enable = true;
-        nvidiaPatches = true;
+        #nvidiaPatches = true;
         xwayland.enable = true;
     };
 
