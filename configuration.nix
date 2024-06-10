@@ -131,6 +131,7 @@ nix.settings.experimental-features = ["nix-command" "flakes"];
 		alsa.support32Bit = true;
 		pulse.enable = true;
         jack.enable = true;
+    };
 
 # Enable Hyprland
     programs.hyprland = {
