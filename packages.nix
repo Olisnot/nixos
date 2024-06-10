@@ -17,6 +17,7 @@
             keymapp
             ranger
             rofi
+            rofi-wayland
             redshift
             unzip
             steam-run
@@ -43,6 +44,7 @@
 			git-credential-manager
 			tmux
 			alacritty
+            kitty
 			obsidian
 
 			#Coding Languages
