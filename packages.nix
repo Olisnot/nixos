@@ -1,4 +1,4 @@
-{ pkgs, config, libs, ... }:
+{ pkgs, config, libs, inputs, ... }:
 
 {
 	environment.systemPackages = with pkgs; [
@@ -26,6 +26,7 @@
             pciutils
             element-desktop
             cinnamon.nemo
+            inputs.swww.packages.${pkgs.system}.swww
 
 			#UI
 			polybar

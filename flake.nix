@@ -16,6 +16,7 @@
       modules = [
         ./configuration.nix
         inputs.home-manager.nixosModules.default
+        inputs.swww.url = "github:LGFae/swww";
       ];
     };
   };
