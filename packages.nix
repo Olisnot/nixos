@@ -17,7 +17,7 @@
             keymapp
             ranger
             rofi
-            rofi-wayland
+            wofi
             redshift
             unzip
             steam-run
@@ -29,8 +29,8 @@
 
 			#UI
 			polybar
+            waybar
 			picom
-			i3
             eww
             lxappearance
             libsForQt5.qt5ct
@@ -44,7 +44,6 @@
 			git-credential-manager
 			tmux
 			alacritty
-            kitty
 			obsidian
 
 			#Coding Languages
