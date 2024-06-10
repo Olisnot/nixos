@@ -72,13 +72,6 @@ nix.settings.experimental-features = ["nix-command" "flakes"];
         NIXOS_OZONE_WL = "1";
 	};
 
-# Enable wayland
-    programs.hyprland = {
-        enable = true;
-        nvidiaPatches = true;
-        xwayland.enable = true;
-    };
-
     hardware = {
         opengl.enable = true;
 
