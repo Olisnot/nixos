@@ -71,11 +71,11 @@
     # EDITOR = "emacs";
   };
 
-  gtk.enable = true;
-  gtk.theme.package = pkgs.kanagawa-gtk-theme;
-  gtk.theme.name = "kanagawa-gtk-theme";
-  gtk.iconTheme.package = pkgs.kanagawa-icon-theme;
-  gtk.iconTheme.name = "kanagawa-icon-theme";
+  #gtk.enable = true;
+  #gtk.theme.package = pkgs.kanagawa-gtk-theme;
+  #gtk.theme.name = "kanagawa-gtk-theme";
+  #gtk.iconTheme.package = pkgs.kanagawa-icon-theme;
+  #gtk.iconTheme.name = "kanagawa-icon-theme";
 
   #virt-manager
   dconf.settings = {
