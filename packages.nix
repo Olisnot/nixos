@@ -3,6 +3,7 @@
 {
 	environment.systemPackages = with pkgs; [
 			#General
+            killall
             util-linux
 			firefox
 			thunderbird
