@@ -104,11 +104,11 @@ nix.settings.experimental-features = ["nix-command" "flakes"];
     environment.gnome.excludePackages = (with pkgs; [
             gnome-photos
             gnome-tour
-    ]) ++ (with pkgs; [
-        gnome.cheese # webcam tool
+            gedit # text editor
+    ]) ++ (with pkgs.gnome; [
+        cheese # webcam tool
         gnome-music
         gnome-terminal
-        gedit # text editor
         epiphany # web browser
         geary # email reader
         evince # document viewer
