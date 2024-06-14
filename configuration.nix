@@ -100,6 +100,10 @@ nix.settings.experimental-features = ["nix-command" "flakes"];
 	services.xserver.displayManager.sddm.enable = true;
     services.xserver.desktopManager.plasma5.enable = true;
 
+# Enable Gnome
+    services.xserver.desktopManager.gnome.enable = true;
+    
+
 # Enable i3WM
 	services.xserver.windowManager.i3.enable = true;
 
