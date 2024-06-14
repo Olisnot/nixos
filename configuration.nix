@@ -104,7 +104,7 @@ nix.settings.experimental-features = ["nix-command" "flakes"];
     environment.gnome.excludePackages = (with pkgs; [
             gnome-photos
             gnome-tour
-    ]) ++ (with pkgs.gnome; [
+    ]) ++ (with pkgs; [
         cheese # webcam tool
         gnome-music
         gnome-terminal
