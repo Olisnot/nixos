@@ -6,10 +6,7 @@
             killall
             util-linux
 			firefox
-			thunderbird
-			feh
             htop
-            vlc
 			lshw
 			pavucontrol
 			spotify
@@ -18,7 +15,6 @@
             neofetch
             keymapp
             ranger
-            rofi
             wofi
             redshift
             unzip
@@ -31,10 +27,7 @@
             swww
 
 			#UI
-			polybar
             waybar
-			picom
-            eww
             lxappearance
             libsForQt5.qt5ct
             libsForQt5.qtstyleplugin-kvantum
