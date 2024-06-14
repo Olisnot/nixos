@@ -105,7 +105,7 @@ nix.settings.experimental-features = ["nix-command" "flakes"];
             gnome-photos
             gnome-tour
     ]) ++ (with pkgs; [
-        cheese # webcam tool
+        gnome.cheese # webcam tool
         gnome-music
         gnome-terminal
         gedit # text editor
