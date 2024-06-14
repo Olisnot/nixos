@@ -96,11 +96,9 @@ nix.settings.experimental-features = ["nix-command" "flakes"];
         };
     };
 
-# Enable the KDE Plasma Desktop Environment.
-	services.xserver.displayManager.sddm.enable = true;
-    #services.xserver.desktopManager.plasma5.enable = true;
 
 # Enable Gnome
+	services.xserver.displayManager.gdm.enable = true;
     services.xserver.desktopManager.gnome.enable = true;
     
 
