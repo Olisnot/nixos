@@ -2,16 +2,18 @@
 
 {
 	environment.systemPackages = with pkgs; [
-			#General
+            #Utility
             killall
             util-linux
-			firefox
             htop
 			lshw
 			pavucontrol
-			spotify
 			tree
             iwd
+
+			#General
+			firefox
+			spotify
             neofetch
             keymapp
             ranger
@@ -25,6 +27,7 @@
             element-desktop
             cinnamon.nemo
             swww
+            mpv
 
 			#UI
             waybar
