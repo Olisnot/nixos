@@ -14,7 +14,7 @@
 			#General
 			firefox
 			spotify
-            geary
+            gnome.geary
             neofetch
             keymapp
             ranger
