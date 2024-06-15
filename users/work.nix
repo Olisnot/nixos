@@ -10,11 +10,4 @@
             globalprotect-openconnect
 		];
 	};
-
-	home-manager = { 
-		extraSpecialArgs = {inherit inputs;};
-		users = {
-			"work" = import ../home.nix;
-		};
-	};
 }
