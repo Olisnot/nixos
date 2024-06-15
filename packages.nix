@@ -14,6 +14,7 @@
 			#General
 			firefox
 			spotify
+            geary
             neofetch
             keymapp
             ranger
