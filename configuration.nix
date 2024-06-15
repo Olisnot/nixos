@@ -10,6 +10,7 @@
         ./alias.nix
         ./cachix.nix
         ./users/oliver.nix
+        ./users/work.nix
 		./modules/nvidia.nix
         ./modules/tmux.nix
         ./modules/virt-manager.nix
