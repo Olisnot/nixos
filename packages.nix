@@ -31,6 +31,7 @@
 
 			#UI
             waybar
+            ags
             lxappearance
             libsForQt5.qt5ct
             libsForQt5.qtstyleplugin-kvantum
