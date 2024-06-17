@@ -66,4 +66,5 @@
 			material-design-icons
             cascadia-code
 	];
+    programs.steam.gamescopeSession.enable = true;
 }
