@@ -100,28 +100,9 @@ nix.settings.experimental-features = ["nix-command" "flakes"];
 
 # Enable Gnome
 	services.xserver.displayManager.gdm.enable = true;
-    services.xserver.desktopManager.gnome.enable = true;
+    #services.xserver.desktopManager.gnome.enable = true;
     services.xserver.desktopManager.plasma6.enable = true;
     
-    environment.gnome.excludePackages = (with pkgs; [
-            gnome-photos
-            gnome-tour
-            gedit # text editor
-    ]) ++ (with pkgs.gnome; [
-        cheese # webcam tool
-        gnome-music
-        gnome-terminal
-        epiphany # web browser
-        geary # email reader
-        evince # document viewer
-        gnome-characters
-        totem # video player
-        tali # poker game
-        iagno # go game
-        hitori # sudoku game
-        atomix # puzzle game
-    ]);
-
 # Set Laptop lid
 	services.logind.lidSwitchExternalPower = "ignore";
 
