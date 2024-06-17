@@ -14,7 +14,7 @@
 		./modules/nvidia.nix
         ./modules/tmux.nix
         ./modules/virt-manager.nix
-        ./modules/hsr.nix
+        ./modules/aagl.nix
 		inputs.home-manager.nixosModules.default
 		];
 
@@ -101,6 +101,7 @@ nix.settings.experimental-features = ["nix-command" "flakes"];
 # Enable Gnome
 	services.xserver.displayManager.gdm.enable = true;
     services.xserver.desktopManager.gnome.enable = true;
+    services.xserver.desktopManager.plasma.enable = true;
     
     environment.gnome.excludePackages = (with pkgs; [
             gnome-photos
