@@ -101,7 +101,7 @@ nix.settings.experimental-features = ["nix-command" "flakes"];
 # Enable Gnome
 	services.xserver.displayManager.gdm.enable = true;
     services.xserver.desktopManager.gnome.enable = true;
-    services.xserver.desktopManager.plasma.enable = true;
+    services.xserver.desktopManager.plasma6.enable = true;
     
     environment.gnome.excludePackages = (with pkgs; [
             gnome-photos
