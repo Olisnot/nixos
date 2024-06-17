@@ -7,4 +7,5 @@ in
   ];
 
   programs.the-honkers-railway-launcher.enable = true;
+  programs.an-anime-game-launcher.enable = true;
 }

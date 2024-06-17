@@ -15,7 +15,6 @@
         ./modules/tmux.nix
         ./modules/virt-manager.nix
         ./modules/hsr.nix
-        ./modules/gi.nix
 		inputs.home-manager.nixosModules.default
 		];
 
