@@ -14,6 +14,7 @@
 		./modules/nvidia.nix
         ./modules/tmux.nix
         ./modules/virt-manager.nix
+        ./modules/gaming.nix
         ./modules/aagl.nix
 		inputs.home-manager.nixosModules.default
 		];

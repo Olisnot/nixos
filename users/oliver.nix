@@ -7,11 +7,6 @@
 		description = "Oliver";
 		extraGroups = [ "networkmanager" "wheel" ];
 		packages = with pkgs; [
-			#Gaming
-			steam
-			lutris
-			heroic
-			protonup-qt
 		];
 	};
 

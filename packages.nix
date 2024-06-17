@@ -21,7 +21,6 @@
             wofi
             redshift
             unzip
-            steam-run
             dunst
             flameshot
             pciutils
@@ -66,5 +65,4 @@
 			material-design-icons
             cascadia-code
 	];
-    programs.steam.gamescopeSession.enable = true;
 }
