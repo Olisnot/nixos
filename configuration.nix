@@ -32,6 +32,9 @@ nix.settings.experimental-features = ["nix-command" "flakes"];
 # networking.proxy.default = "http://user:password@proxy:port/";
 # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
+# Kernel parameters
+    boot.kernelParams = [ "nvidia-drm.modeset=1" ];
+
 # Enable networking
 		#networking.networkmanager.enable = true;
 # Enable IWD
