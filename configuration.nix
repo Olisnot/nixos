@@ -105,15 +105,15 @@ nix.settings.experimental-features = ["nix-command" "flakes"];
 # Enable Gnome
 	services.xserver.displayManager.gdm.enable = true;
     #services.xserver.desktopManager.gnome.enable = true;
-    services.xserver.desktopManager.plasma6.enable = true;
+    services.desktopManager.plasma6.enable.enable = true;
     
 # Set Laptop lid
 	services.logind.lidSwitchExternalPower = "ignore";
 
 # Configure keymap in X11
 	services.xserver = {
-		layout = "us";
-		xkbVariant = "";
+		xkb.layout = "us";
+		xkb.Variant = "";
 	};
 
 # Enable CUPS to print documents.
