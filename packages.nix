@@ -54,6 +54,7 @@
             cmake
             dotnetCorePackages.sdk_9_0
 			python3
+            lua
 
             #Art
             blender
