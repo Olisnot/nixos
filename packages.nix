@@ -48,11 +48,12 @@
 
 			#Coding Languages
 			rustc
-            cmake
             cargo
             rustup
-			python3
             gcc
+            cmake
+            dotnetCorePackages.sdk_9_0
+			python3
 
             #Art
             blender
