@@ -10,6 +10,7 @@
 			pavucontrol
 			tree
             iwd
+            ripgrep
 
 			#General
 			firefox
@@ -27,6 +28,7 @@
             element-desktop
             cinnamon.nemo
             swww
+            waypaper
             mpv
 
 			#UI
