@@ -11,6 +11,7 @@
 			tree
             iwd
             ripgrep
+            networkmanagerapplet
 
 			#General
 			firefox
