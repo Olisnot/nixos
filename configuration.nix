@@ -111,6 +111,7 @@ nix.settings.experimental-features = ["nix-command" "flakes"];
 
 # Huion tablet drivers
     hardware.opentabletdriver.enable = true;
+    hardware.opentabletdriver.daemon.enable = true;
 
     
 # Set Laptop lid
