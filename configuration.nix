@@ -108,7 +108,7 @@ nix.settings.experimental-features = ["nix-command" "flakes"];
     services.desktopManager.plasma6.enable = true;
 
 # Huion tablet drivers
-    services.xserver.digimend.enable = true;
+    hardware.opentabletdriver.enable = true;
 
     
 # Set Laptop lid
