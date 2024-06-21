@@ -12,7 +12,6 @@
             iwd
             ripgrep
             iwgtk
-            wacomtablet
 
 			#General
 			firefox
