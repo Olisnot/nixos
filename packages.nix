@@ -12,6 +12,7 @@
             iwd
             ripgrep
             iwgtk
+            opentabletdriver
 
 			#General
 			firefox
