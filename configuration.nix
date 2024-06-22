@@ -110,8 +110,12 @@ nix.settings.experimental-features = ["nix-command" "flakes"];
     services.desktopManager.plasma6.enable = true;
 
 # Huion tablet drivers
-# Enable OpenTabletDriver
     hardware.opentabletdriver.enable = true;
+    hardware.opentabletdriver.daemon.enable = true;
+    hardware.opentabletdriver.blacklistedKernelModules = [
+        "hid-uclogic"
+            "wacom"
+    ];
     services.udev.extraRules = "";
 
     
