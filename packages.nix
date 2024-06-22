@@ -17,7 +17,6 @@
 			#General
 			firefox
 			spotify
-            gnome.geary
             neofetch
             keymapp
             ranger
@@ -32,6 +31,7 @@
             swww
             waypaper
             mpv
+            betterbird
 
 			#UI
             waybar
