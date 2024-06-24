@@ -6,8 +6,13 @@
         enableMan = true;
         colorscheme = "kanagawa";
 
-        servers = {
-            bash-language-server.enable = true;
+        plugins = {
+            lsp = {
+                enable = true;
+                servers = {
+                    bash-language-server.enable = true;
+                };
+            };
         };
     };
 }
