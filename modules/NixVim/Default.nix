@@ -4,6 +4,6 @@
     programs.nixvim = {
         enable = true;
         enableMan = true;
-        colorscheme = "kanagawa";
+        #colorscheme = "kanagawa";
     };
 }
