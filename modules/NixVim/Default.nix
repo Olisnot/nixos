@@ -13,6 +13,10 @@
 
         colorschemes.kanagawa = {
 		enable = true;
+		extraOptions = {
+			transparent = true;
+			theme = "dragon";
+		};
 	};
 
         plugins = {
