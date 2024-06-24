@@ -17,6 +17,7 @@
         ./modules/Gaming/Default.nix
         ./modules/NixVim/Default.nix
 		inputs.home-manager.nixosModules.default
+        inputs.nixvim.nixosModules.nixvim
 		];
 
 nix.settings.experimental-features = ["nix-command" "flakes"];
