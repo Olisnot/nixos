@@ -105,7 +105,7 @@ nix.settings.experimental-features = ["nix-command" "flakes"];
 
 
 # Enable Plasma
-    services.xserver.displayManager = { 
+    services.displayManager = { 
 	    defaultSession = "hyprland";
 	    gdm.enable = true;
     };
