@@ -59,6 +59,7 @@
             dotnetCorePackages.sdk_9_0
 			python3
             lua
+            bash-language-server
 
             #Art
             blender
