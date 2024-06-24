@@ -4,7 +4,10 @@
     programs.nixvim = {
         enable = true;
         enableMan = true;
-	relativenumber = true;
+
+	globalOpts = {
+		relativenumber = true;
+	};
 
 	globals.mapleader = " ";
 
