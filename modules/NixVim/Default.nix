@@ -5,5 +5,5 @@
         enable = true;
         enableMan = true;
         colorscheme = "kanagawa";
-    }
+    };
 }
