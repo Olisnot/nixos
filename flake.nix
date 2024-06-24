@@ -18,7 +18,8 @@
   };
 
   outputs =
-   { self, nixpkgs, ... }@inputs: {
+    { self, nixpkgs, nixvim, flake-parts, ... }@inputs:
+
     nixosConfigurations.default = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs;};
       modules = [
@@ -26,9 +27,7 @@
         inputs.home-manager.nixosModules.default
       ];
     };
-  };
 
-    { nixvim, flake-parts, ... }@inputs:
     flake-parts.lib.mkFlake { inherit inputs; } {
       systems = [
         "x86_64-linux"
