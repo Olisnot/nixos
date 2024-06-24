@@ -15,6 +15,7 @@
         ./modules/tmux.nix
         ./modules/virt-manager.nix
         ./modules/Gaming/Default.nix
+        ./modules/NixVim/Default.nix
 		inputs.home-manager.nixosModules.default
 		];
 
