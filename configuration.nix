@@ -5,6 +5,8 @@
 {
 	imports =
 		[ # Include the results of the hardware scan.
+		inputs.home-manager.nixosModules.default
+        inputs.nixvim.nixosModules.nixvim
 		./hardware-configuration.nix
 		./packages.nix
         ./alias.nix
@@ -16,8 +18,6 @@
         ./modules/virt-manager.nix
         ./modules/Gaming/Default.nix
         ./modules/NixVim/Default.nix
-		inputs.home-manager.nixosModules.default
-        inputs.nixvim.nixosModules.nixvim
 		];
 
 nix.settings.experimental-features = ["nix-command" "flakes"];

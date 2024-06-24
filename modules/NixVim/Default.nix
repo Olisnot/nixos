@@ -1,9 +1,9 @@
 { pkgs, inputs, ... }: 
 
 {
-    environment.systemModules = [
-        (nixvim.legacyPackages."${pkgs.system}".makeNixvim {
-         colorschemes.kanagawa.enable = true;
-         })
-    ];
+    programs.nixvim = {
+        enable = true;
+        enableMan = true;
+        colorscheme = "kanagawa";
+    }
 }
