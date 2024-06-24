@@ -12,6 +12,11 @@
                 servers = {
                     bashls.enable = true;
                 };
+	    telescope = {
+	    	enable = true;
+		keymaps = {
+		     "<leader>f" = "find_files";
+		};
             };
         };
     };
