@@ -6,6 +6,8 @@
         enableMan = true;
         colorscheme = "kanagawa";
 
-        bash-language-server.enable = true;
+        servers = {
+            bash-language-server.enable = true;
+        };
     };
 }
