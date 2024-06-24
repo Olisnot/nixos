@@ -4,13 +4,13 @@
     programs.nixvim = {
         enable = true;
         enableMan = true;
-        colorscheme = "kanagawa";
+        colorschemes.kanagawa.enable = true;
 
         plugins = {
             lsp = {
                 enable = true;
                 servers = {
-                    bash-language-server.enable = true;
+                    bashls.enable = true;
                 };
             };
         };
