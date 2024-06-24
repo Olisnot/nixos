@@ -26,7 +26,7 @@
         ./configuration.nix
         inputs.home-manager.nixosModules.default
       ];
-    };
+    },
 
     flake-parts.lib.mkFlake { inherit inputs; } {
       systems = [
