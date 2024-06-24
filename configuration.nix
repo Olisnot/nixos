@@ -81,7 +81,7 @@ nix.settings.experimental-features = ["nix-command" "flakes"];
 	};
 
     hardware = {
-        opengl.enable = true;
+        graphics.enable = true;
 
         nvidia.modesetting.enable = true;
     };
