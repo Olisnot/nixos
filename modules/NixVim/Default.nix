@@ -15,7 +15,7 @@
 	    telescope = {
 	    	enable = true;
 		keymaps = {
-		     "<leader>f" = "find_files"
+		     "<leader>f" = "find_files";
 		};
             };
         };
