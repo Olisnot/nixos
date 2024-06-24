@@ -1,4 +1,4 @@
-{ pkgs, inputs, nixvim, ... }: 
+{ pkgs, inputs, ... }: 
 
 {
     environment.systemModules = [
