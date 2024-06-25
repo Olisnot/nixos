@@ -1,0 +1,7 @@
+
+{ pkgs, inputs, ... }: 
+
+{
+	programs.nixvim = {
+	};
+}
