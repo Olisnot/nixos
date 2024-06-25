@@ -1,37 +1,34 @@
 { pkgs, inputs, ... }: 
 
 {
-    programs.nixvim = {
-        enable = true;
-        enableMan = true;
-
-	globalOpts = {
-		relativenumber = true;
-	};
-
-	globals.mapleader = " ";
-
-        colorschemes.kanagawa = {
+	imports = [
+		./kanagawa.nix
+		./keymaps.nix
+		./Plugins/Default.nix
+	];
+	programs.nixvim = {
 		enable = true;
-		extraOptions = {
-			transparent = true;
-			theme = "dragon";
+		enableMan = true;
+
+		globalOpts = {
+			relativenumber = true;
+		};
+
+		globals.mapleader = " ";
+
+		plugins = {
+			lsp = {
+				enable = true;
+				servers = {
+					bashls.enable = true;
+				};
+			};
+			telescope = {
+				enable = true;
+				keymaps = {
+					"<leader>f" = "find_files";
+				};
+			};
 		};
 	};
-
-        plugins = {
-            lsp = {
-                enable = true;
-                servers = {
-                    bashls.enable = true;
-		};
-	    };
-	    telescope = {
-	    	enable = true;
-		keymaps = {
-		     "<leader>f" = "find_files";
-		};
-            };
-        };
-    };
 }
