@@ -10,7 +10,7 @@
 			mode = [ "n" ];
 		}
 		{
-			action = "function() builtin.grep_string({ search = vim.fn.input(\"Grep > \") }";
+			action = "function() builtin.grep_string({ search = vim.fn.input(\"Grep > \") }); end";
 			key = "<leader>gr";
 			mode = [ "n" ];
 		}
