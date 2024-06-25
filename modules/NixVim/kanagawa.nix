@@ -6,8 +6,17 @@
 			enable = true;
 			settings = {
 				transparent = true;
-				theme = "dragon";
 				background.dark = "dragon";
+
+				colors = {
+					theme = {
+						all = {
+							ui = {
+								bg_gutter = "none";
+							};
+						};
+					};
+				};
 			};
 		};
 	};
