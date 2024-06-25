@@ -74,16 +74,27 @@
   gtk = {
 	  enable = true;
 	  theme = {
-	  	package = pkgs.kanagawa-gtk-theme;
-	  	name = "kanagawa-gtk-theme";
+		  package = pkgs.kanagawa-gtk-theme;
+		  name = "kanagawa-gtk-theme";
 	  };
 	  iconTheme = {
-	  	package = pkgs.kanagawa-icon-theme;
-	  	name = "kanagawa-icon-theme";
+		  package = pkgs.kanagawa-icon-theme;
+		  name = "kanagawa-icon-theme";
 	  };
-  };
 
-  systemd.user.sessionVariables = config.home-manager.users.oliver.home.sessionVariables;
+	  gtk3.extraConfig = {
+		  Settings = ''
+			  gtk-application-prefer-dark-theme=1
+			  '';
+	  };
+
+	  gtk4.extraConfig = {
+		  Settings = ''
+			  gtk-application-prefer-dark-theme=1
+			  '';
+	  };
+
+  };
 
   #virt-manager
   dconf.settings = {
