@@ -112,7 +112,6 @@
       };
   };
 
-  home.sessionVariables.GTK_THEME = "Kanagawa";
 
   # Let Home Manager install and manage itself.
   programs.home-manager = {
