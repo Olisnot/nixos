@@ -75,7 +75,7 @@
 	  enable = true;
 	  theme = {
 		  package = pkgs.kanagawa-gtk-theme;
-		  name = "Kanagawa";
+		  name = "Kanagawa-B";
 	  };
 	  iconTheme = {
 		  package = pkgs.kanagawa-icon-theme;
