@@ -1,11 +1,13 @@
 {self, ... }: 
 
 {
-	plugins = {
-		telescope = {
-			enable = true;
-			keymaps = {
-				"<leader>f" = "find_files";
+	programs.nixvim = {
+		plugins = {
+			telescope = {
+				enable = true;
+				keymaps = {
+					"<leader>f" = "find_files";
+				};
 			};
 		};
 	};
