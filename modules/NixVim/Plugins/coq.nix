@@ -7,6 +7,8 @@
 				enable = true;
 				settings = {
 					keymap.recommended = true;
+					auto_start = true;
+					xdg = true;
 				};
 			};
 		};
