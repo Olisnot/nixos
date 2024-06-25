@@ -9,6 +9,7 @@
 					bashls.enable = true;
 					cmake.enable = true;
 					csharp-ls.enable = true;
+					pylsp.enable = true;
 					rust-analyzer = { 
 						enable = true;
 						installCargo = true;
