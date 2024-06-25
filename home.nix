@@ -75,11 +75,11 @@
 	  enable = true;
 	  theme = {
 		  package = pkgs.kanagawa-gtk-theme;
-		  name = "kanagawa";
+		  name = "Kanagawa";
 	  };
 	  iconTheme = {
 		  package = pkgs.kanagawa-icon-theme;
-		  name = "kanagawa";
+		  name = "Kanagawa";
 	  };
 
 	  gtk3.extraConfig = {
