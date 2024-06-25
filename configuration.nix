@@ -1,4 +1,3 @@
-
 { config, lib, pkgs, inputs, ... }:
 
 
@@ -6,50 +5,45 @@
 	imports =
 		[ # Include the results of the hardware scan.
 		inputs.home-manager.nixosModules.default
-        inputs.nixvim.nixosModules.nixvim
-		./hardware-configuration.nix
-		./packages.nix
-        ./alias.nix
-        ./cachix.nix
-        ./users/oliver.nix
-        ./users/work.nix
-		./modules/nvidia.nix
-        ./modules/tmux.nix
-        ./modules/virt-manager.nix
-        ./modules/Gaming/Default.nix
-        ./modules/NixVim/Default.nix
+			inputs.nixvim.nixosModules.nixvim
+			./hardware-configuration.nix
+			./packages.nix
+			./cachix.nix
+			./users/oliver.nix
+			./users/work.nix
+			./modules/Default.nix
 		];
 
-nix.settings.experimental-features = ["nix-command" "flakes"];
+	nix.settings.experimental-features = ["nix-command" "flakes"];
 
 # Bootloader.
 	boot.loader.systemd-boot.enable = true;
 	boot.loader.efi.canTouchEfiVariables = true;
 
-    boot.loader.systemd-boot.configurationLimit = 5;
+	boot.loader.systemd-boot.configurationLimit = 5;
 
 	networking.hostName = "nixos"; # Define your hostname.
 # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-    
+
 # Configure network proxy if necessary
 # networking.proxy.default = "http://user:password@proxy:port/";
 # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
 # Kernel parameters
-    boot.kernelParams = [ "nvidia-drm.modeset=1" ];
+		boot.kernelParams = [ "nvidia-drm.modeset=1" ];
 
 # Enable networking
-		#networking.networkmanager.enable = true;
+#networking.networkmanager.enable = true;
 # Enable IWD
-    networking.wireless.iwd.enable = true;
-    networking.wireless.iwd.settings = {
-        IPv6 = {
-            Enabled = true;
-        };
-        Settings = {
-            AutoConnect = true;
-        };
-    };
+	networking.wireless.iwd.enable = true;
+	networking.wireless.iwd.settings = {
+		IPv6 = {
+			Enabled = true;
+		};
+		Settings = {
+			AutoConnect = true;
+		};
+	};
 
 # Set your time zone.
 	time.timeZone = "Europe/London";
@@ -75,53 +69,53 @@ nix.settings.experimental-features = ["nix-command" "flakes"];
 	services.xserver.dpi = 96;
 	environment.variables = {
 		GDK_SCALE = "0.5";
-        QT_STYLE_OVERRIDE ="kvantum";
-        WLR_NO_HARDWARE_CURSORS = "1";
-        NIXOS_OZONE_WL = "1";
+		QT_STYLE_OVERRIDE ="kvantum";
+		WLR_NO_HARDWARE_CURSORS = "1";
+		NIXOS_OZONE_WL = "1";
 	};
 
-    hardware = {
-        graphics.enable = true;
-        nvidia.modesetting.enable = true;
-    };
+	hardware = {
+		graphics.enable = true;
+		nvidia.modesetting.enable = true;
+	};
 
-    xdg.portal.enable = true;
-    xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+	xdg.portal.enable = true;
+	xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
 
 
 # Enable and Configure Redshift
-    location.provider = "geoclue2";
-    services.redshift = {
-        enable = true;
-        brightness = {
-            day = "1";
-            night = "1";
-        };
-        temperature = {
-            day = 5500;
-            night = 3700;
-        };
-    };
+	location.provider = "geoclue2";
+	services.redshift = {
+		enable = true;
+		brightness = {
+			day = "1";
+			night = "1";
+		};
+		temperature = {
+			day = 5500;
+			night = 3700;
+		};
+	};
 
 
 # Enable Plasma
-    services.xserver.displayManager = { 
-	    defaultSession = "hyprland";
-	    gdm.enable = true;
-    };
-    #services.xserver.desktopManager.gnome.enable = true;
-    services.desktopManager.plasma6.enable = true;
+	services.xserver.displayManager = { 
+		defaultSession = "hyprland";
+		gdm.enable = true;
+	};
+#services.xserver.desktopManager.gnome.enable = true;
+	services.desktopManager.plasma6.enable = true;
 
 # Huion tablet drivers
-    hardware.opentabletdriver.enable = true;
-    hardware.opentabletdriver.daemon.enable = true;
-    hardware.opentabletdriver.blacklistedKernelModules = [
-        "hid-uclogic"
-            "wacom"
-    ];
-    services.udev.extraRules = "";
+	hardware.opentabletdriver.enable = true;
+	hardware.opentabletdriver.daemon.enable = true;
+	hardware.opentabletdriver.blacklistedKernelModules = [
+		"hid-uclogic"
+			"wacom"
+	];
+	services.udev.extraRules = "";
 
-    
+
 # Set Laptop lid
 	services.logind.lidSwitchExternalPower = "ignore";
 
@@ -137,20 +131,20 @@ nix.settings.experimental-features = ["nix-command" "flakes"];
 # Enable sound with pipewire.
 	sound.enable = true;
 	security.rtkit.enable = true;
-    hardware.pulseaudio.enable = false;
+	hardware.pulseaudio.enable = false;
 	services.pipewire = {
 		enable = true;
 		alsa.enable = true;
 		alsa.support32Bit = true;
 		pulse.enable = true;
-        jack.enable = true;
-    };
+		jack.enable = true;
+	};
 
 # Enable Hyprland
-    programs.hyprland = {
-        enable = true;
-        xwayland.enable = true;
-    };
+	programs.hyprland = {
+		enable = true;
+		xwayland.enable = true;
+	};
 
 # use the example session manager (no others are packaged yet so this is enabled by default,
 # no need to redefine it in your config for now)
@@ -167,7 +161,7 @@ nix.settings.experimental-features = ["nix-command" "flakes"];
 # $ nix search wget
 
 # Enable flatpak
-services.flatpak.enable = true;
+	services.flatpak.enable = true;
 
 
 # Some programs need SUID wrappers, can be configured further or are
@@ -181,7 +175,7 @@ services.flatpak.enable = true;
 # List services that you want to enable:
 
 # Enable the OpenSSH daemon.
-services.openssh.enable = true;
+	services.openssh.enable = true;
 
 # Open ports in the firewall.
 # networking.firewall.allowedTCPPorts = [ ... ];
