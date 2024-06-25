@@ -2,47 +2,47 @@
 
 {
 	environment.systemPackages = with pkgs; [
-            #Utility
-            killall
-            util-linux
-            htop
+#Utility
+		killall
+			util-linux
+			htop
 			lshw
 			pavucontrol
 			tree
-            iwd
-            ripgrep
-            iwgtk
-            opentabletdriver
+			iwd
+			ripgrep
+			iwgtk
+			opentabletdriver
 
-			#General
+#General
 			firefox
 			spotify
-            neofetch
-            keymapp
-            ranger
-            wofi
-            redshift
-            unzip
-            dunst
-            flameshot
-            pciutils
-            element-desktop
-            cinnamon.nemo
-            swww
-            waypaper
-            mpv
-            betterbird
+			neofetch
+			keymapp
+			ranger
+			wofi
+			redshift
+			unzip
+			dunst
+			flameshot
+			pciutils
+			element-desktop
+			cinnamon.nemo
+			swww
+			waypaper
+			mpv
+			betterbird
 
-			#UI
-            waybar
-            ags
-            lxappearance
-            libsForQt5.qt5ct
-            libsForQt5.qtstyleplugin-kvantum
-            kanagawa-gtk-theme
-            kanagawa-icon-theme
+#UI
+			waybar
+			ags
+			lxappearance
+			libsForQt5.qt5ct
+			libsForQt5.qtstyleplugin-kvantum
+			kanagawa-gtk-theme
+			kanagawa-icon-theme
 
-			#Coding
+#Coding
 			neovim
 			git
 			git-credential-manager
@@ -50,25 +50,25 @@
 			alacritty
 			obsidian
 
-			#Coding Languages
+#Coding Languages
 			rustc
-            cargo
-            rustup
-            gcc
-            cmake
-            dotnetCorePackages.sdk_9_0
-			python3
-            lua
+			cargo
+			rustup
+			gcc
+			cmake
+			dotnetCorePackages.sdk_9_0
+			python39
+			lua
 
-            #Art
-            blender
-            krita
-            gimp
+#Art
+			blender
+			krita
+			gimp
 
-			#Fonts
+#Fonts
 			gnome.gucharmap
 			font-awesome
 			material-design-icons
-            cascadia-code
-	];
+			cascadia-code
+			];
 }
