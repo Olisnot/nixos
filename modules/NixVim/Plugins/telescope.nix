@@ -7,7 +7,6 @@
 				enable = true;
 				keymaps = {
 					"<leader>f" = "find_files";
-					};
 				};
 			};
 		};
