@@ -7,6 +7,7 @@
 		{
 			action = "vim.cmd.Ex";
 			key = "<leader>e";
+			mode = [ "n" ];
 		}
 
 		];
