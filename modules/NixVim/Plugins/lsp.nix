@@ -9,7 +9,7 @@
 					bashls.enable = true;
 					cmake.enable = true;
 					csharp-ls.enable = true;
-					pylsp = {
+					pylyzer = {
 						enable = true;
 						autostart = true;
 					};
