@@ -2,7 +2,7 @@
 
 {
 	programs.nixvim = {
-		keymaps = [
+		keymaps = {[
 		{
 			action = "vim.cmd.Ex";
 			key = "<leader>e";
@@ -10,7 +10,7 @@
 			options = {
 				silent = true;
 			};
-		];
+		];};
 		};
 	};
 }
