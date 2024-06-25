@@ -6,5 +6,6 @@
 		./undotree.nix
 		./lsp.nix
 		./treesitter.nix
+		./coq.nix
 	];
 }
