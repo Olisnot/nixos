@@ -83,12 +83,6 @@
 	  };
   };
 
-  qt = {
-    enable = true;
-    platformTheme = "gnome";
-    style = "adwaita-dark";
-  };
-
   systemd.user.sessionVariables = config.home-manager.users.oliver.home.sessionVariables;
 
   #virt-manager
