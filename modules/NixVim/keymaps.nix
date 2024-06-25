@@ -1,4 +1,4 @@
-{self, ... }: 
+self, ... }: 
 
 {
 	programs.nixvim = {
@@ -10,7 +10,7 @@
 			mode = [ "n" ];
 		}
 		{
-			action = "<cmd> lua function() builtin.grep_string({ search = vim.fn.input(\"Grep > \") }); end <CR>";
+			action = "<cmd>Telescope live_grep<CR>";
 			key = "<leader>gr";
 			mode = [ "n" ];
 		}
