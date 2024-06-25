@@ -11,6 +11,7 @@
 	};
 
 	home-manager = { 
+		backupFileExtension = "hm-backup";
 		extraSpecialArgs = {inherit inputs;};
 		users = {
 			"oliver" = import ../home.nix;
