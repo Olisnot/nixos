@@ -1,11 +1,11 @@
-{ pkgs, inputs, ... }: 
+{self, ... }: 
 
 {
 	programs.nixvim = {
 		keymaps = [
 
 		{
-			action = "<cmd>Ex";
+			action = "<cmd>Ex<CR>";
 			key = "<leader>e";
 			mode = [ "n" ];
 		}
