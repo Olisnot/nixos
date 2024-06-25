@@ -9,7 +9,11 @@
 					bashls.enable = true;
 					cmake.enable = true;
 					csharp-ls.enable = true;
-					rust-analyzer.enable = true;
+					rust-analyzer = { 
+						enable = true;
+						installCargo = true;
+						installRustc = true;
+					};
 				};
 			};
 		};
