@@ -7,7 +7,7 @@
 			settings = {
 				transparent = true;
 				theme = "dragon";
-				background.dark = "dragon"
+				background.dark = "dragon";
 			};
 		};
 	};
