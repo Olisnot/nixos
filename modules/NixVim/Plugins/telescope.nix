@@ -7,8 +7,6 @@
 				enable = true;
 				keymaps = {
 					"<leader>f" = "find_files";
-					"<leader>gr" = {
-						action = "function() builtin.grep_string({ search = vim.fn.input(\"Grep > \") }";
 					};
 				};
 			};
