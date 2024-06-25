@@ -5,7 +5,7 @@
 		keymaps = [
 
 		{
-			action = "vim.cmd.Ex";
+			action = "<cmd>Ex";
 			key = "<leader>e";
 			mode = [ "n" ];
 		}
