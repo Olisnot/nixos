@@ -12,7 +12,6 @@
 
 		globalOpts = {
 			relativenumber = true;
-			background = ""
 		};
 
 		globals.mapleader = " ";
