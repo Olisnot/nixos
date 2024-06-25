@@ -83,11 +83,23 @@
 	  };
   };
 
+  qt = {
+    enable = true;
+    platformTheme = "gnome";
+    style = "adwaita-dark";
+  };
+
+  systemd.user.sessionVariables = config.home-manager.users.oliver.home.sessionVariables;
+
   #virt-manager
   dconf.settings = {
       "org/virt-manager/virt-manager/connections" = {
           autoconnect = ["qemu:///system"];
           uris = ["qemu:///system"];
+      };
+
+      "org/gnome/desktop/background" = {
+        picture-uri-dark = "file://${pkgs.nixos-artwork.wallpapers.nineish-dark-gray.src}";
       };
 
       "org/gnome/desktop/interface" = {
