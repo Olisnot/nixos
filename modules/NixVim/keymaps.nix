@@ -3,10 +3,12 @@
 {
 	programs.nixvim = {
 		keymaps = [
+
 		{
 			action = "vim.cmd.Ex";
 			key = "<leader>e";
+		}
+
 		];
-		};
 	};
 }
