@@ -9,7 +9,7 @@
 				theme = "dragon";
 
 			};
+			options.background = ""
 		};
-		options.background = ""
 	};
 }
