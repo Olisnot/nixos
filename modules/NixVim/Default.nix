@@ -3,7 +3,7 @@
 {
 	imports = [
 		./kanagawa.nix
-		#./keymaps.nix
+		./keymaps.nix
 		./Plugins/Default.nix
 	];
 	programs.nixvim = {
