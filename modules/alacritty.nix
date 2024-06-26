@@ -9,11 +9,6 @@
 				index = 16;
 			};
 
-			colors.indexed_colors = {
-				color = "#b98d7b";
-				index = 17;
-			};
-
 			colors.bright = {
 				black = "#a6a69c";
 				blue = "#7FB4CA";
