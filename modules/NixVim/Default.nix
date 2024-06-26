@@ -14,6 +14,10 @@
 			relativenumber = true;
 		};
 
+		localOpts = {
+			conceallevel = 2;
+		};
+
 		globals.mapleader = " ";
 	};
 }
