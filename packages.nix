@@ -38,7 +38,6 @@
 
 #Coding
 			neovim
-			git
 			git-credential-manager
 			alacritty
 			obsidian
