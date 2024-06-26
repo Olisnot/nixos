@@ -7,5 +7,6 @@
 		./lsp.nix
 		./treesitter.nix
 		./coq.nix
+		./cursorline.nix
 	];
 }
