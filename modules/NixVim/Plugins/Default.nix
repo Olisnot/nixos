@@ -8,5 +8,6 @@
 		./treesitter.nix
 		./coq.nix
 		./cursorline.nix
+		./obsidian.nix
 	];
 }
