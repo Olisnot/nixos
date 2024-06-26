@@ -5,8 +5,8 @@
 		enable = true;
 		settings = {
 			colors.indexed_colors = {
-				color = "#b6927b";
-				index = 16;
+				color = [ "#b6927b" "#b98d7b"];
+				index = [ 16 17 ];
 			};
 
 			colors.bright = {
