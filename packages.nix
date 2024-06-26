@@ -39,14 +39,11 @@
 			lxappearance
 			libsForQt5.qt5ct
 			libsForQt5.qtstyleplugin-kvantum
-			kanagawa-gtk-theme
-			kanagawa-icon-theme
 
 #Coding
 			neovim
 			git
 			git-credential-manager
-			tmux
 			alacritty
 			obsidian
 
