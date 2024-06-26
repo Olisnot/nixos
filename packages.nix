@@ -3,7 +3,7 @@
 {
 	environment.systemPackages = with pkgs; [
 #Utility
-		killall
+			killall
 			util-linux
 			htop
 			lshw
@@ -28,17 +28,13 @@
 			pciutils
 			element-desktop
 			cinnamon.nemo
-			swww
-			waypaper
 			mpv
 			betterbird
 
 #UI
 			waybar
+			swww
 			ags
-			lxappearance
-			libsForQt5.qt5ct
-			libsForQt5.qtstyleplugin-kvantum
 
 #Coding
 			neovim
