@@ -13,6 +13,8 @@
         url = "github:nix-community/nixvim";
         inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    godot.url = "github:Quoteme/nixos-godot-bin";
   };
 
   outputs = { self, nixpkgs, ... }@inputs: {
@@ -21,6 +23,7 @@
       modules = [
         ./configuration.nix
         inputs.home-manager.nixosModules.default
+	inputs.godot.packages.x86_64-linux.godotMono
       ];
     };
   };
