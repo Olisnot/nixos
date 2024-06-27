@@ -21,7 +21,6 @@
 			keymapp
 			ranger
 			wofi
-			redshift
 			unzip
 			dunst
 			flameshot

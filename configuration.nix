@@ -83,21 +83,6 @@
 	xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk pkgs.xdg-desktop-portal-hyprland];
 
 
-# Enable and Configure Redshift
-	location.provider = "geoclue2";
-	services.redshift = {
-		enable = true;
-		brightness = {
-			day = "1";
-			night = "1";
-		};
-		temperature = {
-			day = 5500;
-			night = 3700;
-		};
-	};
-
-
 # Enable Plasma
 	services.xserver.displayManager = { 
 		defaultSession = "hyprland";
