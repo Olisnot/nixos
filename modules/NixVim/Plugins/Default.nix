@@ -9,5 +9,6 @@
 		./coq.nix
 		./cursorline.nix
 		./obsidian.nix
+		./neoscroll.nix
 	];
 }
