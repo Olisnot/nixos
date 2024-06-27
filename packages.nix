@@ -42,6 +42,7 @@
 			git-credential-manager
 			alacritty
 			obsidian
+			inputs.godot.packages.x86_64-linux.godotMono
 
 #Coding Languages
 			rustc
