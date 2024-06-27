@@ -5,6 +5,7 @@
 		plugins = {
 			godot = {
 				enable = true;
+				godotPackage = pkgs.godot_4;
 			};
 		};
 	};
