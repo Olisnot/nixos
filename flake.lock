@@ -2,7 +2,7 @@
   "nodes": {
     "devshell": {
       "inputs": {
-        "flake-utils": "flake-utils_2",
+        "flake-utils": "flake-utils",
         "nixpkgs": [
           "nixvim",
           "nixpkgs"
@@ -78,24 +78,6 @@
         "systems": "systems"
       },
       "locked": {
-        "lastModified": 1694529238,
-        "narHash": "sha256-zsNZZGTGnMOf9YpHKJqMSsa0dXbfmxeoJ7xHlrt+xmY=",
-        "owner": "numtide",
-        "repo": "flake-utils",
-        "rev": "ff7b65b44d01cf9ba6a71320833626af21126384",
-        "type": "github"
-      },
-      "original": {
-        "owner": "numtide",
-        "repo": "flake-utils",
-        "type": "github"
-      }
-    },
-    "flake-utils_2": {
-      "inputs": {
-        "systems": "systems_2"
-      },
-      "locked": {
         "lastModified": 1701680307,
         "narHash": "sha256-kAuep2h5ajznlPMD9rnQyffWG8EM/C73lejGofXvdM8=",
         "owner": "numtide",
@@ -156,79 +138,6 @@
         "owner": "hercules-ci",
         "repo": "gitignore.nix",
         "type": "github"
-      }
-    },
-    "godot": {
-      "inputs": {
-        "flake-utils": "flake-utils",
-        "godot-desktop-file": "godot-desktop-file",
-        "godot-icon-png": "godot-icon-png",
-        "godot-icon-svg": "godot-icon-svg",
-        "godot-manpage": "godot-manpage",
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1696937914,
-        "narHash": "sha256-s2RaTdMK8xdj+e9BAlckpkUbIbAUP7I5CWuOkbiTndk=",
-        "owner": "Quoteme",
-        "repo": "nixos-godot-bin",
-        "rev": "68adff8f70dceb2a4535dacf772b687019644250",
-        "type": "github"
-      },
-      "original": {
-        "owner": "Quoteme",
-        "repo": "nixos-godot-bin",
-        "type": "github"
-      }
-    },
-    "godot-desktop-file": {
-      "flake": false,
-      "locked": {
-        "narHash": "sha256-FYiixHXikdWjfSDwYc0ZcchoW9UiOBh0cMsClOuSJFY=",
-        "type": "file",
-        "url": "https://raw.githubusercontent.com/godotengine/godot/master/misc/dist/linux/org.godotengine.Godot.desktop"
-      },
-      "original": {
-        "type": "file",
-        "url": "https://raw.githubusercontent.com/godotengine/godot/master/misc/dist/linux/org.godotengine.Godot.desktop"
-      }
-    },
-    "godot-icon-png": {
-      "flake": false,
-      "locked": {
-        "narHash": "sha256-Y4Y2RpEiZOBJEEtgJZVHDJ+GUgN2fn9VPP+oZWQZMr0=",
-        "type": "file",
-        "url": "https://raw.githubusercontent.com/godotengine/godot/master/icon.png"
-      },
-      "original": {
-        "type": "file",
-        "url": "https://raw.githubusercontent.com/godotengine/godot/master/icon.png"
-      }
-    },
-    "godot-icon-svg": {
-      "flake": false,
-      "locked": {
-        "narHash": "sha256-hgrosZPGt/q0YsdhKK7GPO6r9kYwum6e9Y9kYwueiSM=",
-        "type": "file",
-        "url": "https://raw.githubusercontent.com/godotengine/godot/master/icon.svg"
-      },
-      "original": {
-        "type": "file",
-        "url": "https://raw.githubusercontent.com/godotengine/godot/master/icon.svg"
-      }
-    },
-    "godot-manpage": {
-      "flake": false,
-      "locked": {
-        "narHash": "sha256-QBl3N8oOgvzqoTiCCKWUq9PiBqjywhqvCaYM1g40FQw=",
-        "type": "file",
-        "url": "https://raw.githubusercontent.com/godotengine/godot/master/misc/dist/linux/godot.6"
-      },
-      "original": {
-        "type": "file",
-        "url": "https://raw.githubusercontent.com/godotengine/godot/master/misc/dist/linux/godot.6"
       }
     },
     "home-manager": {
@@ -338,28 +247,12 @@
     },
     "root": {
       "inputs": {
-        "godot": "godot",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
         "nixvim": "nixvim"
       }
     },
     "systems": {
-      "locked": {
-        "lastModified": 1681028828,
-        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
-        "owner": "nix-systems",
-        "repo": "default",
-        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nix-systems",
-        "repo": "default",
-        "type": "github"
-      }
-    },
-    "systems_2": {
       "locked": {
         "lastModified": 1681028828,
         "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",

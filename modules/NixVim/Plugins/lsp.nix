@@ -18,6 +18,7 @@
 						installCargo = true;
 						installRustc = true;
 					};
+					gdscript.enable = true;
 				};
 			};
 		};
