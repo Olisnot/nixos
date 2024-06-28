@@ -6,6 +6,7 @@
 			lsp = {
 				enable = true;
 				servers = {
+					nil-ls.enable = true;
 					bashls.enable = true;
 					cmake.enable = true;
 					csharp-ls.enable = true;

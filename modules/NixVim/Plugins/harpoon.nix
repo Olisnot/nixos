@@ -3,9 +3,8 @@
 {
 	programs.nixvim = {
 		plugins = {
-			godot = {
+			harpoon = {
 				enable = true;
-				godotPackage = pkgs.godot_4;
 			};
 		};
 	};
