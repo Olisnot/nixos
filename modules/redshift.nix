@@ -1,4 +1,4 @@
-{ pkgs, config, libs, ... }:
+{ ... }:
 
 {
 	location.provider = "geoclue2";
