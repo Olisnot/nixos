@@ -9,6 +9,7 @@
         config = "/nixos/OpenConfig.sh";
         rebuild = "/nixos/rebuild.sh";
         cleanGenerations = "/nixos/trim-generations.sh";
+        Obsidian = "cd /mnt/1tb/Obsidian && tmux new-session -A -s Obsidian";
     };
 
 }
