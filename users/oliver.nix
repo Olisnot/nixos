@@ -6,12 +6,10 @@
 		isNormalUser = true;
 		description = "Oliver";
 		extraGroups = [ "networkmanager" "wheel" ];
-		packages = with pkgs; [
-		];
 	};
 
 	home-manager = { 
-		backupFileExtension = "mbackup";
+		backupFileExtension = "backup";
 		extraSpecialArgs = {inherit inputs;};
 		users = {
 			"oliver" = import ../home.nix;
