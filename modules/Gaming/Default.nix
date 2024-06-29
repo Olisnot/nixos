@@ -9,10 +9,14 @@
 	programs.gamemode.enable = true;
 
 	environment.systemPackages = with pkgs; [
-		lutris
+                        lutris
 			steam-run
 			heroic
 			protonup-qt
 			mangohud
+
+                        #Emulation
+                        retroarch
+                        rpcs3
 	];
 }

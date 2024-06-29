@@ -17,6 +17,7 @@
 
 #General
 			firefox
+                        ani-cli
 			spotify
 			neofetch
 			keymapp
