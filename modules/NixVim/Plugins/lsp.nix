@@ -20,6 +20,7 @@
 						installRustc = true;
 					};
 					gdscript.enable = true;
+					marksman.enable = true;
 				};
 			};
 		};
