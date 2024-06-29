@@ -13,6 +13,7 @@
 			ripgrep
 			iwgtk
 			opentabletdriver
+                        blueman
 
 #General
 			firefox

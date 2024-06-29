@@ -125,6 +125,9 @@
 		jack.enable = true;
 	};
 
+# Enable Bluetooth
+        services.blueman.enable = true;
+
 # Enable Hyprland
 	programs.hyprland = {
 		enable = true;
