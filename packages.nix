@@ -31,6 +31,7 @@
 			cinnamon.nemo
 			mpv
 			betterbird
+                        libreoffice-still
 
 #UI
 			waybar
