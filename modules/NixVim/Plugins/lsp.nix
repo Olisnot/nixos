@@ -8,6 +8,7 @@
 				servers = {
 					nil-ls.enable = true;
 					bashls.enable = true;
+					clangd.enable = true;
 					cmake.enable = true;
 					csharp-ls.enable = true;
 					pylyzer = {

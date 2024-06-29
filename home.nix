@@ -3,8 +3,7 @@
 
 {
 	imports = [
-		./modules/git.nix
-		./modules/alacritty.nix
+		./modules/home.nix
 	];
   home.username = "oliver";
   home.homeDirectory = "/home/oliver";
