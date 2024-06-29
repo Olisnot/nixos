@@ -11,5 +11,6 @@
 		./obsidian.nix
 		./neoscroll.nix
 		./godot.nix
+		./vim-nix.nix
 	];
 }
