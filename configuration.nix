@@ -126,6 +126,11 @@
 	};
 
 # Enable Bluetooth
+        hardware.enableAllFirmware = true;
+        hardware.bluetooth = {
+          enable = true;
+          powerOnBoot = true;
+        };
         services.blueman.enable = true;
 
 # Enable Hyprland
