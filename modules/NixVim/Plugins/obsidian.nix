@@ -9,7 +9,7 @@
 					workspaces = [
 					{
 						name = "vault";
-						path = "/mnt/1tb/Obsidian";
+						path = "/home/oliver/Obsidian/";
 					}
 					];
 				};
