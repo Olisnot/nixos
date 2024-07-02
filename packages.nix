@@ -32,6 +32,7 @@
 			mpv
 			betterbird
                         libreoffice-still
+                        waypaper
 
 #UI
 			waybar
