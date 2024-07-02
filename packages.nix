@@ -14,6 +14,7 @@
 			iwgtk
 			opentabletdriver
                         blueman
+                        bottles
 
 #General
 			firefox
