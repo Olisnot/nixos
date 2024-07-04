@@ -7,7 +7,7 @@
 				enable = true;
 				settings = {
 					keymap.recommended = true;
-					auto_start = true;
+					auto_start = "shut-up";
 					xdg = true;
 				};
 			};
