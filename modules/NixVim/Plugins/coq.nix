@@ -11,6 +11,8 @@
 					xdg = true;
 				};
 			};
+
+                        coq-thirdparty.enable = true;
 		};
 	};
 }
