@@ -1,7 +1,7 @@
 { ... }:
 
 {
-  programs.waybar.settings =
+  programs.waybar.settings = [
     {
       layer = "top";
       position = "top";
@@ -49,7 +49,7 @@
           transition-left-to-right = false;
         };
         orientation = "horizontal";
-        "modules" = [
+        modules = [
           "custom/power"
           "custom/logout"
           "custom/suspend"
@@ -93,5 +93,6 @@
         on-click = "pavucontrol";
         ignored-sinks = ["Easy Effects Sink"];
       };
-    };
+    }
+  ];
 }
