@@ -49,7 +49,7 @@
           transition-left-to-right = false;
         };
         orientation = "horizontal";
-        modules = [
+        "modules" = [
           "custom/power"
           "custom/logout"
           "custom/suspend"
