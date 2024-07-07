@@ -26,7 +26,6 @@
 			wofi
 			unzip
 			dunst
-			flameshot
 			pciutils
 			element-desktop
 			cinnamon.nemo
@@ -34,6 +33,8 @@
 			betterbird
                         libreoffice-still
                         waypaper
+                        slurp
+                        grim
 
 #UI
 			waybar
