@@ -1,8 +1,7 @@
 { ... }:
 
 {
-  programs.waybar.style = {
-    "
+  programs.waybar.style = ''
     * {
       font-family: 'SF Mono', sans-serif;
       font-weight: bold;
@@ -111,6 +110,5 @@
   color: #C8C093;
   border: 1px solid #C8C093;
 }
-"
-  };
+'';
 }
