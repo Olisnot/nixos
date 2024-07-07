@@ -1,7 +1,7 @@
 { ... }:
 
 {
-  programs.waybar.settings = ''
+  programs.waybar.settings =
     {
       "layer": "top",
       "position": "top",
@@ -94,5 +94,4 @@
         "ignored-sinks": ["Easy Effects Sink"]
       }
     }
-  '';
 }
