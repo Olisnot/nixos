@@ -162,6 +162,10 @@
 #   enableSSHSupport = true;
 # };
 
+environment.systemPackages = [
+  inputs.lobster.packages.x64.lobster
+];
+
 # List services that you want to enable:
 
 # Enable the OpenSSH daemon.
