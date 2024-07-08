@@ -4,7 +4,7 @@
 {
 	imports =
 		[ # Include the results of the hardware scan.
-		inputs.home-manager.nixosModules.default
+		        inputs.home-manager.nixosModules.default
 			inputs.nixvim.nixosModules.nixvim
 			./hardware-configuration.nix
 			./packages.nix
@@ -13,6 +13,10 @@
 			./users/work.nix
 			./modules/Default.nix
 		];
+
+                environment.systemPackages = [
+                  inputs.lobster.packages.aarch64-linux.lobster
+                ];
 
 	nix.settings.experimental-features = ["nix-command" "flakes"];
 
@@ -161,10 +165,6 @@
 #   enable = true;
 #   enableSSHSupport = true;
 # };
-
-environment.systemPackages = [
-  inputs.lobster.packages.lobster
-];
 
 # List services that you want to enable:
 
