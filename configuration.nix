@@ -15,7 +15,7 @@
 		];
 
                 environment.systemPackages = [
-                  inputs.lobster.packages.aarch64-linux.lobster
+                  inputs.lobster.packages.x86_64-linux.lobster
                 ];
 
 	nix.settings.experimental-features = ["nix-command" "flakes"];
