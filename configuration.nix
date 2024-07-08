@@ -163,7 +163,7 @@
 # };
 
 environment.systemPackages = [
-  inputs.lobster.packages.x64.lobster
+  inputs.lobster.packages.lobster
 ];
 
 # List services that you want to enable:
