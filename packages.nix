@@ -14,6 +14,7 @@
 			iwgtk
 			opentabletdriver
                         blueman
+                        gtklock
                         bottles
 
 #General
