@@ -15,6 +15,7 @@
 			opentabletdriver
                         blueman
                         gtklock
+                        gtklock-userinfo-module
                         bottles
 
 #General
