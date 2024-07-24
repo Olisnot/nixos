@@ -14,14 +14,13 @@
 			iwgtk
 			opentabletdriver
                         blueman
-                        gtklock
-                        gtklock-userinfo-module
                         bottles
 
 #General
 			firefox
                         ani-cli
 			spotify
+                        vesktop
 			neofetch
 			keymapp
 			ranger
@@ -37,6 +36,8 @@
                         waypaper
                         slurp
                         grim
+                        tectonic
+                        mupdf
 
 #UI
 			waybar
@@ -69,6 +70,7 @@
 #Fonts
 			gnome.gucharmap
 			font-awesome
+                        nerdfonts
 			material-design-icons
 			cascadia-code
 			];

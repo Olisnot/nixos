@@ -72,7 +72,7 @@
 
 	services.xserver.dpi = 96;
 	environment.variables = {
-		GDK_SCALE = "0.5";
+                GDK_SCALE = "0.5";
 		QT_STYLE_OVERRIDE ="kvantum";
 		WLR_NO_HARDWARE_CURSORS = "1";
 		NIXOS_OZONE_WL = "1";
@@ -94,6 +94,9 @@
 	};
 #services.xserver.desktopManager.gnome.enable = true;
 	services.desktopManager.plasma6.enable = true;
+
+# Use hyprlock for lock screen
+        programs.hyprlock.enable = true;
 
 # Huion tablet drivers
 	hardware.opentabletdriver.enable = true;
@@ -142,6 +145,8 @@
 		enable = true;
 		xwayland.enable = true;
 	};
+
+        virtualisation.waydroid.enable = true;
 
 # use the example session manager (no others are packaged yet so this is enabled by default,
 # no need to redefine it in your config for now)
