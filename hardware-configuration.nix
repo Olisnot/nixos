@@ -14,18 +14,13 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/e6a562c7-fc8d-41a2-ba13-9f39c1ac2224";
+    { device = "/dev/disk/by-uuid/ccd212df-7500-421e-839e-a24543152e32";
       fsType = "ext4";
     };
 
   fileSystems."/boot" =
     { device = "/dev/disk/by-uuid/7404-E105";
       fsType = "vfat";
-    };
-
-    fileSystems."/mnt/1tb" =
-      { device = "/dev/disk/by-uuid/308d89fc-74e6-4507-8b09-0e6a4720952b";
-      fsType = "ext4";
     };
 
   swapDevices = [ ];
@@ -35,6 +30,7 @@
   # still possible to use this option, but it's recommended to use it in conjunction
   # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
   networking.useDHCP = lib.mkDefault true;
+  # networking.interfaces.enp0s20f0u2u4c2.useDHCP = lib.mkDefault true;
   # networking.interfaces.enp7s0.useDHCP = lib.mkDefault true;
   # networking.interfaces.wlp0s20f3.useDHCP = lib.mkDefault true;
 
