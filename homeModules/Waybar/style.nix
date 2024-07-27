@@ -5,7 +5,7 @@
     * {
       font-family: 'SF Mono', sans-serif;
       font-weight: bold;
-      font-size: 20px;
+      font-size: 15px;
       border-radius: 10px;
     }
 
@@ -46,7 +46,6 @@
   color: #C8C093;
   background-color: #16161D;
   border: 1px solid #C8C093;
-  font-size: 15px;
 }
 
 #tray {
@@ -74,7 +73,6 @@
   color: #C8C093;
   background-color: #16161D;
   border: 1px solid #C8C093;
-  font-size: 20px;
 }
 
 #custom-reboot {
@@ -114,7 +112,6 @@
   background-color: #16161D;
   color: #C8C093;
   border: 1px solid #C8C093;
-  font-size: 15px;
 }
 '';
 }
