@@ -113,6 +113,7 @@
   background-color: #16161D;
   color: #C8C093;
   border: 1px solid #C8C093;
+  font-size: 15px;
 }
 '';
 }
