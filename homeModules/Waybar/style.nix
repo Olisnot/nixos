@@ -46,6 +46,7 @@
   color: #C8C093;
   background-color: #16161D;
   border: 1px solid #C8C093;
+  font-size: 15px;
 }
 
 #tray {
@@ -73,7 +74,7 @@
   color: #C8C093;
   background-color: #16161D;
   border: 1px solid #C8C093;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 #custom-reboot {
