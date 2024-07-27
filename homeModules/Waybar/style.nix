@@ -5,7 +5,7 @@
     * {
       font-family: 'SF Mono', sans-serif;
       font-weight: bold;
-      font-size: 15px;
+      font-size: 20px;
       border-radius: 10px;
     }
 
