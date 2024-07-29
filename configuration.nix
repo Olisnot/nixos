@@ -98,16 +98,6 @@
 # Use hyprlock for lock screen
         programs.hyprlock.enable = true;
 
-# Huion tablet drivers
-	hardware.opentabletdriver.enable = true;
-	hardware.opentabletdriver.daemon.enable = true;
-	hardware.opentabletdriver.blacklistedKernelModules = [
-		"hid-uclogic"
-			"wacom"
-	];
-	services.udev.extraRules = "";
-
-
 # Set Laptop lid
 	services.logind.lidSwitchExternalPower = "ignore";
 
