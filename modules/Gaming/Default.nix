@@ -4,7 +4,7 @@
 	imports =
 		[ 
 			./Steam.nix
-			./aagl.nix
+                        #./aagl.nix
 		];
 	programs.gamemode.enable = true;
         hardware.xpadneo.enable = true;

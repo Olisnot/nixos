@@ -6,6 +6,7 @@
 		./NixVim/Default.nix
 		./Gaming/Default.nix
 		./tmux.nix
+                ./OpenTabletDriver.nix
 		./redshift.nix
 		./virt-manager.nix
 		./aliases.nix
