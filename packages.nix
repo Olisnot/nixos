@@ -15,6 +15,7 @@
 			opentabletdriver
                         blueman
                         bottles
+                        usbutils
 
 #General
 			firefox
