@@ -11,19 +11,19 @@
 
     window#waybar {
       background-color: transparent;
-      color: #ebdbb2;
+      color: #fffafa;
     }
 
 #workspaces {
-  background-color: #16161D;
-  color: #C8C093;
   margin-left: 10px;
-  border: 1px solid #C8C093;
+  background-color: #100c08;
+  color: #fffafa;
+  border: 1px solid #fffafa;
 }
 
 #workspaces button.active {
-  background-color: #C8C093;
-  color: #282828;
+  background-color: #fffafa;
+  color: #100c08;
 }
 
 .modules-left {
@@ -43,36 +43,36 @@
   padding-right: 10px;
   padding-left: 10px;
   margin-right: 10px;
-  color: #C8C093;
-  background-color: #16161D;
-  border: 1px solid #C8C093;
+  background-color: #100c08;
+  color: #fffafa;
+  border: 1px solid #fffafa;
 }
 
 #tray {
   padding-right: 10px;
   padding-left: 10px;
   margin-right: 10px;
-  color: #C8C093;
-  background-color: #16161D;
-  border: 1px solid #C8C093;
+  background-color: #100c08;
+  color: #fffafa;
+  border: 1px solid #fffafa;
 }
 
 #pulseaudio {
   padding-right: 10px;
   padding-left: 10px;
   margin-right: 10px;
-  color: #C8C093;
-  background-color: #16161D;
-  border: 1px solid #C8C093;
+  background-color: #100c08;
+  color: #fffafa;
+  border: 1px solid #fffafa;
 }
 
 #custom-power {
   padding-right: 10px;
   padding-left: 10px;
   margin-right: 10px;
-  color: #C8C093;
-  background-color: #16161D;
-  border: 1px solid #C8C093;
+  background-color: #100c08;
+  color: #fffafa;
+  border: 1px solid #fffafa;
   font-size: 20px;
 }
 
@@ -80,9 +80,9 @@
   padding-right: 10px;
   padding-left: 10px;
   margin-right: 10px;
-  color: #C8C093;
-  background-color: #16161D;
-  border: 1px solid #C8C093;
+  background-color: #100c08;
+  color: #fffafa;
+  border: 1px solid #fffafa;
   font-size: 20px;
 }
 
@@ -90,9 +90,9 @@
   padding-right: 10px;
   padding-left: 10px;
   margin-right: 10px;
-  color: #C8C093;
-  background-color: #16161D;
-  border: 1px solid #C8C093;
+  background-color: #100c08;
+  color: #fffafa;
+  border: 1px solid #fffafa;
   font-size: 20px;
 }
 
@@ -110,9 +110,9 @@
   padding-right: 10px;
   padding-left: 10px;
   margin-left: 10px;
-  background-color: #16161D;
-  color: #C8C093;
-  border: 1px solid #C8C093;
+  background-color: #100c08;
+  color: #fffafa;
+  border: 1px solid #fffafa;
 }
 '';
 }

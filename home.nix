@@ -32,12 +32,12 @@
   gtk = {
 	  enable = true;
 	  theme = {
-		  package = pkgs.kanagawa-gtk-theme;
-		  name = "Kanagawa-B";
+		  package = pkgs.graphite-gtk-theme;
+		  name = "graphite-gtk-theme-black";
 	  };
 	  iconTheme = {
-		  package = pkgs.kanagawa-icon-theme;
-		  name = "Kanagawa";
+		  package = pkgs.tela-circle-icon-theme;
+		  name = "tela-circle-icon-theme-black";
 	  };
 
 	  gtk3.extraConfig = {

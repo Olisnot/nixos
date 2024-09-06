@@ -12,7 +12,7 @@
       modules-right = [ "tray" "battery" "pulseaudio" "group/power" ];
 
       battery = {
-        format = " {capacity}%";
+        format = " {capacity}%";
         format-charging = ": {capacity}%";
       };
       clock = {
@@ -23,16 +23,16 @@
         format = "{icon}";
         on-click = "activate";
         format-icons = {
-          "1" = "";
-          "2" = "";
-          "3" = "";
-          "4" = "";
-          "5" = "";
-          "6" = "";
-          "7" = "";
-          "8" = "";
-          "9" = "";
-          "10" = "";
+          "1" = "";
+          "2" = "";
+          "3" = "";
+          "4" = "";
+          "5" = "";
+          "6" = "";
+          "7" = "";
+          "8" = "";
+          "9" = "";
+          "10" = "";
         };
         sort-by-number = true;
       };
@@ -86,8 +86,8 @@
         format-bluetooth = "{icon}";
         format-muted = "";
         format-icons = {
-          headphone = "";
-          default = ["" ""];
+          headphone = "";
+          default = ["" ""];
         };
         scroll-step = 1;
         on-click = "pavucontrol";
