@@ -2,7 +2,8 @@
 
 {
 	imports = [
-		./kanagawa.nix
+		#./kanagawa.nix
+                ./one.nix
 		./keymaps.nix
 		./Plugins/Default.nix
 	];
