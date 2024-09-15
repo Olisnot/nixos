@@ -31,10 +31,6 @@
                           foreground   = "ffffff";
 			};
 
-			colors.indexed_colors = {
-                                index = 16;
-                                color = "#fec43f";
-			};
 		};
 	};
 }
