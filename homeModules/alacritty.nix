@@ -28,7 +28,7 @@
 
 			colors.primary = {
                           background   = "#000000";
-                          foreground   = "ffffff";
+                          foreground   = "#ffffff";
 			};
 
 		};
