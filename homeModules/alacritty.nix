@@ -5,39 +5,35 @@
 		enable = true;
 		settings = {
 			colors.bright = {
-				black = "#a6a69c";
-				blue = "#7FB4CA";
-				cyan = "#7AA89F";
-				green = "#87a987";
-				magenta = "#938AA9";
-				red = "#E46876";
-				white = "#c5c9c5";
-				yellow = "#E6C384";
+                          black     = "#1e1e1e";
+                          red       = "#ff5f5f";
+                          green     = "#44df44";
+                          yellow    = "#efef00";
+                          blue      = "#338fff";
+                          magenta   = "#ff66ff";
+                          cyan      = "#00eff0";
+                          white     = "#989898";
 			};
 
 			colors.normal = {
-				black = "#0d0c0c";
-				blue = "#8ba4b0";
-				cyan = "#8ea4a2";
-				green = "#8a9a7b";
-				magenta = "#a292a3";
-				red = "#c4746e";
-				white = "#C8C093";
-				yellow = "#c4b28a";
+                          black     = "#000000";
+                          red       = "#ff5f59";
+                          green     = "#44bc44";
+                          yellow    = "#d0bc00";
+                          blue      = "#2fafff";
+                          magenta   = "#feacd0";
+                          cyan      = "#00d3d0";
+                          white     = "#ffffff";
 			};
 
 			colors.primary = {
-				background = "#181616";
-				foreground = "#c5c9c5";
+                          background   = "#000000";
+                          foreground   = "ffffff";
 			};
 
-			colors.selection = {
-				background = "#2D4F67";
-				foreground = "#C8C093";
-			};
-
-			window = {
-				opacity = 0.7;
+			colors.indexed_colors = {
+                                index = 16;
+                                color = "#fec43f";
 			};
 		};
 	};
