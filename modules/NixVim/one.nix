@@ -2,8 +2,12 @@
 
 {
 	programs.nixvim = {
-		colorschemes.one = {
+		colorschemes.dracula-nvim = {
 			enable = true;
+
+                        settings = {
+                          transparent_bg = true;
+                        };
 		};
 	};
 }
