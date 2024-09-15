@@ -39,6 +39,7 @@
                         grim
                         tectonic
                         mupdf
+                        chatterino2
 
 #UI
 			waybar
