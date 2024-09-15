@@ -7,7 +7,7 @@
 			colors.bright = {
                           black     = "#1e1e1e";
                           red       = "#ff5f5f";
-                          green     = "#44df44";
+                          green     = "#ffffff";
                           yellow    = "#efef00";
                           blue      = "#338fff";
                           magenta   = "#ff66ff";
@@ -18,7 +18,7 @@
 			colors.normal = {
                           black     = "#000000";
                           red       = "#ff5f59";
-                          green     = "#44bc44";
+                          green     = "#ffffff";
                           yellow    = "#d0bc00";
                           blue      = "#2fafff";
                           magenta   = "#feacd0";
