@@ -2,11 +2,19 @@
 
 {
 	programs.nixvim = {
-		colorschemes.dracula-nvim = {
+		colorschemes.ayu = {
 			enable = true;
 
-                        settings = {
-                          transparent_bg = true;
+                        overrides = {
+                          Normal.bg = "None";
+                          ColorColumn.bg = "None";
+                          SignColumn.bg = "None";
+                          Folded.bg = "None";
+                          FoldColumn.bg = "None";
+                          CursorLine.bg = "None";
+                          CursorColumn.bg = "None";
+                          WhichKeyFloat.bg = "None";
+                          VertSplit.bg = "None";
                         };
 		};
 	};
