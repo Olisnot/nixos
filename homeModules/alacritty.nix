@@ -31,6 +31,10 @@
                           foreground   = "#ffffff";
 			};
 
+                        window = {
+                          opacity = 0.7;
+                        };
+
 		};
 	};
 }
