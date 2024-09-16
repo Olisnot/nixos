@@ -60,7 +60,7 @@
 			rustup
 			gcc
 			cmake
-			dotnetCorePackages.sdk_9_0
+                        dotnet-sdk_8
 			python39
 			lua
 
