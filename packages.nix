@@ -40,6 +40,7 @@
                         tectonic
                         mupdf
                         chatterino2
+                        globalprotect-openconnect
 
 #UI
 			waybar
