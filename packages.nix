@@ -41,7 +41,6 @@
                         mupdf
                         chatterino2
                         globalprotect-openconnect
-                        freetube
 
 #UI
 			waybar
