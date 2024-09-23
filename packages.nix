@@ -42,6 +42,7 @@
                         chatterino2
                         globalprotect-openconnect
                         pipe-viewer
+                        gtk-pipe-viewer
 
 #UI
 			waybar
