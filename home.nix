@@ -33,11 +33,11 @@
 	  enable = true;
 	  theme = {
 		  package = pkgs.graphite-gtk-theme;
-		  name = "graphite-gtk-theme-black";
+		  name = "Graphite-Dark";
 	  };
 	  iconTheme = {
 		  package = pkgs.tela-circle-icon-theme;
-		  name = "tela-circle-icon-theme-black";
+		  name = "Tela-circle-dark";
 	  };
 
 	  gtk3.extraConfig = {
