@@ -41,6 +41,7 @@
                         mupdf
                         chatterino2
                         globalprotect-openconnect
+                        pipe-viewer
 
 #UI
 			waybar
