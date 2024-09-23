@@ -1,21 +1,34 @@
-{ pkgs, ... }:
+{ pkgs, builtins, lib, ...}:
 
 {
   programs.chromium = {
     enable = true;
     package = pkgs.ungoogled-chromium;
 
-    extensions = [
-      { 
-        id = "cjpalhdlnbpafiamejdnhcphjbkeiagm";
-        updateUrl = "https://clients2.google.com/service/update2/crx?response=redirect&acceptformat=crx2,crx3&prodversion=126.0&x=id%3Dcjpalhdlnbpafiamejdnhcphjbkeiagm%26installsource%3Dondemand%26uc";
-      } #Ublock origin
-
-      { 
-        id = "nngceckbapebfimnlniiiahkandclblb";
-        updateUrl = "https://clients2.google.com/service/update2/crx?response=redirect&acceptformat=crx2,crx3&prodversion=126.0&x=id%3Dnngceckbapebfimnlniiiahkandclblb%26installsource%3Dondemand%26uc";
-      } #Bitwarden
-
-    ];
+    extensions =
+      let
+        createChromiumExtensionFor = browserVersion: { id, version }:
+        {
+          inherit id;
+          crxPath = builtins.fetchurl {
+            url = "https://clients2.google.com/service/update2/crx?response=redirect&acceptformat=crx2,crx3&prodversion=${browserVersion}&x=id%3D${id}%26installsource%3Dondemand%26uc";
+            name = "${id}.crx";
+          };
+          inherit version;
+        };
+        createChromiumExtension = createChromiumExtensionFor (lib.versions.major pkgs.ungoogled-chromium.version);
+      in
+      [
+        (createChromiumExtension {
+      # ublock origin
+      id = "cjpalhdlnbpafiamejdnhcphjbkeiagm";
+      version = "1.59.0";
+    })
+    (createChromiumExtension {
+      # Bitwarden
+      id = "nngceckbapebfimnlniiiahkandclblb";
+      version = "2024.9.1";
+    })
+  ];
   };
 }
