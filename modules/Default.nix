@@ -9,6 +9,7 @@
                 ./OpenTabletDriver.nix
 		./redshift.nix
 		./virt-manager.nix
+                ./keymapp.nix
 		./aliases.nix
 	];
 }
