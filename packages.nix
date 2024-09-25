@@ -56,6 +56,7 @@
 			alacritty
 			obsidian
 			godot_4
+                        android-studio
 
 #Coding Languages
 			rustc
