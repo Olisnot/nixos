@@ -59,7 +59,12 @@
 	  };
 
   };
-  home.pointerCursor.gtk.enable = true;
+
+  home.pointerCursor = {
+    package = pkgs.graphite-cursors;
+    name = "graphite-dark";
+    size = 16;
+  };
 
   #virt-manager
   dconf.settings = {
