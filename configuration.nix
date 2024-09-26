@@ -73,6 +73,7 @@
 	services.xserver.dpi = 96;
 	environment.variables = {
                 GDK_SCALE = "0.5";
+                XCURSOR_THEME = pkgs.graphite-cursors;
 		QT_STYLE_OVERRIDE ="kvantum";
 		WLR_NO_HARDWARE_CURSORS = "1";
 		NIXOS_OZONE_WL = "1";
@@ -85,15 +86,19 @@
 	};
 
 	xdg.portal.enable = true;
-	xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk pkgs.xdg-desktop-portal-hyprland];
+        xdg.portal.extraPortals = [
+          pkgs.xdg-desktop-portal-gtk 
+          pkgs.xdg-desktop-portal-hyprland
+        ];
 
 
-# Enable Plasma
+# Set Hyprland as defaultSession
 	services.xserver.displayManager = { 
 		defaultSession = "hyprland";
 		gdm.enable = true;
 	};
-#services.xserver.desktopManager.gnome.enable = true;
+
+# Enable Plasma
 	services.desktopManager.plasma6.enable = true;
 
 # Use hyprlock for lock screen
