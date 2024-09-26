@@ -73,7 +73,7 @@
 	services.xserver.dpi = 96;
 	environment.variables = {
                 GDK_SCALE = "0.5";
-                XCURSOR_THEME = pkgs.graphite-cursors;
+                XCURSOR_THEME = "graphite-cursors";
 		QT_STYLE_OVERRIDE ="kvantum";
 		WLR_NO_HARDWARE_CURSORS = "1";
 		NIXOS_OZONE_WL = "1";
