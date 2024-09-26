@@ -41,8 +41,8 @@
 	  };
 
           cursorTheme = {
-                  package = pkgs.graphite-cursors;
-                  name = "graphite-dark";
+                  package = pkgs.vimix-cursors;
+                  name = "Vimix-cursors";
                   size = 16;
           };
 
@@ -58,12 +58,6 @@
 			  '';
 	  };
 
-  };
-
-  home.pointerCursor = {
-    package = pkgs.graphite-cursors;
-    name = "graphite-dark";
-    size = 16;
   };
 
   #virt-manager
