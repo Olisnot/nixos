@@ -93,7 +93,7 @@
 
 
 # Set Hyprland as defaultSession
-	services.xserver.displayManager = { 
+	services.displayManager = { 
 		defaultSession = "hyprland";
 		gdm.enable = true;
 	};

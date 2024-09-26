@@ -29,7 +29,7 @@
 			dunst
 			pciutils
 			element-desktop
-			cinnamon.nemo
+			nemo
 			mpv
 			betterbird
                         libreoffice-still
@@ -73,7 +73,7 @@
 			gimp
 
 #Fonts
-			gnome.gucharmap
+			gucharmap
 			font-awesome
                         nerdfonts
 			material-design-icons
