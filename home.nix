@@ -40,6 +40,12 @@
 		  name = "Tela-circle-dark";
 	  };
 
+          cursorTheme = {
+                  package = pkgs.graphite-cursors;
+                  name = "graphite-dark";
+                  size = 16;
+          };
+
 	  gtk3.extraConfig = {
 		  Settings = ''
 			  gtk-application-prefer-dark-theme=1
