@@ -40,12 +40,6 @@
 		  name = "Tela-circle-dark";
 	  };
 
-          cursorTheme = {
-                  package = pkgs.vimix-cursors;
-                  name = "Vimix-cursors";
-                  size = 16;
-          };
-
 	  gtk3.extraConfig = {
 		  Settings = ''
 			  gtk-application-prefer-dark-theme=1
