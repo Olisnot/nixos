@@ -42,7 +42,7 @@
 
           cursorTheme = {
                   package = pkgs.graphite-cursors;
-                  name = "Graphite-Dark";
+                  name = "graphite-dark";
                   size = 16;
           };
 
