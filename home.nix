@@ -59,6 +59,7 @@
 	  };
 
   };
+  home.pointerCursor.gtk.enable = true;
 
   #virt-manager
   dconf.settings = {
