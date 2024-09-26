@@ -74,7 +74,7 @@
 	environment.variables = {
                 GDK_SCALE = "0.5";
 		QT_STYLE_OVERRIDE ="kvantum";
-		WLR_NO_HARDWARE_CURSORS = "1";
+		WLR_NO_HARDWARE_CURSORS = "0";
 		NIXOS_OZONE_WL = "1";
                 DOTNET_CLI_TELEMETRY_OPTOUT = "1";
 	};

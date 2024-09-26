@@ -18,7 +18,6 @@
                         usbutils
 
 #General
-			firefox
                         ani-cli
 			spotify
                         vesktop

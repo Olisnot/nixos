@@ -4,9 +4,11 @@
   wayland.windowManager.settings = {
 
 # See https://wiki.hyprland.org/Configuring/Monitors/
-monitor = "DP-1,1920x1080,0x1080,1";
-monitor = "HDMI-A-1,1920x1080,1920x1080,1";
-monitor = "eDP-1,1920x1080,19200x0,1";
+monitor = [
+ "DP-1,1920x1080,0x1080,1"
+ "HDMI-A-1,1920x1080,1920x1080,1"
+ "eDP-1,1920x1080,19200x0,1"
+]
 
 
 ###################
@@ -17,8 +19,8 @@ monitor = "eDP-1,1920x1080,19200x0,1";
 
 # Set programs that you use
 terminal = alacritty;
-fileManager = nemo;
-menu = wofi --show run;
+fileManager = "nemo";
+menu = "wofi --show run";
 
 
 #################
