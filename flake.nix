@@ -13,8 +13,6 @@
 			url = "github:nix-community/nixvim";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
-
-                lobster.url = "github:justchokingaround/lobster";
 	};
 
 	outputs = { self, nixpkgs, ... }@inputs: {
