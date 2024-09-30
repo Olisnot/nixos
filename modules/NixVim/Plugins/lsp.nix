@@ -35,7 +35,11 @@
 
                                         ltex.enable = true;
 
-                                        kotlin-language-server.enable = true;
+                                        kotlin-language-server = {
+                                          enable = true;
+                                          autostart = true;
+                                          filetypes = [ "kt" ];
+                                        };
 
 				};
 			};
