@@ -35,6 +35,8 @@
 
                                         ltex.enable = true;
 
+                                        kotlin-language-server.enable = true;
+
 				};
 			};
 		};

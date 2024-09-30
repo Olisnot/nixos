@@ -6,8 +6,5 @@
 		isNormalUser = true;
 		description = "Work";
 		extraGroups = [ "networkmanager" "wheel" ];
-		packages = with pkgs; [
-            globalprotect-openconnect
-		];
 	};
 }
