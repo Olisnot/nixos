@@ -6,7 +6,7 @@
 		./undotree.nix
 		./lsp.nix
 		./treesitter.nix
-		./coq.nix
+		./cmp.nix
 		./cursorline.nix
 		./obsidian.nix
 		./neoscroll.nix
