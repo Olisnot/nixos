@@ -56,6 +56,7 @@
 			obsidian
 			godot_4
                         android-studio
+                        unityhub
 
 #Coding Languages
 			rustc
