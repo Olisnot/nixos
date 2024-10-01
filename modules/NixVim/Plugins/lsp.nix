@@ -16,7 +16,6 @@
 
                                         csharp-ls = { 
                                           enable = true;
-                                          filetypes = ["cs"];
                                         };
 
 					pylyzer = {

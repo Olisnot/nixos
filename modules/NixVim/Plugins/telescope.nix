@@ -11,6 +11,7 @@
 					"<leader>gi" = "git_commits";
 				};
 			};
+                        web-devicons.enable = true;
 		};
 	};
 }
