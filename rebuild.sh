@@ -1,4 +1,4 @@
-!/usr/bin/env bash
+#!/usr/bin/env bash
 cd /nixos 
 sudo git add . 
 sudo git commit -m "rebuild-$(date +"%d-%m-%Y %H:%M:%S")"

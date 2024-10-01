@@ -14,7 +14,10 @@
 
 					cmake.enable = true;
 
-					csharp-ls.enable = true;
+                                        csharp-ls = { 
+                                          enable = true;
+                                          filetypes = ["cs"];
+                                        };
 
 					pylyzer = {
 						enable = true;
