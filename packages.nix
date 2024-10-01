@@ -66,7 +66,7 @@
 			gcc
 			cmake
                         dotnet-sdk_8
-                        dotnetCorePackages.sdk_8_0_2xx
+                        dotnetCorePackages.sdk_8_0_3xx
 			python39
 			lua
 
