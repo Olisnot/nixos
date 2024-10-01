@@ -29,7 +29,7 @@
 			dunst
 			pciutils
 			element-desktop
-			cinnamon.nemo
+			nemo
 			mpv
 			betterbird
                         libreoffice-still
@@ -39,7 +39,8 @@
                         tectonic
                         mupdf
                         chatterino2
-                        globalprotect-openconnect
+                        gpauth
+                        gpclient
                         pipe-viewer
                         gtk-pipe-viewer
 
@@ -74,7 +75,7 @@
 			gimp
 
 #Fonts
-			gnome.gucharmap
+			gucharmap
 			font-awesome
                         nerdfonts
 			material-design-icons
