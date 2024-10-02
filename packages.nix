@@ -56,8 +56,6 @@
 			alacritty
 			obsidian
 			godot_4
-                        android-studio
-                        unityhub
 
 #Coding Languages
 			rustc
@@ -81,5 +79,10 @@
                         nerdfonts
 			material-design-icons
 			cascadia-code
+
+#UNI
+                        glpk
+                        android-studio
+                        unityhub
 			];
 }
