@@ -84,7 +84,7 @@
       "pulseaudio" = {
         format = "{icon}";
         format-bluetooth = "{icon}";
-        format-muted = "";
+        format-muted = "";
         format-icons = {
           headphone = "";
           default = ["" ""];
