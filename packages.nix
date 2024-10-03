@@ -85,6 +85,5 @@
                         glpk
                         android-studio
                         unityhub
-                        vscode
 			];
 }
