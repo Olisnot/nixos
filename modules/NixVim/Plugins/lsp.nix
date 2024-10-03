@@ -16,7 +16,21 @@
 
                                         #csharp-ls.enable = true;
 
-                                        omnisharp.enable = true;
+                                        omnisharp = {
+                                          enable = true;
+                                          settings = {
+                                            callback = {
+                                              __raw = ''
+                                                function()
+                                                print('nixvim')
+                                                end
+                                              '';
+                                            };
+                                            foo_bar = 42;
+                                            hostname = "localhost:8080";
+                                          };
+
+                                        };
 
 					pylyzer = {
 						enable = true;
