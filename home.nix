@@ -60,6 +60,8 @@
 
   };
 
+  programs.vscode.enable = true;
+
   #virt-manager
   dconf.settings = {
       "org/virt-manager/virt-manager/connections" = {

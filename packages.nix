@@ -85,5 +85,4 @@
                         android-studio
                         unityhub
 			];
-                        programs.vscode.enable = true;
 }
