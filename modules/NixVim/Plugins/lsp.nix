@@ -14,9 +14,9 @@
 
 					cmake.enable = true;
 
-                                        csharp-ls = { 
-                                          enable = true;
-                                        };
+                                        #csharp-ls.enable = true;
+
+                                        omnisharp.enable = true;
 
 					pylyzer = {
 						enable = true;
