@@ -67,6 +67,7 @@
                         dotnetCorePackages.sdk_8_0_3xx
 			python39
 			lua
+                        kotlin
 
 #Art
 			blender
