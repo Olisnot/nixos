@@ -84,6 +84,6 @@
                         glpk
                         android-studio
                         unityhub
-                        vscode
 			];
+                        programs.vscode.enable = true;
 }
