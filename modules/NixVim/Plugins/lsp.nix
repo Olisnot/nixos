@@ -16,7 +16,7 @@
 
                                         csharp-ls.enable = true;
 
-                                        #omnisharp.enable = true;
+                                        omnisharp.enable = true;
 
 					pylyzer = {
 						enable = true;
