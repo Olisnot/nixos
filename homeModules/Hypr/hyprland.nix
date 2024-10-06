@@ -72,10 +72,8 @@ general = {
   border_size = 1;
 
     # https://wiki.hyprland.org/Configuring/Variables/#variable-types for info about colors
-    col = {
-      active_border = "rgba(fffafaaa)";
-      inactive_border = "rgba(595959aa)";
-    };
+    "col.active_border" = "rgba(fffafaaa)";
+    "col.inactive_border" = "rgba(595959aa)";
 
     # Set to true enable resizing windows by clicking and dragging on borders and gaps
     resize_on_border = false;
@@ -97,7 +95,7 @@ decoration = {
     drop_shadow = true;
     shadow_range = 4;
     shadow_render_power = 3;
-    col.shadow = "rgba(1a1a1aee)";
+    "col.shadow" = "rgba(1a1a1aee)";
 
     # https://wiki.hyprland.org/Configuring/Variables/#blur
     blur = {
