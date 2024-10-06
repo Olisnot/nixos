@@ -79,7 +79,7 @@ general = {
     # Please see https://wiki.hyprland.org/Configuring/Tearing/ before you turn this on
     allow_tearing = false;
 
-    layout = dwindle;
+    layout = "dwindle";
   };
 
 # https://wiki.hyprland.org/Configuring/Variables/#decoration
@@ -176,7 +176,7 @@ device = {
 ####################
 
 # See https://wiki.hyprland.org/Configuring/Keywords/
-mainMod = SUPER; # Sets "Windows" key as main modifier
+mainMod = "SUPER"; # Sets "Windows" key as main modifier
 
 # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
 bind = [
