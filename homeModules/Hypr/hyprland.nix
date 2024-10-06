@@ -24,9 +24,9 @@ monitor= [
 # See https://wiki.hyprland.org/Configuring/Keywords/
 
 # Set programs that you use
-terminal = "alacritty";
-fileManager = "nemo";
-menu = "wofi --show run";
+"$terminal" = "alacritty";
+"$fileManager" = "nemo";
+"$menu" = "wofi --show run";
 
 
 #################
