@@ -1,7 +1,9 @@
 { ... }:
 
 {
-  wayland.windowManager.hyprland.settings = {
+  wayland.windowManager.hyprland = {
+    enable = true;
+    settings = {
 ################
 ### MONITORS ###
 ################
@@ -324,4 +326,5 @@ workspace= [
   "10,monitor:eDP-1"
 ];
   };
+};
 }
