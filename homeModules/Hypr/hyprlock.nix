@@ -1,7 +1,9 @@
 { ... }:
 
 {
-  programs.hyprlock.settings = {
+  programs.hyprlock = {
+    enable = true;
+   settings = {
     background = {
       path = "$HOME/Pictures/hyprlockBack.png";
     };
@@ -63,4 +65,5 @@
 ];
 
   };
+};
 }
