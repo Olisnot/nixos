@@ -97,8 +97,6 @@
 # Enable Plasma
 	services.desktopManager.plasma6.enable = true;
 
-# Use hyprlock for lock screen
-        programs.hyprlock.enable = true;
 
 # Set Laptop lid
 	services.logind.lidSwitchExternalPower = "ignore";
@@ -136,6 +134,9 @@
 		enable = true;
 		xwayland.enable = true;
 	};
+
+# Use hyprlock for lock screen
+        programs.hyprlock.enable = true;
 
         virtualisation.waydroid.enable = true;
 
