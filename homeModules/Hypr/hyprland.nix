@@ -38,7 +38,7 @@ menu = "wofi --show run";
 # exec-once = nm-applet &
 exec-once = [ 
   "swww-daemon & dunst & waybar"
-  "hyprctl dispatch exec [workspace 1 silent] alacritty"
+  "hyprctl dispatch exec [workspace 1 fullscreen] alacritty"
   "firefox"
   "vesktop"
   "steam"
