@@ -10,7 +10,7 @@
 		./cursorline.nix
 		./obsidian.nix
 		./neoscroll.nix
-		./godot.nix
+                #./godot.nix
 		./vim-nix.nix
                 ./vimtex.nix
 	];

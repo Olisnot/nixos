@@ -55,7 +55,6 @@
 			git-credential-manager
 			alacritty
 			obsidian
-			godot_4
 
 #Coding Languages
 			rustc
