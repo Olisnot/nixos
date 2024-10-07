@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 
 {
 	environment.systemPackages = with pkgs; [
@@ -18,7 +18,7 @@
                         usbutils
 
 #General
-                        inputs.nixpkgsStable.ani-cli
+                        ani-cli
 			spotify
                         vesktop
 			neofetch
