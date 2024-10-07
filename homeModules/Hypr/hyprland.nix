@@ -194,7 +194,7 @@ bind = [
   "$mainMod, L, exec, hyprlock"
 
 # Screen Capture
-#bind = $mainMod SHIFT, S, exec, "slurp | grim -g - screenshot.png"
+"$mainMod SHIFT, S, exec, \"slurp | grim -g - screenshot.png\""
 
 # Move focus with mainMod + arrow keys
 "$mainMod, left, movefocus, l"
