@@ -133,7 +133,7 @@
 	programs.hyprland = {
 		enable = true;
 		xwayland.enable = true;
-                package = inputs.nixpkgsStable.hyprland;
+                package = inputs.nixpkgsStable.legacyPackages.x86_64-linux.hyprland;
 	};
 
 # Use hyprlock for lock screen
