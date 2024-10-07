@@ -15,8 +15,6 @@
 			url = "github:nix-community/nixvim";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
-
-                godot.url = "github:Quoteme/nixos-godot-bin";
 	};
 
         outputs = { self, nixpkgs, nixpkgsStable, ... } @inputs: {
