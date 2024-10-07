@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
 	environment.systemPackages = with pkgs; [
@@ -65,6 +65,7 @@
                         dotnet-sdk_8
                         dotnetCorePackages.sdk_8_0_3xx
 			python39
+                        inputs.godot.packages.x86_64-linux.godotMono
 			lua
                         kotlin
 

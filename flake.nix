@@ -25,7 +25,6 @@
 			modules = [
 				./configuration.nix
 				inputs.home-manager.nixosModules.default
-                                inputs.godot.packages.x86_64-linux.godotMono
 			];
 		};
 	};
