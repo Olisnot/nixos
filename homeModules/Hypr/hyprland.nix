@@ -40,7 +40,7 @@ monitor= [
 # exec-once = nm-applet &
 exec-once = [ 
   "swww-daemon & dunst & waybar"
-  "hyprctl dispatch exec [workspace 1 fullscreen] alacritty"
+  "hyprctl dispatch exec \"[workspace 1 fullscreen]\" alacritty"
   "firefox"
   "vesktop"
   "steam"
