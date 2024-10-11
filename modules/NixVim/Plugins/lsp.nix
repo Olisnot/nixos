@@ -16,8 +16,6 @@
 
                                         csharp-ls.enable = true;
 
-                                        #omnisharp.enable = true;
-
 					pylyzer = {
 						enable = true;
 						autostart = true;
@@ -28,8 +26,6 @@
 						installCargo = true;
 						installRustc = true;
 					};
-
-					gdscript.enable = true;
 
 					marksman.enable = true;
 

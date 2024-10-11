@@ -81,7 +81,6 @@
 			cascadia-code
 
 #UNI
-                        glpk
                         android-studio
                         unityhub
 			];

@@ -13,5 +13,6 @@
                 #./godot.nix
 		./vim-nix.nix
                 ./vimtex.nix
+                ./otter.nix
 	];
 }
