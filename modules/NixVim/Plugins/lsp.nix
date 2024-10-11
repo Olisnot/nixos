@@ -7,7 +7,7 @@
 				enable = true;
                                 keymaps = {
                                   diagnostic = {
-                                    #"<leader>i" = "show_line_diagnostics";
+                                    "<leader>i" = "open_float";
                                     "<leader>j" = "goto_next";
                                     "<leader>k" = "goto_prev";
                                   };
