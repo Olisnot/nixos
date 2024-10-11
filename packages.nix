@@ -16,9 +16,9 @@
                         blueman
                         bottles
                         usbutils
+			pciutils
 
 #General
-                        ani-cli
 			spotify
                         vesktop
 			neofetch
@@ -27,13 +27,9 @@
 			wofi
 			unzip
 			dunst
-			pciutils
-			element-desktop
 			nemo
 			mpv
 			betterbird
-                        libreoffice-still
-                        waypaper
                         slurp
                         grim
                         tectonic
@@ -41,8 +37,6 @@
                         chatterino2
                         gpauth
                         gpclient
-                        pipe-viewer
-                        gtk-pipe-viewer
 
 #UI
 			waybar
@@ -69,8 +63,6 @@
                         kotlin
 
 #Art
-			blender
-			krita
 			gimp
 
 #Fonts
