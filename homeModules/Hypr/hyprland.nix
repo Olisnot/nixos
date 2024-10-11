@@ -208,6 +208,12 @@ bind = [
 "$mainMod SHIFT, up, movewindow, u"
 "$mainMod SHIFT, down, movewindow, d"
 
+# Resize window with mainMod + Alt + arrow keys
+"$mainMod ALT, right, resizeactive, 10 0"
+"$mainMod ALT, left, resizeactive, -10 0"
+"$mainMod ALT, up, resizeactive, 0 -10"
+"$mainMod ALT, down, resizeactive, 0 10"
+
 # Switch workspaces with mainMod + [0-9]
 "$mainMod, 1, workspace, 1"
 "$mainMod, 2, workspace, 2"
