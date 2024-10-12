@@ -9,6 +9,11 @@
       {
         toolbar = true;
         bookmarks = [
+          {
+            name = "YouTube";
+            keyword = "youtube";
+            url = "https://www.youtube.com/";
+          }   
         ];
     }
     ];
