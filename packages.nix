@@ -2,6 +2,7 @@
 
 let
   rebuild = import ./scripts/Rebuild.nix { inherit pkgs; };
+  config = import ./scripts/Config.nix { inherit pkgs; };
 in
 {
 	environment.systemPackages = with pkgs; [
@@ -76,6 +77,7 @@ in
 			cascadia-code
 #Scripts
                         rebuild
+                        config
 
 #UNI
                         android-studio
