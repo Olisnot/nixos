@@ -41,7 +41,7 @@ monitor= [
 exec-once = [ 
   "swww-daemon & dunst & waybar"
   "hyprctl dispatch exec \"[workspace 1; fullscreen]\" alacritty"
-  "firefox"
+  "firefox -P"
   "vesktop"
   "steam"
 ];

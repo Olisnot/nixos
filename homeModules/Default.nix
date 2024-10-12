@@ -6,6 +6,6 @@
 		./git.nix
 		./alacritty.nix
                 ./Waybar/Default.nix
-                ./Firefox.nix
+                ./Firefox/Default.nix
 	];
 }
