@@ -3,7 +3,7 @@
 {
   programs.firefox.profiles.Work = {
     name = "Work";
-    search.default = "DuckDuckGo";
+    #search.default = "DuckDuckGo";
     bookmarks = [
       {
         toolbar = true;
