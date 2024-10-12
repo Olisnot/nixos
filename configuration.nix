@@ -10,7 +10,6 @@
 			./packages.nix
 			./cachix.nix
 			./users/oliver.nix
-			./users/work.nix
 			./modules/Default.nix
 		];
 
