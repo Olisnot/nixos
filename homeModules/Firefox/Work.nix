@@ -2,6 +2,7 @@
 
 {
   programs.firefox.profiles.Work = {
+    id = 1;
     name = "Work";
     #search.default = "DuckDuckGo";
     bookmarks = [
