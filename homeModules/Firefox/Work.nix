@@ -14,6 +14,11 @@
             keyword = "youtube";
             url = "https://www.youtube.com/";
           }   
+          {
+            name = "Blackboard";
+            keyword = "blackboard";
+            url = "https://blackboard.aber.ac.uk/ultra/course";
+          }        
         ];
     }
     ];
