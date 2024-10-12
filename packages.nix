@@ -1,5 +1,8 @@
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 
+let
+  rebuild = import ./scripts/Rebuild.nix { inherit pkgs; };
+in
 {
 	environment.systemPackages = with pkgs; [
 #Utility
@@ -71,6 +74,8 @@
                         nerdfonts
 			material-design-icons
 			cascadia-code
+#Scripts
+                        rebuild
 
 #UNI
                         android-studio

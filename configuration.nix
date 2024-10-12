@@ -12,7 +12,6 @@
 			./users/oliver.nix
 			./users/work.nix
 			./modules/Default.nix
-                        ./scripts/Default.nix
 		];
 
 	nix.settings.experimental-features = ["nix-command" "flakes"];
