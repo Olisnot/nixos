@@ -1,6 +1,6 @@
 { pkgs }:
 
-pkgs.writeShellpplication {
+pkgs.writeShellApplication {
   name = "config";
   text = /* bash */ ''
     cd /nixos || exit

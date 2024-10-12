@@ -1,6 +1,6 @@
 { pkgs }:
 
-pkgs.writeShellpplication {
+pkgs.writeShellApplication {
   name = "rebuild";
   text = /* bash */ ''
     cd /nixos 
