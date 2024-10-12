@@ -8,6 +8,7 @@
     bookmarks = [
       {
         name = "YouTube";
+        toolbar = true;
         keyword = "youtube";
         url = "https://www.youtube.com/";
       }
