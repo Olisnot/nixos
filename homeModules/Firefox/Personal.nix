@@ -48,5 +48,10 @@
         ublock-origin
         youtube-shorts-block
       ];
+
+    settings = {
+      "browser.toolbars.bookmarks.visibility" = "always";
+      "browser.startup.page" = 3;
+    };
   };
 }
