@@ -4,7 +4,7 @@
   programs.firefox.profiles.Work = {
     id = 1;
     name = "Work";
-    #search.default = "DuckDuckGo";
+    search.default = "DuckDuckGo";
     bookmarks = [
       {
         toolbar = true;
