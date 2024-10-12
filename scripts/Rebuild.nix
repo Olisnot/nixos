@@ -1,8 +1,8 @@
 { pkgs, ... }:
 
 {
-  environment.systemPackages = [
-    pkgs.writeShellApplication {
+  environment.systemPackages = with pkgs; [
+    writeShellApplication {
       name = "rebuild";
       text = /* bash */ ''
       cd /nixos 
