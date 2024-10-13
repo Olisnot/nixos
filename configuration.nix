@@ -102,9 +102,11 @@
 
 # Configure keymap in X11
 	services.xserver = {
-		xkb.layout = "us,";
-		xkbVariant = ", dvorak";
-                xkbOptions = "grp:alt_shift_toggle";
+          xkb = {
+            layout = "us,";
+            Variant = ", dvorak";
+            Options = "grp:alt_shift_toggle";
+          };
 	};
 
 # Enable CUPS to print documents.
