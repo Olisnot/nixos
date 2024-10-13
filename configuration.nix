@@ -104,8 +104,8 @@
 	services.xserver = {
           xkb = {
             layout = "us,";
-            Variant = ", dvorak";
-            Options = "grp:alt_shift_toggle";
+            variant = ", dvorak";
+            options = "grp:alt_shift_toggle";
           };
 	};
 
