@@ -149,7 +149,9 @@ misc = {
 
 # https://wiki.hyprland.org/Configuring/Variables/#input
 input = {
-  kb_layout = "us";
+  kb_layout = "us, us";
+  kb_variant = ", dvorak";
+  kb_options = "grp:alt_shift_toggle";
 
   follow_mouse = 0;
 
