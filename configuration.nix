@@ -103,8 +103,8 @@
 # Configure keymap in X11
 	services.xserver = {
           xkb = {
-            layout = "us,";
-            variant = ", dvorak";
+            layout = "us, us";
+            variant = "qwerty, dvorak";
           };
 	};
 
