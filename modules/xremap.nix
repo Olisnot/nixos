@@ -6,7 +6,6 @@
   ];
 
   services.xremap = {
-    withHypr = true;
     userName = "oliver";
     yamlConfig = /* yaml */ ''
     modmap:
