@@ -104,7 +104,7 @@
 	services.xserver = {
           xkb = {
             layout = "us, us";
-            variant = "qwerty, dvorak";
+            variant = ", dvorak";
           };
 	};
 
