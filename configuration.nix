@@ -105,7 +105,6 @@
           xkb = {
             layout = "us,";
             variant = ", dvorak";
-            options = "grp:alt_shift_toggle";
           };
 	};
 
