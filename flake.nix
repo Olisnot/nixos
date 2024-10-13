@@ -20,6 +20,8 @@
                   url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
                   inputs.nixpkgs.follows = "nixpkgs";
                 };
+
+                xremap.url = "github:xremap/nix-flake";
 	};
 
         outputs = { self, nixpkgs, nixpkgsStable, ... } @inputs: {
