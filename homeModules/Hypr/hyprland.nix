@@ -149,8 +149,7 @@ misc = {
 
 # https://wiki.hyprland.org/Configuring/Variables/#input
 input = {
-  kb_layout = "us, us";
-  kb_variant = ", dvorak";
+  kb_layout = "us";
 
   follow_mouse = 0;
 
