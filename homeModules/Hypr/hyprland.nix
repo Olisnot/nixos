@@ -150,7 +150,7 @@ misc = {
 # https://wiki.hyprland.org/Configuring/Variables/#input
 input = {
   kb_layout = "us, us";
-  kb_variant = "qwerty, dvorak";
+  kb_variant = ", dvorak";
 
   follow_mouse = 0;
 
