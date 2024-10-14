@@ -54,6 +54,7 @@ in
 			git-credential-manager
 			alacritty
 			obsidian
+                        android-studio
 
 #Coding Languages
 			gcc
