@@ -5,7 +5,6 @@
 	imports =
 		[ # Include the results of the hardware scan.
 		        inputs.home-manager.nixosModules.default
-			inputs.nixvim.nixosModules.nixvim
 			./hardware-configuration.nix
 			./packages.nix
 			./cachix.nix

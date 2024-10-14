@@ -11,10 +11,7 @@
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
 
-		nixvim = {
-			url = "github:nix-community/nixvim";
-			inputs.nixpkgs.follows = "nixpkgs";
-		};
+		nixvim.url = "github:Olisnot/NixVimConfig";
 
                 firefox-addons = {
                   url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
