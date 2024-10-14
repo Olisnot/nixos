@@ -49,7 +49,6 @@ in
 			ags
 
 #Coding
-			neovim
                         nvim
 			git
 			git-credential-manager
