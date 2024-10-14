@@ -55,16 +55,9 @@ in
 			obsidian
 
 #Coding Languages
-			rustc
-			cargo
-			rustup
 			gcc
-			cmake
-                        dotnet-sdk_8
-                        dotnetCorePackages.sdk_8_0_3xx
 			python39
 			lua
-                        kotlin
 
 #Art
 			gimp
@@ -78,9 +71,5 @@ in
 #Scripts
                         rebuild
                         config
-
-#UNI
-                        android-studio
-                        unityhub
 			];
 }
