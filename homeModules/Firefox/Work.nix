@@ -24,7 +24,6 @@
     ];
 
     extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
-        profile-switcher
         bitwarden
         ublock-origin
         youtube-shorts-block
