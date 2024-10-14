@@ -33,9 +33,9 @@
 
                                         clangd.enable = true;
 
-                                        csharp_ls.enable = true;
+                                        csharp-ls.enable = true;
 
-                                        kotlin_language_server.enable = true;
+                                        kotlin-language-server.enable = true;
 				};
 			};
 		};
