@@ -30,6 +30,12 @@
 					};
 
 					marksman.enable = true;
+
+                                        clangd.enable = true;
+
+                                        csharp_ls.enable = true;
+
+                                        kotlin_language_server.enable = true;
 				};
 			};
 		};
