@@ -55,6 +55,7 @@ in
 			alacritty
 			obsidian
                         android-studio
+                        unityhub
 
 #Coding Languages
 			gcc
