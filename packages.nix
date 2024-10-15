@@ -11,17 +11,18 @@ in
 			killall
 			util-linux
 			htop
+                        bottles
 			lshw
 			pavucontrol
 			tree
 			iwd
-			ripgrep
 			iwgtk
+			ripgrep
 			opentabletdriver
                         blueman
-                        bottles
                         usbutils
 			pciutils
+                        fzf
 
 #General
 			spotify
