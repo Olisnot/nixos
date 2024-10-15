@@ -19,8 +19,13 @@
             keyword = "blackboard";
             url = "https://blackboard.aber.ac.uk/ultra/course";
           }        
+          {
+            name = "";
+            keyword = "profiles";
+            url = "about:profiles";
+          }
         ];
-    }
+      }
     ];
 
     extensions = with inputs.firefox-addons.packages."x86_64-linux"; [

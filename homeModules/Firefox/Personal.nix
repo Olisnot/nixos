@@ -39,6 +39,11 @@
             keyword = "github";
             url = "https://github.com/";
           }
+          {
+            name = "";
+            keyword = "profiles";
+            url = "about:profiles";
+          }
         ];
     }
     ];
