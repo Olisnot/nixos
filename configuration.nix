@@ -10,6 +10,7 @@
 			./cachix.nix
 			./users/oliver.nix
 			./modules/Default.nix
+			./scripts/default.nix
 		];
 
 	nix.settings.experimental-features = ["nix-command" "flakes"];
