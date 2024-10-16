@@ -9,7 +9,7 @@
 	};
 
 	home-manager = { 
-		backupFileExtension = "backup33";
+		backupFileExtension = "backup34";
 		extraSpecialArgs = {inherit inputs;};
 		users = {
 			"oliver" = import ../home.nix;
