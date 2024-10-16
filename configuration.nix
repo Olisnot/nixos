@@ -14,6 +14,8 @@
 
 	nix.settings.experimental-features = ["nix-command" "flakes"];
 
+        nix.settings.auto-optimise-store = true;
+
 # Bootloader.
 	boot.loader.systemd-boot.enable = true;
 	boot.loader.efi.canTouchEfiVariables = true;
