@@ -31,7 +31,7 @@
 			dunst
 			nemo
 			mpv
-			betterbird
+                        thunderbird
                         slurp
                         grim
                         mupdf
