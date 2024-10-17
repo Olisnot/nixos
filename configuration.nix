@@ -17,10 +17,32 @@
         nix.settings.auto-optimise-store = true;
 
 # Bootloader.
-	boot.loader.systemd-boot.enable = true;
-	boot.loader.efi.canTouchEfiVariables = true;
+boot.loader = {
+  systemd-boot.enable = true;
+  efi.canTouchEfiVariables = true;
 
-	boot.loader.systemd-boot.configurationLimit = 5;
+  systemd-boot.configurationLimit = 5;
+
+  "windows.conf" =
+    let
+          # To determine the name of the windows boot drive, boot into edk2 first, then run
+          # `map -c` to get drive aliases, and try out running `FS1:`, then `ls EFI` to check
+          # which alias corresponds to which EFI partition.
+          boot-drive = "FS1";
+    in
+    ''
+    title Windows Bootloader
+    efi /efi/shell.efi
+    options -nointerrupt -nomap -noversion ${boot-drive}:EFI\Microsoft\Boot\Bootmgfw.efi
+    sort-key y_windows
+    '';
+      # Make EDK2 Shell available as a boot option
+      "edk2-uefi-shell.conf" = ''
+      title EDK2 UEFI Shell
+      efi /efi/shell.efi
+      sort-key z_edk2
+      '';
+    };
 
 	networking.hostName = "nixos"; # Define your hostname.
 # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
