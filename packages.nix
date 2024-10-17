@@ -18,6 +18,7 @@
                         usbutils
 			pciutils
                         fzf
+                        waypaper
 
 #General
 			spotify
