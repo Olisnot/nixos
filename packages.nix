@@ -37,6 +37,7 @@
                         chatterino2
                         gpauth
                         gpclient
+                        libreoffice-qt6-fresh
 
 #UI
 			waybar
