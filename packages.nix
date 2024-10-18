@@ -59,6 +59,7 @@
 #Art
 			gimp
 
+
 #Fonts
 			gucharmap
 			font-awesome
