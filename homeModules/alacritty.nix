@@ -35,6 +35,25 @@
                           opacity = 0.7;
                         };
 
+                        font = {
+                          bold = {
+                            family = "Cascadia Code";
+                            style = "Bold";
+                          };
+                          bold_italic = {
+                            family = "Cascadia Code";
+                            style = "Bold Italic";
+                          };
+                          italic = {
+                            family = "Cascadia Code";
+                            style = "Italic";
+                          };
+                          normal = {
+                            family = "Cascadia Code";
+                            style = "Regular";
+                          };
+                        };
+
 		};
 	};
 }
