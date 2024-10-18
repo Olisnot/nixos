@@ -69,6 +69,7 @@ boot.loader = {
 
 	services.xserver.dpi = 96;
 	environment.variables = {
+                EDITOR = "nvim";
                 GDK_SCALE = "0.5";
                 XCURSOR_THEME = "graphite-cursors";
 		QT_STYLE_OVERRIDE ="kvantum";
