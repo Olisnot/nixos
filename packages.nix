@@ -62,9 +62,5 @@
 
 #Fonts
 			gucharmap
-			font-awesome
-                        nerdfonts
-			material-design-icons
-			cascadia-code
 			];
 }
