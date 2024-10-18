@@ -29,6 +29,14 @@
     EDITOR = "neovim";
   };
 
+  home.pointerCursor = {
+    gtk.enable = true;
+    # x11.enable = true;
+    package = pkgs.graphite-cursors;
+    name = "graphite-dark";
+    size = 16;
+  };
+
   gtk = {
 	  enable = true;
 	  theme = {

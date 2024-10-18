@@ -53,10 +53,10 @@ exec-once = [
 
 # See https://wiki.hyprland.org/Configuring/Environment-variables/
 
-env = [ 
-  "XCURSOR_SIZE,16"
-  "XCURSOR_THEME,\"${pkgs.graphite-cursors}\""
-];
+#env = [ 
+  #"XCURSOR_SIZE,16"
+  #"XCURSOR_THEME,\"${pkgs.graphite-cursors}\""
+#];
 
 
 #####################
