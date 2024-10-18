@@ -13,7 +13,6 @@
 			iwd
 			iwgtk
 			ripgrep
-			opentabletdriver
                         blueman
                         usbutils
 			pciutils

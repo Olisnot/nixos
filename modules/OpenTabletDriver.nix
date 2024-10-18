@@ -3,11 +3,6 @@
 {
         # Huion tablet drivers
 	hardware.opentabletdriver.enable = true;
-	hardware.opentabletdriver.daemon.enable = true;
-	hardware.opentabletdriver.blacklistedKernelModules = [
-          "hid-uclogic"
-          "wacom"
-	];
         services.udev.extraRules = "
         # Dynamically generated with the OpenTabletDriver.udev tool. https://github.com/OpenTabletDriver/OpenTabletDriver
         KERNEL==\"uinput\", SUBSYSTEM==\"misc\", TAG+=\"uaccess\", OPTIONS+=\"static_node=uinput\"
