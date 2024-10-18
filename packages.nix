@@ -21,15 +21,13 @@
                         waypaper
 
 #General
+			ranger
 			spotify
                         vesktop
 			neofetch
-			keymapp
-			ranger
 			wofi
 			unzip
 			dunst
-			nemo
 			mpv
                         thunderbird
                         slurp
@@ -39,6 +37,7 @@
                         gpauth
                         gpclient
                         libreoffice-qt6-fresh
+			keymapp
 
 #UI
 			waybar
