@@ -5,7 +5,7 @@
     * {
       font-family: 'Font Awesome 6 Free', 'Font Awesome 6 Brands';
       font-weight: bold;
-      font-size: 13px;
+      font-size: 25px;
       border-radius: 10px;
     }
 
@@ -20,14 +20,12 @@
   background-color: #100c08;
   color: #fffafa;
   border: 1px solid #fffafa;
-  font-size: 30px;
 }
 
 #workspaces button.active {
   font-family: 'Material Design Icons';
   background-color: #fffafa;
   color: #100c08;
-  font-size: 30px;
 }
 
 .modules-left {
