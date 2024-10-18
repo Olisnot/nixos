@@ -3,7 +3,7 @@
 {
   programs.waybar.style = ''
     * {
-      font-family: 'SF Mono', sans-serif;
+      font-family: 'Font Awesome 6 Free', 'Font Awesome 6 Brands';
       font-weight: bold;
       font-size: 13px;
       border-radius: 10px;
