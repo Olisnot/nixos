@@ -1,8 +1,5 @@
 { pkgs, ... }:
 
-let
-  font-logos = pkgs.callPackage ./packages/font-logos.nix { inherit pkgs; };
-in
 {
   fonts.packages = with pkgs; [
     noto-fonts
@@ -18,7 +15,6 @@ in
     nerdfonts
     material-design-icons
     cascadia-code
-    font-logos
   ];
 
 }
