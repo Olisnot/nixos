@@ -15,6 +15,7 @@
     }
 
 #workspaces {
+  font-family: 'Material Design Icons';
   margin-left: 10px;
   background-color: #100c08;
   color: #fffafa;
@@ -23,6 +24,7 @@
 }
 
 #workspaces button.active {
+  font-family: 'Material Design Icons';
   background-color: #fffafa;
   color: #100c08;
   font-size: 25px;
