@@ -25,7 +25,7 @@ monitor= [
 
 # Set programs that you use
 "$terminal" = "alacritty";
-"$fileManager" = "nemo";
+"$fileManager" = "alacritty --command ranger";
 "$menu" = "wofi --show run";
 
 
