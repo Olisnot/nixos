@@ -42,6 +42,7 @@
 }
 
 #battery {
+  font-family: 'Cascadia Code';
   padding-right: 10px;
   padding-left: 10px;
   margin-right: 10px;
@@ -75,7 +76,6 @@
   background-color: #100c08;
   color: #fffafa;
   border: 1px solid #fffafa;
-  font-size: 20px;
 }
 
 #custom-reboot {
@@ -106,6 +106,7 @@
 }
 
 #clock {
+  font-family: 'Cascadia Code';
   padding-right: 10px;
   padding-left: 10px;
   margin-left: 10px;
