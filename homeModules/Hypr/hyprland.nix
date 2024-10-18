@@ -55,7 +55,7 @@ exec-once = [
 
 env = [ 
   "XCURSOR_SIZE,16"
-  "XCURSOR_THEME,\"${pkgs.graphite-cursors}/share/icons/graphite-dark\""
+  "XCURSOR_THEME,\"${pkgs.graphite-cursors}\""
 ];
 
 
