@@ -39,6 +39,7 @@
                         gpauth
                         gpclient
                         libreoffice-qt6-fresh
+                        qcal
 
 #UI
 			waybar
