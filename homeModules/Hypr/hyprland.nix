@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   wayland.windowManager.hyprland = {
@@ -55,7 +55,7 @@ exec-once = [
 
 env = [ 
   "XCURSOR_SIZE,16"
-  "XCURSOR_THEME,\"Graphite-Dark\""
+  "XCURSOR_THEME,\"${pkgs.graphite-cursors}/share/icons/graphite-dark\""
 ];
 
 
