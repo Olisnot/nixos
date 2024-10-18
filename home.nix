@@ -3,7 +3,7 @@
 
 {
 	imports = [
-		./homeModules/Default.nix
+		./homeModules/default.nix
 	];
   home.username = "oliver";
   home.homeDirectory = "/home/oliver";

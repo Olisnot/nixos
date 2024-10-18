@@ -3,8 +3,8 @@
 {
   
   imports = [ 
-    ./Personal.nix
-    ./Work.nix
+    ./personal.nix
+    ./work.nix
   ];
   programs.firefox = { 
     enable = true;

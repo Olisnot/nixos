@@ -3,10 +3,9 @@
 {
 	imports = [
 		./nvidia.nix
-                #./NixVim/Default.nix
-		./Gaming/Default.nix
+		./Gaming/default.nix
 		./tmux.nix
-                ./OpenTabletDriver.nix
+                ./opentabletdriver.nix
 		./redshift.nix
 		./virt-manager.nix
                 ./keymapp.nix

@@ -9,7 +9,7 @@
                         ./fonts.nix
 			./cachix.nix
 			./users/oliver.nix
-			./modules/Default.nix
+			./modules/default.nix
 			./scripts/default.nix
 		];
 

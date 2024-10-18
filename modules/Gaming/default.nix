@@ -3,7 +3,7 @@
 {
 	imports =
 		[ 
-			./Steam.nix
+			./steam.nix
                         ./aagl.nix
 		];
 	programs.gamemode.enable = true;
