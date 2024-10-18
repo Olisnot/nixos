@@ -35,25 +35,6 @@
                           opacity = 0.7;
                         };
 
-                        font = {
-                          bold = {
-                            family = "fira-code";
-                            style = "Bold";
-                          };
-                          bold_italic = {
-                            family = "fira-code";
-                            style = "Bold Italic";
-                          };
-                          italic = {
-                            family = "fira-code";
-                            style = "Italic";
-                          };
-                          normal = {
-                            family = "fira-code";
-                            style = "Regular";
-                          };
-                        };
-
 		};
 	};
 }
