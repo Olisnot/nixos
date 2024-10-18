@@ -37,19 +37,19 @@
 
                         font = {
                           bold = {
-                            family = "cascadia-code";
+                            family = "cascadia-mono";
                             style = "Bold";
                           };
                           bold_italic = {
-                            family = "cascadia-code";
+                            family = "cascadia-mono";
                             style = "Bold Italic";
                           };
                           italic = {
-                            family = "cascadia-code";
+                            family = "cascadia-mono";
                             style = "Italic";
                           };
                           normal = {
-                            family = "cascadia-code";
+                            family = "cascadia-mono";
                             style = "Regular";
                           };
                         };
