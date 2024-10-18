@@ -36,20 +36,8 @@
                         };
 
                         font = {
-                          bold = {
-                            family = "cascadia-mono";
-                            style = "Bold";
-                          };
-                          bold_italic = {
-                            family = "cascadia-mono";
-                            style = "Bold Italic";
-                          };
-                          italic = {
-                            family = "cascadia-mono";
-                            style = "Italic";
-                          };
                           normal = {
-                            family = "cascadia-mono";
+                            family = "cascadia-code";
                             style = "Regular";
                           };
                         };
