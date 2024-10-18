@@ -9,7 +9,7 @@
       margin-top = 5;
       modules-left = [ "hyprland/workspaces" ];
       modules-center = [ "clock" ];
-      modules-right = [ "tray" "battery" "pulseaudio" "group/power" ];
+      modules-right = [ "tray" "battery" "group/power" ];
 
       battery = {
         format = " {capacity}%";

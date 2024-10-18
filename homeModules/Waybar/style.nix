@@ -19,13 +19,13 @@
   background-color: #100c08;
   color: #fffafa;
   border: 1px solid #fffafa;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 #workspaces button.active {
   background-color: #fffafa;
   color: #100c08;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .modules-left {
