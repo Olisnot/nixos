@@ -19,17 +19,18 @@
   background-color: #100c08;
   color: #fffafa;
   border: 1px solid #fffafa;
+  font-size: 20px;
 }
 
 #workspaces button.active {
   background-color: #fffafa;
   color: #100c08;
+  font-size: 20px;
 }
 
 .modules-left {
   padding-left: 10px;
   padding-right: 10px;
-  font-size: 20px;
 }
 
 .modules-right {
@@ -99,9 +100,9 @@
   padding-right: 10px;
   padding-left: 10px;
   margin-right: 10px;
-  color: #C8C093;
-  background-color: #16161D;
-  border: 1px solid #C8C093;
+  background-color: #100c08;
+  color: #fffafa;
+  border: 1px solid #fffafa;
 }
 
 #clock {
