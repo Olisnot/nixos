@@ -35,10 +35,7 @@
                           opacity = 0.7;
                         };
 
-                        font = {
-                          family = "cascadia-code";
-                        };
-
+                        font.family = "cascadia-code";
 		};
 	};
 }
