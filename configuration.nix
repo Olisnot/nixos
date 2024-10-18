@@ -17,11 +17,11 @@
         nix.settings.auto-optimise-store = true;
 
 # Bootloader.
-boot.loader = {
-  systemd-boot.enable = true;
-  efi.canTouchEfiVariables = true;
-  systemd-boot.configurationLimit = 5;
-};
+        boot.loader = {
+          systemd-boot.enable = true;
+          efi.canTouchEfiVariables = true;
+          systemd-boot.configurationLimit = 5;
+        };
 
 	networking.hostName = "nixos"; # Define your hostname.
 # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -97,7 +97,7 @@ boot.loader = {
 	};
 
 # Enable Plasma
-	services.desktopManager.plasma6.enable = true;
+        #services.desktopManager.plasma6.enable = true;
 
 
 # Set Laptop lid
