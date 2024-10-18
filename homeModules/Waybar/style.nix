@@ -20,14 +20,14 @@
   background-color: #100c08;
   color: #fffafa;
   border: 1px solid #fffafa;
-  font-size: 25px;
+  font-size: 30px;
 }
 
 #workspaces button.active {
   font-family: 'Material Design Icons';
   background-color: #fffafa;
   color: #100c08;
-  font-size: 25px;
+  font-size: 30px;
 }
 
 .modules-left {
