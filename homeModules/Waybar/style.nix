@@ -73,7 +73,6 @@
   background-color: #100c08;
   color: #fffafa;
   border: 1px solid #fffafa;
-  font-size: 20px;
 }
 
 #custom-reboot {
@@ -83,7 +82,6 @@
   background-color: #100c08;
   color: #fffafa;
   border: 1px solid #fffafa;
-  font-size: 20px;
 }
 
 #custom-suspend {
@@ -93,7 +91,6 @@
   background-color: #100c08;
   color: #fffafa;
   border: 1px solid #fffafa;
-  font-size: 20px;
 }
 
 #custom-logout {
@@ -103,7 +100,6 @@
   color: #C8C093;
   background-color: #16161D;
   border: 1px solid #C8C093;
-  font-size: 25px;
 }
 
 #clock {
