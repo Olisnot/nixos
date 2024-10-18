@@ -35,7 +35,25 @@
                           opacity = 0.7;
                         };
 
-                        font.family = "cascadia-code";
+                        font = {
+                          bold = {
+                            family = "cascadia-code";
+                            style = "Bold";
+                          };
+                          bold_italic = {
+                            family = "cascadia-code";
+                            style = "Bold Italic";
+                          };
+                          italic = {
+                            family = "cascadia-code";
+                            style = "Italic";
+                          };
+                          normal = {
+                            family = "cascadia-code";
+                            style = "Regular";
+                          };
+                        };
+
 		};
 	};
 }
