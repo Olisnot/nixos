@@ -29,6 +29,7 @@
 .modules-left {
   padding-left: 10px;
   padding-right: 10px;
+  font-size: 15px;
 }
 
 .modules-right {
@@ -73,6 +74,7 @@
   background-color: #100c08;
   color: #fffafa;
   border: 1px solid #fffafa;
+  font-size: 15px;
 }
 
 #custom-reboot {
