@@ -36,8 +36,20 @@
                         };
 
                         font = {
+                          bold = {
+                            family = "fira-code";
+                            style = "Bold";
+                          };
+                          bold_italic = {
+                            family = "fira-code";
+                            style = "Bold Italic";
+                          };
+                          italic = {
+                            family = "fira-code";
+                            style = "Italic";
+                          };
                           normal = {
-                            family = "cascadia-code";
+                            family = "fira-code";
                             style = "Regular";
                           };
                         };
