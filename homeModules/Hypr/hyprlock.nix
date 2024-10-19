@@ -5,7 +5,7 @@
     enable = true;
    settings = {
     background = {
-      path = "$HOME/Pictures/hyprlockBack.png";
+      path = ../../wallpaper.png;
     };
 
     input-field = {
