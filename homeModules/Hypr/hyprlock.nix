@@ -1,11 +1,15 @@
 { ... }:
 
 {
+  imports = [
+    ../../wallpaper.png
+  ];
+
   programs.hyprlock = {
     enable = true;
    settings = {
     background = {
-      path = "/nixos/wallpaper.png";
+      path = "../../wallpaper.png";
     };
 
     input-field = {
