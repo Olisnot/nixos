@@ -76,7 +76,7 @@
   background-color: #100c08;
   color: #fffafa;
   border: 1px solid #fffafa;
-  font-size: 50px;
+  font-size: 25px;
 }
 
 #custom-reboot {
