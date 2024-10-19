@@ -5,7 +5,7 @@
     enable = true;
    settings = {
     background = {
-      path = ../../wallpaper.png;
+      path = "../../wallpaper.png";
     };
 
     input-field = {
