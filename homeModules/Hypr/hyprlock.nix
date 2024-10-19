@@ -5,7 +5,7 @@
     enable = true;
    settings = {
     background = {
-      path = "../../wallpaper.png";
+      path = "/nixos/wallpaper.png";
     };
 
     input-field = {
