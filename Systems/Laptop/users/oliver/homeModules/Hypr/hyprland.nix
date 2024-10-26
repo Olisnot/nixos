@@ -45,6 +45,8 @@ exec-once = [
   "firefox"
   "vesktop"
   "steam"
+  "thunderbird"
+  "obsidian"
 ];
 
 #############################
