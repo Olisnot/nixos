@@ -4,6 +4,7 @@
 {
 	imports = [
 		./homeModules/default.nix
+                ./homePackages.nix
 	];
   home.username = "oliver";
   home.homeDirectory = "/home/oliver";
@@ -17,9 +18,6 @@
   # release notes.
   home.stateVersion = "23.11"; # Please read the comment before changing.
 
-  home.packages = [
-  ];
-
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
@@ -31,7 +29,6 @@
 
   home.pointerCursor = {
     gtk.enable = true;
-    # x11.enable = true;
     package = pkgs.graphite-cursors;
     name = "graphite-dark";
     size = 16;

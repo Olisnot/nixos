@@ -8,8 +8,8 @@
 			./packages.nix
                         ./fonts.nix
 			./cachix.nix
-			./users/oliver.nix
-			./modules/default.nix
+			./users/oliver/user.nix
+			../../modules/default.nix
 			./scripts/default.nix
 		];
 

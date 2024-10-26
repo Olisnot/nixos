@@ -12,7 +12,7 @@
 		backupFileExtension = "backup44";
 		extraSpecialArgs = {inherit inputs;};
 		users = {
-			"oliver" = import ../home.nix;
+			"oliver" = import ./home.nix;
 		};
 	};
 }
