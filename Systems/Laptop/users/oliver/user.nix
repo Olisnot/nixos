@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ ... }:
 
 {
 # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -9,9 +9,6 @@
 	};
 
 	home-manager = { 
-		backupFileExtension = "backup45";
-		extraSpecialArgs = {inherit inputs;};
-                useGlobalPkgs = true;
 		users = {
 			"oliver" = import ./home.nix;
 		};
