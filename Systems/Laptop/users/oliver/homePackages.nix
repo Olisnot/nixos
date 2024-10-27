@@ -26,5 +26,6 @@
     swww
     ags
     waybar
+    openrgb-with-all-plugins
   ];
 }
