@@ -22,7 +22,6 @@
 			wofi
 			unzip
 			dunst
-#UI
 #Coding
 			git
 			git-credential-manager
