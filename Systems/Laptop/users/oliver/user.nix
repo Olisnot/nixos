@@ -9,7 +9,7 @@
 	};
 
 	home-manager = { 
-                #backupFileExtension = "backup45";
+                backupFileExtension = "backup46";
 		extraSpecialArgs = {inherit inputs;};
                 useGlobalPkgs = true;
 		users = {
