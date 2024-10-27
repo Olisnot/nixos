@@ -10,6 +10,7 @@
     unityhub
     obsidian
     gimp
+    krita
     gucharmap
     chatterino2
     gpauth
