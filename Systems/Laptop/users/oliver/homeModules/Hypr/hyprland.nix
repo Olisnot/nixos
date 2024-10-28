@@ -46,7 +46,6 @@ exec-once = [
   "webcord"
   "steam"
   "thunderbird"
-  "obsidian"
 ];
 
 #############################
