@@ -4,7 +4,7 @@
   home.packages = with pkgs; [
     spotify
     #vesktop
-    webcord
+    webcord-vencord
     thunderbird
     android-studio
     unityhub

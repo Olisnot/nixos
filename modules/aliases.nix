@@ -8,5 +8,4 @@
         tb = "cd /mnt/1tb";
         Obsidian = "cd /home/oliver/Obsidian && tmux new-session -A -s Obsidian";
     };
-
 }
