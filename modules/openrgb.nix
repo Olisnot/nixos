@@ -1,7 +1,7 @@
 { ... }:
 
 {
-  services.udev.extraRules = '''
+  services.udev.extraRules = ''
         #---------------------------------------------------------------#
         #  OpenRGB udev rules - Git Commit: b5f46e3f                    #
         #---------------------------------------------------------------#
@@ -1579,5 +1579,5 @@
         #---------------------------------------------------------------#
         SUBSYSTEMS=="usb|hidraw", ATTRS{idVendor}=="1c57", ATTRS{idProduct}=="7ed0", TAG+="uaccess", TAG+="Zalman_Z_Sync"
 
-''';
+'';
 }
