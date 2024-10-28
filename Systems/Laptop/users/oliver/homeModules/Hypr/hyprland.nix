@@ -321,6 +321,7 @@ windowrulev2 = [
   "workspace 4 silent, class:obsidian"
   "workspace 5 silent, class:steam"
   "workspace 5 silent, class:Lutris"
+  "workspace 7 silent, class:thunderbird"
   "workspace 9 silent, class:vesktop"
 ];
 

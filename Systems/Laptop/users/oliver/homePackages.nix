@@ -3,8 +3,7 @@
 {
   home.packages = with pkgs; [
     spotify
-    #vesktop
-    webcord-vencord
+    vesktop
     thunderbird
     android-studio
     unityhub
