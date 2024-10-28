@@ -6,7 +6,7 @@
 		./Gaming/default.nix
 		./tmux.nix
                 ./opentabletdriver.nix
-                ./openrgb.nix
+                #./openrgb.nix
 		./redshift.nix
 		./virt-manager.nix
                 ./keymapp.nix

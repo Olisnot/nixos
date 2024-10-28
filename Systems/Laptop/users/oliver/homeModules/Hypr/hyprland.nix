@@ -43,7 +43,7 @@ exec-once = [
   "waybar"
   "hyprctl dispatch exec \"[workspace 1; fullscreen]\" alacritty"
   "firefox"
-  "vesktop"
+  "webcord"
   "steam"
   "thunderbird"
   "obsidian"
