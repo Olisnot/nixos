@@ -64,6 +64,8 @@ exec-once = [
 ### LOOK AND FEEL ###
 #####################
 
+"disable_splash_rendering" = true;
+"disable_hyprland_logo" = true;
 # Refer to https://wiki.hyprland.org/Configuring/Variables/
 
 # https://wiki.hyprland.org/Configuring/Variables/#general
