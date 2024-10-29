@@ -10,8 +10,8 @@
 
 # See https://wiki.hyprland.org/Configuring/Monitors/
 monitor= [ 
-  "DP-1,1920x1080,0x1080,1"
-  "HDMI-A-1,1920x1080,19200x1080,1"
+  "DP-3,1920x1080,0x1080,1"
+  "DP-4,1920x1080,19200x1080,1"
   "eDP-1,1920x1080,192000x0,1"
   "Unknown-1, disable"
 ];
