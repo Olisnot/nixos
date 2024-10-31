@@ -22,7 +22,7 @@
     mupdf
     waypaper
     bottles
-    #swww
+    swww
     mpvpaper
     ags
     waybar
