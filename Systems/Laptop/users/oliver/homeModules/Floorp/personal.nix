@@ -57,7 +57,7 @@
       "extensions.formautofill.addresses.enabled" = false;
       "floorp.browser.sidebar.useIconProvider" = "DuckDuckGo";
       "floorp.browser.sidebar2.data" = ''
-      {"data":{"floorp__history":{"url":"floorp//history","width":415},"floorp__downloads":{"url":"floorp//downloads","width":415},"floorp__profiles":{"url":"about:profiles","width":550}},"index":["floorp__profiles", "floorp__history","floorp__downloads"]}
+      {"data":{"floorp__history":{"url":"floorp//history","width":415},"floorp__downloads":{"url":"floorp//downloads","width":415},"floorp__profiles":{"url":"about:profiles","width":400}},"index":["floorp__profiles", "floorp__history","floorp__downloads"]}
       '';
     };
   };
