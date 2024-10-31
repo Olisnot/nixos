@@ -53,7 +53,7 @@
       "browser.toolbars.bookmarks.visibility" = "always";
       "browser.startup.page" = 3;
       "floorp.browser.sidebar2.data" = ''
-      {"data":{"floorp__bmt":{"url":"floorp//bmt","width":600},"floorp__bookmarks":{"url":"floorp//bookmarks","width":415},"floorp__history":{"url":"floorp//history","width":415},"floorp__downloads":{"url":"floorp//downloads","width":415},"floorp__notes":{"url":"floorp//notes","width":550},"index":["floorp__bmt","floorp__bookmarks","floorp__history","floorp__downloads"]}
+      {"data":{"floorp__bmt":{"url":"floorp//bmt","width":600},"floorp__bookmarks":{"url":"floorp//bookmarks","width":415},"floorp__history":{"url":"floorp//history","width":415},"floorp__downloads":{"url":"floorp//downloads","width":415},"floorp__notes":{"url":"floorp//notes","width":550}},"index":["floorp__bmt","floorp__bookmarks","floorp__history","floorp__downloads"]}
       '';
     };
   };
