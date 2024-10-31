@@ -22,7 +22,8 @@
     mupdf
     waypaper
     bottles
-    swww
+    #swww
+    mpvpaper
     ags
     waybar
     openrgb-with-all-plugins
