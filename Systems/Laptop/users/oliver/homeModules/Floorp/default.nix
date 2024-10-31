@@ -17,7 +17,6 @@
       NewTabPage = false;
       PasswordManagerEnabled = false;
       OfferToSaveLogins = false;
-      OfferToSaveLoginsDefault = false;
       ShowHomeButton = false;
     };
   };
