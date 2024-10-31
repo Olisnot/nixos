@@ -3,7 +3,7 @@
 {
   home.file."Kamvas 13.json" = {
     enable = true;
-    target = ".local/share/OpenTabletDriver/Configurations/Huion/";
+    target = ".local/share/OpenTabletDriver/Configurations/Huion/Kamvas 13.json";
     text = /* json */ ''
     {
       "Name": "Huion Kamvas 13",
