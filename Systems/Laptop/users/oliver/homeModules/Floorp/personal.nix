@@ -52,6 +52,9 @@
     settings = {
       "browser.toolbars.bookmarks.visibility" = "always";
       "browser.startup.page" = 3;
+      "extensions.formautofill.creditCards.enabled" = false;
+      "extensions.formautofill.addresses.enabled" = false;
+      "floorp.browser.sidebar.useIconProvider" = "DuckDuckGo";
       "floorp.browser.sidebar2.data" = ''
       {"data":{"floorp__history":{"url":"floorp//history","width":415},"floorp__downloads":{"url":"floorp//downloads","width":415},"floorp__notes":{"url":"floorp//notes","width":550}},"index":["floorp__history","floorp__downloads"]}
       '';
