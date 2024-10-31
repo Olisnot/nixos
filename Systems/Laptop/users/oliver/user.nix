@@ -1,6 +1,5 @@
 { inputs, ... }:
 
-
 {
 # Define a user account. Don't forget to set a password with ‘passwd’.
 	users.users.oliver = {
@@ -10,7 +9,7 @@
 	};
 
 	home-manager = { 
-                backupFileExtension = "backup56";
+                backupFileExtension = "backup57";
 		extraSpecialArgs = {inherit inputs;};
                 useGlobalPkgs = true;
 		users = {
