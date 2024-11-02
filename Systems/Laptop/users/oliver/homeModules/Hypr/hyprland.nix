@@ -42,10 +42,11 @@ exec-once = [
   "swww-daemon & dunst" 
   "waybar"
   "hyprctl dispatch exec \"[workspace 1; fullscreen]\" alacritty"
-  "firefox"
+  "floorp"
   "vesktop"
   "steam"
   "thunderbird"
+  "hyprctl dispatch exec \"[workspace 4; fullscreen]\" obsidian"
 ];
 
 #############################
@@ -58,6 +59,10 @@ exec-once = [
   #"XCURSOR_SIZE,16"
   #"XCURSOR_THEME,\"${pkgs.graphite-cursors}\""
 #];
+
+xwayland = {
+  force_zero_scaling = true;
+};
 
 
 #####################
@@ -317,7 +322,7 @@ windowrule= [
 
 windowrulev2 = [ 
   "suppressevent maximize, class:.* "
-  "workspace 2 silent, class:firefox"
+  "workspace 2 silent, class:floorp"
   "workspace 4 silent, class:obsidian"
   "workspace 5 silent, class:steam"
   "workspace 5 silent, class:Lutris"
