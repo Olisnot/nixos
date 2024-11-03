@@ -20,9 +20,9 @@
             url = "http://www.twitch.tv/";
           }
           {
-            name = "AllAnime";
+            name = "HiAnime";
             keyword = "anime";
-            url = "https://allmanga.to/anime?tr=sub&cty=ALL";
+            url = "https://hianime.to/home";
           }
           {
             name = "AniList";
