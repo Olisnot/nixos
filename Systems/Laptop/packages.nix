@@ -16,6 +16,7 @@
                         usbutils
 			pciutils
                         fzf
+                        wl-clipboard
 #General
 			ranger
 			neofetch
