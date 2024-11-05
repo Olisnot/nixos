@@ -6,7 +6,6 @@
     vesktop
     thunderbird
     android-studio
-    unityhub
     obsidian
     gimp
     krita
