@@ -46,7 +46,6 @@ exec-once = [
   "vesktop"
   "steam"
   "thunderbird"
-  "hyprctl dispatch exec \"[workspace 4; fullscreen]\" obsidian"
 ];
 
 #############################
@@ -323,7 +322,6 @@ windowrule= [
 windowrulev2 = [ 
   "suppressevent maximize, class:.* "
   "workspace 2 silent, class:floorp"
-  "workspace 4 silent, class:obsidian"
   "workspace 5 silent, class:steam"
   "workspace 5 silent, class:Lutris"
   "workspace 7 silent, class:thunderbird"
