@@ -1,25 +1,31 @@
-{ pkgs, ... }:
+{ lib, config, pkgs, ... }:
 
 {
-  programs = {
-    steam = {
-      enable = true;
-      remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
-      dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
-      gamescopeSession.enable = true;
+  options = {
+    steam.setup.enable = lib.mkEnableOption "Enables steam and any extras";
+  };
 
-      extraCompatPackages = [
-        pkgs.proton-ge-bin
-      ];
-    };
+  config = lib.mkIf config.steam.setup.enable {
+    programs = {
+      steam = {
+        enable = true;
+        remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
+        dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+        gamescopeSession.enable = true;
 
-    gamescope = {
-      enable = true;
-      capSysNice = true;
-      args = [
-        "--rt"
-        "--expose-wayland"
-      ];
+        extraCompatPackages = [
+          pkgs.proton-ge-bin
+        ];
+      };
+
+      gamescope = {
+        enable = true;
+        capSysNice = true;
+        args = [
+          "--rt"
+          "--expose-wayland"
+        ];
+      };
     };
   };
 

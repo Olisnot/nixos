@@ -1,15 +1,16 @@
 { lib, config, pkgs, ... }:
 
 {
-  options = {
-    gaming.enable = lib.mkEnableOption "Enable gaming settings and applications";
-  };
-  config = lib.mkIf config.gaming.enable {
-    imports =
-      [ 
-        ./steam.nix
-        ./aagl.nix
-      ];
+  imports =
+    [ 
+      ./steam.nix
+      ./aagl.nix
+    ];
+
+    options = {
+      gaming.enable = lib.mkEnableOption "Enable gaming settings and applications";
+    };
+    config = lib.mkIf config.gaming.enable {
       programs.gamemode.enable = true;
       hardware.xpadneo.enable = true;
 
@@ -24,5 +25,7 @@
                         retroarch
                         rpcs3
                       ];
+                      aagl.enable = lib.mkDefault true;
+                      steam.setup.enable = lib.mkDefault true;
                     };
                   }
