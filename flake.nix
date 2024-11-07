@@ -11,6 +11,8 @@
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
 
+		nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
+
 		nixvim.url = "github:Olisnot/NixVimConfig";
 
 		firefox-addons = {
@@ -21,20 +23,25 @@
 		xremap.url = "github:xremap/nix-flake";
 	};
 
-	outputs = { self, nixpkgs, nixpkgsStable, ... } @inputs: {
+	outputs = { self, nixpkgs, nixpkgsStable, nixos-wsl, ... } @inputs: {
 		nixosConfigurations = {
 			default = nixpkgs.lib.nixosSystem {
 				specialArgs = {inherit inputs;};
 				modules = [
 					./Systems/Laptop/configuration.nix
-					inputs.home-manager.nixosModules.default
+						inputs.home-manager.nixosModules.default
 				];
 			};
-			wsl = {
+			wsl = nixpkgs.lib.nixosSystem {
 				specialArgs = {inherit inputs;};
 				modules = [
 					./Systems/WSL/configuration.nix
-					inputs.home-manager.nixosModules.default
+						inputs.home-manager.nixosModules.default
+						nixos-wsl.nixosModules.default
+						{
+							system.stateVersion = "24.05";
+							wsl.enable = true;
+						}
 				];
 			};
 		};

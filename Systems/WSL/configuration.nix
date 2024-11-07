@@ -9,8 +9,7 @@
 
 {
   imports = [
-    # include NixOS-WSL modules
-    <nixos-wsl/modules>
+  ./hardware-configuration.nix
   ];
 
   wsl.enable = true;
