@@ -1,12 +1,9 @@
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 
-let
-  nvim = inputs.nixvim.packages."x86_64-linux".default;
-in
 {
   environment.systemPackages = with pkgs; [
     tmux
+    ripgrep
     git
-    nvim
   ];
 }
