@@ -23,6 +23,15 @@
   home.file = {
   };
 
+  # Custom home modules
+  hyprlandConfig.enable = true;
+  hyprlockConfig.enable = true;
+  waybarConfig.enable = true;
+  alacrittyConfig.enable = true;
+  floorp.enable = true;
+  dropbox.enable = true;
+  otd.kamvas13.enable = true;
+
   home.sessionVariables = {
     EDITOR = "neovim";
   };

@@ -1,9 +1,14 @@
-{ ... }:
+{ lib, config, ... }:
 
 {
-  wayland.windowManager.hyprland = {
-    enable = true;
-    settings = {
+  options = {
+    hyprlandConfig.enable = lib.mkEnableOption "Enable hyprland configuration";
+  };
+
+  config = lib.mkIf config.hyprlandConfig.enable { 
+    wayland.windowManager.hyprland = {
+      enable = true;
+      settings = {
 ################
 ### MONITORS ###
 ################
@@ -146,7 +151,7 @@ dwindle = {
 misc = {
   force_default_wallpaper = -1; # Set to 0 or 1 to disable the anime mascot wallpapers
   disable_hyprland_logo = true; # If true disables the random hyprland logo / anime girl background. :(
-  disable_splash_rendering = true;
+    disable_splash_rendering = true;
   };
 
 
@@ -341,5 +346,6 @@ workspace= [
   "10,monitor:eDP-1"
 ];
   };
+};
 };
 }
