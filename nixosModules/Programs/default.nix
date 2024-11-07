@@ -6,6 +6,6 @@
     ./opentabletdriver.nix
     ./virt-manager.nix
     ./keymapp.nix
-    #./xremap.nix
+    ./xremap.nix
   ];
 }
