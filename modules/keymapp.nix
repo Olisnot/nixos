@@ -4,7 +4,8 @@
   options = {
     keymapp.enable = lib.mkEnableOption "Enables udev rules for zsa keymapp";
   };
-  services.udev.extraRules = lib.mkIf config.keymapp.enable "
+  config = lib.mkIf config.keymapp.enable {
+    services.udev.extraRules = "
   # Rules for Oryx web flashing and live training
   KERNEL==\"hidraw*\", ATTRS{idVendor}==\"16c0\", MODE=\"0664\", GROUP=\"plugdev\"
   KERNEL==\"hidraw*\", ATTRS{idVendor}==\"3297\", MODE=\"0664\", GROUP=\"plugdev\"
@@ -30,4 +31,5 @@ SUBSYSTEMS==\"usb\", ATTRS{idVendor}==\"0483\", ATTRS{idProduct}==\"df11\", MODE
 # Keymapp Flashing rules for the Voyager
 SUBSYSTEMS==\"usb\", ATTRS{idVendor}==\"3297\", MODE:=\"0666\", SYMLINK+=\"ignition_dfu\"
 ";
+};
 }
