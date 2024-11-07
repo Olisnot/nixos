@@ -3,7 +3,6 @@
 
 {
 	imports = [
-		./homeModules/default.nix
                 ../../homeModules/default.nix
                 ./homePackages.nix
 	];
