@@ -10,6 +10,7 @@
 {
   imports = [
   ./hardware-configuration.nix
+  ./packages.nix
   ];
 
   wsl.enable = true;
