@@ -1,11 +1,16 @@
-{ config, ... }:
+{ config, lib, ... }:
 
 {
-# Enable OpenGL
-  hardware.graphics = {
-    enable = true;
-    enable32Bit = true;
+  options = {
+    nvidia.enable = lib.mkEnableOption "Enables Nvidia Drivers";
   };
+
+  config = lib.mkIf config.nvidia.enable {
+# Enable OpenGL
+hardware.graphics = {
+  enable = true;
+  enable32Bit = true;
+};
 
   # Load nvidia driver for Xorg and Wayland
   services.xserver.videoDrivers = ["nvidia"];
@@ -31,18 +36,19 @@
     open = false;
 
     # Enable the Nvidia settings menu,
-	# accessible via `nvidia-settings`.
-    nvidiaSettings = true;
+        # accessible via `nvidia-settings`.
+        nvidiaSettings = true;
 
     # Optionally, you may need to select the appropriate driver version for your specific GPU.
     package = config.boot.kernelPackages.nvidiaPackages.production;
 
     prime = { 
-		# Make sure to use the correct Bus ID values for your system!
-		  intelBusId = "PCI:00:02.0";
-		  nvidiaBusId = "PCI:01:00.0";
-	};
+                # Make sure to use the correct Bus ID values for your system!
+                intelBusId = "PCI:00:02.0";
+                nvidiaBusId = "PCI:01:00.0";
+              };
 
-  };
+            };
+          };
 
 }
