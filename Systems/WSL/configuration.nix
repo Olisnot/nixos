@@ -13,12 +13,14 @@
   ./packages.nix
   ./scripts
   ./aliases.nix
+  ../../nixosModules
   ];
 
   wsl.enable = true;
   wsl.defaultUser = "nixos";
   nix.settings.experimental-features = ["nix-command" "flakes"];
   
+  tmuxConfig.enable = true;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
