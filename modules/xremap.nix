@@ -10,8 +10,8 @@
     yamlConfig = /* yaml */ ''
     modmap:
     - name: main
-    remap:
-    CapsLock: LeftMeta
+      remap:
+        CapsLock: LeftMeta
     '';
   };
 }
