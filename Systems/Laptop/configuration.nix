@@ -7,24 +7,25 @@
     ./hardware-configuration.nix
     ./packages.nix
     ./fonts.nix
+    ./aliases.nix
     ./cachix.nix
     ./users/oliver/user.nix
     ../../nixosModules
     ./scripts
   ];
 
-  #Custom module options
-  nvidia.enable = true;
-  gaming.enable = true;
-  opentabletdriverudev.enable = true;
-  keymapp.enable = true;
-  tmuxConfig.enable = true;
-  virt-manager.setup = true;
-  xremap.mappings.enable = true;
+#Custom module options
+nvidia.enable = true;
+gaming.enable = true;
+opentabletdriverudev.enable = true;
+keymapp.enable = true;
+tmuxConfig.enable = true;
+virt-manager.setup = true;
+xremap.mappings.enable = true;
 
-  #Nix settings
-  nix.settings.experimental-features = ["nix-command" "flakes"];
-  nix.settings.auto-optimise-store = true;
+#Nix settings
+nix.settings.experimental-features = ["nix-command" "flakes"];
+nix.settings.auto-optimise-store = true;
 
 # Bootloader.
 boot.loader = {
