@@ -1,4 +1,4 @@
-{ ... }:
+{ lib, ... }:
 
 {
 	imports = [
@@ -7,10 +7,12 @@
 		./tmux.nix
                 ./opentabletdriver.nix
                 #./openrgb.nix
-		./redshift.nix
+                #./redshift.nix
 		./virt-manager.nix
                 ./keymapp.nix
                 ./xremap.nix
 		./aliases.nix
 	];
+
+        aliases.enable = lib.mkDefault true;
 }

@@ -1,8 +1,13 @@
-{ ... }:
+{ lib, config, ... }:
 
 {
+  options = {
+    opentabletdriverudev.enable = lib.mkEnableOption "Add udev rules for open tablet driver";
+  };
+
+  config = lib.mkIf config.opentabletdriverudev.enable {
         # Huion tablet drivers
-	hardware.opentabletdriver.enable = true;
+        hardware.opentabletdriver.enable = true;
         services.udev.extraRules = "
         # Dynamically generated with the OpenTabletDriver.udev tool. https://github.com/OpenTabletDriver/OpenTabletDriver
         KERNEL==\"uinput\", SUBSYSTEM==\"misc\", TAG+=\"uaccess\", OPTIONS+=\"static_node=uinput\"
@@ -916,4 +921,5 @@
         SUBSYSTEM==\"usb\", ATTRS{idVendor}==\"08f2\", ATTRS{idProduct}==\"6811\", MODE=\"0666\"
         SUBSYSTEM==\"input\", ATTRS{idVendor}==\"08f2\", ATTRS{idProduct}==\"6811\", ENV{LIBINPUT_IGNORE_DEVICE}=\"1\"
         ";
+      };
 }

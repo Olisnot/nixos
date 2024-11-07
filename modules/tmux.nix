@@ -1,6 +1,11 @@
-{ ... }:
+{ lib, config, ... }:
 
 {
+  options = {
+    tmuxConfig.enable = lib.mkEnableOption "Enables tmux configuration";
+  };
+
+  config = lib.mkIf config.tmuxConfig.enable {
     programs.tmux = {
         enable = true;
 
@@ -10,4 +15,5 @@
             set-window-option -g mode-keys vi
         '';
     };
+  };
 }
