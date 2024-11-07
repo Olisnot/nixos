@@ -20,7 +20,6 @@
   keymapp.enable = true;
   tmuxConfig.enable = true;
   virt-manager.setup = true;
-  xremap.mappings.enable = true;
 
   #Nix settings
   nix.settings.experimental-features = ["nix-command" "flakes"];
