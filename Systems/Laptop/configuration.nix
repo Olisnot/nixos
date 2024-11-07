@@ -9,8 +9,8 @@
     ./fonts.nix
     ./cachix.nix
     ./users/oliver/user.nix
-    ../../modules/default.nix
-    ./scripts/default.nix
+    ../../nixosModules
+    ./scripts
   ];
 
   #Custom module options

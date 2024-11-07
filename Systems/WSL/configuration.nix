@@ -11,7 +11,7 @@
   imports = [
   ./hardware-configuration.nix
   ./packages.nix
-  ./scripts/default.nix
+  ./scripts
   ];
 
   wsl.enable = true;

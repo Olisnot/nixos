@@ -20,12 +20,10 @@
         heroic
         protonup-qt
         mangohud
-
-                        #Emulation
-                        retroarch
-                        rpcs3
-                      ];
-                      aagl.enable = lib.mkDefault true;
-                      steam.setup.enable = lib.mkDefault true;
-                    };
-                  }
+        retroarch
+        rpcs3
+      ];
+      aagl.enable = lib.mkDefault true;
+      steam.setup.enable = lib.mkDefault true;
+    };
+  }

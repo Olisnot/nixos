@@ -2,12 +2,12 @@
 
 {
 	imports = [
-                ./Hypr/default.nix
+                ./Hypr
 		./git.nix
 		./alacritty.nix
                 ./opentabletdriver.nix
                 ./dropbox.nix
-                ./Waybar/default.nix
-                ./Floorp/default.nix
+                ./Waybar
+                ./Floorp
 	];
 }

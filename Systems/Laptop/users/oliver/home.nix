@@ -3,7 +3,7 @@
 
 {
 	imports = [
-                ../../../../homeModules/default.nix
+                ../../../../homeModules
                 ./homePackages.nix
 	];
   home.username = "oliver";

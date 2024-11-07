@@ -10,7 +10,7 @@
       enable = true;
       settings = {
         background = {
-          path = "/nixos/Systems/Laptop/wallpaper.png";
+          path = "/home/oliver/Pictures/hyprlockBack.png";
         };
 
         input-field = {
