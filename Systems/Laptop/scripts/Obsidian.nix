@@ -1,7 +1,7 @@
 { pkgs }:
 
 pkgs.writeShellApplication {
-  name = "rebuild";
+  name = "Obsidian";
   text = /* bash */ ''
   cd /home/oliver/Obsidian
   tmux new-session -A -s Obsidian -n Editing
