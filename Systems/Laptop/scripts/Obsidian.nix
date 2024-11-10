@@ -5,7 +5,8 @@ pkgs.writeShellApplication {
   text = /* bash */ ''
   cd /home/oliver/Obsidian
   tmux new-session -A -s Obsidian -n Editing
-  tmux send-keys 'nix develop'
-  tmux split-window -v
+  tmux new-window -t Obsidian:2 -n Git
+  tmux send -t Obsidian:1 'nix develop' Enter
+  tmux a -t Obsidian
   '';
 }
