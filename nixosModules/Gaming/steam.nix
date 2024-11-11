@@ -5,7 +5,7 @@
     gaming.steam.enable = lib.mkEnableOption "Enables steam and any extras";
   };
 
-  config = lib.mkIf config.steam.setup.enable {
+  config = lib.mkIf config.gaming.steam.enable {
     programs = {
       steam = {
         enable = true;
