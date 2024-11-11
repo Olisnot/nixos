@@ -20,6 +20,7 @@ nvidia.enable = true;
 gaming.enable = true;
 gaming.steam.enable = true;
 gaming.emulation.enable = true;
+gaming.emulation.retroarch.enable = true;
 gaming.emulation.playstation2.enable = true;
 opentabletdriverudev.enable = true;
 keymapp.enable = true;
