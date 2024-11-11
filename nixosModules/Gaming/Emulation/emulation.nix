@@ -8,7 +8,7 @@
   config = lib.mkIf config.gaming.emulation.enable {
     environment.systemPackages = with pkgs; [
       retroarch
-      #steam-rom-manager
+      steam-rom-manager
       #emulationstation-de
     ];
   };
