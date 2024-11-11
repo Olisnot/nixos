@@ -18,7 +18,7 @@
           ppsspp
           blastem
           flycast
-          yabuse
+          yabause
         ];
       }
       )
