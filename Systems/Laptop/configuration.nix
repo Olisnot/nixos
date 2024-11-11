@@ -14,6 +14,7 @@
     ./scripts
   ];
 
+
 #Custom module options
 nvidia.enable = true;
 gaming.enable = true;
