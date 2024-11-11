@@ -2,7 +2,7 @@
 
 {
   options = {
-    steam.setup.enable = lib.mkEnableOption "Enables steam and any extras";
+    gaming.steam.enable = lib.mkEnableOption "Enables steam and any extras";
   };
 
   config = lib.mkIf config.steam.setup.enable {

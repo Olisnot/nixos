@@ -17,6 +17,7 @@
 #Custom module options
 nvidia.enable = true;
 gaming.enable = true;
+gaming.steam.enable = true;
 opentabletdriverudev.enable = true;
 keymapp.enable = true;
 tmuxConfig.enable = true;
