@@ -14,7 +14,6 @@
                 useGlobalPkgs = true;
 		users = {
 			"oliver" = import ./home.nix;
-                        nixpkgs.allowUnfreePredicate = _: true;
 		};
 	};
 }
