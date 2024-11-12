@@ -85,7 +85,7 @@ environment.variables = {
   QT_STYLE_OVERRIDE ="kvantum";
   WLR_NO_HARDWARE_CURSORS = "1";
   NIXOS_OZONE_WL = "1";
-  DOTNET_CLI_TELEMETRY_OPTOUT = "1";
+  NIXPKGS_ALLOW_UNFREE=1;
 };
 
 hardware = {
