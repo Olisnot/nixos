@@ -15,10 +15,7 @@
 
     nixvim.url = "github:Olisnot/NixVimConfig";
 
-    firefox-addons = {
-      url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    nur.url = "github:nix-community/nur";
 
     xremap.url = "github:xremap/nix-flake";
   };
@@ -26,14 +23,14 @@
   outputs = { self, nixpkgs, nixpkgsStable, nixos-wsl, ... } @inputs: {
     nixosConfigurations = {
       default = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs;};
+        specialArgs = { inherit inputs; };
         modules = [
           ./Systems/Laptop/configuration.nix
           inputs.home-manager.nixosModules.default
         ];
       };
       wsl = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs;};
+        specialArgs = { inherit inputs; };
         modules = [
           ./Systems/WSL/configuration.nix
           inputs.home-manager.nixosModules.default

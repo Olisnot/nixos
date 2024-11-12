@@ -92,7 +92,7 @@
 
   nixpkgs = {
     overlays = [
-      inputs.firefox-addons
+      inputs.nur.overlay
     ];
     config = {
       allowUnfree = true;

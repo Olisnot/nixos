@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ pkgs, ... }:
 
 {
   programs.floorp.profiles.Work = {
@@ -23,11 +23,11 @@
       }
     ];
 
-    extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
-        bitwarden
-        ublock-origin
-        #youtube-recommended-videos
-      ];
+    extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+      bitwarden
+      ublock-origin
+      youtube-recommended-videos
+    ];
 
     settings = {
       "browser.toolbars.bookmarks.visibility" = "always";
