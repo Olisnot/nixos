@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ pkgs, inputs, lib, ... }:
 
 {
   imports =
@@ -152,6 +152,11 @@ virtualisation.waydroid.enable = true;
 
 # Allow unfree packages
 nixpkgs.config.allowUnfree = true;
+
+nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
+  "youtube-recommended-videos"
+];
+
 
 # Enable flatpak
 services.flatpak.enable = true;
