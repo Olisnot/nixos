@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 
 {
@@ -88,6 +88,15 @@
       "org/gnome/desktop/interface" = {
 	      color-scheme = "prefer-dark";
       };
+  };
+
+  nixpkgs = {
+    overlays = [
+      inputs.firefox-addons.overlay
+    ];
+    config = {
+      allowUnfree = true;
+    };
   };
 
   # Let Home Manager install and manage itself.
