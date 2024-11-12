@@ -43,7 +43,7 @@
     }
     ];
 
-    extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
+    extensions = with inputs.firefox-addons.packages."x86_64-linux" { config.allowUnfree = true; }; [
         bitwarden
         ublock-origin
         steam-database
