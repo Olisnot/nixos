@@ -47,6 +47,7 @@
         bitwarden
         ublock-origin
         steam-database
+        youtube-recommended-videos
       ];
 
     settings = {
