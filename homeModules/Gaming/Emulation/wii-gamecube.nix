@@ -6,6 +6,6 @@
   };
 
   config = lib.mkIf config.gaming.emulation.wii-gamecube.enable {
-    environment.systemPackages = with pkgs; [ dolphin-emu ];
+    home.packages = with pkgs; [ dolphin-emu ];
   };
 }

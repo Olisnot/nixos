@@ -6,7 +6,7 @@
   };
 
   config = lib.mkIf config.gaming.emulation.retroarch.enable {
-    environment.systemPackages = with pkgs; [ 
+    home.packages = with pkgs; [ 
       (retroarch.override {
         cores = with libretro; [
           fceumm

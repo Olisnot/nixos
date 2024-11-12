@@ -6,6 +6,6 @@
   };
 
   config = lib.mkIf config.gaming.emulation.playstation.enable {
-    environment.systemPackages = with pkgs; [ duckstation ];
+    home.packages = with pkgs; [ duckstation ];
   };
 }

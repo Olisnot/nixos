@@ -6,6 +6,6 @@
   };
 
   config = lib.mkIf config.gaming.emulation.playstation2.enable {
-    environment.systemPackages = with pkgs; [ pcsx2 ];
+    home.packages = with pkgs; [ pcsx2 ];
   };
 }

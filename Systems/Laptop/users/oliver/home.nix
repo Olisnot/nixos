@@ -31,6 +31,9 @@
   floorp.enable = true;
   dropbox.enable = true;
   otd.kamvas13.enable = true;
+  gaming.emulation.enable = true;
+  gaming.emulation.retroarch.enable = true;
+  gaming.emulation.playstation2.enable = true;
 
   home.sessionVariables = {
     EDITOR = "neovim";

@@ -6,6 +6,6 @@
   };
 
   config = lib.mkIf config.gaming.emulation.three-ds.enable {
-    environment.systemPackages = with pkgs; [ lime3ds ];
+    home.packages = with pkgs; [ lime3ds ];
   };
 }

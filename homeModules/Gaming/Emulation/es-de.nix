@@ -6,7 +6,7 @@
   };
 
   config = lib.mkIf config.gaming.emulation.emulationstation.enable {
-    environment.systemPackages = with pkgs; [ emulationstation-de ];
+    home.packages = with pkgs; [ emulationstation-de ];
     nixpkgs.config.permittedInsecurePackages = [ "freeimage-unstable-2021-11-01" ];
   };
 }

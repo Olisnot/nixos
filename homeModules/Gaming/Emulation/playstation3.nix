@@ -6,6 +6,6 @@
   };
 
   config = lib.mkIf config.gaming.emulation.playstation3.enable {
-    environment.systemPackages = with pkgs; [ rpcs3 ];
+    home.packages = with pkgs; [ rpcs3 ];
   };
 }

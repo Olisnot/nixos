@@ -6,6 +6,6 @@
   };
 
   config = lib.mkIf config.gaming.emulation.enable {
-    environment.systemPackages = with pkgs; [ steam-rom-manager ];
+    home.packages = with pkgs; [ steam-rom-manager ];
   };
 }

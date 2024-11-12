@@ -3,6 +3,7 @@
 {
 	imports = [
                 ./Hypr
+                ./Gaming
 		./git.nix
 		./alacritty.nix
                 ./opentabletdriver.nix

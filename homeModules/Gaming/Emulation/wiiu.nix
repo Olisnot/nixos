@@ -6,6 +6,6 @@
   };
 
   config = lib.mkIf config.gaming.emulation.wiiu.enable {
-    environment.systemPackages = with pkgs; [ cemu ];
+    home.packages = with pkgs; [ cemu ];
   };
 }

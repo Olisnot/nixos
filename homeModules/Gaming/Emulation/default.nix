@@ -3,7 +3,7 @@
 {
   imports = [
     ./emulation.nix
-    ./retroarch.nix
+    ./Retroarch
     ./es-de.nix
     ./3ds.nix
     ./playstation.nix

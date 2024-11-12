@@ -48,6 +48,7 @@
       ublock-origin
       steam-database
       youtube-recommended-videos
+      darkreader
     ];
 
     settings = {

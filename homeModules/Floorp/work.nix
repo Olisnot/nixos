@@ -27,6 +27,7 @@
       bitwarden
       ublock-origin
       youtube-recommended-videos
+      darkreader
     ];
 
     settings = {
