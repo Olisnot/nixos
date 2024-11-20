@@ -47,7 +47,7 @@ exec-once = [
   "swww-daemon & dunst" 
   "waybar"
   "hyprctl dispatch exec \"[workspace 1; fullscreen]\" alacritty"
-  "floorp"
+  "zen"
   "vesktop"
   "steam"
   "thunderbird"
@@ -326,7 +326,7 @@ windowrule= [
 
 windowrulev2 = [ 
   "suppressevent maximize, class:.* "
-  "workspace 2 silent, class:floorp"
+  "workspace 2 silent, class:zen-alpha"
   "workspace 5 silent, class:steam"
   "workspace 5 silent, class:Lutris"
   "workspace 7 silent, class:thunderbird"
