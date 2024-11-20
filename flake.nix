@@ -18,6 +18,8 @@
     nur.url = "github:nix-community/nur";
 
     xremap.url = "github:xremap/nix-flake";
+
+    zen-browser.url = "github:MarceColl/zen-browser-flake";
   };
 
   outputs = { self, nixpkgs, nixpkgsStable, nixos-wsl, ... } @inputs: {

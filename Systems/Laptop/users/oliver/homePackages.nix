@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   home.packages = with pkgs; [
@@ -26,5 +26,6 @@
     ags
     waybar
     openrgb-with-all-plugins
+    inputs.zen-browser.packages."x86_64-linux".specific
   ];
 }
