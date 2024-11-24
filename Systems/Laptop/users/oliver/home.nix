@@ -28,7 +28,6 @@
   hyprlockConfig.enable = true;
   waybarConfig.enable = true;
   alacrittyConfig.enable = true;
-  floorp.enable = true;
   dropbox.enable = true;
   otd.kamvas13.enable = true;
   gaming.emulation.enable = true;
