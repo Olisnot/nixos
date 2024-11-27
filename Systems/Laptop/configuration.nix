@@ -138,7 +138,7 @@ services.blueman.enable = true;
 
 services.gnome.gnome-keyring.enable = true;
 # Enable Hyprland
-hyprland.enable = true;
+#hyprland.enable = true;
 sway.enable = true;
 security.polkit.enable = true;
 
