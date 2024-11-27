@@ -136,14 +136,10 @@ hardware.bluetooth = {
 };
 services.blueman.enable = true;
 
+services.gnome.gnome-keyring.enable = true;
 # Enable Hyprland
-programs.hyprland = {
-  enable = true;
-  xwayland.enable = true;
-};
-
-# Use hyprlock for lock screen
-programs.hyprlock.enable = true;
+hyprland.enable = true;
+sway.enable = true;
 
 virtualisation.waydroid.enable = true;
 
