@@ -129,18 +129,12 @@ services.pipewire = {
 };
 
 # Enable Bluetooth
-hardware.enableAllFirmware = true;
-hardware.bluetooth = {
-  enable = true;
-  powerOnBoot = true;
-};
-services.blueman.enable = true;
+bluetooth.enable = true;
 
 services.gnome.gnome-keyring.enable = true;
+
 # Enable Hyprland
-#hyprland.enable = true;
-sway.enable = true;
-security.polkit.enable = true;
+hyprland.enable = true;
 
 virtualisation.waydroid.enable = true;
 
