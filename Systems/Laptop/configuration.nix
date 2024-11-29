@@ -29,6 +29,8 @@ xremap.mappings.enable = true;
 nix.settings.experimental-features = ["nix-command" "flakes"];
 nix.settings.auto-optimise-store = true;
 
+nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
+
 # Bootloader.
 boot.loader = {
   systemd-boot.enable = true;
