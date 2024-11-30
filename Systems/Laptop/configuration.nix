@@ -103,7 +103,6 @@ services.displayManager.defaultSession = "hyprland";
 services.xserver.displayManager.lightdm = { 
   enable = true;
   greeters = {
-    enable = true;
     gtk.enable = true;
   };
 };
