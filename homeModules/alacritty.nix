@@ -43,11 +43,6 @@
             foreground = "#C8C093";
           };
 
-          indexed_colors = [
-            { index = 16; color = "#b6927b"; }
-            { index = 17; color = "#b98d7b"; }
-          ];
-
           font = {
             bold = {
               family = "Cascadia Code";
@@ -66,6 +61,11 @@
               style = "Regular";
             };
           };
+
+          indexed_colors = [
+            { index = 16; color = "#b6927b"; }
+            { index = 17; color = "#b98d7b"; }
+          ];
         };
       };
     };
