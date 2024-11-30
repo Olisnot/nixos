@@ -40,11 +40,6 @@
           cyan = "#7dcfff";
           white = "#c0caf5";
         };
-
-        colors.indexed_colors = {
-          index = 16;
-          color = "#ff9e64";
-        };
       };
     };
   };
