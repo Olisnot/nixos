@@ -12,7 +12,7 @@
         # Kanagawa Alacritty Colors
         colors = {
           primary = {
-            background = "#181616";
+            background = "#16161D";
             foreground = "#c5c9c5";
           };
 
