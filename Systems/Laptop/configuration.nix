@@ -102,7 +102,7 @@ xdg.portal.extraPortals = [
 services.displayManager.defaultSession = "hyprland";
 services.xserver.displayManager.lightdm = { 
   enable = true;
-  greeter = {
+  greeters = {
     enable = true;
     gtk.enable = true;
   };
