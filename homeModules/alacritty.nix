@@ -43,29 +43,29 @@
             foreground = "#C8C093";
           };
 
-          font = {
-            bold = {
-              family = "Cascadia Code";
-              style = "Bold";
-            };
-            bold_italic = {
-              family = "Cascadia Code";
-              style = "Bold Italic";
-            };
-            italic = {
-              family = "Cascadia Code";
-              style = "Italic";
-            };
-            normal = {
-              family = "Cascadia Code";
-              style = "Regular";
-            };
-          };
-
           indexed_colors = [
             { index = 16; color = "#b6927b"; }
             { index = 17; color = "#b98d7b"; }
           ];
+        };
+
+        font = {
+          bold = {
+            family = "Cascadia Code";
+            style = "Bold";
+          };
+          bold_italic = {
+            family = "Cascadia Code";
+            style = "Bold Italic";
+          };
+          italic = {
+            family = "Cascadia Code";
+            style = "Italic";
+          };
+          normal = {
+            family = "Cascadia Code";
+            style = "Regular";
+          };
         };
       };
     };
