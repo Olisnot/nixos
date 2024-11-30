@@ -100,8 +100,12 @@ xdg.portal.extraPortals = [
 
 # Set Hyprland as defaultSession
 services.displayManager.defaultSession = "hyprland";
-services.xserver.displayManager = { 
-  gdm.enable = true;
+services.xserver.displayManager.lightdm = { 
+  enable = true;
+  greeter = {
+    enable = true;
+    gtk.enable = true;
+  };
 };
 
 # Set Laptop lid
