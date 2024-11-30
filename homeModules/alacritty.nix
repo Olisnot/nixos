@@ -9,56 +9,42 @@
     programs.alacritty = {
       enable = true;
       settings = {
-        colors.bright = {
-          black     = "#1e1e1e";
-          red       = "#ff5f5f";
-          green     = "#f7f7f7";
-          yellow    = "#efef00";
-          blue      = "#338fff";
-          magenta   = "#ff66ff";
-          cyan      = "#00eff0";
-          white     = "#989898";
+        colors.primary = {
+          background = "#1a1b26";
+          foreground = "#c0caf5";
+        };
+
+        colors.cursor = {
+          cursor = "#c0caf5";
+          text = "#1a1b26";
         };
 
         colors.normal = {
-          black     = "#000000";
-          red       = "#ff5f59";
-          green     = "#f7f7f7";
-          yellow    = "#d0bc00";
-          blue      = "#2fafff";
-          magenta   = "#feacd0";
-          cyan      = "#00d3d0";
-          white     = "#ffffff";
+          black = "#15161e";
+          red = "#f7768e";
+          green = "#9ece6a";
+          yellow = "#e0af68";
+          blue = "#7aa2f7";
+          magenta = "#bb9af7";
+          cyan = "#7dcfff";
+          white = "#a9b1d6";
         };
 
-        colors.primary = {
-          background   = "#000000";
-          foreground   = "#ffffff";
+        colors.bright = {
+          black = "#414868";
+          red = "#f7768e";
+          green = "#9ece6a";
+          yellow = "#e0af68";
+          blue = "#7aa2f7";
+          magenta = "#bb9af7";
+          cyan = "#7dcfff";
+          white = "#c0caf5";
         };
 
-        window = {
-          opacity = 0.7;
+        colors.indexed_colors = {
+          index = 16;
+          color = "#ff9e64";
         };
-
-        font = {
-          bold = {
-            family = "Cascadia Code";
-            style = "Bold";
-          };
-          bold_italic = {
-            family = "Cascadia Code";
-            style = "Bold Italic";
-          };
-          italic = {
-            family = "Cascadia Code";
-            style = "Italic";
-          };
-          normal = {
-            family = "Cascadia Code";
-            style = "Regular";
-          };
-        };
-
       };
     };
   };
