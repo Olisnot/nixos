@@ -6,6 +6,7 @@
                 ./hyprland.nix
                 ./sway.nix
                 ./bluetooth.nix
+                ./stylix.nix
 		./Gaming
                 ./Programs
 	];

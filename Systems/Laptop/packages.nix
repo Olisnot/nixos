@@ -5,7 +5,7 @@
 #Utility
 			killall
 			util-linux
-			htop
+			btop
 			lshw
 			pavucontrol
 			tree

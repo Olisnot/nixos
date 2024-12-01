@@ -11,6 +11,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    stylix = {
+      url = "github:danth/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
 
     nixvim.url = "github:Olisnot/NixVimConfig";
@@ -29,6 +34,7 @@
         modules = [
           ./Systems/Laptop/configuration.nix
           inputs.home-manager.nixosModules.default
+          inputs.stylix.nixosModules.stylix
         ];
       };
       wsl = nixpkgs.lib.nixosSystem {

@@ -12,7 +12,6 @@
     dina-font
     proggyfonts
     font-awesome
-    nerdfonts
     material-design-icons
     cascadia-code
   ];
