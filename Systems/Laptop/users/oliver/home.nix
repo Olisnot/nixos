@@ -2,10 +2,10 @@
 
 
 {
-	imports = [
-                ../../../../homeModules
-                ./homePackages.nix
-	];
+  imports = [
+    ../../../../homeModules
+    ./homePackages.nix
+  ];
   home.username = "oliver";
   home.homeDirectory = "/home/oliver";
 
@@ -28,6 +28,7 @@
   hyprlockConfig.enable = true;
   waybarConfig.enable = true;
   alacrittyConfig.enable = true;
+  fish.enable = true;
   dropbox.enable = true;
   otd.kamvas13.enable = true;
   gaming.emulation.enable = true;
@@ -37,15 +38,15 @@
   stylix.targets.hyprpaper.enable = lib.mkForce false;
 
   home.sessionVariables = {
-    EDITOR = "neovim";
+    EDITOR = "nvim";
   };
 
   #virt-manager
   dconf.settings = {
-      "org/virt-manager/virt-manager/connections" = {
-          autoconnect = ["qemu:///system"];
-          uris = ["qemu:///system"];
-      };
+    "org/virt-manager/virt-manager/connections" = {
+      autoconnect = ["qemu:///system"];
+      uris = ["qemu:///system"];
+    };
   };
 
   nixpkgs = {
