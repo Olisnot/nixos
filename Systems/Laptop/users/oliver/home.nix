@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ pkgs, lib, inputs, ... }:
 
 
 {
@@ -31,8 +31,10 @@
   dropbox.enable = true;
   otd.kamvas13.enable = true;
   gaming.emulation.enable = true;
+  tmux.enable = true;
 
-  programs.tmux.enable = true;
+  services.hyprpaper.enable = lib.mkForce false; 
+  stylix.targets.hyprpaper.enable = lib.mkForce false;
 
   home.sessionVariables = {
     EDITOR = "neovim";

@@ -21,9 +21,9 @@ gaming.enable = true;
 gaming.steam.enable = true;
 opentabletdriverudev.enable = true;
 keymapp.enable = true;
-tmuxConfig.enable = true;
 virt-manager.setup = true;
 xremap.mappings.enable = true;
+aagl.enable = true;
 
 #Nix settings
 nix.settings.experimental-features = ["nix-command" "flakes"];

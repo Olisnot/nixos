@@ -48,6 +48,7 @@ exec-once = [
   "vesktop"
   "steam"
   "thunderbird"
+  "eval \"$(ssh-agent -s)\""
 ];
 
 #############################
@@ -80,7 +81,7 @@ general = {
   };
 
 decoration = {
-  rounding = 10;
+  rounding = 0;
 
     # Change transparency of focused and unfocused windows
     active_opacity = 1.0;
