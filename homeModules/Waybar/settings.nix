@@ -6,10 +6,10 @@
       layer = "top";
       position = "top";
       height = 1;
-      margin-top = 5;
+      margin-top = 0;
       modules-left = [ "hyprland/workspaces" ];
       modules-center = [ "clock" ];
-      modules-right = [ "tray" "battery" "group/power" ];
+      modules-right = [ "tray" "battery" "custom/power" ];
 
       battery = {
         format = " {capacity}%";
@@ -23,16 +23,16 @@
         format = "{icon}";
         on-click = "activate";
         format-icons = {
-          "1" = "";
-          "2" = "";
-          "3" = "";
-          "4" = "";
-          "5" = "";
-          "6" = "";
-          "7" = "";
-          "8" = "";
-          "9" = "";
-          "10" = "";
+          "1" = "1";
+          "2" = "2";
+          "3" = "3";
+          "4" = "4";
+          "5" = "5";
+          "6" = "6";
+          "7" = "7";
+          "8" = "8";
+          "9" = "9";
+          "10" = "10";
         };
         sort-by-number = true;
       };
@@ -42,42 +42,9 @@
         spacing = 10;
       };
 
-      "group/power" = {
-        drawer = {
-          transition-duration = 500;
-          children-class = "not-power";
-          transition-left-to-right = false;
-        };
-        orientation = "horizontal";
-        modules = [
-          "custom/power"
-          "custom/logout"
-          "custom/suspend"
-          "custom/reboot"
-        ];
-      };
-
       "custom/power" = {
         format = "";
         on-click = "systemctl poweroff";
-        tooltip = false;
-      };
-
-      "custom/reboot" = {
-        format = "";
-        on-click = "systemctl reboot";
-        tooltip = false;
-      };
-
-      "custom/suspend" = {
-        format = "";
-        on-click = "systemctl suspend";
-        tooltip = false;
-      };
-
-      "custom/logout" = {
-        format = "";
-        on-click = "hyprctl dispatch exit";
         tooltip = false;
       };
 

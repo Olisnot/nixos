@@ -41,6 +41,8 @@ boot.loader = {
 networking.hostName = "nixos"; # Define your hostname.
 # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
+programs.spicetify.enable = true;
+
 # Kernel parameters
 boot.kernelParams = [ "nvidia-drm.modeset=1" ];
 

@@ -25,6 +25,11 @@
     xremap.url = "github:xremap/nix-flake";
 
     zen-browser.url = "github:MarceColl/zen-browser-flake";
+
+    spicetify-nix = {
+      url = "github:Gerg-L/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { self, nixpkgs, nixpkgsStable, nixos-wsl, ... } @inputs: {
@@ -35,6 +40,7 @@
           ./Systems/Laptop/configuration.nix
           inputs.home-manager.nixosModules.default
           inputs.stylix.nixosModules.stylix
+          inputs.spicetify-nix.nixosModules.default
         ];
       };
       wsl = nixpkgs.lib.nixosSystem {

@@ -2,7 +2,6 @@
 
 {
   home.packages = with pkgs; [
-    spotify
     vesktop
     thunderbird
     android-studio
