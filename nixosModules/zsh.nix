@@ -18,6 +18,7 @@
         c = "clear";
         sudovim = "sudo -E nvim .";
         vim = "nvim .";
+        dev = "nix develop --command zsh";
         tb = "cd /mnt/1tb";
       };
     };

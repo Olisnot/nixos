@@ -5,13 +5,13 @@ let
 in
   {
     options = {
-      starship.enable = lib.mkEnableOption "Enable Z shell starship";
+      starship.enable = lib.mkEnableOption "Enable starship cross shell prompt";
     };
 
     config = lib.mkIf config.starship.enable {
       programs.starship = {
         enable = true;
-        enableZshIntegration = true;
+        enableFishIntegration = true;
         settings = {
           format = '' 
           '';

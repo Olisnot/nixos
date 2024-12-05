@@ -3,6 +3,7 @@
 {
   imports = [
     ./zsh.nix
+    ./fish.nix
     ./nvidia.nix
     ./hyprland.nix
     ./sway.nix

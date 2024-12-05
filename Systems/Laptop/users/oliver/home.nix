@@ -28,6 +28,7 @@
   hyprlockConfig.enable = true;
   waybarConfig.enable = true;
   alacrittyConfig.enable = true;
+  bash.enable = true;
   fish.enable = true;
   dropbox.enable = true;
   otd.kamvas13.enable = true;

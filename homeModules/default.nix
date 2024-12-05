@@ -5,6 +5,7 @@
                 ./Hypr
                 ./Gaming
                 ./tmux.nix
+                ./bash.nix
                 ./zsh.nix
                 ./fish.nix
                 ./starship.nix
