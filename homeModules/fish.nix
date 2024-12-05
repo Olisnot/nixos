@@ -20,6 +20,7 @@ in
         sudovim = "sudo -E nvim .";
         vim = "nvim .";
         tb = "cd /mnt/1tb";
+        dev = "nix develop --command fish";
       };
       plugins = [
         { name = "bobthefish"; src = pkgs.fishPlugins.bobthefish.src; }
