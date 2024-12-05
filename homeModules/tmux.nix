@@ -10,8 +10,10 @@
       enable = true;
       baseIndex = 1;
       keyMode = "vi";
+      extraConfig = ''
+      set -g status-left-length 20 # could be any number
+      '';
     };
-
   };
 }
 
