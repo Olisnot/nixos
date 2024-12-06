@@ -30,6 +30,7 @@
   alacrittyConfig.enable = true;
   bash.enable = true;
   fish.enable = true;
+  starship.enable = true;
   dropbox.enable = true;
   otd.kamvas13.enable = true;
   gaming.emulation.enable = true;
@@ -40,6 +41,13 @@
 
   home.sessionVariables = {
     EDITOR = "nvim";
+  };
+
+  programs.fish.shellAliases = {
+      c = "clear";
+      sudovim = "sudo -E nvim .";
+      vim = "nvim .";
+      tb = "cd /mnt/1tb";
   };
 
   #virt-manager
