@@ -3,7 +3,6 @@
 {
   programs.waybar.style = ''
     * {
-      font-family: 'Font Awesome 6 Free', 'Font Awesome 6 Brands';
       font-weight: bold;
       font-size: 15px;
     }
@@ -14,12 +13,10 @@
     }
 
 #workspaces {
-  font-family: 'Material Design Icons';
   margin-left: 10px;
 }
 
 #workspaces button.active {
-  font-family: 'Material Design Icons';
 }
 
 .modules-left {
@@ -36,7 +33,6 @@
 }
 
 #battery {
-  font-family: 'Cascadia Code';
   padding-right: 10px;
   padding-left: 10px;
   margin-right: 10px;
@@ -55,14 +51,11 @@
 }
 
 #custom-power {
-  padding-right: 10px;
   padding-left: 10px;
-  margin-right: 10px;
-  font-size: 30px;
+  font-size: 18px;
 }
 
 #clock {
-  font-family: 'Cascadia Code';
   padding-right: 10px;
   padding-left: 10px;
   margin-left: 10px;
