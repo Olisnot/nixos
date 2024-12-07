@@ -4,6 +4,7 @@
 	imports = [
                 ./Hypr
                 ./Gaming
+                ./waypaper.nix
                 ./tmux.nix
                 ./bash.nix
                 ./zsh.nix

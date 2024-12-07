@@ -27,6 +27,7 @@
   hyprlandConfig.enable = true;
   hyprlockConfig.enable = true;
   waybarConfig.enable = true;
+  waypaper.enable = true;
   alacrittyConfig.enable = true;
   bash.enable = true;
   fish.enable = true;

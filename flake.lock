@@ -1045,6 +1045,7 @@
         "nur": "nur",
         "spicetify-nix": "spicetify-nix",
         "stylix": "stylix",
+        "wallpapers": "wallpapers",
         "xremap": "xremap",
         "zen-browser": "zen-browser"
       }
@@ -1249,6 +1250,22 @@
       "original": {
         "owner": "numtide",
         "repo": "treefmt-nix",
+        "type": "github"
+      }
+    },
+    "wallpapers": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1733594733,
+        "narHash": "sha256-V/vzJlWG1T9NrsBkkQgyr1XTceh6Juhwdli9ipry6iQ=",
+        "owner": "olmods",
+        "repo": "wallpapers",
+        "rev": "fa49b9a28ceb3c8843fc2732f3a1ddc1eff37281",
+        "type": "github"
+      },
+      "original": {
+        "owner": "olmods",
+        "repo": "wallpapers",
         "type": "github"
       }
     },

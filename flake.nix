@@ -16,6 +16,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    wallpapers = {
+      url = "github:olmods/wallpapers";
+      flake = false;
+    };
+
     nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
 
     nixvim.url = "github:Olisnot/NixVimConfig";

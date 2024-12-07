@@ -1,9 +1,9 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   stylix = {
     enable = true;
-    image = ./wallpaper.jpg;
+    image = "${inputs.wallpapers}/gruvbox/xavier-cuenca-w4-3.jpg";
     polarity = "dark";
     base16Scheme = {
       base00 = "#1d2021";
