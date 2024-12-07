@@ -46,7 +46,7 @@ exec-once = [
   "hyprctl dispatch exec \"[workspace 1; fullscreen]\" alacritty"
   "zen"
   "vesktop"
-  "steam"
+  "lutris"
   "thunderbird"
   "eval \"$(ssh-agent -s)\""
 ];
@@ -291,7 +291,7 @@ windowrulev2 = [
   "suppressevent maximize, class:.* "
   "workspace 2 silent, class:zen-alpha"
   "workspace 5 silent, class:steam"
-  "workspace 5 silent, class:Lutris"
+  "workspace 5 silent, class:lutris"
   "workspace 7 silent, class:thunderbird"
   "workspace 9 silent, class:vesktop"
 ];

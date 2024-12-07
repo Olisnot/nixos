@@ -35,6 +35,8 @@
   dropbox.enable = true;
   otd.kamvas13.enable = true;
   gaming.emulation.enable = true;
+  gaming.emulation.retroarch.enable = true;
+  gaming.emulation.playstation2.enable = true;
   tmux.enable = true;
 
   services.hyprpaper.enable = lib.mkForce false; 
