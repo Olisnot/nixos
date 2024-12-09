@@ -3,5 +3,6 @@
 {
   imports = [
     ./Emulation
+    ./mangohud.nix
   ];
 }

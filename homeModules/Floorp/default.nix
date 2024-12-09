@@ -1,10 +1,9 @@
-{ lib, config, ... }:
+{ lib, config, pkgs, ... }:
 
 {
 
   imports = [ 
     ./personal.nix
-    ./work.nix
   ];
 
   options = {
@@ -25,6 +24,10 @@
         OfferToSaveLogins = false;
         ShowHomeButton = false;
       };
+    };
+
+    home.sessionVariables = {
+      DEFAULT_BROWSER = "${pkgs.floorp}/bin/floorp";
     };
   };
 }

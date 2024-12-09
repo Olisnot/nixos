@@ -7,8 +7,8 @@
                 ./waypaper.nix
                 ./tmux.nix
                 ./bash.nix
-                ./zsh.nix
                 ./fish.nix
+                ./fastfetch.nix
                 ./starship.nix
 		./git.nix
 		./alacritty.nix

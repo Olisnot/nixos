@@ -18,11 +18,6 @@
   # release notes.
   home.stateVersion = "23.11"; # Please read the comment before changing.
 
-  # Home Manager is pretty good at managing dotfiles. The primary way to manage
-  # plain files is through 'home.file'.
-  home.file = {
-  };
-
   # Custom home modules
   hyprlandConfig.enable = true;
   hyprlockConfig.enable = true;
@@ -31,12 +26,17 @@
   alacrittyConfig.enable = true;
   bash.enable = true;
   fish.enable = true;
+  fastfetch.enable = true;
   starship.enable = true;
   dropbox.enable = true;
+  floorp.enable = true;
   otd.kamvas13.enable = true;
+  gaming.mangohud.enable = true;
   gaming.emulation.enable = true;
   gaming.emulation.retroarch.enable = true;
+  gaming.emulation.ds.enable = true;
   gaming.emulation.playstation2.enable = true;
+  gaming.emulation.playstation3.enable = true;
   tmux.enable = true;
 
   services.hyprpaper.enable = lib.mkForce false; 

@@ -19,7 +19,6 @@
                         wl-clipboard
 #General
 			ranger
-			neofetch
 			wofi
 			unzip
 			dunst

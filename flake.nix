@@ -29,8 +29,6 @@
 
     xremap.url = "github:xremap/nix-flake";
 
-    zen-browser.url = "github:MarceColl/zen-browser-flake";
-
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
