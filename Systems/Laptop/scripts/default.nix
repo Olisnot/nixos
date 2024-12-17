@@ -3,6 +3,7 @@
 let
   rebuild = import ./Rebuild.nix { inherit pkgs; };
   Obsidian = import ./Obsidian.nix { inherit pkgs; };
+  TmuxSessionizer = import ./TmuxSessionizer.nix { inherit pkgs; };
   nvim = inputs.nixvim.packages."x86_64-linux".default;
 in
 {
@@ -12,6 +13,7 @@ in
   environment.systemPackages = [
     rebuild
     Obsidian
+    TmuxSessionizer
     nvim
   ];
 }

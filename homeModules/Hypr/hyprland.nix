@@ -51,23 +51,9 @@ exec-once = [
   "eval \"$(ssh-agent -s)\""
 ];
 
-#############################
-### ENVIRONMENT VARIABLES ###
-#############################
-
-#env = [ 
-  #"XCURSOR_SIZE,16"
-  #"XCURSOR_THEME,\"${pkgs.graphite-cursors}\""
-#];
-
 xwayland = {
   force_zero_scaling = true;
 };
-
-
-#####################
-### LOOK AND FEEL ###
-#####################
 
 general = {
   gaps_in = 5;
@@ -75,10 +61,10 @@ general = {
 
   border_size = 1;
 
-    resize_on_border = false;
-    allow_tearing = false;
-    layout = "dwindle";
-  };
+  resize_on_border = false;
+  allow_tearing = false;
+  layout = "dwindle";
+};
 
 decoration = {
   rounding = 0;
@@ -96,82 +82,69 @@ decoration = {
     };
   };
 
-animations = {
-  enabled = true;
-  bezier = "myBezier, 0.05, 0.9, 0.1, 1.05";
+  animations = {
+    enabled = true;
+    bezier = "myBezier, 0.05, 0.9, 0.1, 1.05";
 
-  animation = [
-    "windows, 1, 7, myBezier"
-    "windowsOut, 1, 7, default, popin 80%"
-    "border, 1, 10, default"
-    "borderangle, 1, 8, default"
-    "fade, 1, 7, default"
-    "workspaces, 1, 6, default"
-  ];
-};
+    animation = [
+      "windows, 1, 7, myBezier"
+      "windowsOut, 1, 7, default, popin 80%"
+      "border, 1, 10, default"
+      "borderangle, 1, 8, default"
+      "fade, 1, 7, default"
+      "workspaces, 1, 6, default"
+    ];
+  };
 
-dwindle = {
-  pseudotile = true; # Master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
-  preserve_split = true; # You probably want this
-};
+  dwindle = {
+    pseudotile = true; 
+    preserve_split = true; 
+  };
 
-#master {
-    #new_is_master = true
-#}
-
-misc = {
-  force_default_wallpaper = -1; # Set to 0 or 1 to disable the anime mascot wallpapers
-  disable_hyprland_logo = true; # If true disables the random hyprland logo / anime girl background. :(
+  misc = {
+    force_default_wallpaper = -1; 
+    disable_hyprland_logo = true;
     disable_splash_rendering = true;
   };
 
 
-#############
-### INPUT ###
-#############
 
-input = {
-  kb_layout = "us, us";
-  kb_variant = ", dvorak";
-  kb_options = "grp:alt_shift_toggle";
+  input = {
+    kb_layout = "us, us";
+    kb_variant = ", dvorak";
+    kb_options = "grp:alt_shift_toggle";
 
-  follow_mouse = 0;
+    follow_mouse = 0;
 
-  sensitivity = 0; # -1.0 - 1.0, 0 means no modification.
+    sensitivity = 0;
 
-  touchpad = {
-    natural_scroll = false;
+    touchpad = {
+      natural_scroll = false;
+    };
   };
-};
 
-gestures = {
-  workspace_swipe = false;
-};
+  gestures = {
+    workspace_swipe = false;
+  };
 
-# Example per-device config
-device = {
-  name = "epic-mouse-v1";
-  sensitivity = -0.5;
-};
+  device = {
+    name = "epic-mouse-v1";
+    sensitivity = -0.5;
+  };
 
+  "$mainMod" = "SUPER";
 
-####################
-### KEYBINDINGSS ###
-####################
-
-"$mainMod" = "SUPER"; # Sets "Windows" key as main modifier
-
-bind = [
-  "$mainMod, return, exec, $terminal"
-  "$mainMod, C, killactive,"
-  "$mainMod, M, exit,"
-  "$mainMod, E, exec, $fileManager"
-  "$mainMod, V, togglefloating,"
-  "$mainMod, Space, exec, $menu"
-  "$mainMod, P, pseudo, # dwindle"
-  "$mainMod, J, togglesplit," # dwindle
-  "$mainMod, F, fullscreen"
-  "$mainMod, L, exec, hyprlock"
+  bind = [
+    "$mainMod, return, exec, $terminal"
+    "$mainMod, C, killactive,"
+    "$mainMod, M, exit,"
+    "$mainMod, E, exec, $fileManager"
+    "$mainMod, V, togglefloating,"
+    "$mainMod, Space, exec, $menu"
+    "$mainMod, P, pseudo, # dwindle"
+    "$mainMod, J, togglesplit,"
+    "$mainMod, F, fullscreen"
+    "$mainMod, L, exec, hyprlock"
 
 # Screen Capture
 "$mainMod SHIFT, S, exec, \"slurp | grim -g - screenshot.png\""
@@ -272,15 +245,6 @@ bindm = [
   "$mainMod, mouse:272, movewindow"
   "$mainMod, mouse:273, resizewindow"
 ];
-##############################
-### WINDOWS AND WORKSPACES ###
-##############################
-
-# Example windowrule
-# windowrule = float, ^(kitty)$
-
-# Example windowrule v2
-# windowrulev2 = float,class:^(kitty)$,title:^(kitty)$
 
 windowrule= [ 
   "workspace 8,title:Spotify Premium"
