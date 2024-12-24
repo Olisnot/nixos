@@ -1,4 +1,4 @@
-{ pkgs, inputs, lib, ... }:
+{ pkgs, inputs, ... }:
 
 {
   imports =
@@ -23,7 +23,6 @@ opentabletdriverudev.enable = true;
 keymapp.enable = true;
 virt-manager.setup = true;
 xremap.mappings.enable = true;
-aagl.enable = true;
 fish.enable = true;
 
 #Nix settings
