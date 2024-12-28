@@ -29,6 +29,10 @@
 
     xremap.url = "github:xremap/nix-flake";
 
+    ghostty = {
+      url = "github:ghostty-org/ghostty";
+    };
+
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
