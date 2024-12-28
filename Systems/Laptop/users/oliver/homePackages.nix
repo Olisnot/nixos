@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 
 {
   home.packages = with pkgs; [
@@ -25,6 +25,5 @@
     ags
     waybar
     openrgb-with-all-plugins
-    inputs.ghostty.packages.x86_64-linux.default
   ];
 }
