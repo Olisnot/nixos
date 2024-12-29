@@ -15,6 +15,5 @@
                 ./opentabletdriver.nix
                 ./dropbox.nix
                 ./Waybar
-                ./Floorp
 	];
 }

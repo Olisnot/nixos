@@ -25,7 +25,6 @@ monitor= [
 ### MY PROGRAMS ###
 ###################
 
-# Set programs that you use
 "$terminal" = "alacritty";
 "$fileManager" = "alacritty --command ranger";
 "$menu" = "wofi --show run";
@@ -35,16 +34,11 @@ monitor= [
 ### AUTOSTART ###
 #################
 
-# Autostart necessary processes (like notifications daemons, status bars, etc.)
-# Or execute your favorite apps at launch like this:
-
-# exec-once = $terminal
-# exec-once = nm-applet &
 exec-once = [ 
   "swww-daemon & dunst" 
   "waybar"
-  "hyprctl dispatch exec \"[workspace 1; fullscreen]\" alacritty"
-  "floorp"
+  "hyprctl dispatch exec \"[workspace 3; fullscreen]\" alacritty"
+  "vivaldi"
   "vesktop"
   "lutris"
   "thunderbird"
@@ -253,7 +247,7 @@ windowrule= [
 
 windowrulev2 = [ 
   "suppressevent maximize, class:.* "
-  "workspace 2 silent, class:floorp"
+  "workspace 2 silent, class:Vivaldi-stable"
   "workspace 5 silent, class:steam"
   "workspace 5 silent, class:lutris"
   "workspace 7 silent, class:thunderbird"

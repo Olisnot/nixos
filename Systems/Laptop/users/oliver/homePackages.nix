@@ -2,9 +2,9 @@
 
 {
   home.packages = with pkgs; [
+    vivaldi
     vesktop
     thunderbird
-    android-studio
     obsidian
     gimp
     krita
@@ -26,4 +26,5 @@
     waybar
     openrgb-with-all-plugins
   ];
+
 }

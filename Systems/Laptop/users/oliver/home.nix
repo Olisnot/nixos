@@ -29,7 +29,6 @@
   fastfetch.enable = true;
   starship.enable = true;
   dropbox.enable = true;
-  floorp.enable = true;
   otd.kamvas13.enable = true;
   gaming.mangohud.enable = true;
   gaming.emulation.enable = true;
