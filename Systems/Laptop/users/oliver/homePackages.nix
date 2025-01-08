@@ -2,7 +2,6 @@
 
 {
   home.packages = with pkgs; [
-    vivaldi
     vesktop
     thunderbird
     obsidian

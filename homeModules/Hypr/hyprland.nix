@@ -38,7 +38,7 @@ exec-once = [
   "swww-daemon & dunst" 
   "waybar"
   "hyprctl dispatch exec \"[workspace 3; fullscreen]\" alacritty"
-  "vivaldi"
+  "io.github.zen_browser.zen"
   "vesktop"
   "lutris"
   "thunderbird"
@@ -189,13 +189,6 @@ decoration = {
 "$mainMod, S, togglespecialworkspace, magic"
 "$mainMod SHIFT, S, movetoworkspace, special:magic"
 
-# Scroll through existing workspaces with mainMod + scroll
-#bind = $mainMod, mouse_down, workspace, e+1
-#bind = $mainMod, mouse_up, workspace, e-1
-
-# Move/resize windows with mainMod + LMB/RMB and dragging
-
-
 ##############################
 ### WINDOWS AND WORKSPACES ###
 # Switch workspaces with mainMod + [0-9]
@@ -225,13 +218,8 @@ decoration = {
 # Example special workspace (scratchpad)
 "$mainMod, S, togglespecialworkspace, magic"
 "$mainMod SHIFT, S, movetoworkspace, special:magic"
-
-# Scroll through existing workspaces with mainMod + scroll
-#bind = $mainMod, mouse_down, workspace, e+1
-#bind = $mainMod, mouse_up, workspace, e-1
-
-# Move/resize windows with mainMod + LMB/RMB and dragging
 ];
+
 
 bindm = [
   "$mainMod, mouse:272, movewindow"
@@ -247,7 +235,7 @@ windowrule= [
 
 windowrulev2 = [ 
   "suppressevent maximize, class:.* "
-  "workspace 2 silent, class:Vivaldi-stable"
+  "workspace 2 silent, class:zen-beta"
   "workspace 5 silent, class:steam"
   "workspace 5 silent, class:lutris"
   "workspace 7 silent, class:thunderbird"
