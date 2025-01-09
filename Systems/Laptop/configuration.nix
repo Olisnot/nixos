@@ -25,6 +25,7 @@ virt-manager.setup = true;
 xremap.mappings.enable = true;
 aagl.enable = true;
 fish.enable = true;
+ollama.enable = true;
 
 #Nix settings
 nix.settings.experimental-features = ["nix-command" "flakes"];
