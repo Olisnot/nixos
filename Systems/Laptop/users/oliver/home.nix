@@ -41,6 +41,12 @@
   services.hyprpaper.enable = lib.mkForce false; 
   stylix.targets.hyprpaper.enable = lib.mkForce false;
 
+  stylix.iconTheme = {
+    enable = true;
+    package = pkgs.material-black-colors;
+    dark = "Material-Black-Mango-Numix-FLAT";
+  };
+
   home.sessionVariables = {
     EDITOR = "nvim";
   };

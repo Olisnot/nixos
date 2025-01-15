@@ -4,13 +4,13 @@
   home.packages = with pkgs; [
     vesktop
     thunderbird
+    nautilus
     obsidian
     gimp
     krita
     gucharmap
     chatterino2
     gpauth
-    gpclient
     libreoffice-qt6-fresh
     keymapp
     mpv
@@ -23,7 +23,9 @@
     mpvpaper
     ags
     waybar
+    globalprotect-openconnect
     openrgb-with-all-plugins
+    spotube
   ];
 
 }

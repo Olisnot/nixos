@@ -1,4 +1,4 @@
-{ config, lib, ... }:
+{ config, lib, pkgs, ... }:
 
 {
   options = {
@@ -6,6 +6,7 @@
   };
 
   config = lib.mkIf config.nvidia.enable {
+    environment.systemPackages = with pkgs; [ nvtopPackages.nvidia ];
 # Enable OpenGL
 hardware.graphics = {
   enable = true;

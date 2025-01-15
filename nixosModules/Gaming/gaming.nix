@@ -9,7 +9,7 @@
     hardware.xpadneo.enable = true;
 
     environment.systemPackages = with pkgs; [
-      lutris
+      stable.lutris
       steam-run
       heroic
       protonup-qt

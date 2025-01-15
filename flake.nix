@@ -29,22 +29,22 @@
     nur.url = "github:nix-community/nur";
 
     xremap.url = "github:xremap/nix-flake";
-
-    spicetify-nix = {
-      url = "github:Gerg-L/spicetify-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
-  outputs = { self, nixpkgs, nixpkgsStable, nixos-wsl, ... } @inputs: {
+  outputs = { nixpkgs, nixpkgsStable, nixos-wsl, ... } @inputs:
+  let
+    system = "x86_64-linux";
+    overlay-stable = final: prev: { stable = import nixpkgsStable { inherit system; config.allowUnfree = true;}; };
+  in
+  {
     nixosConfigurations = {
       default = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; };
         modules = [
           ./Systems/Laptop/configuration.nix
           inputs.home-manager.nixosModules.default
+          ({ ... }: { nixpkgs.overlays = [ overlay-stable ]; })
           inputs.stylix.nixosModules.stylix
-          inputs.spicetify-nix.nixosModules.default
         ];
       };
       wsl = nixpkgs.lib.nixosSystem {

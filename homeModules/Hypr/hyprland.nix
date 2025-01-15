@@ -16,7 +16,8 @@
 monitor= [ 
   "DP-1,1920x1080,0x1080,1"
   "HDMI-A-1,1920x1080,19200x1080,1"
-  "eDP-1,1920x1080,192000x0,1"
+  #"eDP-1,1920x1080,192000x0,1"
+  "eDP-1, disable"
   "Unknown-1, disable"
 ];
 
@@ -26,7 +27,7 @@ monitor= [
 ###################
 
 "$terminal" = "alacritty";
-"$fileManager" = "alacritty --command ranger";
+"$fileManager" = "nautilus";
 "$menu" = "wofi --show run";
 
 
@@ -37,8 +38,9 @@ monitor= [
 exec-once = [ 
   "swww-daemon & dunst" 
   "waybar"
+  "hyprctl dispatch exec \"[workspace 2; fullscreen]\" app.zen_browser.zen"
   "hyprctl dispatch exec \"[workspace 3; fullscreen]\" alacritty"
-  "io.github.zen_browser.zen"
+  "hyprctl dispatch exec \"[workspace 4; fullscreen]\" obsidian"
   "vesktop"
   "lutris"
   "thunderbird"
@@ -235,10 +237,11 @@ windowrule= [
 
 windowrulev2 = [ 
   "suppressevent maximize, class:.* "
-  "workspace 2 silent, class:zen-beta"
+  "workspace 2 silent, class:zen"
   "workspace 5 silent, class:steam"
   "workspace 5 silent, class:lutris"
   "workspace 7 silent, class:thunderbird"
+  "workspace 8 silent, class:spotube"
   "workspace 9 silent, class:vesktop"
 ];
 
