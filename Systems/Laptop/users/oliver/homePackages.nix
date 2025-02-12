@@ -3,7 +3,6 @@
 {
   home.packages = with pkgs; [
     vesktop
-    thunderbird
     nautilus
     obsidian
     gimp

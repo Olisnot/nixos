@@ -4,10 +4,9 @@
 	imports = [
                 ./Hypr
                 ./Gaming
+                ./Shells
                 ./waypaper.nix
                 ./tmux.nix
-                ./bash.nix
-                ./fish.nix
                 ./fastfetch.nix
                 ./starship.nix
 		./git.nix

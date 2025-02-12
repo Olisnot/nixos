@@ -26,6 +26,7 @@
   alacrittyConfig.enable = true;
   bash.enable = true;
   fish.enable = true;
+  nushell.enable = true;
   fastfetch.enable = true;
   starship.enable = true;
   dropbox.enable = true;
