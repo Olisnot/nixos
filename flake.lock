@@ -1133,11 +1133,11 @@
         "nixvim": "nixvim_2"
       },
       "locked": {
-        "lastModified": 1733269703,
-        "narHash": "sha256-551+Li09dA+bdZTdMRwAP/fkwxSHNDKGtln1SAqFHcM=",
+        "lastModified": 1740716605,
+        "narHash": "sha256-tV4+nZl2RhPpd0AZzv2LZj2W4WW18o3wNdqPUflMQ70=",
         "owner": "Olisnot",
         "repo": "NixVimConfig",
-        "rev": "9177fcefa1ebfeebf3571df989057a3ec3f57327",
+        "rev": "e2c7c51a0902f85b6020164d55d5e05423626eab",
         "type": "github"
       },
       "original": {
@@ -1464,11 +1464,11 @@
     "wallpapers": {
       "flake": false,
       "locked": {
-        "lastModified": 1738165597,
-        "narHash": "sha256-kUHAbN3T8VYT2nSbbrJbl34A7b4allBpNVkGki+OWz4=",
+        "lastModified": 1740716363,
+        "narHash": "sha256-u8lK1mG5RHBRxJhgQCyF1JsjzPfBbA5SDwoueoW5S1g=",
         "owner": "olmods",
         "repo": "wallpapers",
-        "rev": "6c18c330490ff81930853fb4302c0f7203501349",
+        "rev": "607b83dfc5a5775df907fb32d5431c544065e6f4",
         "type": "github"
       },
       "original": {

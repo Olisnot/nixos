@@ -45,7 +45,7 @@
   stylix.iconTheme = {
     enable = true;
     package = pkgs.material-black-colors;
-    dark = "Material-Black-Mango-Numix-FLAT";
+    dark = "Material-Black-Blueberry-Suru";
   };
 
   home.sessionVariables = {
