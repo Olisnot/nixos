@@ -9,12 +9,13 @@
       margin-top = 0;
       modules-left = [ "hyprland/workspaces" ];
       modules-center = [ "clock" ];
-      modules-right = [ "tray" "battery" "custom/power" ];
+      modules-right = [ "tray" "cpu" "memory" "battery" "custom/power" ];
 
       battery = {
         format = " {capacity}%";
         format-charging = ": {capacity}%";
       };
+
       clock = {
         format = "{:%I:%M %p}";
       };
@@ -23,16 +24,16 @@
         format = "{icon}";
         on-click = "activate";
         format-icons = {
-          "1" = "1";
-          "2" = "2";
-          "3" = "3";
-          "4" = "4";
-          "5" = "5";
-          "6" = "6";
-          "7" = "7";
-          "8" = "8";
-          "9" = "9";
-          "10" = "10";
+          "1" = "";
+          "2" = "";
+          "3" = "";
+          "4" = "";
+          "5" = "";
+          "6" = "";
+          "7" = "";
+          "8" = "";
+          "9" = "";
+          "10" = "";
         };
         sort-by-number = true;
       };
@@ -43,22 +44,21 @@
       };
 
       "custom/power" = {
-        format = "";
+        format = "";
         on-click = "systemctl poweroff";
         tooltip = false;
       };
 
-      "pulseaudio" = {
-        format = "{icon}";
-        format-bluetooth = "{icon}";
-        format-muted = "";
-        format-icons = {
-          headphone = "";
-          default = ["" ""];
-        };
-        scroll-step = 1;
-        on-click = "pavucontrol";
-        ignored-sinks = ["Easy Effects Sink"];
+      "cpu" = {
+        "interval" = 10;
+        "format" = "{}% ";
+        "max-length" = 10;
+      };
+
+      "memory" = {
+        "interval" = 30;
+        "format" = "{}% ";
+        "max-length" = 10;
       };
     }
   ];

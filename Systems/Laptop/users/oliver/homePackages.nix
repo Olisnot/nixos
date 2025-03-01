@@ -24,7 +24,5 @@
     waybar
     globalprotect-openconnect
     openrgb-with-all-plugins
-    spotube
   ];
-
 }

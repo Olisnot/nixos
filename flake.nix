@@ -1,7 +1,6 @@
 {
   description = "Nixos config flake";
 
-
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
@@ -29,6 +28,13 @@
     nur.url = "github:nix-community/nur";
 
     xremap.url = "github:xremap/nix-flake";
+
+    spicetify-nix = {
+      url = "github:Gerg-L/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    ags.url = "github:aylur/ags";
   };
 
   outputs = { nixpkgs, nixpkgsStable, nixos-wsl, ... } @inputs:
@@ -42,9 +48,10 @@
         specialArgs = { inherit inputs; };
         modules = [
           ./Systems/Laptop/configuration.nix
-          inputs.home-manager.nixosModules.default
           ({ ... }: { nixpkgs.overlays = [ overlay-stable ]; })
+          inputs.home-manager.nixosModules.default
           inputs.stylix.nixosModules.stylix
+          inputs.spicetify-nix.nixosModules.default
         ];
       };
       wsl = nixpkgs.lib.nixosSystem {

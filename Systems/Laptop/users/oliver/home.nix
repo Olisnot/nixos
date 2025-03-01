@@ -40,12 +40,16 @@
   tmux.enable = true;
 
   services.hyprpaper.enable = lib.mkForce false; 
-  stylix.targets.hyprpaper.enable = lib.mkForce false;
 
-  stylix.iconTheme = {
-    enable = true;
-    package = pkgs.material-black-colors;
-    dark = "Material-Black-Blueberry-Suru";
+  stylix = {
+    targets.hyprpaper.enable = lib.mkForce false;
+    targets.waybar.enable = false;
+
+    iconTheme = {
+      enable = true;
+      package = pkgs.material-black-colors;
+      dark = "Material-Black-Blueberry-Suru";
+    };
   };
 
   home.sessionVariables = {

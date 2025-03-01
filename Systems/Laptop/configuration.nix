@@ -107,6 +107,8 @@ services.xserver.displayManager.gdm = {
   wayland = true;
 };
 
+programs.spicetify.enable = true;
+
 # Set Laptop lid
 services.logind.lidSwitchExternalPower = "ignore";
 
