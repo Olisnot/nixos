@@ -15,7 +15,7 @@
 
 monitor= [ 
   "DP-1,1920x1080,0x1080,1"
-  "HDMI-A-1,1920x1080,19200x1080,1"
+  "HDMI-A-1,2560x1080,19200x1080,1"
   "eDP-1,1920x1080,192000x0,1"
   #"eDP-1, disable"
   "Unknown-1, disable"
@@ -39,11 +39,11 @@ exec-once = [
   "swww-daemon & dunst" 
   "waybar"
   "hyprctl dispatch exec \"[workspace 2; fullscreen]\" app.zen_browser.zen"
-  "hyprctl dispatch exec \"[workspace 4; fullscreen]\" obsidian"
-  "hyprctl dispatch exec \"[workspace 3; fullscreen]\" alacritty"
+  "hyprctl dispatch exec \"[workspace 4]\" obsidian"
+  "hyprctl dispatch exec \"[workspace 3]\" alacritty"
   "vesktop"
   "lutris"
-  "eval \"$(ssh-agent -s)\""
+  "pomodoro"
 ];
 
 xwayland = {
@@ -142,7 +142,7 @@ decoration = {
     "$mainMod, L, exec, hyprlock"
 
 # Screen Capture
-"$mainMod SHIFT, S, exec, \"slurp | grim -g - screenshot.png\""
+#"$mainMod SHIFT, S, exec, \"slurp | grim -g - screenshot.png\""
 
 # Move focus with mainMod + arrow keys
 "$mainMod, left, movefocus, l"
@@ -186,10 +186,6 @@ decoration = {
 "$mainMod SHIFT, 9, movetoworkspace, 9"
 "$mainMod SHIFT, 0, movetoworkspace, 10"
 
-# Example special workspace (scratchpad)
-"$mainMod, S, togglespecialworkspace, magic"
-"$mainMod SHIFT, S, movetoworkspace, special:magic"
-
 ##############################
 ### WINDOWS AND WORKSPACES ###
 # Switch workspaces with mainMod + [0-9]
@@ -216,9 +212,10 @@ decoration = {
 "$mainMod SHIFT, 9, movetoworkspace, 9"
 "$mainMod SHIFT, 0, movetoworkspace, 10"
 
-# Example special workspace (scratchpad)
-"$mainMod, S, togglespecialworkspace, magic"
-"$mainMod SHIFT, S, movetoworkspace, special:magic"
+# Spotify controls
+"$mainMod SHIFT, p, exec, dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
+"$mainMod SHIFT, n, exec, dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
+"$mainMod SHIFT, t, exec, dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
 ];
 
 
@@ -229,17 +226,13 @@ bindm = [
   "$mainMod, mouse:273, resizewindow"
 ];
 
-windowrule= [ 
-  "workspace 8,title:Spotify Premium"
-  "float, ^(honkers-railway-launcher)$"
-];
-
 windowrulev2 = [ 
   "suppressevent maximize, class:.* "
   "workspace 2 silent, class:zen"
   "workspace 5 silent, class:steam"
   "workspace 5 silent, class:lutris"
-  "workspace 8 silent, class:spotube"
+  "workspace 6 silent, class:io.gitlab.idevecore.Pomodoro"
+  "workspace 8 silent, class:Spotify"
   "workspace 9 silent, class:vesktop"
 ];
 

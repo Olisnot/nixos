@@ -19,10 +19,9 @@
     waypaper
     bottles
     swww
-    mpvpaper
-    ags
     waybar
     globalprotect-openconnect
-    openrgb-with-all-plugins
+    pomodoro-gtk
+    ani-cli
   ];
 }

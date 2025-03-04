@@ -32,10 +32,6 @@
   dropbox.enable = true;
   otd.kamvas13.enable = true;
   gaming.mangohud.enable = true;
-  gaming.emulation.enable = true;
-  gaming.emulation.retroarch.enable = true;
-  gaming.emulation.ds.enable = true;
-  gaming.emulation.playstation2.enable = true;
   gaming.emulation.playstation3.enable = true;
   tmux.enable = true;
 

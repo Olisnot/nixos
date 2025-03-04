@@ -75,6 +75,7 @@ in
     #custom-power {
       padding-left: 10px;
       padding-right: 15px;
+      margin-right: 10px;
       font-size: 18px;
       background-color: ${colors.base00};
       border: 2px solid ${colors.base02};

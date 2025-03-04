@@ -19,7 +19,6 @@ os.chdir(repoPath)
 tmT = "${tmux}"
 ns = "new-session"
 subprocess.Popen([tmT, ns, "-d", "-s", repo, "-n", "NeoVim"])
-subprocess.Popen([tmT, "send-keys", "-t", repo + ":1", "'vim'", "Enter"])
 
 t = os.environ["TERM"]
 termState = subprocess.run(["echo", t], capture_output=True)
