@@ -15,6 +15,7 @@
                         blueman
                         usbutils
 			pciutils
+                        inetutils
                         fzf
                         wl-clipboard
 #General
