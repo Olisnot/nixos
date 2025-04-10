@@ -17,6 +17,7 @@
 			pciutils
                         inetutils
                         fzf
+                        filezilla
                         wl-clipboard
 #General
 			ranger
