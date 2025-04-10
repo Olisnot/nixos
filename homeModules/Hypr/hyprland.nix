@@ -42,7 +42,7 @@ exec-once = [
   "hyprctl dispatch exec \"[workspace 4]\" obsidian"
   "hyprctl dispatch exec \"[workspace 3]\" alacritty"
   "vesktop"
-  "lutris"
+  "steam"
   "pomodoro"
 ];
 
@@ -230,6 +230,7 @@ windowrulev2 = [
   "suppressevent maximize, class:.* "
   "workspace 2 silent, class:zen"
   "workspace 5 silent, class:steam"
+  "workspace 5 silent, class:heroic"
   "workspace 5 silent, class:lutris"
   "workspace 6 silent, class:io.gitlab.idevecore.Pomodoro"
   "workspace 8 silent, class:Spotify"
