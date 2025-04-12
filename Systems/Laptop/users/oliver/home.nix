@@ -44,7 +44,7 @@
     iconTheme = {
       enable = true;
       package = pkgs.material-black-colors;
-      dark = "Material-Black-Blueberry-Suru";
+      dark = "Material-Black-Pistachio";
     };
   };
 
