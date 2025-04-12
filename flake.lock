@@ -1097,11 +1097,11 @@
         "nixvim": "nixvim_2"
       },
       "locked": {
-        "lastModified": 1742577414,
-        "narHash": "sha256-ihCxJpt6lANnNAERWh/t8rH8ajKInbcZ36QsBqCnidg=",
+        "lastModified": 1744458003,
+        "narHash": "sha256-60PzjNB8ysuS6VO4TV2u0ew/yYRg0nxKLZmH18lj8NM=",
         "owner": "Olisnot",
         "repo": "NixVimConfig",
-        "rev": "989819cb6d05b39c3416e7016969161cac611b6f",
+        "rev": "a7c6f11c527dc4fab797015c470cd3114c5be5a4",
         "type": "github"
       },
       "original": {
