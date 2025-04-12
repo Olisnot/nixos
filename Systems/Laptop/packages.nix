@@ -19,6 +19,7 @@
                         fzf
                         filezilla
                         wl-clipboard
+                        gparted
 #General
 			ranger
 			wofi
