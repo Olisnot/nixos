@@ -29,11 +29,6 @@
 
     xremap.url = "github:xremap/nix-flake";
 
-    spicetify-nix = {
-      url = "github:Gerg-L/spicetify-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     ags.url = "github:aylur/ags";
   };
 
@@ -51,7 +46,6 @@
           ({ ... }: { nixpkgs.overlays = [ overlay-stable ]; })
           inputs.home-manager.nixosModules.default
           inputs.stylix.nixosModules.stylix
-          inputs.spicetify-nix.nixosModules.default
         ];
       };
       wsl = nixpkgs.lib.nixosSystem {

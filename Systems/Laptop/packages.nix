@@ -20,18 +20,19 @@
                         filezilla
                         wl-clipboard
                         gparted
+                        zip
+                        ffmpeg
 #General
 			ranger
 			wofi
 			unzip
-			dunst
 #Coding
 			git
 			git-credential-manager
 			alacritty
 #Coding Languages
 			gcc
-			python39
+			python314
 			lua
 			];
 }

@@ -14,7 +14,6 @@
     ./scripts
   ];
 
-
 #Custom module options
 nvidia.enable = true;
 gaming.enable = true;
@@ -39,13 +38,30 @@ boot.loader = {
   systemd-boot.configurationLimit = 5;
 };
 
+
+boot.resumeDevice = "/dev/disk/by-uuid/a357b12d-bc51-4745-9898-4f7bdc59d327";
+
+powerManagement.enable = true;
+
+boot.extraModprobeConfig = ''
+options nvidia_modset vblank_sem_control=0
+'';
+
+swapDevices = [
+  {
+    device = "/var/lib/swapfile";
+    size = 16 * 1024; # 32GB in MB
+  }
+];
+
+
 security.polkit.enable = true;
 
 networking.hostName = "nixos"; # Define your hostname.
-# networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+# networking.wireless.enable = true;  #Enables wireless support via wpa_supplicant.
 
 # Kernel parameters
-boot.kernelParams = [ "nvidia-drm.modeset=1" ];
+boot.kernelParams = [ "nvidia-drm.modeset=1" "resume_offset=79960064" ];
 
 # Enable IWD
 networking.wireless.iwd.enable = true;
@@ -84,7 +100,7 @@ environment.variables = {
   EDITOR = "nvim";
   GDK_SCALE = "0.5";
   XCURSOR_THEME = "graphite-cursors";
-  QT_STYLE_OVERRIDE ="kvantum";
+  QT_STYLE_OVERRIDE = lib.mkDefault "kvantum";
   WLR_NO_HARDWARE_CURSORS = "1";
   NIXOS_OZONE_WL = "1";
   NIXPKGS_ALLOW_UNFREE=1;
@@ -108,8 +124,6 @@ services.xserver.displayManager.gdm = {
   wayland = true;
 };
 
-programs.spicetify.enable = true;
-
 # Set Laptop lid
 services.logind.lidSwitchExternalPower = "ignore";
 
@@ -118,7 +132,6 @@ services.xserver = {
   xkb = {
     layout = "us, us";
     variant = ", dvorak";
-    options = "grp:alt_shift_toggle";
   };
 };
 

@@ -29,11 +29,11 @@
   nushell.enable = true;
   fastfetch.enable = true;
   starship.enable = true;
-  dropbox.enable = true;
   otd.kamvas13.enable = true;
   gaming.mangohud.enable = true;
   gaming.emulation.playstation3.enable = true;
   tmux.enable = true;
+  dunst.enable = true;
 
   services.hyprpaper.enable = lib.mkForce false; 
 

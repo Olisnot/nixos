@@ -5,6 +5,7 @@
                 ./Hypr
                 ./Gaming
                 ./Shells
+                ./dunst.nix
                 ./waypaper.nix
                 ./tmux.nix
                 ./fastfetch.nix
@@ -12,7 +13,6 @@
 		./git.nix
 		./alacritty.nix
                 ./opentabletdriver.nix
-                ./dropbox.nix
                 ./Waybar
 	];
 }

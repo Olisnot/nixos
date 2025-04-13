@@ -1,4 +1,4 @@
-{ lib, config, ... }:
+{ pkgs, lib, config, ... }:
 
 {
   options = {
@@ -14,10 +14,9 @@
 ################
 
 monitor= [ 
-  "DP-1,1920x1080,0x1080,1"
-  "HDMI-A-1,2560x1080,19200x1080,1"
-  "eDP-1,1920x1080,192000x0,1"
-  #"eDP-1, disable"
+  "DP-1,1920x1080,0x0,1"
+  "HDMI-A-1,1920x1080,1920x0,1"
+  "eDP-1, disable"
   "Unknown-1, disable"
 ];
 
@@ -38,7 +37,10 @@ monitor= [
 exec-once = [ 
   "swww-daemon & dunst" 
   "waybar"
-  "hyprctl dispatch exec \"[workspace 2; fullscreen]\" app.zen_browser.zen"
+  "iwgtk -i"
+  "blueman-applet"
+  "hyprctl dispatch exec \"[workspace 2]\" app.zen_browser.zen"
+  "hyprctl dispatch exec \"[workspace 8]\" com.mastermindzh.tidal-hifi"
   "hyprctl dispatch exec \"[workspace 4]\" obsidian"
   "hyprctl dispatch exec \"[workspace 3]\" alacritty"
   "vesktop"
@@ -107,7 +109,6 @@ decoration = {
   input = {
     kb_layout = "us, us";
     kb_variant = ", dvorak";
-    kb_options = "grp:alt_shift_toggle";
 
     follow_mouse = 0;
 
@@ -136,13 +137,12 @@ decoration = {
     "$mainMod, E, exec, $fileManager"
     "$mainMod, V, togglefloating,"
     "$mainMod, Space, exec, $menu"
-    "$mainMod, P, pseudo, # dwindle"
     "$mainMod, J, togglesplit,"
     "$mainMod, F, fullscreen"
     "$mainMod, L, exec, hyprlock"
 
 # Screen Capture
-#"$mainMod SHIFT, S, exec, \"slurp | grim -g - screenshot.png\""
+"$mainMod, S, exec, hyprshot -m region -o ~/Pictures/Screenshots"
 
 # Move focus with mainMod + arrow keys
 "$mainMod, left, movefocus, l"
@@ -186,6 +186,9 @@ decoration = {
 "$mainMod SHIFT, 9, movetoworkspace, 9"
 "$mainMod SHIFT, 0, movetoworkspace, 10"
 
+#pin floating window
+"$mainMod, P, pin"
+
 ##############################
 ### WINDOWS AND WORKSPACES ###
 # Switch workspaces with mainMod + [0-9]
@@ -211,11 +214,6 @@ decoration = {
 "$mainMod SHIFT, 8, movetoworkspace, 8"
 "$mainMod SHIFT, 9, movetoworkspace, 9"
 "$mainMod SHIFT, 0, movetoworkspace, 10"
-
-# Spotify controls
-"$mainMod SHIFT, p, exec, dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
-"$mainMod SHIFT, n, exec, dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
-"$mainMod SHIFT, t, exec, dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
 ];
 
 
@@ -233,7 +231,7 @@ windowrulev2 = [
   "workspace 5 silent, class:heroic"
   "workspace 5 silent, class:lutris"
   "workspace 6 silent, class:io.gitlab.idevecore.Pomodoro"
-  "workspace 8 silent, class:Spotify"
+  "workspace 8 silent, class:com.mastermindzh.tidal-hifi"
   "workspace 9 silent, class:vesktop"
 ];
 
@@ -243,13 +241,15 @@ workspace= [
   "3,monitor:DP-1"
   "4,monitor:DP-1"
   "5,monitor:DP-1"
-  "6,monitor:HDMI-A-1"
-  "7,monitor:HDMI-A-1"
-  "8,monitor:HDMI-A-1"
-  "9,monitor:HDMI-A-1"
-  "10,monitor:eDP-1"
+  "6,monitor:DP-1"
+  "7,monitor:DP-1"
+  "8,monitor:DP-1"
+  "9,monitor:DP-1"
+  "10,monitor:HDMI-A-1"
 ];
   };
 };
+services.hyprpolkitagent.enable = true;
+home.packages = with pkgs; [ hyprshot ];
 };
 }

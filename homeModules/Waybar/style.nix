@@ -11,20 +11,17 @@ in
     }
 
     window#waybar {
-      background-color: transparent;
+      background-color: ${colors.base00};
     }
 
     #workspaces {
       background-color: ${colors.base00};
       font-size: 20px;
-      border-radius: 25px;
       margin-left: 10px;
-      border: 2px solid ${colors.base02};
     }
 
     #workspaces button.active {
       background-color: ${colors.base02};
-      border-radius: 25px;
     }
 
     .modules-left {
@@ -42,34 +39,19 @@ in
       padding-left: 10px;
       margin-right: 10px;
       background-color: ${colors.base00};
-      border: 2px solid ${colors.base02};
-      border-radius: 25px;
-    }
-    #cpu {
-      padding-right: 10px;
-      padding-left: 10px;
-      margin-right: 10px;
-      background-color: ${colors.base00};
-      border: 2px solid ${colors.base02};
-      border-radius: 25px;
     }
 
-    #memory {
+    #mpris {
+      border-radius: 25px;
+      border: 2px solid ${colors.base02};
       padding-right: 10px;
       padding-left: 10px;
-      margin-right: 10px;
-      background-color: ${colors.base00};
-      border: 2px solid ${colors.base02};
-      border-radius: 25px;
     }
 
     #tray {
       padding-right: 10px;
       padding-left: 10px;
       margin-right: 10px;
-      background-color: ${colors.base00};
-      border: 2px solid ${colors.base02};
-      border-radius: 25px;
     }
 
     #custom-power {
@@ -77,17 +59,11 @@ in
       padding-right: 15px;
       margin-right: 10px;
       font-size: 18px;
-      background-color: ${colors.base00};
-      border: 2px solid ${colors.base02};
-      border-radius: 25px;
     }
 
     #clock {
       padding-right: 10px;
       padding-left: 10px;
-      background-color: ${colors.base00};
-      border: 2px solid ${colors.base02};
-      border-radius: 25px;
     }
 '';
 }

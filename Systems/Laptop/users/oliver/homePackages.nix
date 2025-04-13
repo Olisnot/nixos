@@ -5,9 +5,11 @@
     vesktop
     nautilus
     obsidian
-    gimp
+    gimp3
     krita
     gucharmap
+    streamlink
+    streamlink-twitch-gui-bin 
     chatterino2
     gpauth
     libreoffice-qt6-fresh
@@ -23,5 +25,6 @@
     globalprotect-openconnect
     pomodoro-gtk
     ani-cli
+    playerctl
   ];
 }
