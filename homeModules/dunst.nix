@@ -25,6 +25,7 @@ in
             min_icon_size = 32;
             max_icon_size = 64;
             progress_bar_corner_radius = 5;
+            show_indicators = false;
           };
           urgency_normal = {
             timeout = 10;
