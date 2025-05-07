@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   home.packages = with pkgs; [
@@ -26,5 +26,6 @@
     pomodoro-gtk
     ani-cli
     playerctl
+    inputs.astal.packages.x86_64-linux.default
   ];
 }

@@ -16,23 +16,22 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nixvim.url = "github:Olisnot/NixVimConfig";
+
     wallpapers = {
       url = "github:olmods/wallpapers";
       flake = false;
     };
 
-    nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
-
-    nixvim.url = "github:Olisnot/NixVimConfig";
-
-    nur.url = "github:nix-community/nur";
+    astal = {
+      url = "github:aylur/astal";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     xremap.url = "github:xremap/nix-flake";
-
-    ags.url = "github:aylur/ags";
   };
 
-  outputs = { nixpkgs, nixpkgsStable, nixos-wsl, ... } @inputs:
+  outputs = { nixpkgs, nixpkgsStable, ... } @inputs:
   let
     system = "x86_64-linux";
     overlay-stable = final: prev: { stable = import nixpkgsStable { inherit system; config.allowUnfree = true;}; };
@@ -46,18 +45,6 @@
           ({ ... }: { nixpkgs.overlays = [ overlay-stable ]; })
           inputs.home-manager.nixosModules.default
           inputs.stylix.nixosModules.stylix
-        ];
-      };
-      wsl = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs; };
-        modules = [
-          ./Systems/WSL/configuration.nix
-          inputs.home-manager.nixosModules.default
-          nixos-wsl.nixosModules.default
-          {
-            system.stateVersion = "24.05";
-            wsl.enable = true;
-          }
         ];
       };
     };
