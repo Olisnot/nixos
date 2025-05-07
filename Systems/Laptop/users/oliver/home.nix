@@ -43,8 +43,8 @@
 
     iconTheme = {
       enable = true;
-      package = pkgs.material-black-colors;
-      dark = "Material-Black-Pistachio";
+      package = pkgs.morewaita-icon-theme;
+      dark = "MoreWaita";
     };
   };
 
