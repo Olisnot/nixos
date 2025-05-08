@@ -82,7 +82,7 @@
 
       "custom/power" = {
         format = "";
-        on-click = "systemctl poweroff";
+        on-click = "~/start_menu";
         tooltip = false;
       };
     }

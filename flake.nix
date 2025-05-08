@@ -23,11 +23,6 @@
       flake = false;
     };
 
-    astal = {
-      url = "github:aylur/astal";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     xremap.url = "github:xremap/nix-flake";
   };
 
