@@ -117,6 +117,9 @@ xdg.portal.extraPortals = [
   pkgs.xdg-desktop-portal-hyprland
 ];
 
+# Enable Hyprland
+hyprland.enable = true;
+
 # Set Hyprland as defaultSession
 services.displayManager.defaultSession = "hyprland";
 services.xserver.displayManager.gdm = { 
@@ -153,11 +156,6 @@ services.pipewire = {
 bluetooth.enable = true;
 
 services.gnome.gnome-keyring.enable = true;
-
-# Enable Hyprland
-hyprland.enable = true;
-
-virtualisation.waydroid.enable = true;
 
 # Allow unfree packages
 nixpkgs.config.allowUnfree = true;
