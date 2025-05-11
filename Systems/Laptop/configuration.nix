@@ -50,7 +50,7 @@ options nvidia_modset vblank_sem_control=0
 swapDevices = [
   {
     device = "/var/lib/swapfile";
-    size = 16 * 1024; # 32GB in MB
+    size = 16 * 1024; # 16GB in MB
   }
 ];
 

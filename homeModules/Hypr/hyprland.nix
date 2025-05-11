@@ -36,7 +36,7 @@ monitor= [
 
 exec-once = [ 
   "swww-daemon & dunst" 
-  "waybar"
+  #"waybar"
   "iwgtk -i"
   "blueman-applet"
   "hyprctl dispatch exec \"[workspace 2]\" app.zen_browser.zen"
