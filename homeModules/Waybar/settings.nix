@@ -77,7 +77,7 @@
         "status-icons" = {
           "paused" = "⏸";
         };
-        "ignored-players" = ["firefox.instance_1_36"];
+        "ignored-players" = ["firefox.instance_1_36" "chromium.instance2"];
       };
 
       "custom/power" = {
