@@ -7,7 +7,7 @@
 			util-linux
 			btop
 			lshw
-			pavucontrol
+                        pwvucontrol
 			tree
 			iwd
 			iwgtk
