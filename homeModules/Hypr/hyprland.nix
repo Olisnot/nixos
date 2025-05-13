@@ -16,7 +16,7 @@
 monitor= [ 
   "DP-1,1920x1080,0x0,1"
   "HDMI-A-1,1920x1080,1920x0,1"
-  "eDP-1, disable"
+  #"eDP-1, disable"
   "Unknown-1, disable"
 ];
 
