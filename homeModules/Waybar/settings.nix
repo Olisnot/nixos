@@ -9,7 +9,7 @@
       margin-top = 0;
       modules-left = [ "hyprland/workspaces" ];
       modules-center = [ "clock" ];
-      modules-right = [ "mpris"  "tray" "privacy" "battery" "custom/power" ];
+      modules-right = [ "custom/music"  "tray" "privacy" "battery" "custom/power" ];
 
       "hyprland/workspaces" = {
         format = "{icon}";
@@ -36,6 +36,7 @@
 
       clock = {
         format = "{:%I:%M %p}";
+        tooltip = false;
       };
 
       "tray" = {
@@ -66,18 +67,10 @@
         ];
       };
 
-      "mpris" = {
-        "title-len" = 20;
-        "format" = "{player_icon} {title}";
-        "format-paused" = "{status_icon} {title}";
-        "player-icons" = {
-          "default" = "▶";
-          "mpv" = "🎵";
-        };
-        "status-icons" = {
-          "paused" = "⏸";
-        };
-        "ignored-players" = ["firefox.instance_1_36" "chromium.instance2"];
+      "custom/music" = {
+        format = "🎵";
+        on-click = "";
+        tooltip = false;
       };
 
       "custom/power" = {

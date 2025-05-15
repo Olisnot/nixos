@@ -5,11 +5,6 @@ let
 in
 {
   programs.waybar.style = ''
-    * {
-      font-weight: bold;
-      font-size: 14px;
-    }
-
     window#waybar {
       background-color: ${colors.base00};
     }
