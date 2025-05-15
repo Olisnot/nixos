@@ -36,7 +36,7 @@ in
       background-color: ${colors.base00};
     }
 
-    #custom/music {
+    #custom-music {
       border-radius: 25px;
       border: 2px solid ${colors.base02};
     }
