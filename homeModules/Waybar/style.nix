@@ -36,11 +36,9 @@ in
       background-color: ${colors.base00};
     }
 
-    #mpris {
+    #custom/music {
       border-radius: 25px;
       border: 2px solid ${colors.base02};
-      padding-right: 10px;
-      padding-left: 10px;
     }
 
     #tray {
