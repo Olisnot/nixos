@@ -11,7 +11,6 @@ in
 
     #workspaces {
       background-color: ${colors.base00};
-      font-size: 20px;
       margin-left: 10px;
     }
 
