@@ -67,7 +67,7 @@
       };
 
       "mpris" = {
-        "title-len" = 30;
+        "title-len" = 20;
         "format" = "{player_icon} {title}";
         "format-paused" = "{status_icon} {title}";
         "player-icons" = {
@@ -81,7 +81,7 @@
       };
 
       "custom/power" = {
-        format = "";
+        format = "";
         on-click = "~/start_menu";
         tooltip = false;
       };
