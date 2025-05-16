@@ -16,7 +16,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nixvim.url = "github:Olisnot/NixVimConfig";
+    nixvim.url = "git+https://codeberg.org/Olisnot/NixVimConfig";
 
     wallpapers = {
       url = "github:olmods/wallpapers";

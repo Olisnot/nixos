@@ -41,11 +41,11 @@ exec-once = [
   "waybar"
   "iwgtk -i"
   "blueman-applet"
-  "hyprctl dispatch exec \"[workspace 2]\" app.zen_browser.zen"
-  "hyprctl dispatch exec \"[workspace 8]\" com.mastermindzh.tidal-hifi"
+  "hyprctl dispatch exec \"[workspace 2]\" librewolf"
+  "hyprctl dispatch exec \"[workspace 8]\" tidal-hifi"
   "hyprctl dispatch exec \"[workspace 4]\" obsidian"
   "hyprctl dispatch exec \"[workspace 3]\" alacritty"
-  "vesktop"
+  "equibop"
   "steam"
   "pomodoro"
 ];
@@ -233,13 +233,13 @@ bindm = [
 
 windowrulev2 = [ 
   "suppressevent maximize, class:.* "
-  "workspace 2 silent, class:zen"
+  "workspace 2 silent, class:LibreWolf"
   "workspace 5 silent, class:steam"
   "workspace 5 silent, class:heroic"
   "workspace 5 silent, class:lutris"
   "workspace 6 silent, class:io.gitlab.idevecore.Pomodoro"
-  "workspace 8 silent, class:com.mastermindzh.tidal-hifi"
-  "workspace 9 silent, class:vesktop"
+  "workspace 8 silent, class:tidal-hifi"
+  "workspace 9 silent, class:equibop"
 ];
 
 workspace= [ 

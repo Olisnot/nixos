@@ -1,4 +1,4 @@
-{ pkgs, lib, inputs, ... }:
+{ pkgs, lib, ... }:
 
 
 {
@@ -34,6 +34,7 @@
   gaming.emulation.playstation3.enable = true;
   tmux.enable = true;
   dunst.enable = true;
+  ghostty.enable = true;
 
   services.hyprpaper.enable = lib.mkForce false; 
 

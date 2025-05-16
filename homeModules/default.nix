@@ -14,5 +14,6 @@
 		./alacritty.nix
                 ./opentabletdriver.nix
                 ./Waybar
+                ./ghostty.nix
 	];
 }

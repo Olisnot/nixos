@@ -1,8 +1,9 @@
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 
 {
   home.packages = with pkgs; [
     vesktop
+    equibop
     nautilus
     obsidian
     gimp3
@@ -25,6 +26,9 @@
     globalprotect-openconnect
     pomodoro-gtk
     ani-cli
+    miru
     playerctl
+    tidal-hifi
+    librewolf-bin
   ];
 }
