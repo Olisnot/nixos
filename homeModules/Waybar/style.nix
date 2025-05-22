@@ -6,16 +6,7 @@ in
 {
   programs.waybar.style = ''
     window#waybar {
-      background-color: ${colors.base00};
-    }
-
-    #workspaces {
-      background-color: ${colors.base00};
-      margin-left: 10px;
-    }
-
-    #workspaces button.active {
-      background-color: ${colors.base02};
+      background-color: transparent;
     }
 
     .modules-left {
@@ -28,34 +19,55 @@ in
       padding-left: 10px;
     }
 
+    #workspaces {
+      background-color: ${colors.base00};
+      border: 1px solid ${colors.base02};
+      border-radius: 10px;
+      padding-left: 5px;
+      padding-right: 10px;
+      font-size: 18px;
+    }
+
     #battery {
+      background-color: ${colors.base00};
+      border: 1px solid ${colors.base02};
+      border-radius: 10px;
       padding-right: 10px;
       padding-left: 10px;
       margin-right: 10px;
-      background-color: ${colors.base00};
-    }
-
-    #custom-music {
-      border-radius: 25px;
-      border: 2px solid ${colors.base02};
-      padding-right: 10px;
-      padding-left: 10px;
     }
 
     #tray {
+      background-color: ${colors.base00};
+      border: 1px solid ${colors.base02};
+      border-radius: 10px;
       padding-right: 10px;
       padding-left: 10px;
       margin-right: 10px;
     }
 
-    #custom-power {
+    #mpd {
+      background-color: ${colors.base00};
+      border: 1px solid ${colors.base02};
+      border-radius: 10px;
+      padding-right: 10px;
       padding-left: 10px;
-      padding-right: 15px;
-      margin-right: 10px;
+      margin-left: 10px;
+    }
+
+    #custom-power {
+      background-color: ${colors.base00};
+      border: 1px solid ${colors.base02};
+      border-radius: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
       font-size: 18px;
     }
 
     #clock {
+      background-color: ${colors.base00};
+      border: 1px solid ${colors.base02};
+      border-radius: 10px;
       padding-right: 10px;
       padding-left: 10px;
     }

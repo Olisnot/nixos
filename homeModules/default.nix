@@ -11,9 +11,12 @@
                 ./fastfetch.nix
                 ./starship.nix
 		./git.nix
-		./alacritty.nix
                 ./opentabletdriver.nix
                 ./Waybar
                 ./ghostty.nix
+                ./wezterm.nix
+                ./zellij.nix
+                ./mpd.nix
+                ./zen.nix
 	];
 }

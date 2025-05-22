@@ -6,27 +6,25 @@
       layer = "top";
       position = "top";
       height = 1;
-      margin-top = 0;
-      modules-left = [ "hyprland/workspaces" ];
+      margin-top = 5;
+      modules-left = [ "niri/workspaces" "mpd" ];
       modules-center = [ "clock" ];
-      modules-right = [ "custom/music"  "tray" "privacy" "battery" "custom/power" ];
+      modules-right = [ "tray" "battery" "custom/power" ];
 
-      "hyprland/workspaces" = {
+      "niri/workspaces" = {
         format = "{icon}";
         on-click = "activate";
         format-icons = {
-          "1" = "1";
-          "2" = "2";
-          "3" = "3";
-          "4" = "4";
-          "5" = "5";
-          "6" = "6";
-          "7" = "7";
-          "8" = "8";
-          "9" = "9";
-          "10" = "0";
+          "media" = "";
+          "browser" = "";
+          "terminal" = "";
+          "obsidian" = "";
+          "gaming" = "";
+          "social" = "";
+          "extern-monitor" = "";
         };
         sort-by-number = true;
+        current-only = true;
       };
 
       battery = {
@@ -39,38 +37,23 @@
         tooltip = false;
       };
 
-      "tray" = {
+      tray = {
         icon-size = 18;
         spacing = 10;
       };
 
-      "privacy" = {
-        "icon-spacing" = 4;
-        "icon-size" = 18;
-        "transition-duration" = 250;
-        "modules" = [
-          {
-            "type" = "screenshare";
-            "tooltip" = true;
-            "tooltip-icon-size" = 24;
-          }
-          {
-            "type" = "audio-out";
-            "tooltip" = true;
-            "tooltip-icon-size" = 24;
-          }
-          {
-            "type" = "audio-in";
-            "tooltip" = true;
-            "tooltip-icon-size" = 24;
-          }
-        ];
-      };
-
-      "custom/music" = {
-        format = "🎵";
-        on-click = "";
-        tooltip = false;
+      mpd = {
+        format = "{stateIcon} - {album} - {title}";
+        format-disconnected = "Disconnected ";
+        format-stopped = "Stopped ";
+        interval = 10;
+        on-click = "rmpc togglepause";
+        state-icons = {
+          paused = "";
+          playing = "";
+        };
+        tooltip-format = "MPD (connected)";
+        tooltip-format-disconnected = "MPD (disconnected)";
       };
 
       "custom/power" = {

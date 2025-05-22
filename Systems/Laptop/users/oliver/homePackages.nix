@@ -2,33 +2,31 @@
 
 {
   home.packages = with pkgs; [
-    vesktop
-    equibop
-    nautilus
-    obsidian
-    gimp3
-    krita
-    gucharmap
+    #Media
+    mpv
+    rmpc
     streamlink
     streamlink-twitch-gui-bin 
     chatterino2
-    gpauth
-    libreoffice-qt6-fresh
+    miru
+    playerctl
+    tidal-hifi
+    tidal-dl
+    #Tools
+    obsidian
+    nautilus
+    gimp3
+    krita
+    gucharmap
     keymapp
-    mpv
-    slurp
-    grim
+    gpauth
     mupdf
     waypaper
     bottles
     swww
-    waybar
-    globalprotect-openconnect
-    pomodoro-gtk
-    ani-cli
-    miru
-    playerctl
-    tidal-hifi
-    librewolf-bin
+    fuzzel
+    #Social
+    vesktop
+    equibop
   ];
 }

@@ -23,7 +23,6 @@
   hyprlockConfig.enable = true;
   waybarConfig.enable = true;
   waypaper.enable = true;
-  alacrittyConfig.enable = true;
   bash.enable = true;
   fish.enable = true;
   nushell.enable = true;
@@ -31,10 +30,14 @@
   starship.enable = true;
   otd.kamvas13.enable = true;
   gaming.mangohud.enable = true;
-  gaming.emulation.playstation3.enable = true;
+  gaming.minecraft.enable = true;
   tmux.enable = true;
   dunst.enable = true;
   ghostty.enable = true;
+  wezterm.enable = true;
+  zellij.enable = true;
+  mpd.enable = true;
+  zen-browser.enable = true;
 
   services.hyprpaper.enable = lib.mkForce false; 
 

@@ -2,9 +2,8 @@
 
 {
   environment.systemPackages = with pkgs; [
-    #Utility
-    killall
-    util-linux
+    #tools
+    xwayland-satellite
     btop
     lshw
     pwvucontrol
@@ -13,26 +12,38 @@
     iwgtk
     ripgrep
     blueman
-    usbutils
-    pciutils
-    inetutils
     fzf
+    skim
+    fd
     filezilla
     wl-clipboard
     gparted
     zip
     ffmpeg
-    #General
-    ranger
-    wofi
     unzip
+
+    #Utils
+    uutils-coreutils-noprefix
+    usbutils
+    pciutils
+    inetutils
+    util-linux
+
+    #General
+    yazi
+    wofi
+
     #Coding
     git
     git-credential-manager
-    alacritty
+
     #Coding Languages
     gcc
     python314
-    lua
+    cargo 
+    rustc 
+    rustfmt 
+    rusty-man
+    clippy
   ];
 }

@@ -117,13 +117,16 @@ xdg.portal.extraPortals = with pkgs; [
   xdg-desktop-portal-gtk 
   xdg-desktop-portal-wlr
   xdg-desktop-portal-hyprland
+  xdg-desktop-portal-gnome
 ];
 
 # Enable Hyprland
 hyprland.enable = true;
 
+programs.niri.enable = true;
+
 # Set Hyprland as defaultSession
-services.displayManager.defaultSession = "hyprland";
+services.displayManager.defaultSession = "niri";
 services.xserver.displayManager.gdm = { 
   enable = true;
   wayland = true;

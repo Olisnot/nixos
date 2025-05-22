@@ -27,7 +27,7 @@ monitor= [
 ### MY PROGRAMS ###
 ###################
 
-"$terminal" = "alacritty";
+"$terminal" = "ghostty";
 "$fileManager" = "nautilus";
 "$menu" = "wofi --show run";
 
@@ -38,16 +38,11 @@ monitor= [
 
 exec-once = [ 
   "swww-daemon & dunst" 
-  "waybar"
   "iwgtk -i"
   "blueman-applet"
   "hyprctl dispatch exec \"[workspace 2]\" librewolf"
-  "hyprctl dispatch exec \"[workspace 8]\" tidal-hifi"
   "hyprctl dispatch exec \"[workspace 4]\" obsidian"
-  "hyprctl dispatch exec \"[workspace 3]\" alacritty"
-  "equibop"
-  "steam"
-  "pomodoro"
+  "hyprctl dispatch exec \"[workspace 3]\" ghostty"
 ];
 
 xwayland = {
