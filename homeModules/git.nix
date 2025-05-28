@@ -5,13 +5,17 @@
 		enable = true;
 		userName = "Olisnot";
 		userEmail = "oliverpm2007@gmail.com";
-                aliases = {
-                  cm = "commit";
-                  a = "add";
-                  co = "checkout";
-                  r = "rebase";
-                  m = "merge";
-                };
 	};
+
+        programs.fish.shellAliases = {
+          gd = "git diff";
+          ga = "git add";
+          gc = "git commit";
+          gp = "git push";
+          gu = "git pull";
+          gl = "git log";
+          gb = "git branch";
+          gcl = "git clone";
+        };
 }
 

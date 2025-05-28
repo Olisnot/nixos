@@ -5,6 +5,8 @@
                 ./Hypr
                 ./Gaming
                 ./Shells
+                ./RMPC
+                ./Zellij
                 ./dunst.nix
                 ./waypaper.nix
                 ./tmux.nix
@@ -15,8 +17,9 @@
                 ./Waybar
                 ./ghostty.nix
                 ./wezterm.nix
-                ./zellij.nix
                 ./mpd.nix
                 ./zen.nix
+                ./niri.nix
+                ./helix.nix
 	];
 }

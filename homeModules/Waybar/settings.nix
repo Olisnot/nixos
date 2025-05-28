@@ -44,8 +44,8 @@
 
       mpd = {
         format = "{stateIcon} - {album} - {title}";
-        format-disconnected = "Disconnected ";
-        format-stopped = "Stopped ";
+        format-disconnected = "Disconnected";
+        format-stopped = "Stopped";
         interval = 10;
         on-click = "rmpc togglepause";
         state-icons = {

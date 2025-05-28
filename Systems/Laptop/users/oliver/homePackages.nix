@@ -4,7 +4,7 @@
   home.packages = with pkgs; [
     #Media
     mpv
-    rmpc
+    grayjay
     streamlink
     streamlink-twitch-gui-bin 
     chatterino2

@@ -9,9 +9,9 @@
     programs.wezterm = {
       enable = true;
       extraConfig = ''
-      local mylib = require 'mylib';
       return {
         enable_tab_bar = false,
+        front_end = "WebGpu",
       }
       '';
     };

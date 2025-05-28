@@ -19,8 +19,7 @@
   home.stateVersion = "23.11"; # Please read the comment before changing.
 
   # Custom home modules
-  hyprlandConfig.enable = true;
-  hyprlockConfig.enable = true;
+  niri.config.enable = true;
   waybarConfig.enable = true;
   waypaper.enable = true;
   bash.enable = true;
@@ -33,17 +32,19 @@
   gaming.minecraft.enable = true;
   tmux.enable = true;
   dunst.enable = true;
-  ghostty.enable = true;
   wezterm.enable = true;
   zellij.enable = true;
+  rmpc.enable = true;
   mpd.enable = true;
   zen-browser.enable = true;
+  helix.enable = true;
 
   services.hyprpaper.enable = lib.mkForce false; 
 
   stylix = {
     targets.hyprpaper.enable = lib.mkForce false;
     targets.waybar.enable = false;
+    targets.helix.enable = true;
 
     iconTheme = {
       enable = true;

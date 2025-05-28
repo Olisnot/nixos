@@ -10,10 +10,12 @@
       enable = true;
       interactiveShellInit = ''
       set fish_greeting # Disable greeting
+      zoxide init fish | source
       '';
 
       shellAliases = {
         dev = "nix develop --command fish";
+        ls = "eza -l --icons --time-style=long-iso --group-directories-first";
       };
     };
   };

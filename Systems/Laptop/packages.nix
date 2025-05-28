@@ -12,7 +12,6 @@
     iwgtk
     ripgrep
     blueman
-    fzf
     skim
     fd
     filezilla
@@ -21,6 +20,9 @@
     zip
     ffmpeg
     unzip
+    bat
+    eza
+    zoxide
 
     #Utils
     uutils-coreutils-noprefix
@@ -38,12 +40,27 @@
     git-credential-manager
 
     #Coding Languages
+    lldb
+    #C
     gcc
-    python314
+    clang
+    llvmPackages_20.clang-unwrapped
+    bear
+
+    #Rust
     cargo 
+    rust-analyzer
     rustc 
     rustfmt 
+    bacon
     rusty-man
     clippy
+
+    #zig
+    zig
+    zls
+    
+    #Python
+    python314
   ];
 }

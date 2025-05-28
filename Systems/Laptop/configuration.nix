@@ -124,6 +124,7 @@ xdg.portal.extraPortals = with pkgs; [
 hyprland.enable = true;
 
 programs.niri.enable = true;
+programs.gtklock.enable = true;
 
 # Set Hyprland as defaultSession
 services.displayManager.defaultSession = "niri";
