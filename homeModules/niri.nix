@@ -96,9 +96,11 @@
       spawn-at-startup "swww-daemon"
       spawn-at-startup "xwayland-satellite"
       spawn-at-startup "waybar"
-      spawn-at-startup "zellij" "--layout" "\"$HOME\"/.config/zellij/Layouts/config_layout.kdl" "attach" "NixOSConfig" "-c"
       spawn-at-startup "zen-beta"
-      spawn-at-startup "wezterm"
+      spawn-at-startup "ghostty"
+      spawn-at-startup "obsidian"
+      spawn-at-startup "tidal-hifi"
+      spawn-at-startup "steam"
 
       environment {
           DISPLAY ":0"
@@ -108,18 +110,8 @@
 
       screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
-      animations {
-              workspace-switch {
-              }
-      }
-
       window-rule {
-          match app-id=r#"^org\.wezfurlong\.wezterm$"#
-          default-column-width {}
-      }
-
-      window-rule {
-          match app-id=r#"^org\.wezfurlong\.wezterm$"# at-startup=true
+          match app-id=r#"ghostty$"# at-startup=true
           default-column-width {}
           open-on-workspace "terminal"
           open-maximized true
@@ -132,20 +124,27 @@
               open-maximized true
       }
 
+      // miru rule
+      window-rule {
+          match app-id=r#"tidal-hifi$"# at-startup=true
+          open-on-workspace "media"
+              open-maximized true
+      }
+
       // Librewolf rules
       window-rule {
-          match app-id=r#"librewolf$"#
+          match app-id=r#"zen-beta$"#
           open-on-workspace "browser"
       }
 
       window-rule {
-          match app-id=r#"librewolf$"# at-startup=true
+          match app-id=r#"zen-beta$"# at-startup=true
           open-on-workspace "browser"
           open-maximized true
       }
 
       window-rule {
-          match app-id=r#"librewolf$"# title="^Picture-in-Picture$"
+          match app-id=r#"zen-beta$"# title="^Picture-in-Picture$"
           open-floating true
       }
 
@@ -166,7 +165,7 @@
       binds {
           Mod+Shift+Slash { show-hotkey-overlay; }
 
-          Mod+return { spawn "wezterm"; }
+          Mod+return { spawn "ghostty"; }
           Mod+Space { spawn "fuzzel"; }
           Super+Alt+L { spawn "gtklock"; }
 
@@ -295,13 +294,13 @@
 
           Mod+W { toggle-column-tabbed-display; }
 
-          Print { screenshot; }
+          Mod+Shift+S { screenshot; }
           Ctrl+Print { screenshot-screen; }
           Alt+Print { screenshot-window; }
 
-          Mod+Shift+P { spawn "rmpc" "togglepause"; }
-          Mod+Shift+T { spawn "rmpc" "prev"; }
-          Mod+Shift+N { spawn "rmpc" "next"; }
+          Mod+Shift+P { spawn "playerctl" "play-pause"; }
+          Mod+Shift+N { spawn "playerctl" "next"; }
+          Mod+Shift+T { spawn "playerctl" "previous"; }
 
           Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 

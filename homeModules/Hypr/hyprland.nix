@@ -15,9 +15,8 @@
 ################
 
 monitor= [ 
-  "DP-1,1920x1080,0x0,1"
+  "DP-1,2560x1080,0x0,1"
   #"eDP-1,1920x1080,0x0,1"
-  "HDMI-A-1,1920x1080,1920x0,1"
   "eDP-1, disable"
   "Unknown-1, disable"
 ];
@@ -29,7 +28,7 @@ monitor= [
 
 "$terminal" = "ghostty";
 "$fileManager" = "nautilus";
-"$menu" = "wofi --show run";
+"$menu" = "fuzzel";
 
 
 #################
@@ -40,9 +39,12 @@ exec-once = [
   "swww-daemon & dunst" 
   "iwgtk -i"
   "blueman-applet"
-  "hyprctl dispatch exec \"[workspace 2]\" librewolf"
+  "hyprctl dispatch exec \"[workspace 2]\" zen-beta"
   "hyprctl dispatch exec \"[workspace 4]\" obsidian"
   "hyprctl dispatch exec \"[workspace 3]\" ghostty"
+  "hyprctl dispatch exec \"[workspace 8]\" tidal-hifi"
+  "hyprctl dispatch exec \"[workspace 8]\" equibop"
+  "steam"
 ];
 
 xwayland = {
@@ -61,7 +63,8 @@ general = {
 };
 
 decoration = {
-  rounding = 0;
+  rounding = 10;
+
 
     # Change transparency of focused and unfocused windows
     active_opacity = 1.0;
@@ -186,10 +189,10 @@ decoration = {
 # Pin floating window
 "$mainMod, P, pin"
 
-# Playerctl
-"$mainMod SHIFT, P, exec, playerctl play-pause"
-"$mainMod SHIFT, N, exec, playerctl next"
-"$mainMod SHIFT, T, exec, playerctl previous"
+# tidal-hifi
+"$mainMod SHIFT, P, exec, curl -X 'POST' 'http://localhost:47836/player/playpause' -H 'accept: text/plain' -d ''"
+"$mainMod SHIFT, N, exec, curl -X 'POST' 'http://localhost:47836/player/next' -H 'accept: text/plain' -d ''"
+"$mainMod SHIFT, T, exec, curl -X 'POST' 'http://localhost:47836/player/previous' -H 'accept: text/plain' -d ''"
 
 ##############################
 ### WINDOWS AND WORKSPACES ###
@@ -232,7 +235,6 @@ windowrulev2 = [
   "workspace 5 silent, class:steam"
   "workspace 5 silent, class:heroic"
   "workspace 5 silent, class:lutris"
-  "workspace 6 silent, class:io.gitlab.idevecore.Pomodoro"
   "workspace 8 silent, class:tidal-hifi"
   "workspace 9 silent, class:equibop"
 ];

@@ -2,7 +2,7 @@
 
 let
   rebuild = import ./Rebuild.nix { inherit pkgs; };
-  ZellijSessionizer = import ./ZellijSessionizer.nix { inherit pkgs; };
+  TmuxSessionizer = import ./TmuxSessionizer.nix { inherit pkgs; };
   nvim = inputs.nixvim.packages."x86_64-linux".default;
 in
 {
@@ -11,7 +11,7 @@ in
   ];
   environment.systemPackages = [
     rebuild
-    ZellijSessionizer
+    TmuxSessionizer
     nvim
   ];
 }

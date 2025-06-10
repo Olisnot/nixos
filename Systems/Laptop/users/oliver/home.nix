@@ -19,7 +19,7 @@
   home.stateVersion = "23.11"; # Please read the comment before changing.
 
   # Custom home modules
-  niri.config.enable = true;
+  hyprlandConfig.enable = true;
   waybarConfig.enable = true;
   waypaper.enable = true;
   bash.enable = true;
@@ -28,16 +28,14 @@
   fastfetch.enable = true;
   starship.enable = true;
   otd.kamvas13.enable = true;
-  gaming.mangohud.enable = true;
-  gaming.minecraft.enable = true;
+  gaming = {
+    mangohud.enable = true;
+    minecraft.enable = true;
+  };
   tmux.enable = true;
   dunst.enable = true;
-  wezterm.enable = true;
-  zellij.enable = true;
-  rmpc.enable = true;
-  mpd.enable = true;
+  ghostty.enable = true;
   zen-browser.enable = true;
-  helix.enable = true;
 
   services.hyprpaper.enable = lib.mkForce false; 
 
@@ -48,8 +46,8 @@
 
     iconTheme = {
       enable = true;
-      package = pkgs.morewaita-icon-theme;
-      dark = "MoreWaita";
+      package = pkgs.whitesur-icon-theme;
+      dark = "WhiteSur";
     };
   };
 

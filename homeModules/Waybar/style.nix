@@ -6,7 +6,13 @@ in
 {
   programs.waybar.style = ''
     window#waybar {
-      background-color: transparent;
+      background-color: ${colors.base00};
+      border-left: 2px solid ${colors.base01};
+      border-right: 2px solid ${colors.base01};
+      border-bottom: 2px solid ${colors.base01};
+      border-top: 0px solid transparent; 
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
     }
 
     .modules-left {
@@ -20,54 +26,36 @@ in
     }
 
     #workspaces {
-      background-color: ${colors.base00};
-      border: 1px solid ${colors.base02};
-      border-radius: 10px;
       padding-left: 5px;
       padding-right: 10px;
       font-size: 18px;
     }
 
     #battery {
-      background-color: ${colors.base00};
-      border: 1px solid ${colors.base02};
-      border-radius: 10px;
+      padding-right: 10px;
+      padding-left: 10px;
+      margin-right: 10px;
+    }
+
+    #pulseaudio {
       padding-right: 10px;
       padding-left: 10px;
       margin-right: 10px;
     }
 
     #tray {
-      background-color: ${colors.base00};
-      border: 1px solid ${colors.base02};
-      border-radius: 10px;
       padding-right: 10px;
       padding-left: 10px;
       margin-right: 10px;
     }
 
-    #mpd {
-      background-color: ${colors.base00};
-      border: 1px solid ${colors.base02};
-      border-radius: 10px;
-      padding-right: 10px;
-      padding-left: 10px;
-      margin-left: 10px;
-    }
-
     #custom-power {
-      background-color: ${colors.base00};
-      border: 1px solid ${colors.base02};
-      border-radius: 10px;
       padding-left: 10px;
       padding-right: 10px;
       font-size: 18px;
     }
 
     #clock {
-      background-color: ${colors.base00};
-      border: 1px solid ${colors.base02};
-      border-radius: 10px;
       padding-right: 10px;
       padding-left: 10px;
     }

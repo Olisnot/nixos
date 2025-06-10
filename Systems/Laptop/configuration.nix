@@ -75,7 +75,7 @@ networking.wireless.iwd.settings = {
 };
 
 # Set your time zone.
-time.timeZone = "Europe/London";
+time.timeZone = "Europe/Madrid";
 
 # Select internationalisation properties.
 i18n.defaultLocale = "en_GB.UTF-8";
@@ -99,7 +99,7 @@ services.xserver.dpi = 96;
 environment.variables = {
   EDITOR = "nvim";
   GDK_SCALE = "0.5";
-  XCURSOR_THEME = "graphite-cursors";
+  XCURSOR_THEME = "WhiteSur-cursors";
   QT_STYLE_OVERRIDE = lib.mkDefault "kvantum";
   WLR_NO_HARDWARE_CURSORS = "1";
   NIXOS_OZONE_WL = "1";
@@ -123,12 +123,9 @@ xdg.portal.extraPortals = with pkgs; [
 # Enable Hyprland
 hyprland.enable = true;
 
-programs.niri.enable = true;
-programs.gtklock.enable = true;
-
 # Set Hyprland as defaultSession
-services.displayManager.defaultSession = "niri";
-services.xserver.displayManager.gdm = { 
+services.displayManager.defaultSession = "hyprland";
+services.displayManager.gdm = { 
   enable = true;
   wayland = true;
 };

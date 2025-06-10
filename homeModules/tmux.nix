@@ -1,4 +1,4 @@
-{ lib, config, ... }:
+{ pkgs, lib, config, ... }:
 
 {
   options = {
@@ -10,8 +10,9 @@
       enable = true;
       baseIndex = 1;
       keyMode = "vi";
+      plugins = with pkgs.tmuxPlugins; [ resurrect ];
       extraConfig = ''
-      set -g status-left-length 40 # could be any number
+      set -g status-left-length 40
       '';
     };
   };

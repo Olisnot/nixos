@@ -22,14 +22,6 @@
       simplified_ui true
       pane_frames false
       show_startup_tips false
-      keybinds {
-        normal {
-          bind "Ctrl r" { SwitchToMode "Resize"; }
-        }
-        resize {
-          bind "Ctrl r" { SwitchToMode "Normal"; }
-        }
-      }
       '';
     };
   };

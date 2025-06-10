@@ -6,10 +6,10 @@
       layer = "top";
       position = "top";
       height = 1;
-      margin-top = 5;
-      modules-left = [ "niri/workspaces" "mpd" ];
+      margin-top = 0;
+      modules-left = [ ];
       modules-center = [ "clock" ];
-      modules-right = [ "tray" "battery" "custom/power" ];
+      modules-right = [ "tray" "pulseaudio"  "battery" "custom/power" ];
 
       "niri/workspaces" = {
         format = "{icon}";
@@ -42,18 +42,16 @@
         spacing = 10;
       };
 
-      mpd = {
-        format = "{stateIcon} - {album} - {title}";
-        format-disconnected = "Disconnected";
-        format-stopped = "Stopped";
-        interval = 10;
-        on-click = "rmpc togglepause";
-        state-icons = {
-          paused = "";
-          playing = "";
+      pulseaudio = {
+        format = "{icon}  {volume}%";
+        "format-muted" = "";
+        "format-icons" = {
+          "headphone" = "";
+          "default" = ["" ""];
         };
-        tooltip-format = "MPD (connected)";
-        tooltip-format-disconnected = "MPD (disconnected)";
+        scroll-step = 1;
+        on-click = "pwvucontrol";
+        ignored-sinks = ["Easy Effects Sink"];
       };
 
       "custom/power" = {
