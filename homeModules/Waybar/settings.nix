@@ -6,30 +6,17 @@
       layer = "top";
       position = "top";
       height = 1;
+      width = 1920;
       margin-top = 0;
-      modules-left = [ ];
+      modules-left = [ "hyprland/workspaces" ];
       modules-center = [ "clock" ];
-      modules-right = [ "tray" "pulseaudio"  "battery" "custom/power" ];
+      modules-right = [ "tray" "custom/power" ];
 
-      "niri/workspaces" = {
+      "hyprland/workspaces" = {
         format = "{icon}";
         on-click = "activate";
-        format-icons = {
-          "media" = "";
-          "browser" = "";
-          "terminal" = "";
-          "obsidian" = "";
-          "gaming" = "";
-          "social" = "";
-          "extern-monitor" = "";
-        };
         sort-by-number = true;
-        current-only = true;
-      };
-
-      battery = {
-        format = " {capacity}%";
-        format-charging = ": {capacity}%";
+        current-only = false;
       };
 
       clock = {
@@ -38,20 +25,8 @@
       };
 
       tray = {
-        icon-size = 18;
+        icon-size = 20;
         spacing = 10;
-      };
-
-      pulseaudio = {
-        format = "{icon}  {volume}%";
-        "format-muted" = "";
-        "format-icons" = {
-          "headphone" = "";
-          "default" = ["" ""];
-        };
-        scroll-step = 1;
-        on-click = "pwvucontrol";
-        ignored-sinks = ["Easy Effects Sink"];
       };
 
       "custom/power" = {

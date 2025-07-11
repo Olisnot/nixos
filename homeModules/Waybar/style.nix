@@ -5,21 +5,19 @@ let
 in
 {
   programs.waybar.style = ''
+    * {
+      font-family: FiraCode Nerd Font Propo;
+      font-size: 16px;
+    }
+
     window#waybar {
-      background-color: ${colors.base00};
-      border-left: 2px solid ${colors.base01};
-      border-right: 2px solid ${colors.base01};
-      border-bottom: 2px solid ${colors.base01};
-      border-top: 0px solid transparent; 
+      background: ${colors.base00};
+      box-shadow: 0 4px 8px rgba(76, 76, 76, 0.2);
       border-bottom-left-radius: 20px;
       border-bottom-right-radius: 20px;
     }
 
-    .modules-left {
-      padding-left: 10px;
-      padding-right: 10px;
-    }
-
+    .modules-left,
     .modules-right {
       padding-right: 10px;
       padding-left: 10px;
@@ -27,37 +25,28 @@ in
 
     #workspaces {
       padding-left: 5px;
-      padding-right: 10px;
-      font-size: 18px;
+      padding-right: 5px;
     }
 
-    #battery {
-      padding-right: 10px;
-      padding-left: 10px;
-      margin-right: 10px;
-    }
-
-    #pulseaudio {
-      padding-right: 10px;
-      padding-left: 10px;
-      margin-right: 10px;
-    }
-
-    #tray {
-      padding-right: 10px;
-      padding-left: 10px;
-      margin-right: 10px;
-    }
-
-    #custom-power {
-      padding-left: 10px;
-      padding-right: 10px;
-      font-size: 18px;
+    #custom-power:hover,
+    #workspaces button:hover {
+      background: ${colors.base03};
+      border-radius: 20px;
     }
 
     #clock {
+      font-size: 14px;
+    }
+
+    #clock,
+    #tray,
+    #custom-power,
+    #workspaces {
+      margin: 5px;
       padding-right: 10px;
       padding-left: 10px;
+      background: ${colors.base02};
+      border-radius: 20px;
     }
 '';
 }

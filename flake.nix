@@ -29,9 +29,14 @@
     };
 
     xremap.url = "github:xremap/nix-flake";
+
+    anyrun = {
+      url = "github:anyrun-org/anyrun";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { nixpkgs, nixpkgsStable, ... } @inputs:
+  outputs = { nixpkgs, nixpkgsStable, anyrun, ... } @inputs:
   let
     system = "x86_64-linux";
     overlay-stable = final: prev: { stable = import nixpkgsStable { inherit system; config.allowUnfree = true;}; };
@@ -45,6 +50,7 @@
           ({ ... }: { nixpkgs.overlays = [ overlay-stable ]; })
           inputs.home-manager.nixosModules.default
           inputs.stylix.nixosModules.stylix
+          {environment.systemPackages = [ anyrun.packages.${system}.anyrun ];}
         ];
       };
     };

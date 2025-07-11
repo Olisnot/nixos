@@ -3,36 +3,36 @@
 {
   stylix = {
     enable = true;
-    image = "${inputs.wallpapers}/dark/galaxycloud.png";
+    image = "${inputs.wallpapers}/Cloudsnight.jpg";
     polarity = "dark";
     base16Scheme = {
-      base00 = "#0f0f0f";
-      base01 = "#191919";
-      base02 = "#262626";
-      base03 = "#4c4c4c";
-      base04 = "#ac8a8c";
-      base05 = "#cacaca";
-      base06 = "#e7e7e7";
-      base07 = "#f0f0f0";
-      base08 = "#ac8a8c";
-      base09 = "#ceb188";
-      base0A = "#aca98a";
-      base0B = "#8aac8b";
-      base0C = "#8aabac";
-      base0D = "#8f8aac";
-      base0E = "#ac8aac";
-      base0F = "#ac8a8c";
+      base00 = "#1e1e2e"; # base
+      base01 = "#181825"; # mantle
+      base02 = "#313244"; # surface0
+      base03 = "#45475a"; # surface1
+      base04 = "#585b70"; # surface2
+      base05 = "#cdd6f4"; # text
+      base06 = "#f5e0dc"; # rosewater
+      base07 = "#b4befe"; # lavender
+      base08 = "#f38ba8"; # red
+      base09 = "#fab387"; # peach
+      base0A = "#f9e2af"; # yellow
+      base0B = "#a6e3a1"; # green
+      base0C = "#94e2d5"; # teal
+      base0D = "#89b4fa"; # blue
+      base0E = "#cba6f7"; # mauve
+      base0F = "#f2cdcd"; # flamingo
     };
 
     fonts = {
       serif = {
-        package = pkgs.fira-code;
-        name = "FiraCode";
+        package = pkgs.dejavu_fonts;
+        name = "DejaVu Serif";
       };
 
       sansSerif = {
-        package = pkgs.fira-code;
-        name = "FiraCode";
+        package = pkgs.dejavu_fonts;
+        name = "DejaVu Serif";
       };
 
       monospace = {
@@ -46,12 +46,6 @@
         desktop = 10; 
         popups = 10; 
       };
-    };
-
-    cursor = {
-      package = pkgs.whitesur-cursors;
-      name = "WhiteSur-cursors";
-      size = 24;
     };
   };
 }

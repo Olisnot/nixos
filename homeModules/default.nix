@@ -21,5 +21,6 @@
                 ./zen.nix
                 ./niri.nix
                 ./helix.nix
+                ./anyrun.nix
 	];
 }

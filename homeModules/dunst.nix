@@ -18,8 +18,7 @@ in
             height = "(0, 300)";
             offset = "(30, 50)";
             origin = "top-right";
-            frame_color = "${colors.base01}";
-            frame_width = 3;
+            frame_width = 0;
             corner_radius = 10;
             icon_corner_radius = 10;
             min_icon_size = 32;

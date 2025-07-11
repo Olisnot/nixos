@@ -3,6 +3,7 @@
 {
   imports = [
     ./fish.nix
+    ./nu.nix
     ./nvidia.nix
     ./hyprland.nix
     ./gnome.nix

@@ -28,7 +28,7 @@ monitor= [
 
 "$terminal" = "ghostty";
 "$fileManager" = "nautilus";
-"$menu" = "fuzzel";
+"$menu" = "anyrun";
 
 
 #################
@@ -39,9 +39,10 @@ exec-once = [
   "swww-daemon & dunst" 
   "iwgtk -i"
   "blueman-applet"
+  "waybar"
   "hyprctl dispatch exec \"[workspace 2]\" zen-beta"
-  "hyprctl dispatch exec \"[workspace 4]\" obsidian"
   "hyprctl dispatch exec \"[workspace 3]\" ghostty"
+  "hyprctl dispatch exec \"[workspace 4]\" obsidian"
   "hyprctl dispatch exec \"[workspace 8]\" tidal-hifi"
   "hyprctl dispatch exec \"[workspace 8]\" equibop"
   "steam"
@@ -104,8 +105,6 @@ decoration = {
     disable_splash_rendering = true;
   };
 
-
-
   input = {
     kb_layout = "us, us";
     kb_variant = ", dvorak";
@@ -139,28 +138,28 @@ decoration = {
     "$mainMod, Space, exec, $menu"
     "$mainMod, J, togglesplit,"
     "$mainMod, F, fullscreen"
-    "$mainMod, L, exec, hyprlock"
+    "$mainMod SHIFT, L, exec, hyprlock"
 
 # Screen Capture
 "$mainMod, S, exec, hyprshot -m region -o ~/Pictures/Screenshots"
 
 # Move focus with mainMod + arrow keys
-"$mainMod, left, movefocus, l"
-"$mainMod, right, movefocus, r"
-"$mainMod, up, movefocus, u"
-"$mainMod, down, movefocus, d"
+"$mainMod, h, movefocus, l"
+"$mainMod, l, movefocus, r"
+"$mainMod, k, movefocus, u"
+"$mainMod, j, movefocus, d"
 
 # Move window with mainMod + Shift + arrow keys
-"$mainMod SHIFT, left, movewindow, l"
-"$mainMod SHIFT, right, movewindow, r"
-"$mainMod SHIFT, up, movewindow, u"
-"$mainMod SHIFT, down, movewindow, d"
+"$mainMod SHIFT, h, movewindow, l"
+"$mainMod SHIFT, l, movewindow, r"
+"$mainMod SHIFT, k, movewindow, u"
+"$mainMod SHIFT, j, movewindow, d"
 
 # Resize window with mainMod + Alt + arrow keys
-"$mainMod ALT, right, resizeactive, 10 0"
-"$mainMod ALT, left, resizeactive, -10 0"
-"$mainMod ALT, up, resizeactive, 0 -10"
-"$mainMod ALT, down, resizeactive, 0 10"
+"$mainMod ALT, l, resizeactive, 10 0"
+"$mainMod ALT, h, resizeactive, -10 0"
+"$mainMod ALT, k, resizeactive, 0 -10"
+"$mainMod ALT, j, resizeactive, 0 10"
 
 # Switch workspaces with mainMod + [0-9]
 "$mainMod, 1, workspace, 1"

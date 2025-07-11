@@ -3,7 +3,6 @@
 {
   environment.systemPackages = with pkgs; [
     #tools
-    xwayland-satellite
     btop
     lshw
     pwvucontrol
@@ -34,6 +33,12 @@
     #General
     yazi
     wofi
+
+    #gnome extensions
+    gnomeExtensions.dock-from-dash
+    gnomeExtensions.media-controls
+    gnomeExtensions.logo-menu
+    nautilus
 
     #Coding
     git

@@ -8,7 +8,6 @@
     ./packages.nix
     ./fonts.nix
     ./aliases.nix
-    ./cachix.nix
     ./users/oliver/user.nix
     ../../nixosModules
     ./scripts
@@ -23,7 +22,7 @@ ollama.enable = true;
 keymapp.enable = true;
 virt-manager.setup = true;
 xremap.mappings.enable = true;
-fish.enable = true;
+nu.enable = true;
 
 #Nix settings
 nix.settings.experimental-features = ["nix-command" "flakes"];
@@ -99,7 +98,6 @@ services.xserver.dpi = 96;
 environment.variables = {
   EDITOR = "nvim";
   GDK_SCALE = "0.5";
-  XCURSOR_THEME = "WhiteSur-cursors";
   QT_STYLE_OVERRIDE = lib.mkDefault "kvantum";
   WLR_NO_HARDWARE_CURSORS = "1";
   NIXOS_OZONE_WL = "1";
@@ -116,15 +114,14 @@ xdg.portal.extraPortals = with pkgs; [
   xdg-desktop-portal
   xdg-desktop-portal-gtk 
   xdg-desktop-portal-wlr
-  xdg-desktop-portal-hyprland
   xdg-desktop-portal-gnome
 ];
 
-# Enable Hyprland
-hyprland.enable = true;
+# Enable gnome
+services.desktopManager.gnome.enable = true;
 
 # Set Hyprland as defaultSession
-services.displayManager.defaultSession = "hyprland";
+services.displayManager.defaultSession = "gnome";
 services.displayManager.gdm = { 
   enable = true;
   wayland = true;
