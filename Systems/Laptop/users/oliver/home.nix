@@ -21,7 +21,6 @@
   # Custom home modules
   waypaper.enable = true;
   bash.enable = true;
-  fish.enable = true;
   nushell.enable = true;
   fastfetch.enable = true;
   starship.enable = true;
@@ -31,16 +30,13 @@
     minecraft.enable = true;
   };
   tmux.enable = true;
-  dunst.enable = true;
   ghostty.enable = true;
   zen-browser.enable = true;
-  anyrun.enable = true;
 
   services.hyprpaper.enable = lib.mkForce false; 
 
   stylix = {
     targets.hyprpaper.enable = lib.mkForce false;
-    targets.waybar.enable = false;
     targets.helix.enable = true;
 
     iconTheme = {

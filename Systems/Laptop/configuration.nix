@@ -21,7 +21,6 @@ opentabletdriverudev.enable = true;
 ollama.enable = true;
 keymapp.enable = true;
 virt-manager.setup = true;
-xremap.mappings.enable = true;
 nu.enable = true;
 
 #Nix settings
