@@ -38,6 +38,7 @@
     gnomeExtensions.dock-from-dash
     gnomeExtensions.media-controls
     gnomeExtensions.logo-menu
+    gnomeExtensions.blur-my-shell
     nautilus
 
     #Coding
