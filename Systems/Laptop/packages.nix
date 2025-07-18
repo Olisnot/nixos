@@ -34,6 +34,7 @@
     yazi
     wofi
 
+    gnome-tweaks
     #gnome extensions
     gnomeExtensions.dock-from-dash
     gnomeExtensions.media-controls
