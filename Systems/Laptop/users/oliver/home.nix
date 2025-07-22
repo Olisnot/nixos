@@ -19,9 +19,10 @@
   home.stateVersion = "23.11"; # Please read the comment before changing.
 
   # Custom home modules
+  hyprlandConfig.enable = true;
+  hyprlockConfig.enable = true;
   waypaper.enable = true;
   bash.enable = true;
-  fish.enable = true;
   nushell.enable = true;
   fastfetch.enable = true;
   starship.enable = true;
@@ -35,6 +36,7 @@
   ghostty.enable = true;
   zen-browser.enable = true;
   anyrun.enable = true;
+  helix.enable = true;
 
   services.hyprpaper.enable = lib.mkForce false; 
 

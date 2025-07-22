@@ -6,7 +6,6 @@
                 ./Gaming
                 ./Shells
                 ./RMPC
-                ./Zellij
                 ./dunst.nix
                 ./waypaper.nix
                 ./tmux.nix
@@ -19,7 +18,6 @@
                 ./wezterm.nix
                 ./mpd.nix
                 ./zen.nix
-                ./niri.nix
                 ./helix.nix
                 ./anyrun.nix
 	];

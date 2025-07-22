@@ -47,5 +47,11 @@
         popups = 10; 
       };
     };
+
+    cursor = {
+      package = pkgs.capitaine-cursors-themed;
+      name = "Capitaine Cursors";
+      size = 24;
+    };
   };
 }

@@ -20,7 +20,6 @@
     ffmpeg
     unzip
     bat
-    eza
     zoxide
 
     #Utils
@@ -32,14 +31,6 @@
 
     #General
     yazi
-    wofi
-
-    gnome-tweaks
-    #gnome extensions
-    gnomeExtensions.dock-from-dash
-    gnomeExtensions.media-controls
-    gnomeExtensions.logo-menu
-    gnomeExtensions.blur-my-shell
     nautilus
 
     #Coding

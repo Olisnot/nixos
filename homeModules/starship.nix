@@ -11,7 +11,7 @@ in
     config = lib.mkIf config.starship.enable {
       programs.starship = {
         enable = true;
-        enableFishIntegration = true;
+        enableNushellIntegration = true;
         settings = {
           format = lib.concatStrings [ 
             ''[](base03)''

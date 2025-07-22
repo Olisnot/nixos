@@ -113,14 +113,14 @@ xdg.portal.extraPortals = with pkgs; [
   xdg-desktop-portal
   xdg-desktop-portal-gtk 
   xdg-desktop-portal-wlr
-  xdg-desktop-portal-gnome
+  xdg-desktop-portal-hyprland
 ];
 
-# Enable gnome
-services.desktopManager.gnome.enable = true;
+# Enable Hyprland
+hyprland.enable = true;
 
 # Set Hyprland as defaultSession
-services.displayManager.defaultSession = "gnome";
+services.displayManager.defaultSession = "hyprland";
 services.displayManager.gdm = { 
   enable = true;
   wayland = true;
@@ -128,14 +128,6 @@ services.displayManager.gdm = {
 
 # Set Laptop lid
 services.logind.lidSwitchExternalPower = "ignore";
-
-# Configure keymap in X11
-services.xserver = {
-  xkb = {
-    layout = "us, us";
-    variant = ", dvorak";
-  };
-};
 
 # Enable CUPS to print documents.
 services.printing.enable = true;
