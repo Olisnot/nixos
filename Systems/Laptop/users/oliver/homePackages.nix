@@ -5,6 +5,7 @@
     #Media
     mpv
     miru
+    stremio
     playerctl
     tidal-hifi
     tidal-dl
