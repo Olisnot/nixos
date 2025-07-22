@@ -10,7 +10,7 @@
       margin-top = 0;
       modules-left = [ "hyprland/workspaces" ];
       modules-center = [ "clock" ];
-      modules-right = [ "tray" "custom/power" ];
+      modules-right = [ "tray" "group/power" ];
 
       "hyprland/workspaces" = {
         format = "{icon}";
