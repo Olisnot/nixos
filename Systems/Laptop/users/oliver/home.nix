@@ -21,6 +21,7 @@
   # Custom home modules
   hyprlandConfig.enable = true;
   hyprlockConfig.enable = true;
+  waybarConfig.enable = true;
   waypaper.enable = true;
   bash.enable = true;
   nushell.enable = true;
