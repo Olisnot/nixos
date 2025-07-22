@@ -31,11 +31,11 @@
 
       "group/power" = {
         orientation = "horizontal";
-        "drawer": {
-          "transition-duration": 500,
-          "children-class": "not-power",
-          "transition-left-to-right": false,
-        },
+        "drawer" = {
+          "transition-duration": 500;
+          "children-class": "not-power";
+          "transition-left-to-right": false;
+        };
         modules = [
           "custom/nixos"
           "custom/poweroff"
