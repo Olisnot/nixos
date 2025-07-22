@@ -41,7 +41,7 @@ in
     #clock,
     #tray,
     #group-power,
-    #custom-power,
+    #custom-poweroff,
     #custom-restart,
     #custom-nixos,
     #workspaces {

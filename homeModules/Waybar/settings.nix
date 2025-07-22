@@ -38,8 +38,8 @@
         };
         modules = [
           "custom/nixos"
-          "custom/poweroff"
           "custom/restart"
+          "custom/poweroff"
         ];
       };
 
