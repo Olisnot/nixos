@@ -17,5 +17,6 @@
     waypaper
     bottles
     swww
+    gucharmap
   ];
 }

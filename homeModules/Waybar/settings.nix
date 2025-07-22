@@ -29,6 +29,13 @@
         spacing = 10;
       };
 
+      "group/power" = {
+        orientation = "horizontal";
+        modules = [
+          "custom/power"
+        ];
+      };
+
       "custom/power" = {
         format = "";
         on-click = "~/start_menu";
