@@ -40,7 +40,7 @@ in
 
     #clock,
     #tray,
-    #custom-power,
+    #group-power,
     #workspaces {
       margin: 5px;
       padding-right: 10px;

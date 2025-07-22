@@ -31,14 +31,32 @@
 
       "group/power" = {
         orientation = "horizontal";
+        "drawer": {
+          "transition-duration": 500,
+          "children-class": "not-power",
+          "transition-left-to-right": false,
+        },
         modules = [
-          "custom/power"
+          "custom/nixos"
+          "custom/poweroff"
+          "custom/restart"
         ];
       };
 
-      "custom/power" = {
-        format = "";
-        on-click = "~/start_menu";
+      "custom/nixos" = {
+        format = "";
+        tooltip = false;
+      };
+
+      "custom/poweroff" = {
+        format = "󰐥";
+        on-click = "poweroff";
+        tooltip = false;
+      };
+
+      "custom/restart" = {
+        format = "";
+        on-click = "reboot";
         tooltip = false;
       };
     }
