@@ -28,7 +28,9 @@ in
       padding-right: 5px;
     }
 
-    #custom-power:hover,
+    #custom-poweroff,
+    #custom-restart,
+    #custom-nixos,
     #workspaces button:hover {
       background: ${colors.base03};
       border-radius: 20px;
