@@ -41,6 +41,9 @@ in
     #clock,
     #tray,
     #group-power,
+    #custom-power,
+    #custom-restart,
+    #custom-nixos,
     #workspaces {
       margin: 5px;
       padding-right: 10px;
