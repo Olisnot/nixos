@@ -28,8 +28,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    xremap.url = "github:xremap/nix-flake";
-
     anyrun = {
       url = "github:anyrun-org/anyrun";
       inputs.nixpkgs.follows = "nixpkgs";

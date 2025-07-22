@@ -15,7 +15,6 @@
                 ./opentabletdriver.nix
                 ./Waybar
                 ./ghostty.nix
-                ./wezterm.nix
                 ./mpd.nix
                 ./zen.nix
                 ./helix.nix
