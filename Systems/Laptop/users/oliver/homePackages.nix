@@ -1,10 +1,9 @@
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 
 {
   home.packages = with pkgs; [
     #Media
     mpv
-    miru
     stremio
     playerctl
     tidal-hifi

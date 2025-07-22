@@ -7,7 +7,6 @@
     ./hardware-configuration.nix
     ./packages.nix
     ./fonts.nix
-    ./aliases.nix
     ./users/oliver/user.nix
     ../../nixosModules
     ./scripts
