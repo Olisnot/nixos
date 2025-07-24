@@ -18,5 +18,8 @@
     bottles
     swww
     gucharmap
+    #social
+    equibop
+    zapzap
   ];
 }
