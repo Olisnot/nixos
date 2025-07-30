@@ -20,6 +20,7 @@
     ffmpeg
     unzip
     bat
+    eza
     zoxide
 
     #Utils

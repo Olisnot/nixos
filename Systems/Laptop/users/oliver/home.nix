@@ -24,7 +24,7 @@
   waybarConfig.enable = true;
   waypaper.enable = true;
   bash.enable = true;
-  nushell.enable = true;
+  fish.enable = true;
   fastfetch.enable = true;
   starship.enable = true;
   otd.kamvas13.enable = true;
@@ -38,6 +38,8 @@
   zen-browser.enable = true;
   anyrun.enable = true;
   helix.enable = true;
+  mpd.enable = true;
+  rmpc.enable = true;
 
   services.hyprpaper.enable = lib.mkForce false; 
 

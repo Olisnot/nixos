@@ -6,7 +6,7 @@
     mpv
     stremio
     playerctl
-    tidal-hifi
+    youtube-music
     tidal-dl
     #Tools
     obsidian
@@ -18,8 +18,10 @@
     bottles
     swww
     gucharmap
+    localsend
     #social
     equibop
-    zapzap
+    revolt-desktop
+    element-desktop
   ];
 }

@@ -189,7 +189,6 @@ decoration = {
 # Pin floating window
 "$mainMod, P, pin"
 
-# tidal-hifi
 "$mainMod SHIFT, P, exec, curl -X 'POST' 'http://localhost:47836/player/playpause' -H 'accept: text/plain' -d ''"
 "$mainMod SHIFT, N, exec, curl -X 'POST' 'http://localhost:47836/player/next' -H 'accept: text/plain' -d ''"
 "$mainMod SHIFT, T, exec, curl -X 'POST' 'http://localhost:47836/player/previous' -H 'accept: text/plain' -d ''"

@@ -20,7 +20,7 @@ opentabletdriverudev.enable = true;
 ollama.enable = true;
 keymapp.enable = true;
 virt-manager.setup = true;
-nu.enable = true;
+fish.enable = true;
 
 #Nix settings
 nix.settings.experimental-features = ["nix-command" "flakes"];
