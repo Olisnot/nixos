@@ -21,6 +21,7 @@ ollama.enable = true;
 keymapp.enable = true;
 virt-manager.setup = true;
 fish.enable = true;
+nextdns.enable = true;
 
 #Nix settings
 nix.settings.experimental-features = ["nix-command" "flakes"];

@@ -8,6 +8,7 @@
     ./hyprland.nix
     ./bluetooth.nix
     ./stylix.nix
+    ./nextdns.nix
     ./Gaming
     ./Programs
   ];
