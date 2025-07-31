@@ -33,9 +33,14 @@
       url = "github:anyrun-org/anyrun";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    lsfg-vk-flake = {
+      url = "github:pabloaul/lsfg-vk-flake/main";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { nixpkgs, nixpkgsStable, ... } @inputs:
+  outputs = { nixpkgs, nixpkgsStable, lsfg-vk-flake, ... } @inputs:
   let
     system = "x86_64-linux";
     overlay-stable = final: prev: { stable = import nixpkgsStable { inherit system; config.allowUnfree = true;}; };
@@ -49,6 +54,7 @@
           ({ ... }: { nixpkgs.overlays = [ overlay-stable ]; })
           inputs.home-manager.nixosModules.default
           inputs.stylix.nixosModules.stylix
+          lsfg-vk-flake.nixosModules.default
         ];
       };
     };

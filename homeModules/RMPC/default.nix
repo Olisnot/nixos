@@ -31,7 +31,6 @@
   select_current_song_on_change: false,
   on_song_change: ["~/.config/rmpc/notify"],
   album_art: (
-    method: Sixel,
     max_size_px: (width: 1200, height: 1200),
     disabled_protocols: ["http://", "https://"],
     vertical_align: Center,

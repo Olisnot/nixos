@@ -14,6 +14,13 @@
       heroic
       protonup-qt
       mangohud
+      vulkan-tools
     ];
+
+    # Enables lossless scaling for games
+    services.lsfg-vk = {
+      enable = true;
+      ui.enable = true; # installs gui for configuring lsfg-vk
+    };
   };
 }

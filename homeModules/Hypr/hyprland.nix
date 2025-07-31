@@ -43,10 +43,7 @@ exec-once = [
   "hyprctl dispatch exec \"[workspace 2]\" zen-beta"
   "hyprctl dispatch exec \"[workspace 3]\" ghostty"
   "hyprctl dispatch exec \"[workspace 4]\" obsidian"
-  "hyprctl dispatch exec \"[workspace 8]\" tidal-hifi"
   "hyprctl dispatch exec \"[workspace 9]\" equibop"
-  "hyprctl dispatch exec \"[workspace 9]\" zapzap"
-  "steam"
 ];
 
 xwayland = {

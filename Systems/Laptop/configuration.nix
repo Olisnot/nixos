@@ -2,15 +2,15 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
-    inputs.home-manager.nixosModules.default
-    ./hardware-configuration.nix
-    ./packages.nix
-    ./fonts.nix
-    ./users/oliver/user.nix
-    ../../nixosModules
-    ./scripts
-  ];
+    [
+      inputs.home-manager.nixosModules.default
+      ./hardware-configuration.nix
+      ./packages.nix
+      ./fonts.nix
+      ./users/oliver/user.nix
+      ../../nixosModules
+      ./scripts
+    ];
 
 #Custom module options
 nvidia.enable = true;
@@ -22,6 +22,7 @@ keymapp.enable = true;
 virt-manager.setup = true;
 fish.enable = true;
 nextdns.enable = true;
+syncthing.enable = true;
 
 #Nix settings
 nix.settings.experimental-features = ["nix-command" "flakes"];
@@ -55,7 +56,7 @@ swapDevices = [
 
 security.polkit.enable = true;
 
-networking.hostName = "nixos"; # Define your hostname.
+networking.hostName = "zeus"; # Define your hostname.
 # networking.wireless.enable = true;  #Enables wireless support via wpa_supplicant.
 
 # Kernel parameters
@@ -145,6 +146,8 @@ services.pipewire = {
 
 # Enable Bluetooth
 bluetooth.enable = true;
+
+programs.kdeconnect.enable = true;
 
 services.gnome.gnome-keyring.enable = true;
 
