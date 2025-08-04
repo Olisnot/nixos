@@ -1,7 +1,6 @@
 {
   description = "Nixos config flake";
 
-
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
@@ -51,6 +50,16 @@
         specialArgs = { inherit inputs; };
         modules = [
           ./Systems/Laptop/configuration.nix
+          ({ ... }: { nixpkgs.overlays = [ overlay-stable ]; })
+          inputs.home-manager.nixosModules.default
+          inputs.stylix.nixosModules.stylix
+          lsfg-vk-flake.nixosModules.default
+        ];
+      };
+      steamdeck = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./Systems/SteamDeck/configuration.nix
           ({ ... }: { nixpkgs.overlays = [ overlay-stable ]; })
           inputs.home-manager.nixosModules.default
           inputs.stylix.nixosModules.stylix
