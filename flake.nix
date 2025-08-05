@@ -56,16 +56,6 @@
           lsfg-vk-flake.nixosModules.default
         ];
       };
-      steamdeck = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs; };
-        modules = [
-          ./Systems/SteamDeck/configuration.nix
-          ({ ... }: { nixpkgs.overlays = [ overlay-stable ]; })
-          inputs.home-manager.nixosModules.default
-          inputs.stylix.nixosModules.stylix
-          lsfg-vk-flake.nixosModules.default
-        ];
-      };
     };
   };
 }
