@@ -37,6 +37,10 @@ boot.loader = {
   systemd-boot.configurationLimit = 5;
 };
 
+# Enable dynamically linked binaries
+programs.nix-ld.enable = true;
+programs.nix-ld.libraries = with pkgs; [
+];
 
 boot.resumeDevice = "/dev/disk/by-uuid/a357b12d-bc51-4745-9898-4f7bdc59d327";
 
