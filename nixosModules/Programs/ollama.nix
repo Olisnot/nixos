@@ -1,4 +1,4 @@
-{ lib, config, ... }:
+{ pkgs, lib, config, ... }:
 
 {
   options = {
@@ -9,5 +9,6 @@
       enable = true;
       acceleration = "cuda";
     };
+    environment.systemPackages = with pkgs; [ open-webui ];
   };
 }
