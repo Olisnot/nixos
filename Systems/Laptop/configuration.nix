@@ -34,7 +34,14 @@ nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
 boot.loader = {
   systemd-boot.enable = true;
   efi.canTouchEfiVariables = true;
-  systemd-boot.configurationLimit = 5;
+  systemd-boot.configurationLimit = 10;
+};
+
+# Garbage collector
+nix.gc = {
+  automatic = true;
+  dates = "weekly";
+  options = "--delete-older-than 30d";
 };
 
 # Enable dynamically linked binaries
