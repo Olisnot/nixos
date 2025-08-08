@@ -38,7 +38,6 @@
   zen-browser.enable = true;
   anyrun.enable = true;
   helix.enable = true;
-  zed.enable = true;
   mpd.enable = true;
   rmpc.enable = true;
 
