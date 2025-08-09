@@ -12,6 +12,7 @@
       set fish_greeting # Disable greeting
       zoxide init fish | source
       starship init fish | source
+      export AVANTE_OPENAI_API_KEY=${builtins.readFile ./avante_key}
       '';
 
       shellAliases = {
