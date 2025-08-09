@@ -8,7 +8,7 @@
   config = lib.mkIf config.zed.enable {
     programs.zed-editor = {
       enable = true;
-      extensions = ["nix" "toml" "make"];
+      extensions = ["nix" "toml" "make" "catppuccin"];
       userSettings = {
         assistant = {
           enabled = true;
