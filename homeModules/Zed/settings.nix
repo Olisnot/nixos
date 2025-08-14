@@ -3,7 +3,7 @@
 {
   programs.zed-editor = {
     userSettings = {
-      experimental.theme_overrides = {
+      "experimental.theme_overrides" = {
         "background.appearance" = "blurred";
         "background" = "#191724BB";
       };
