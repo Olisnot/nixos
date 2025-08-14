@@ -1,5 +1,6 @@
 { ... }:
 
+
 {
   programs.zed-editor = {
     userSettings = {
