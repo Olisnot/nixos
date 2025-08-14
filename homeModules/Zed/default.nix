@@ -6,6 +6,7 @@
     #./languages.nix
     ./settings.nix
     ./extensions.nix
+    ./ai.nix
   ];
 
   options = {
@@ -14,7 +15,7 @@
     };
   };
 
-  config = lib.mkIf config.programs.zed-editor.enable {
+  config = lib.mkIf config.zed-editor.enable {
     programs.zed-editor = {
       enable = true;
     };
