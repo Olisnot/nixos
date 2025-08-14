@@ -19,6 +19,6 @@
     programs.zed-editor = {
       enable = true;
     };
-    stylix.targets.zed-editor.enable = false;
+    stylix.targets.zed.enable = false;
   };  
 }
