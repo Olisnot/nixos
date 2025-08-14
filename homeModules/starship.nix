@@ -81,7 +81,7 @@ in
 
           git_branch = {
             symbol = "";
-            style = "bg:base02";
+            style = "bg:base01";
             format = "[ $symbol $branch ]($style)";
 
           };
