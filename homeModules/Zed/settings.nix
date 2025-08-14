@@ -2,11 +2,11 @@
 
 {
   programs.zed-editor = {
-    experimental.theme_overrides = {
-      "background.appearance" = "blurred";
-      "background" = "#191724BB";
-    };
     userSettings = {
+      experimental.theme_overrides = {
+        "background.appearance" = "blurred";
+        "background" = "#191724BB";
+      };
       hour_format = "hour24";
       auto_update = false;
       terminal = {
