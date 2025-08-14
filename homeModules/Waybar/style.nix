@@ -13,7 +13,7 @@ in
 
 #tray menu,
 window#waybar {
-  background: rgba(30, 30, 46, 0.8);
+  background: rgba(30, 30, 46, 0);
 }
 
 .modules-left,

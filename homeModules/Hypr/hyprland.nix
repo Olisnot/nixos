@@ -42,7 +42,7 @@ exec-once = [
   "waybar"
   "hyprctl dispatch exec \"[workspace 2]\" zen-beta"
   "hyprctl dispatch exec \"[workspace 3]\" ghostty"
-  "hyprctl dispatch exec \"[workspace 4]\" obsidian"
+  "hyprctl dispatch exec \"[workspace 6]\" obsidian"
   "hyprctl dispatch exec \"[workspace 9]\" equibop"
 ];
 
@@ -227,12 +227,12 @@ bindm = [
 
 windowrulev2 = [ 
   "suppressevent maximize, class:.* "
-  "workspace 2 silent, class:LibreWolf"
+  "workspace 2 silent, class:zen-beta"
+  "workspace 4, class:dev.zed.Zed"
   "workspace 5 silent, class:steam"
   "workspace 5 silent, class:heroic"
   "workspace 5 silent, class:lutris"
-  "workspace 8 silent, class:tidal-hifi"
-  "workspace 9 silent, class:equibop"
+  "workspace 9 silent, class:vesktop"
 ];
 
 workspace= [ 

@@ -6,7 +6,6 @@
       layer = "top";
       position = "top";
       height = 1;
-      margin-top = 0;
       modules-left = [ "hyprland/window" ];
       modules-center = [ "hyprland/workspaces" ];
       modules-right = [ "tray" "clock" "group/power" ];
