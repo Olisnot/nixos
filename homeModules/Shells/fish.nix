@@ -17,6 +17,7 @@
       shellAliases = {
         dev = "nix develop --command fish";
         ls = "eza -l --icons --time-style=long-iso --group-directories-first";
+        zed = "zeditor .";
       };
     };
   };
