@@ -6,17 +6,22 @@
       layer = "top";
       position = "top";
       height = 1;
-      width = 1920;
       margin-top = 0;
-      modules-left = [ "hyprland/workspaces" ];
-      modules-center = [ "clock" ];
-      modules-right = [ "tray" "group/power" ];
+      modules-left = [ "hyprland/window" ];
+      modules-center = [ "hyprland/workspaces" ];
+      modules-right = [ "tray" "clock" "group/power" ];
 
       "hyprland/workspaces" = {
         format = "{icon}";
         on-click = "activate";
         sort-by-number = true;
         current-only = false;
+      };
+
+      "hyprland/window" = {
+        "format" = "";
+        "icon" = true;
+        "separate-outputs" = true;
       };
 
       clock = {

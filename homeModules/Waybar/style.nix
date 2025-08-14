@@ -3,55 +3,52 @@
 let
   colors = config.lib.stylix.colors.withHashtag;
 in
-{
-  programs.waybar.style = ''
+  {
+    programs.waybar.style = ''
     * {
       font-family: FiraCode Nerd Font Propo;
       font-size: 16px;
+      color: #d8dee9;
     }
 
-    window#waybar {
-      background: ${colors.base00};
-      box-shadow: 0 4px 8px rgba(76, 76, 76, 0.2);
-      border-bottom-left-radius: 20px;
-      border-bottom-right-radius: 20px;
-    }
+#tray menu,
+window#waybar {
+  background: rgba(30, 30, 46, 0.8);
+}
 
-    .modules-left,
-    .modules-right {
-      padding-right: 10px;
-      padding-left: 10px;
-    }
+.modules-left,
+.modules-right {
+  padding-right: 10px;
+  padding-left: 10px;
+}
 
-    #workspaces {
-      padding-left: 5px;
-      padding-right: 5px;
-    }
+#workspaces {
+  padding-left: 5px;
+  padding-right: 5px;
+}
 
-    #custom-poweroff:hover,
-    #custom-restart:hover,
-    #custom-nixos:hover,
-    #workspaces button:hover {
-      background: ${colors.base03};
-      border-radius: 20px;
-    }
+#custom-poweroff:hover,
+#custom-restart:hover,
+#custom-nixos:hover,
+#workspaces button:hover {
+  background: #45475a;
+  border-radius: 20px;
+}
 
-    #clock {
-      font-size: 14px;
-    }
+#clock {
+  font-size: 14px;
+}
 
-    #clock,
-    #tray,
-    #group-power,
-    #custom-poweroff,
-    #custom-restart,
-    #custom-nixos,
-    #workspaces {
-      margin: 5px;
-      padding-right: 10px;
-      padding-left: 10px;
-      background: ${colors.base02};
-      border-radius: 20px;
-    }
+#clock,
+#tray,
+#group-power,
+#custom-poweroff,
+#custom-restart,
+#custom-nixos,
+#window,
+#workspaces {
+  padding-right: 10px;
+  padding-left: 10px;
+}
 '';
 }
