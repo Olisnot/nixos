@@ -2,8 +2,8 @@
 
 {
   imports = [
-    ./keybinds.nix
-    ./languages.nix
+    #./keybinds.nix
+    #./languages.nix
     ./settings.nix
     ./extensions.nix
   ];
