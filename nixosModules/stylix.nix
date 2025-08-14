@@ -6,10 +6,10 @@
     image = "${inputs.wallpapers}/Cloudsnight.jpg";
     polarity = "dark";
     base16Scheme = {
-      base00 = "#0d0c0ccc";
-      base01 = "#1D1C19cc";
-      base02 = "#282727cc";
-      base03 = "#737c73cc";
+      base00 = "#0d0c0c";
+      base01 = "#1D1C19";
+      base02 = "#282727";
+      base03 = "#737c73";
       base04 = "#a6a69c";
       base05 = "#c5c9c5";
       base06 = "#7a8382";
