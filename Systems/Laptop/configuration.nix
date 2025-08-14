@@ -21,7 +21,7 @@ ollama.enable = true;
 keymapp.enable = true;
 virt-manager.setup = true;
 fish.enable = true;
-nextdns.enable = true;
+#nextdns.enable = true;
 syncthing.enable = true;
 
 #Nix settings

@@ -8,7 +8,7 @@
   config = lib.mkIf config.zed.enable {
     programs.zed-editor = {
       enable = true;
-      extensions = ["nix" "toml" "make" "catppuccin"];
+      extensions = ["nix" "toml" "make" "catppuccin blur" "catppuccin icons"];
       userSettings = {
         assistant = {
           enabled = true;
@@ -18,6 +18,9 @@
             provider = "zed.dev";
             model = "claude-3-5-sonnet-latest";
           };
+        };
+        features = {
+          edit_prediction_provider = "supermaven";
         };
         hour_format = "hour24";
         auto_update = false;
