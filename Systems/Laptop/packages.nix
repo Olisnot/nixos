@@ -48,7 +48,7 @@
 
     #Rust
     cargo 
-    rust-analyzer
+    stable.rust-analyzer
     rustc 
     rustfmt 
     bacon
