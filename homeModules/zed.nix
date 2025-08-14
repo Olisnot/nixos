@@ -6,6 +6,7 @@
   };
 
   config = lib.mkIf config.zed.enable {
+    nixGL.vulkan.enable = true;
     programs.zed-editor = {
       enable = true;
       extensions = ["nix" "toml" "make" "Catppuccin Blur" "Catppuccin Icons"];
