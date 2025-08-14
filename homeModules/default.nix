@@ -6,6 +6,7 @@
                 ./Gaming
                 ./Shells
                 ./RMPC
+                ./Zed
                 ./dunst.nix
                 ./waypaper.nix
                 ./tmux.nix
@@ -19,6 +20,5 @@
                 ./zen.nix
                 ./helix.nix
                 ./anyrun.nix
-                ./zed.nix
 	];
 }
