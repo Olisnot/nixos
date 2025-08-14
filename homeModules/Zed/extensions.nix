@@ -7,7 +7,5 @@
     "make" 
     "latex"
     "zig"
-    "catppuccin blur" 
-    "catppuccin icons"
   ];
 }
