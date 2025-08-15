@@ -19,7 +19,7 @@
           notifyAboutUpdates = false;
           transparent = true;
           themeLinks = [        # or use an online theme
-            "https://capnkitten.github.io/BetterDiscord/Themes/Translucence/css/source.css"
+            "https://discordstyles.github.io/DarkMatter/DarkMatter.theme.css"
           ];
           frameless = true;                   # Set some Vencord options
         };
