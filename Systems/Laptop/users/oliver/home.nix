@@ -41,8 +41,9 @@
   zed-editor.enable = true;
   mpd.enable = true;
   rmpc.enable = true;
+  nixcord.enable = true;
 
-  services.hyprpaper.enable = lib.mkForce false; 
+  services.hyprpaper.enable = lib.mkForce false;
 
   stylix = {
     targets.hyprpaper.enable = lib.mkForce false;
