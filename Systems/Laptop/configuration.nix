@@ -174,9 +174,6 @@ services.gnome.gnome-keyring.enable = true;
 
 # Allow unfree packages
 nixpkgs.config.allowUnfree = true;
-nixpkgs.overlays = [
-  inputs.millennium.overlays.default
-];
 
 # Enable flatpak
 services.flatpak.enable = true;

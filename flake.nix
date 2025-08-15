@@ -33,15 +33,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    millennium.url = "git+https://github.com/SteamClientHomebrew/Millennium";
-
     lsfg-vk-flake = {
       url = "github:pabloaul/lsfg-vk-flake/main";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { nixpkgs, nixpkgsStable, lsfg-vk-flake, millennium, ... } @inputs:
+  outputs = { nixpkgs, nixpkgsStable, lsfg-vk-flake, ... } @inputs:
   let
     system = "x86_64-linux";
     overlay-stable = final: prev: { stable = import nixpkgsStable { inherit system; config.allowUnfree = true;}; };
