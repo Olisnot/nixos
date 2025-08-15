@@ -19,7 +19,6 @@
           /* Variables */
           :root {
               --avatar-size: 32px;
-              --background-image: url('https://i.imgur.com/7SbtKvw.png');
               --home-image: url('https://i.imgur.com/233d55Y.gif');
               --background-solid: rgba(0, 15, 25, 0.3); /* Adjusted transparency */
               --background-solid-dark: rgba(0, 10, 20, 0.25); /* Adjusted transparency */
