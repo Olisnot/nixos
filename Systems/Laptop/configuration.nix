@@ -133,7 +133,7 @@ hardware = {
 xdg.portal.enable = true;
 xdg.portal.extraPortals = with pkgs; [
   xdg-desktop-portal
-  xdg-desktop-portal-gtk 
+  xdg-desktop-portal-gtk
   xdg-desktop-portal-wlr
   xdg-desktop-portal-hyprland
 ];
@@ -143,7 +143,7 @@ hyprland.enable = true;
 
 # Set Hyprland as defaultSession
 services.displayManager.defaultSession = "hyprland";
-services.displayManager.gdm = { 
+services.displayManager.gdm = {
   enable = true;
   wayland = true;
 };
@@ -174,6 +174,9 @@ services.gnome.gnome-keyring.enable = true;
 
 # Allow unfree packages
 nixpkgs.config.allowUnfree = true;
+nixpkgs.overlay = [
+  inputs.millennium.overlays.default
+];
 
 # Enable flatpak
 services.flatpak.enable = true;
