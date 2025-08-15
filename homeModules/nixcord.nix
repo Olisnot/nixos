@@ -13,13 +13,18 @@
     programs.nixcord = {
         enable = true;          # Enable Nixcord (It also installs Discord)
         vesktop.enable = true;  # Vesktop
-        quickCss = "";  # quickCSS file
+        quickCss = ''
+          :root {
+              --background-solid: rgba(0, 15, 25, 0.3); /* Adjusted transparency */
+              --background-solid-dark: rgba(0, 10, 20, 0.25); /* Adjusted transparency */
+              --background-solid-darker: rgba(0, 5, 15, 0.2); /* Adjusted transparency */
+          }
+        '';  # quickCSS file
         config = {
           useQuickCss = true;   # use out quickCSS
           notifyAboutUpdates = false;
           transparent = true;
           themeLinks = [        # or use an online theme
-            "https://raw.githubusercontent.com/ClearVision/ClearVision-v7/master/ClearVision-v7.theme.css"
           ];
           frameless = true;                   # Set some Vencord options
         };
