@@ -33,6 +33,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    inputs.millennium.url = "git+https://github.com/SteamClientHomebrew/Millennium";
+
     lsfg-vk-flake = {
       url = "github:pabloaul/lsfg-vk-flake/main";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -50,7 +52,7 @@
         specialArgs = { inherit inputs; };
         modules = [
           ./Systems/Laptop/configuration.nix
-          ({ ... }: { nixpkgs.overlays = [ overlay-stable ]; })
+          ({ ... }: { nixpkgs.overlays = [ overlay-stable inputs.millennium.overlays.default ]; })
           inputs.home-manager.nixosModules.default
           inputs.stylix.nixosModules.stylix
           lsfg-vk-flake.nixosModules.default

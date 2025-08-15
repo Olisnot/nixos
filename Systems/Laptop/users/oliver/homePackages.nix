@@ -19,9 +19,5 @@
     swww
     gucharmap
     localsend
-    #social
-    equibop
-    revolt-desktop
-    element-desktop
   ];
 }
