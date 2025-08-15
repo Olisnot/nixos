@@ -49,6 +49,7 @@
               background-image: none !important;
           }
         '';  # quickCSS file
+
         config = {
           useQuickCss = true;   # use out quickCSS
           notifyAboutUpdates = false;
