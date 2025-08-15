@@ -33,7 +33,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    inputs.millennium.url = "git+https://github.com/SteamClientHomebrew/Millennium";
+    millennium.url = "git+https://github.com/SteamClientHomebrew/Millennium";
 
     lsfg-vk-flake = {
       url = "github:pabloaul/lsfg-vk-flake/main";
