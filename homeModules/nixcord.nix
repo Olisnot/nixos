@@ -15,9 +15,9 @@
         vesktop.enable = true;  # Vesktop
         quickCss = ''
           :root {
-              --background-solid: rgba(0, 15, 25, 0.3); /* Adjusted transparency */
-              --background-solid-dark: rgba(0, 10, 20, 0.25); /* Adjusted transparency */
-              --background-solid-darker: rgba(0, 5, 15, 0.2); /* Adjusted transparency */
+              --background-solid: transparent; /* Adjusted transparency */
+              --background-solid-dark: transparent; /* Adjusted transparency */
+              --background-solid-darker: transparent; /* Adjusted transparency */
           }
         '';  # quickCSS file
         config = {
