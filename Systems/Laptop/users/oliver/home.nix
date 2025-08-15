@@ -50,6 +50,8 @@
     targets.waybar.enable = false;
     targets.helix.enable = true;
     targets.nixcord.enable = false;
+    targets.vesktop.enable = false;
+    targets.vencord.enable = false;
 
     iconTheme = {
       enable = true;
