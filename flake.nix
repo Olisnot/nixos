@@ -52,7 +52,7 @@
         specialArgs = { inherit inputs; };
         modules = [
           ./Systems/Laptop/configuration.nix
-          ({ ... }: { nixpkgs.overlays = [ overlay-stable ]; })
+          ({ ... }: { nixpkgs.overlays = [ overlay-stable millennium.overlays.default ]; })
           inputs.home-manager.nixosModules.default
           inputs.stylix.nixosModules.stylix
           lsfg-vk-flake.nixosModules.default
