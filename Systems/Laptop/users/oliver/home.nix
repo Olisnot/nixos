@@ -49,6 +49,7 @@
     targets.hyprpaper.enable = lib.mkForce false;
     targets.waybar.enable = false;
     targets.helix.enable = true;
+    targets.vesktop.enable = false;
 
     iconTheme = {
       enable = true;
