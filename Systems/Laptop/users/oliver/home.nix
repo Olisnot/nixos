@@ -49,7 +49,7 @@
     targets.hyprpaper.enable = lib.mkForce false;
     targets.waybar.enable = false;
     targets.helix.enable = true;
-    targets.vesktop.enable = false;
+    targets.nixcord.enable = false;
 
     iconTheme = {
       enable = true;
