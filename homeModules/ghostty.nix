@@ -12,9 +12,9 @@
       enableFishIntegration = true;
       settings = {
         font-feature = [ "ss01" "ss08" "ss02"];
-        background-opacity = 0.8;
+        background-opacity = 0.6;
         background-blur = true;
-        theme = "Batman";
+        theme = "Dark Modern";
       };
     };
   };
