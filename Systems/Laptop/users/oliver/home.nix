@@ -36,7 +36,6 @@
   dunst.enable = true;
   ghostty.enable = true;
   zen-browser.enable = true;
-  anyrun.enable = true;
   helix.enable = true;
   zed-editor.enable = true;
   mpd.enable = true;
