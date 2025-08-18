@@ -15,7 +15,7 @@
     environment.systemPackages = with pkgs;
     [
       whitesur-kde
-      plank
+      latte-dock
       kdePackages.kclock
       kdePackages.discover # Optional: Install if you use Flatpak or fwupd firmware update sevice
       kdePackages.kcalc # Calculator
