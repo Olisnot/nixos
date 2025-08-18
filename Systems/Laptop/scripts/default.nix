@@ -12,6 +12,5 @@ in
   environment.systemPackages = [
     rebuild
     TmuxSessionizer
-    nvim
   ];
 }
