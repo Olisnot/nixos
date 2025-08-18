@@ -19,10 +19,6 @@
   home.stateVersion = "23.11"; # Please read the comment before changing.
 
   # Custom home modules
-  hyprlandConfig.enable = true;
-  hyprlockConfig.enable = true;
-  waybarConfig.enable = true;
-  waypaper.enable = true;
   bash.enable = true;
   fish.enable = true;
   fastfetch.enable = true;
@@ -33,7 +29,6 @@
     minecraft.enable = true;
   };
   tmux.enable = true;
-  dunst.enable = true;
   ghostty.enable = true;
   zen-browser.enable = true;
   helix.enable = true;
