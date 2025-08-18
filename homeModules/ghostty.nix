@@ -14,7 +14,7 @@
         font-feature = [ "ss01" "ss08" "ss02"];
         background-opacity = 0.8;
         background-blur = true;
-        theme = "Apple Classic";
+        theme = "Batman";
       };
     };
   };
