@@ -6,8 +6,8 @@
     mpv
     stremio
     playerctl
-    youtube-music
-    tidal-dl
+    spotify
+    ncspot
     #Tools
     obsidian
     gimp3
