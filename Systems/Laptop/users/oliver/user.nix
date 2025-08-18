@@ -8,8 +8,8 @@
 		extraGroups = [ "networkmanager" "wheel" ];
 	};
 
-	home-manager = { 
-                backupFileExtension = "backup6";
+	home-manager = {
+                backupFileExtension = "backup7";
 		extraSpecialArgs = {inherit inputs;};
                 #useGlobalPkgs = true;
 		users = {
