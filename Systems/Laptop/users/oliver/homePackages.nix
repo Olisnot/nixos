@@ -19,5 +19,6 @@
     swww
     gucharmap
     localsend
+    chatgpt
   ];
 }
