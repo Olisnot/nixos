@@ -19,6 +19,5 @@
     swww
     gucharmap
     localsend
-    ulauncher
   ];
 }
