@@ -45,23 +45,8 @@
 
   services.hyprpaper.enable = lib.mkForce false;
 
-  stylix = {
-    targets.hyprpaper.enable = lib.mkForce false;
-    targets.waybar.enable = false;
-    targets.helix.enable = true;
-    targets.nixcord.enable = false;
-    targets.vesktop.enable = false;
-    targets.vencord.enable = false;
-
-    iconTheme = {
-      enable = true;
-      package = pkgs.whitesur-icon-theme;
-      dark = "WhiteSur";
-    };
-  };
-
   home.sessionVariables = {
-    EDITOR = "nvim";
+    EDITOR = "hx";
   };
 
   programs.fish.shellAliases = {
@@ -69,6 +54,37 @@
       sudovim = "sudo -E nvim .";
       vim = "nvim .";
       tb = "cd /mnt/1tb";
+      zed = "zeditor .";
+  };
+
+  gtk = {
+    enable = true;
+    theme = {
+      package = pkgs.whitesur-gtk-theme;
+      name = "WhiteSur";
+    };
+    iconTheme = {
+      package = pkgs.whitesur-icon-theme;
+      name = "WhiteSur";
+    };
+
+    cursorTheme = {
+      package = pkgs.whitesur-cursors;
+      name = "WhiteSur Cursors";
+      size = 24;
+    };
+
+    gtk3.extraConfig = {
+      Settings = ''
+        gtk-application-prefer-dark-theme=1
+      '';
+    };
+
+    gtk4.extraConfig = {
+      Settings = ''
+        gtk-application-prefer-dark-theme=1
+      '';
+    };
   };
 
   #virt-manager

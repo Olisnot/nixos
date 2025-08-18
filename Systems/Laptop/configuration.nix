@@ -30,6 +30,10 @@ nix.settings.auto-optimise-store = true;
 
 nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
 
+services.displayManager = {
+	autoLogin.enable = true;
+	autoLogin.user = "oliver";
+};
 
 # Bootloader.
 boot.loader = {
@@ -50,20 +54,11 @@ programs.nix-ld.enable = true;
 programs.nix-ld.libraries = with pkgs; [
 ];
 
-boot.resumeDevice = "/dev/disk/by-uuid/a357b12d-bc51-4745-9898-4f7bdc59d327";
-
 powerManagement.enable = true;
 
 boot.extraModprobeConfig = ''
 options nvidia_modset vblank_sem_control=0
 '';
-
-swapDevices = [
-  {
-    device = "/var/lib/swapfile";
-    size = 16 * 1024; # 16GB in MB
-  }
-];
 
 system.autoUpgrade = {
   enable = true;
@@ -84,16 +79,7 @@ networking.hostName = "zeus"; # Define your hostname.
 # Kernel parameters
 boot.kernelParams = [ "nvidia-drm.modeset=1" "resume_offset=79960064" ];
 
-# Enable IWD
-networking.wireless.iwd.enable = true;
-networking.wireless.iwd.settings = {
-  IPv6 = {
-    Enabled = true;
-  };
-  Settings = {
-    AutoConnect = true;
-  };
-};
+networking.networkmanager.enable = true;
 
 # Set your time zone.
 time.timeZone = "Europe/Madrid";
@@ -136,18 +122,9 @@ xdg.portal.extraPortals = with pkgs; [
   xdg-desktop-portal
   xdg-desktop-portal-gtk
   xdg-desktop-portal-wlr
-  xdg-desktop-portal-hyprland
 ];
 
-# Enable Hyprland
-hyprland.enable = true;
-
-# Set Hyprland as defaultSession
-services.displayManager.defaultSession = "hyprland";
-services.displayManager.gdm = {
-  enable = true;
-  wayland = true;
-};
+kde.enable = true;
 
 # Set Laptop lid
 services.logind.lidSwitchExternalPower = "ignore";
