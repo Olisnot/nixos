@@ -30,6 +30,7 @@ nix.settings.auto-optimise-store = true;
 
 nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
 
+
 # Bootloader.
 boot.loader = {
   systemd-boot.enable = true;
