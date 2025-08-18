@@ -6,7 +6,6 @@
   };
 
   config = lib.mkIf config.gaming.mangohud.enable {
-    stylix.targets.mangohud.enable = false;
     programs.mangohud = { enable = true; };
     home.file.".config/mangohud/mangohud.conf".text = ''
     legacy_layout=false

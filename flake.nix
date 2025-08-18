@@ -11,13 +11,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    stylix = {
-      url = "github:danth/stylix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    nixvim.url = "git+https://codeberg.org/Olisnot/NixVimConfig";
-
     wallpapers = {
       url = "github:olmods/wallpapers";
       flake = false;
@@ -25,11 +18,6 @@
 
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    anyrun = {
-      url = "github:anyrun-org/anyrun";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -56,7 +44,6 @@
           ./Systems/Laptop/configuration.nix
           ({ ... }: { nixpkgs.overlays = [ overlay-stable ]; })
           inputs.home-manager.nixosModules.default
-          inputs.stylix.nixosModules.stylix
           lsfg-vk-flake.nixosModules.default
         ];
       };
