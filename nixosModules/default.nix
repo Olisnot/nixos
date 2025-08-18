@@ -7,6 +7,7 @@
     ./bluetooth.nix
     ./nextdns.nix
     ./syncthing.nix
+    ./kde.nix
     ./Gaming
     ./Programs
   ];
