@@ -23,7 +23,6 @@ virt-manager.setup = true;
 fish.enable = true;
 #nextdns.enable = true;
 syncthing.enable = true;
-mullvad.enable = true;
 
 #Nix settings
 nix.settings.experimental-features = ["nix-command" "flakes"];
@@ -102,6 +101,8 @@ i18n.extraLocaleSettings = {
 
 # Enable the X11 windowing system.
 services.xserver.enable = true;
+
+services.mullvad-vpn.enable = true;
 
 services.xserver.dpi = 96;
 environment.variables = {
