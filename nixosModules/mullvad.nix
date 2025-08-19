@@ -1,4 +1,4 @@
-{ pkgs, inputs, lib, ... }:
+{ pkgs, config, lib, ... }:
 
 let
   mullvad-autostart = pkgs.makeAutostartItem {
