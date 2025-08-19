@@ -22,6 +22,7 @@
     bat
     eza
     zoxide
+    mullvad-vpn
 
     #Utils
     uutils-coreutils-noprefix
@@ -47,10 +48,10 @@
     bear
 
     #Rust
-    cargo 
+    cargo
     stable.rust-analyzer
-    rustc 
-    rustfmt 
+    rustc
+    rustfmt
     bacon
     rusty-man
     clippy
@@ -58,7 +59,7 @@
     #zig
     zig
     zls
-    
+
     #Python
     python314
   ];
