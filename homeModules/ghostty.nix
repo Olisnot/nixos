@@ -12,7 +12,7 @@
       enableFishIntegration = true;
       settings = {
         font-feature = [ "ss01" "ss08" "ss02"];
-        background-opacity = 0.6;
+        background-opacity = 0.9;
         background-blur = true;
         theme = "Dark Modern";
       };
