@@ -2,7 +2,7 @@
 
 {
   imports = [
-    #./keybinds.nix
+    ./keybinds.nix
     #./languages.nix
     ./settings.nix
     ./extensions.nix
@@ -19,5 +19,5 @@
     programs.zed-editor = {
       enable = true;
     };
-  };  
+  };
 }
