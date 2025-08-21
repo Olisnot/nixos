@@ -38,7 +38,7 @@
   in
   {
     nixosConfigurations = {
-      default = nixpkgs.lib.nixosSystem {
+      laptop = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; };
         modules = [
           ./Systems/Laptop/configuration.nix
