@@ -3,7 +3,7 @@
 pkgs.writeShellApplication {
   name = "config";
   text = /* bash */ ''
-    cd /nixos || exit
+    cd /home/oliver/nixos || exit
     tmux new -A -s NixOSConfig
   '';
 }
