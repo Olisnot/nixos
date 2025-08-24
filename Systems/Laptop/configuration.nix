@@ -128,7 +128,7 @@ xdg.portal.extraPortals = with pkgs; [
 
 # Enable KDE
 kde.enable = true;
-services.displayManager.defaultSession = "kde";
+services.displayManager.defaultSession = "plasma";
 
 # Set Laptop lid
 services.logind.lidSwitchExternalPower = "ignore";
