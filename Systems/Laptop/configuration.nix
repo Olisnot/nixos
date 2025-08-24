@@ -42,6 +42,8 @@ boot.loader = {
   systemd-boot.configurationLimit = 10;
 };
 
+systemd.tpm2.enable = false;
+
 # Garbage collector
 nix.gc = {
   automatic = true;
