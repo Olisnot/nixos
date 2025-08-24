@@ -23,6 +23,7 @@
     eza
     zoxide
     mullvad-vpn
+    xwayland-satellite
 
     #Utils
     uutils-coreutils-noprefix

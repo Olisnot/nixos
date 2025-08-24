@@ -126,8 +126,6 @@ xdg.portal.extraPortals = with pkgs; [
   xdg-desktop-portal-wlr
 ];
 
-kde.enable = true;
-
 # Set Laptop lid
 services.logind.lidSwitchExternalPower = "ignore";
 

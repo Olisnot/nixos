@@ -11,6 +11,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    stylix = {
+      url = "github:danth/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     wallpapers = {
       url = "github:olmods/wallpapers";
       flake = false;
@@ -44,6 +49,7 @@
           ./Systems/Laptop/configuration.nix
           ({ ... }: { nixpkgs.overlays = [ overlay-stable ]; })
           inputs.home-manager.nixosModules.default
+          inputs.stylix.nixosModules.stylix
           lsfg-vk-flake.nixosModules.default
         ];
       };

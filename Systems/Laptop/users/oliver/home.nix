@@ -35,6 +35,7 @@
   zed-editor.enable = true;
   mpd.enable = true;
   rmpc.enable = true;
+  waypaper.enable = true;
   nixcord.enable = true;
 
   services.hyprpaper.enable = lib.mkForce false;
@@ -51,33 +52,22 @@
       zed = "zeditor .";
   };
 
-  gtk = {
-    enable = true;
-    theme = {
-      package = pkgs.whitesur-gtk-theme;
-      name = "WhiteSur";
-    };
+  stylix = {
+    targets.hyprpaper.enable = lib.mkForce false;
+    targets.waybar.enable = false;
+    targets.helix.enable = true;
+    targets.nixcord.enable = false;
+    targets.vesktop.enable = false;
+    targets.vencord.enable = false;
+
+    targets.gtk.extraCss = ''
+        opacity: 0.8;
+    '';
+
     iconTheme = {
+      enable = true;
       package = pkgs.whitesur-icon-theme;
-      name = "WhiteSur";
-    };
-
-    cursorTheme = {
-      package = pkgs.whitesur-cursors;
-      name = "WhiteSur Cursors";
-      size = 24;
-    };
-
-    gtk3.extraConfig = {
-      Settings = ''
-        gtk-application-prefer-dark-theme=1
-      '';
-    };
-
-    gtk4.extraConfig = {
-      Settings = ''
-        gtk-application-prefer-dark-theme=1
-      '';
+      dark = "WhiteSur";
     };
   };
 

@@ -16,5 +16,6 @@
                 ./zen.nix
                 ./helix.nix
                 ./nixcord.nix
+                ./waypaper.nix
 	];
 }

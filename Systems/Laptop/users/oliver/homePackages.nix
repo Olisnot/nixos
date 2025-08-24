@@ -16,8 +16,8 @@
     mupdf
     waypaper
     bottles
-    swww
     gucharmap
     localsend
+    fuzzel
   ];
 }

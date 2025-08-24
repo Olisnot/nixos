@@ -15,7 +15,7 @@
     environment.systemPackages = with pkgs;
     [
       whitesur-kde
-      latte-dock
+      #latte-dock
       nautilus
       kdePackages.kclock
       kdePackages.discover # Optional: Install if you use Flatpak or fwupd firmware update sevice
