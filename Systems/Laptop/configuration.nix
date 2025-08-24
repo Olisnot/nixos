@@ -126,6 +126,7 @@ xdg.portal.extraPortals = with pkgs; [
   xdg-desktop-portal-wlr
 ];
 
+kde.enable = true;
 services.displayManager.defaultSession = "kde";
 
 # Set Laptop lid
