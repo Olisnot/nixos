@@ -43,6 +43,7 @@ boot.loader = {
 };
 
 systemd.tpm2.enable = false;
+boot.initrd.systemd.tpm2.enable = false;
 
 # Garbage collector
 nix.gc = {
