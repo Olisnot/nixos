@@ -126,6 +126,7 @@ xdg.portal.extraPortals = with pkgs; [
   xdg-desktop-portal-wlr
 ];
 
+# Enable KDE
 kde.enable = true;
 services.displayManager.defaultSession = "kde";
 
