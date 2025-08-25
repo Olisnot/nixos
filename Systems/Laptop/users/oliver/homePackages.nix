@@ -18,7 +18,6 @@
     bottles
     gucharmap
     localsend
-    fuzzel
     hydralauncher
   ];
 }
