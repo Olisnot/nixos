@@ -6,7 +6,7 @@
     mpv
     stremio
     playerctl
-    muffon
+    Amberol
     spotify
     ncspot
     #Tools
