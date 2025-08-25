@@ -19,5 +19,6 @@
     gucharmap
     localsend
     fuzzel
+    hydralauncher
   ];
 }
