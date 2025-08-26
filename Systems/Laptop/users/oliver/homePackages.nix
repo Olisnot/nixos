@@ -20,5 +20,7 @@
     gucharmap
     localsend
     hydralauncher
+    filen-cli
+    filen-desktop
   ];
 }
