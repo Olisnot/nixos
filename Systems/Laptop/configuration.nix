@@ -35,6 +35,16 @@ services.displayManager = {
 	autoLogin.user = "oliver";
 };
 
+networking.firewall = { allowedTCPPorts = [ 20 21 ]; };
+
+services.vsftpd = {
+  enable = true;
+  writeEnable = true;
+  localUsers = true;
+  userlist = [ "oliver" ];
+  userlistEnable = true;
+};
+
 # Bootloader.
 boot.loader = {
   systemd-boot.enable = true;
