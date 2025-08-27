@@ -39,6 +39,7 @@
     git-credential-manager
 
     texlab
+    nixd
 
     #Coding Languages
     lldb
