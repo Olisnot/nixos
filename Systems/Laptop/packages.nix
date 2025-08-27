@@ -62,8 +62,5 @@
     #zig
     zig
     zls
-
-    #Python
-    python314
   ];
 }
