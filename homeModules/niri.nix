@@ -40,13 +40,8 @@
             off
         }
 
-        output "DP-1" {
-            mode "1920x1080@60"
-            scale 1
-        }
-
         output "HDMI-A-1" {
-            mode "1920x1080@60"
+            mode "2560x1080@60"
             scale 1
         }
 
