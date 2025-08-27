@@ -144,10 +144,7 @@
   ];
 
   # Enable niri
-  programs.niri = {
-    enable = true;
-    package = pkgs.stable.niri;
-  };
+  programs.niri.enable = true;
   services.displayManager.defaultSession = "niri";
 
   # Set Laptop lid
