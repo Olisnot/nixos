@@ -29,7 +29,7 @@
           command = "nixd";
           args = [ "--semantic-tokens=true"];
           formatting = {
-            command = ["alejandra"];
+            command = ["nixfmt"];
           };
         config.nixd =
             let
