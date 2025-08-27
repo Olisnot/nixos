@@ -72,7 +72,7 @@
 
   # Enable dynamically linked binaries
   programs.nix-ld.enable = true;
-  programs.nix-ld.libraries = with pkgs; [ ];
+  #programs.nix-ld.libraries = with pkgs; [ ];
 
   powerManagement.enable = true;
 
@@ -143,9 +143,9 @@
     xdg-desktop-portal-wlr
   ];
 
-  # Enable KDE
-  kde.enable = true;
-  services.displayManager.defaultSession = "plasma";
+  # Enable niri
+  programs.niri.enable = true;
+  services.displayManager.defaultSession = "niri";
 
   # Set Laptop lid
   services.logind.lidSwitchExternalPower = "ignore";

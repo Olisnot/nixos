@@ -34,7 +34,7 @@
   waypaper.enable = true;
   nixcord.enable = true;
   waybarConfig.enable = true;
-  niri.config.enable = true;
+  niri.enable = true;
 
   services.hyprpaper.enable = lib.mkForce false;
 
