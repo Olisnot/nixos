@@ -1,193 +1,190 @@
 { pkgs, inputs, lib, ... }:
 
 {
-  imports =
-    [
-      inputs.home-manager.nixosModules.default
-      ./hardware-configuration.nix
-      ./packages.nix
-      ./fonts.nix
-      ./users/oliver/user.nix
-      ../../nixosModules
-      ./scripts
-    ];
-
-#Custom module options
-nvidia.enable = true;
-gaming.enable = true;
-gaming.steam.enable = true;
-opentabletdriverudev.enable = true;
-ollama.enable = true;
-keymapp.enable = true;
-virt-manager.setup = true;
-fish.enable = true;
-#nextdns.enable = true;
-syncthing.enable = true;
-
-
-#Nix settings
-nix.settings.experimental-features = ["nix-command" "flakes"];
-nix.settings.auto-optimise-store = true;
-
-nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
-
-services.displayManager = {
-	autoLogin.enable = true;
-	autoLogin.user = "oliver";
-};
-
-networking.firewall = { allowedTCPPorts = [ 20 21 ]; };
-networking.firewall.allowedTCPPortRanges = [ { from = 51000; to = 51999; } ];
-
-services.vsftpd = {
-  enable = true;
-  writeEnable = true;
-  localUsers = true;
-  userlist = [ "oliver" ];
-  userlistEnable = true;
-  extraConfig = ''
-    pasv_enable=Yes
-    pasv_min_port=51000
-    pasv_max_port=51999
-  '';
-};
-
-# Bootloader.
-boot.loader = {
-  systemd-boot.enable = true;
-  efi.canTouchEfiVariables = true;
-  systemd-boot.configurationLimit = 10;
-};
-
-systemd.tpm2.enable = false;
-boot.initrd.systemd.tpm2.enable = false;
-
-# Garbage collector
-nix.gc = {
-  automatic = true;
-  dates = "weekly";
-  options = "--delete-older-than 30d";
-};
-
-# Enable dynamically linked binaries
-programs.nix-ld.enable = true;
-programs.nix-ld.libraries = with pkgs; [
-];
-
-powerManagement.enable = true;
-
-boot.extraModprobeConfig = ''
-options nvidia_modset vblank_sem_control=0
-'';
-
-system.autoUpgrade = {
-  enable = true;
-  flake = inputs.self.outPath;
-  flags = [
-    "--print-build-logs"
-    "--impure"
+  imports = [
+    inputs.home-manager.nixosModules.default
+    ./hardware-configuration.nix
+    ./packages.nix
+    ./fonts.nix
+    ./users/oliver/user.nix
+    ../../nixosModules
+    ./scripts
   ];
-  dates = "02:00";
-  randomizedDelaySec = "45min";
-};
 
-security.polkit.enable = true;
+  #Custom module options
+  nvidia.enable = true;
+  gaming.enable = true;
+  gaming.steam.enable = true;
+  opentabletdriverudev.enable = true;
+  ollama.enable = true;
+  keymapp.enable = true;
+  virt-manager.setup = true;
+  fish.enable = true;
+  #nextdns.enable = true;
+  syncthing.enable = true;
 
-networking.hostName = "zeus"; # Define your hostname.
-# networking.wireless.enable = true;  #Enables wireless support via wpa_supplicant.
+  #Nix settings
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.auto-optimise-store = true;
 
-# Kernel parameters
-boot.kernelParams = [ "nvidia-drm.modeset=1" "resume_offset=79960064" ];
+  nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
 
-networking.networkmanager.enable = true;
+  services.displayManager = {
+    autoLogin.enable = true;
+    autoLogin.user = "oliver";
+  };
 
-# Set your time zone.
-time.timeZone = "Europe/Madrid";
+  networking.firewall = { allowedTCPPorts = [ 20 21 ]; };
+  networking.firewall.allowedTCPPortRanges = [{
+    from = 51000;
+    to = 51999;
+  }];
 
-# Select internationalisation properties.
-i18n.defaultLocale = "en_GB.UTF-8";
+  services.vsftpd = {
+    enable = true;
+    writeEnable = true;
+    localUsers = true;
+    userlist = [ "oliver" ];
+    userlistEnable = true;
+    extraConfig = ''
+      pasv_enable=Yes
+      pasv_min_port=51000
+      pasv_max_port=51999
+    '';
+  };
 
-i18n.extraLocaleSettings = {
-  LC_ADDRESS = "en_GB.UTF-8";
-  LC_IDENTIFICATION = "en_GB.UTF-8";
-  LC_MEASUREMENT = "en_GB.UTF-8";
-  LC_MONETARY = "en_GB.UTF-8";
-  LC_NAME = "en_GB.UTF-8";
-  LC_NUMERIC = "en_GB.UTF-8";
-  LC_PAPER = "en_GB.UTF-8";
-  LC_TELEPHONE = "en_GB.UTF-8";
-  LC_TIME = "en_GB.UTF-8";
-};
+  # Bootloader.
+  boot.loader = {
+    systemd-boot.enable = true;
+    efi.canTouchEfiVariables = true;
+    systemd-boot.configurationLimit = 10;
+  };
 
-# Enable the X11 windowing system.
-services.xserver.enable = true;
+  systemd.tpm2.enable = false;
+  boot.initrd.systemd.tpm2.enable = false;
 
-services.mullvad-vpn.enable = true;
+  # Garbage collector
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 30d";
+  };
 
-services.xserver.dpi = 96;
-environment.variables = {
-  EDITOR = "nvim";
-  GDK_SCALE = "0.5";
-  QT_STYLE_OVERRIDE = lib.mkDefault "kvantum";
-  WLR_NO_HARDWARE_CURSORS = "1";
-  NIXOS_OZONE_WL = "1";
-  NIXPKGS_ALLOW_UNFREE=1;
-};
+  # Enable dynamically linked binaries
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [ ];
 
-hardware = {
-  graphics.enable = true;
-  nvidia.modesetting.enable = true;
-};
+  powerManagement.enable = true;
 
-xdg.portal.enable = true;
-xdg.portal.extraPortals = with pkgs; [
-  xdg-desktop-portal
-  xdg-desktop-portal-gtk
-  xdg-desktop-portal-wlr
-];
+  boot.extraModprobeConfig = ''
+    options nvidia_modset vblank_sem_control=0
+  '';
 
-# Enable KDE
-kde.enable = true;
-services.displayManager.defaultSession = "plasma";
+  system.autoUpgrade = {
+    enable = true;
+    flake = inputs.self.outPath;
+    flags = [ "--print-build-logs" "--impure" ];
+    dates = "02:00";
+    randomizedDelaySec = "45min";
+  };
 
-# Set Laptop lid
-services.logind.lidSwitchExternalPower = "ignore";
+  security.polkit.enable = true;
 
-# Enable CUPS to print documents.
-services.printing.enable = true;
+  networking.hostName = "zeus"; # Define your hostname.
+  # networking.wireless.enable = true;  #Enables wireless support via wpa_supplicant.
 
-# Enable sound with pipewire.
-security.rtkit.enable = true;
-services.pulseaudio.enable = false;
-services.pipewire = {
-  enable = true;
-  alsa.enable = true;
-  alsa.support32Bit = true;
-  pulse.enable = true;
-  jack.enable = true;
-};
+  # Kernel parameters
+  boot.kernelParams = [ "nvidia-drm.modeset=1" "resume_offset=79960064" ];
 
-# Enable Bluetooth
-bluetooth.enable = true;
+  networking.networkmanager.enable = true;
 
-programs.kdeconnect.enable = true;
+  # Set your time zone.
+  time.timeZone = "Europe/Madrid";
 
-services.gnome.gnome-keyring.enable = true;
+  # Select internationalisation properties.
+  i18n.defaultLocale = "en_GB.UTF-8";
 
-# Allow unfree packages
-nixpkgs.config.allowUnfree = true;
+  i18n.extraLocaleSettings = {
+    LC_ADDRESS = "en_GB.UTF-8";
+    LC_IDENTIFICATION = "en_GB.UTF-8";
+    LC_MEASUREMENT = "en_GB.UTF-8";
+    LC_MONETARY = "en_GB.UTF-8";
+    LC_NAME = "en_GB.UTF-8";
+    LC_NUMERIC = "en_GB.UTF-8";
+    LC_PAPER = "en_GB.UTF-8";
+    LC_TELEPHONE = "en_GB.UTF-8";
+    LC_TIME = "en_GB.UTF-8";
+  };
 
-# Enable flatpak
-services.flatpak.enable = true;
+  # Enable the X11 windowing system.
+  services.xserver.enable = true;
 
-# Enable the OpenSSH daemon.
-services.openssh.enable = true;
+  services.mullvad-vpn.enable = true;
 
-# This value determines the NixOS release from which the default
-# settings for stateful data, like file locations and database versions
-# on your system were taken. It‘s perfectly fine and recommended to leave
-# this value at the release version of the first install of this system.
-# Before changing this value read the documentation for this option
-# (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-system.stateVersion = "23.11"; # Did you read the comment?
+  services.xserver.dpi = 96;
+  environment.variables = {
+    EDITOR = "nvim";
+    GDK_SCALE = "0.5";
+    QT_STYLE_OVERRIDE = lib.mkDefault "kvantum";
+    WLR_NO_HARDWARE_CURSORS = "1";
+    NIXOS_OZONE_WL = "1";
+    NIXPKGS_ALLOW_UNFREE = 1;
+  };
+
+  hardware = {
+    graphics.enable = true;
+    nvidia.modesetting.enable = true;
+  };
+
+  xdg.portal.enable = true;
+  xdg.portal.extraPortals = with pkgs; [
+    xdg-desktop-portal
+    xdg-desktop-portal-gtk
+    xdg-desktop-portal-wlr
+  ];
+
+  # Enable KDE
+  kde.enable = true;
+  services.displayManager.defaultSession = "plasma";
+
+  # Set Laptop lid
+  services.logind.lidSwitchExternalPower = "ignore";
+
+  # Enable CUPS to print documents.
+  services.printing.enable = true;
+
+  # Enable sound with pipewire.
+  security.rtkit.enable = true;
+  services.pulseaudio.enable = false;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+    jack.enable = true;
+  };
+
+  # Enable Bluetooth
+  bluetooth.enable = true;
+
+  programs.kdeconnect.enable = true;
+
+  services.gnome.gnome-keyring.enable = true;
+
+  # Allow unfree packages
+  nixpkgs.config.allowUnfree = true;
+
+  # Enable flatpak
+  services.flatpak.enable = true;
+
+  # Enable the OpenSSH daemon.
+  services.openssh.enable = true;
+
+  # This value determines the NixOS release from which the default
+  # settings for stateful data, like file locations and database versions
+  # on your system were taken. It‘s perfectly fine and recommended to leave
+  # this value at the release version of the first install of this system.
+  # Before changing this value read the documentation for this option
+  # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
+  system.stateVersion = "23.11"; # Did you read the comment?
 }
