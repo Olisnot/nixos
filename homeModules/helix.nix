@@ -19,13 +19,31 @@
         };
       };
       languages = {
+        language = [
+            {
+              name = "nix";
+              auto-format = true;
+            }
+        ];
         language-server.nixd = {
           command = "nixd";
+          args = [ "--semantic-tokens=true"];
           formatting = {
             command = ["alejandra"];
           };
-          nixpkgs.expr = "import (builtins.getFlake \"/etc/nixos\").inputs.nixpkgs { }";
-          options.nixos.expr = "(builtins.getFlake \"/etc/nixos\").nixosConfigurations.bld0.options";
+        config.nixd =
+            let
+              myFlake = "(builtins.getFlake (toString /home/brisingr/nixos-config))";
+              nixosOpts = "${myFlake}.nixosConfigurations.manin.options";
+            in
+            {
+              nixpkgs.expr = "import ${myFlake}.inputs.nixpkgs { }";
+              formatting.command = [ "nixfmt" ];
+              options = {
+                nixos.expr = nixosOpts;
+                home-manager.expr = "${nixosOpts}.home-manager.users.type.getSubOptions []";
+              };
+            };
         };
       };
     };
