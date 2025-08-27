@@ -7,8 +7,6 @@
     lshw
     pwvucontrol
     tree
-    iwd
-    iwgtk
     ripgrep
     blueman
     skim
@@ -39,6 +37,8 @@
     #Coding
     git
     git-credential-manager
+
+    texlab
 
     #Coding Languages
     lldb
