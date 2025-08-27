@@ -1,11 +1,7 @@
 { pkgs, lib, ... }:
 
-
 {
-  imports = [
-    ../../../../homeModules
-    ./homePackages.nix
-  ];
+  imports = [ ../../../../homeModules ./homePackages.nix ];
   home.username = "oliver";
   home.homeDirectory = "/home/oliver";
 
@@ -37,19 +33,19 @@
   rmpc.enable = true;
   waypaper.enable = true;
   nixcord.enable = true;
+  waybarConfig.enable = true;
+  niri.config.enable = true;
 
   services.hyprpaper.enable = lib.mkForce false;
 
-  home.sessionVariables = {
-    EDITOR = "hx";
-  };
+  home.sessionVariables = { EDITOR = "hx"; };
 
   programs.fish.shellAliases = {
-      c = "clear";
-      sudovim = "sudo -E nvim .";
-      vim = "nvim .";
-      tb = "cd /mnt/1tb";
-      zed = "zeditor .";
+    c = "clear";
+    sudovim = "sudo -E nvim .";
+    vim = "nvim .";
+    tb = "cd /mnt/1tb";
+    zed = "zeditor .";
   };
 
   stylix = {
@@ -61,7 +57,7 @@
     targets.vencord.enable = false;
 
     targets.gtk.extraCss = ''
-        opacity: 0.8;
+      opacity: 0.8;
     '';
 
     iconTheme = {
@@ -74,16 +70,12 @@
   #virt-manager
   dconf.settings = {
     "org/virt-manager/virt-manager/connections" = {
-      autoconnect = ["qemu:///system"];
-      uris = ["qemu:///system"];
+      autoconnect = [ "qemu:///system" ];
+      uris = [ "qemu:///system" ];
     };
   };
 
-  nixpkgs = {
-    config = {
-      allowUnfree = true;
-    };
-  };
+  nixpkgs = { config = { allowUnfree = true; }; };
 
   # Let Home Manager install and manage itself.
   programs.home-manager = { enable = true; };
