@@ -1,9 +1,7 @@
 { config, ... }:
 
-let
-  colors = config.lib.stylix.colors.withHashtag;
-in
-{
+let colors = config.lib.stylix.colors.withHashtag;
+in {
   programs.waybar.style = ''
     * {
       font-family: FiraCode Nerd Font Propo;
@@ -11,10 +9,8 @@ in
     }
 
     window#waybar {
-      background: ${colors.base00};
+      background: transparent;
       box-shadow: 0 4px 8px rgba(76, 76, 76, 0.2);
-      border-bottom-left-radius: 20px;
-      border-bottom-right-radius: 20px;
     }
 
     .modules-left,
@@ -50,8 +46,6 @@ in
       margin: 5px;
       padding-right: 10px;
       padding-left: 10px;
-      background: ${colors.base02};
-      border-radius: 20px;
     }
-'';
+  '';
 }
