@@ -19,5 +19,6 @@
     ./Waybar
     ./waypaper.nix
     ./niri.nix
+    ./dunst.nix
   ];
 }

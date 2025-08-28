@@ -35,6 +35,7 @@
   nixcord.enable = true;
   waybarConfig.enable = true;
   niri.enable = true;
+  dunst.enable = true;
 
   services.hyprpaper.enable = lib.mkForce false;
 
