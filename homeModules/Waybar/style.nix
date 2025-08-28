@@ -9,7 +9,7 @@ in {
     }
 
     window#waybar {
-      background: transparent;
+      background: rgba(33, 33, 33, 0.8);
       box-shadow: 0 4px 8px rgba(76, 76, 76, 0.2);
     }
 
@@ -19,15 +19,9 @@ in {
       padding-left: 10px;
     }
 
-    #workspaces {
-      padding-left: 5px;
-      padding-right: 5px;
-    }
-
     #custom-poweroff:hover,
     #custom-restart:hover,
-    #custom-nixos:hover,
-    #workspaces button:hover {
+    #custom-nixos:hover {
       background: ${colors.base03};
       border-radius: 20px;
     }

@@ -10,13 +10,6 @@
     modules-center = [ "clock" ];
     modules-right = [ "tray" "group/power" ];
 
-    "niri/workspaces" = {
-      format = "{icon}";
-      on-click = "activate";
-      sort-by-number = true;
-      current-only = false;
-    };
-
     clock = {
       format = "{:%I:%M %p}";
       tooltip = false;
