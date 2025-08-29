@@ -208,6 +208,7 @@
           "$mainMod SHIFT, 0, movetoworkspace, 10"
 
           "$mainMod, R, layoutmsg, colresize +conf"
+          "$mainMod SHIFT, F, layoutmsg, colresize 1.0"
         ];
 
         bindm = [
