@@ -148,7 +148,7 @@
             Mod+Shift+Slash { show-hotkey-overlay; }
 
             Mod+return { spawn "ghostty"; }
-            Mod+Space { spawn "wofi"; }
+            Mod+Space { spawn "wofi" "--show" "dmenu"; }
             Super+Alt+L { spawn "gtklock"; }
 
             XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }
