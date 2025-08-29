@@ -53,7 +53,7 @@
 
           resize_on_border = false;
           allow_tearing = false;
-          layout = "dwindle";
+          layout = "scrolling";
         };
 
         decoration = {
@@ -239,6 +239,6 @@
       };
     };
     services.hyprpolkitagent.enable = true;
-    home.packages = with pkgs; [ hyprshot ];
+    home.packages = with pkgs; [ hyprshot hyprlandPlugins.hyprscrolling ];
   };
 }
