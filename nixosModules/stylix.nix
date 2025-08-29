@@ -49,8 +49,10 @@
     };
 
     cursor = {
-      package = pkgs.whitesur-cursors;
-      name = "WhiteSur Cursors";
+      # package = pkgs.whitesur-cursors;
+      # name = "WhiteSur Cursors";
+      package = pkgs.capitaine-cursors-themed;
+      name = "Capitaine Cursors";
       size = 24;
     };
   };
