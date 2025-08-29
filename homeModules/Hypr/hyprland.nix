@@ -8,6 +8,7 @@
   config = lib.mkIf config.hyprlandConfig.enable {
     wayland.windowManager.hyprland = {
       enable = true;
+      plugins = with pkgs.hyprlandPlugins; [ hyprscrolling ];
       settings = {
         ################
         ### MONITORS ###
@@ -239,6 +240,6 @@
       };
     };
     services.hyprpolkitagent.enable = true;
-    home.packages = with pkgs; [ hyprshot hyprlandPlugins.hyprscrolling ];
+    home.packages = with pkgs; [ hyprshot ];
   };
 }
