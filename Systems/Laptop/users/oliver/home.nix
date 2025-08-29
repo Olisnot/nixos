@@ -36,6 +36,8 @@
   waybarConfig.enable = true;
   niri.enable = true;
   dunst.enable = true;
+  hyprlandConfig.enable = true;
+  hyprlockConfig.enable = true;
 
   services.hyprpaper.enable = lib.mkForce false;
 

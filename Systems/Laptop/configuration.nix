@@ -145,7 +145,8 @@
 
   # Enable niri
   programs.niri.enable = true;
-  services.displayManager.defaultSession = "niri";
+  hyprland.enable = true;
+  services.displayManager.defaultSession = "hyprland";
 
   # Enable gtklock
   programs.gtklock.enable = true;

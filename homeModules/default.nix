@@ -6,6 +6,8 @@
     ./Shells
     ./RMPC
     ./Zed
+    ./Hypr
+    ./Waybar
     ./tmux.nix
     ./fastfetch.nix
     ./starship.nix
@@ -16,7 +18,6 @@
     ./zen.nix
     ./helix.nix
     ./nixcord.nix
-    ./Waybar
     ./waypaper.nix
     ./niri.nix
     ./dunst.nix

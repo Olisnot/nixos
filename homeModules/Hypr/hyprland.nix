@@ -1,0 +1,244 @@
+{ pkgs, lib, config, ... }:
+
+{
+  options = {
+    hyprlandConfig.enable = lib.mkEnableOption "Enable hyprland configuration";
+  };
+
+  config = lib.mkIf config.hyprlandConfig.enable {
+    wayland.windowManager.hyprland = {
+      enable = true;
+      settings = {
+        ################
+        ### MONITORS ###
+        ################
+
+        monitor = [
+          "DP-1,2560x1080,0x0,1"
+          #"eDP-1,1920x1080,0x0,1"
+          "eDP-1, disable"
+          "Unknown-1, disable"
+        ];
+
+        ###################
+        ### MY PROGRAMS ###
+        ###################
+
+        "$terminal" = "ghostty";
+        "$fileManager" = "nautilus";
+        "$menu" = "anyrun";
+
+        #################
+        ### AUTOSTART ###
+        #################
+
+        exec-once = [
+          "swww-daemon & dunst"
+          "iwgtk -i"
+          "blueman-applet"
+          "waybar"
+          ''hyprctl dispatch exec "[workspace 2]" zen-beta''
+          ''hyprctl dispatch exec "[workspace 3]" ghostty''
+          ''hyprctl dispatch exec "[workspace 6]" obsidian''
+          ''hyprctl dispatch exec "[workspace 9]" equibop''
+        ];
+
+        xwayland = { force_zero_scaling = true; };
+
+        general = {
+          gaps_in = 5;
+          gaps_out = 20;
+
+          border_size = 1;
+
+          resize_on_border = false;
+          allow_tearing = false;
+          layout = "dwindle";
+        };
+
+        decoration = {
+          rounding = 10;
+
+          # Change transparency of focused and unfocused windows
+          active_opacity = 1.0;
+          inactive_opacity = 1.0;
+
+          blur = {
+            enabled = true;
+            size = 3;
+            passes = 2;
+
+            vibrancy = 0.1696;
+          };
+        };
+
+        animations = {
+          enabled = true;
+          bezier = "myBezier, 0.05, 0.9, 0.1, 1.05";
+
+          animation = [
+            "windows, 1, 7, myBezier"
+            "windowsOut, 1, 7, default, popin 80%"
+            "border, 1, 10, default"
+            "borderangle, 1, 8, default"
+            "fade, 1, 7, default"
+            "workspaces, 1, 6, default"
+          ];
+        };
+
+        dwindle = {
+          pseudotile = true;
+          preserve_split = true;
+        };
+
+        misc = {
+          force_default_wallpaper = -1;
+          disable_hyprland_logo = true;
+          disable_splash_rendering = true;
+        };
+
+        input = {
+          kb_layout = "us, us";
+          kb_variant = ", dvorak";
+
+          follow_mouse = 0;
+
+          sensitivity = 0;
+
+          touchpad = { natural_scroll = false; };
+        };
+
+        gestures = { workspace_swipe = false; };
+
+        device = {
+          name = "epic-mouse-v1";
+          sensitivity = -0.5;
+        };
+
+        "$mainMod" = "SUPER";
+
+        bind = [
+          "$mainMod, return, exec, $terminal"
+          "$mainMod, C, killactive,"
+          "$mainMod, M, exit,"
+          "$mainMod, E, exec, $fileManager"
+          "$mainMod, V, togglefloating,"
+          "$mainMod, Space, exec, $menu"
+          "$mainMod, J, togglesplit,"
+          "$mainMod, F, fullscreen"
+          "$mainMod SHIFT, L, exec, hyprlock"
+
+          # Screen Capture
+          "$mainMod, S, exec, hyprshot -m region -o ~/Pictures/Screenshots"
+
+          # Move focus with mainMod + arrow keys
+          "$mainMod, h, movefocus, l"
+          "$mainMod, l, movefocus, r"
+          "$mainMod, k, movefocus, u"
+          "$mainMod, j, movefocus, d"
+
+          # Move window with mainMod + Shift + arrow keys
+          "$mainMod SHIFT, h, movewindow, l"
+          "$mainMod SHIFT, l, movewindow, r"
+          "$mainMod SHIFT, k, movewindow, u"
+          "$mainMod SHIFT, j, movewindow, d"
+
+          # Resize window with mainMod + Alt + arrow keys
+          "$mainMod ALT, l, resizeactive, 10 0"
+          "$mainMod ALT, h, resizeactive, -10 0"
+          "$mainMod ALT, k, resizeactive, 0 -10"
+          "$mainMod ALT, j, resizeactive, 0 10"
+
+          # Switch workspaces with mainMod + [0-9]
+          "$mainMod, 1, workspace, 1"
+          "$mainMod, 2, workspace, 2"
+          "$mainMod, 3, workspace, 3"
+          "$mainMod, 4, workspace, 4"
+          "$mainMod, 5, workspace, 5"
+          "$mainMod, 6, workspace, 6"
+          "$mainMod, 7, workspace, 7"
+          "$mainMod, 8, workspace, 8"
+          "$mainMod, 9, workspace, 9"
+          "$mainMod, 0, workspace, 10"
+
+          # Move active window to a workspace with mainMod + SHIFT + [0-9]
+          "$mainMod SHIFT, 1, movetoworkspace, 1"
+          "$mainMod SHIFT, 2, movetoworkspace, 2"
+          "$mainMod SHIFT, 3, movetoworkspace, 3"
+          "$mainMod SHIFT, 4, movetoworkspace, 4"
+          "$mainMod SHIFT, 5, movetoworkspace, 5"
+          "$mainMod SHIFT, 6, movetoworkspace, 6"
+          "$mainMod SHIFT, 7, movetoworkspace, 7"
+          "$mainMod SHIFT, 8, movetoworkspace, 8"
+          "$mainMod SHIFT, 9, movetoworkspace, 9"
+          "$mainMod SHIFT, 0, movetoworkspace, 10"
+
+          # Pin floating window
+          "$mainMod, P, pin"
+
+          "$mainMod SHIFT, P, exec, curl -X 'POST' 'http://localhost:47836/player/playpause' -H 'accept: text/plain' -d ''"
+          "$mainMod SHIFT, N, exec, curl -X 'POST' 'http://localhost:47836/player/next' -H 'accept: text/plain' -d ''"
+          "$mainMod SHIFT, T, exec, curl -X 'POST' 'http://localhost:47836/player/previous' -H 'accept: text/plain' -d ''"
+
+          ##############################
+          ### WINDOWS AND WORKSPACES ###
+          # Switch workspaces with mainMod + [0-9]
+          "$mainMod, 1, workspace, 1"
+          "$mainMod, 2, workspace, 2"
+          "$mainMod, 3, workspace, 3"
+          "$mainMod, 4, workspace, 4"
+          "$mainMod, 5, workspace, 5"
+          "$mainMod, 6, workspace, 6"
+          "$mainMod, 7, workspace, 7"
+          "$mainMod, 8, workspace, 8"
+          "$mainMod, 9, workspace, 9"
+          "$mainMod, 0, workspace, 10"
+
+          # Move active window to a workspace with mainMod + SHIFT + [0-9]
+          "$mainMod SHIFT, 1, movetoworkspace, 1"
+          "$mainMod SHIFT, 2, movetoworkspace, 2"
+          "$mainMod SHIFT, 3, movetoworkspace, 3"
+          "$mainMod SHIFT, 4, movetoworkspace, 4"
+          "$mainMod SHIFT, 5, movetoworkspace, 5"
+          "$mainMod SHIFT, 6, movetoworkspace, 6"
+          "$mainMod SHIFT, 7, movetoworkspace, 7"
+          "$mainMod SHIFT, 8, movetoworkspace, 8"
+          "$mainMod SHIFT, 9, movetoworkspace, 9"
+          "$mainMod SHIFT, 0, movetoworkspace, 10"
+        ];
+
+        bindm = [
+          "$mainMod, mouse:272, movewindow"
+          "$mainMod, mouse:273, resizewindow"
+          "$mainMod, mouse:272, movewindow"
+          "$mainMod, mouse:273, resizewindow"
+        ];
+
+        windowrulev2 = [
+          "suppressevent maximize, class:.* "
+          "workspace 2 silent, class:zen-beta"
+          "workspace 4, class:dev.zed.Zed"
+          "workspace 5 silent, class:steam"
+          "workspace 5 silent, class:heroic"
+          "workspace 5 silent, class:lutris"
+          "workspace 9 silent, class:vesktop"
+        ];
+
+        workspace = [
+          "1,monitor:DP-1"
+          "2,monitor:DP-1"
+          "3,monitor:DP-1"
+          "4,monitor:DP-1"
+          "5,monitor:DP-1"
+          "6,monitor:DP-1"
+          "7,monitor:DP-1"
+          "8,monitor:DP-1"
+          "9,monitor:DP-1"
+          "10,monitor:HDMI-A-1"
+        ];
+      };
+    };
+    services.hyprpolkitagent.enable = true;
+    home.packages = with pkgs; [ hyprshot ];
+  };
+}
