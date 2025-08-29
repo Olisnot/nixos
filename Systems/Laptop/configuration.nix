@@ -147,6 +147,9 @@
   programs.niri.enable = true;
   services.displayManager.defaultSession = "niri";
 
+  # Enable gtklock
+  programs.gtklock.enable = true;
+
   # Set Laptop lid
   services.logind.lidSwitchExternalPower = "ignore";
 

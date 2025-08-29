@@ -8,12 +8,11 @@
       enable = true;
       target = "/home/oliver/.config/niri/config.kdl";
       text = ''
-        workspace "media"
+        workspace "obsidian"
         workspace "browser"
         workspace "terminal"
-        workspace "obsidian"
-        workspace "gaming"
         workspace "social"
+        workspace "gaming"
         workspace "extern-monitor" {
                 open-on-output "HDMI-A-1"
         }
@@ -46,7 +45,7 @@
         }
 
         cursor {
-            xcursor-theme "Capitaine Cursors"
+            xcursor-theme "WhiteSur Cursors"
             xcursor-size 24
         }
 
@@ -92,8 +91,6 @@
         spawn-at-startup "zen-beta"
         spawn-at-startup "ghostty"
         spawn-at-startup "obsidian"
-        spawn-at-startup "tidal-hifi"
-        spawn-at-startup "steam"
 
         environment {
             DISPLAY ":0"
@@ -110,21 +107,7 @@
             open-maximized true
         }
 
-        // miru rule
-        window-rule {
-            match app-id=r#"Miru$"#
-            open-on-workspace "media"
-                open-maximized true
-        }
-
-        // miru rule
-        window-rule {
-            match app-id=r#"tidal-hifi$"# at-startup=true
-            open-on-workspace "media"
-                open-maximized true
-        }
-
-        // Librewolf rules
+        // zen rules
         window-rule {
             match app-id=r#"zen-beta$"#
             open-on-workspace "browser"
@@ -155,11 +138,17 @@
                 open-maximized true
         }
 
+        window-rule {
+            match app-id=r#"heroic$"#
+            open-on-workspace "gaming"
+                open-maximized true
+        }
+
         binds {
             Mod+Shift+Slash { show-hotkey-overlay; }
 
             Mod+return { spawn "ghostty"; }
-            Mod+Space { spawn "anyrun"; }
+            Mod+Space { spawn "wofi"; }
             Super+Alt+L { spawn "gtklock"; }
 
             XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }
