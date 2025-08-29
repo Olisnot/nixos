@@ -35,12 +35,12 @@
 
         exec-once = [
           "swww-daemon & dunst"
-          "iwgtk -i"
           "blueman-applet"
           "waybar"
+          "mullvad-vpn"
+          ''hyprctl dispatch exec "[workspace 1]" obsidian''
           ''hyprctl dispatch exec "[workspace 2]" zen-beta''
           ''hyprctl dispatch exec "[workspace 3]" ghostty''
-          ''hyprctl dispatch exec "[workspace 6]" obsidian''
           ''hyprctl dispatch exec "[workspace 9]" equibop''
         ];
 
@@ -220,12 +220,13 @@
 
         windowrulev2 = [
           "suppressevent maximize, class:.* "
+          "workspace 1 silent, class:obsidian"
           "workspace 2 silent, class:zen-beta"
-          "workspace 4, class:dev.zed.Zed"
+          "workspace 3 silent, class:dev.zed.Zed"
+          "workspace 4 silent, class:vesktop"
           "workspace 5 silent, class:steam"
           "workspace 5 silent, class:heroic"
           "workspace 5 silent, class:lutris"
-          "workspace 9 silent, class:vesktop"
         ];
 
         workspace = [

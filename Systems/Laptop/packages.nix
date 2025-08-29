@@ -22,6 +22,7 @@
     zoxide
     mullvad-vpn
     xwayland-satellite
+    networkmanagerapplet
 
     #Utils
     uutils-coreutils-noprefix
