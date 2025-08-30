@@ -13,7 +13,6 @@
     "hyprland/workspaces" = {
       format = "{icon}";
       on-click = "activate";
-      active-only = true;
       format-icons = {
         "active" = "";
         "default" = "";
