@@ -19,6 +19,10 @@ in {
       padding-left: 10px;
     }
 
+    #workspaces {
+      font-size: 12px;
+    }
+
     #custom-poweroff:hover,
     #custom-restart:hover,
     #custom-nixos:hover {
