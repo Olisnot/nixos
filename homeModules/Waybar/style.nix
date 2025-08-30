@@ -44,5 +44,12 @@ in {
       padding-right: 10px;
       padding-left: 10px;
     }
+
+    #group-power,
+    #custom-poweroff,
+    #custom-restart,
+    #custom-nixos {
+      font-size: 16px;
+    }
   '';
 }
