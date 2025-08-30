@@ -10,6 +10,17 @@
     modules-center = [ "hyprland/workspaces" ];
     modules-right = [ "tray" "clock" ];
 
+    "hyprland/workspaces" = {
+      format = "{icon}";
+      on-click = "activate";
+      active-only = true;
+      format-icons = {
+        "active" = "";
+        "default" = "";
+      };
+      "sort-by-number" = true;
+    };
+
     clock = {
       format = "{:%I:%M %p}";
       tooltip = false;
