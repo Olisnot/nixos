@@ -5,7 +5,6 @@ in {
   programs.waybar.style = ''
     * {
       font-family: FiraCode Nerd Font Propo;
-      font-size: 16px;
     }
 
     window#waybar {
