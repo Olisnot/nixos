@@ -40,7 +40,6 @@ in {
     #custom-restart,
     #custom-nixos,
     #workspaces {
-      margin: 5px;
       padding-right: 10px;
       padding-left: 10px;
     }
