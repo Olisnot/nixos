@@ -6,9 +6,9 @@
     position = "top";
     height = 1;
     margin-top = 0;
-    modules-left = [ "hyprland/workspaces" ];
-    modules-center = [ "clock" ];
-    modules-right = [ "tray" "group/power" ];
+    modules-left = [ "group/power" ];
+    modules-center = [ "hyprland/workspaces" ];
+    modules-right = [ "tray" "clock" ];
 
     clock = {
       format = "{:%I:%M %p}";
@@ -16,7 +16,7 @@
     };
 
     tray = {
-      icon-size = 20;
+      icon-size = 10;
       spacing = 10;
     };
 

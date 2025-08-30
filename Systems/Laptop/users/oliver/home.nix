@@ -29,12 +29,9 @@
   zen-browser.enable = true;
   helix.enable = true;
   zed-editor.enable = true;
-  mpd.enable = true;
-  rmpc.enable = true;
   waypaper.enable = true;
   nixcord.enable = true;
   waybarConfig.enable = true;
-  niri.enable = true;
   dunst.enable = true;
   hyprlandConfig.enable = true;
   hyprlockConfig.enable = true;

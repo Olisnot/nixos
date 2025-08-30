@@ -144,13 +144,9 @@
     xdg-desktop-portal-hyprland
   ];
 
-  # Enable niri
-  programs.niri.enable = true;
+  # Enable Hyprland
   hyprland.enable = true;
   services.displayManager.defaultSession = "hyprland";
-
-  # Enable gtklock
-  programs.gtklock.enable = true;
 
   # Set Laptop lid
   services.logind.lidSwitchExternalPower = "ignore";

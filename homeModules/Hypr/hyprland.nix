@@ -35,6 +35,7 @@
 
         exec-once = [
           "swww-daemon & dunst"
+          "nm-applet"
           "blueman-applet"
           "waybar"
           "mullvad-vpn"
