@@ -25,7 +25,7 @@
       "drawer" = {
         "transition-duration" = 500;
         "children-class" = "not-power";
-        "transition-left-to-right" = false;
+        "transition-left-to-right" = true;
       };
       modules = [ "custom/nixos" "custom/restart" "custom/poweroff" ];
     };
