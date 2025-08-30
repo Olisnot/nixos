@@ -37,7 +37,7 @@
         "children-class" = "not-power";
         "transition-left-to-right" = true;
       };
-      modules = [ "custom/nixos" "custom/restart" "custom/poweroff" ];
+      modules = [ "custom/nixos" "custom/poweroff" "custom/restart" ];
     };
 
     "custom/nixos" = {
