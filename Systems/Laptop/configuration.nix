@@ -149,7 +149,7 @@
   services.displayManager.defaultSession = "hyprland";
 
   # Set Laptop lid
-  services.logind.lidSwitchExternalPower = "ignore";
+  services.logind.settings.Login.HandleLidSwitchExternalPower = "ignore";
 
   # Enable CUPS to print documents.
   services.printing.enable = true;

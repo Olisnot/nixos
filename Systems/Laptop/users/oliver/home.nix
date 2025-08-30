@@ -56,6 +56,8 @@
     targets.vesktop.enable = false;
     targets.vencord.enable = false;
 
+    targets.zen-browser.profileNames = [ "Default Profile" ];
+
     targets.gtk.extraCss = ''
       opacity: 0.8;
     '';
