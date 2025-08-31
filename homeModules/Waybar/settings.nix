@@ -6,7 +6,7 @@
     position = "top";
     height = 1;
     margin-top = 0;
-    modules-left = [ "group/power" ];
+    modules-left = [ "group/power" "mpris" ];
     modules-center = [ "hyprland/workspaces" ];
     modules-right = [ "tray" "clock" ];
 
@@ -28,6 +28,17 @@
     tray = {
       icon-size = 15;
       spacing = 10;
+    };
+
+    "mpris" = {
+      format = "{player_icon} {dynamic}";
+      format-paused = "{status_icon} <i>{dynamic}</i>";
+      player-icons = {
+        default = "▶";
+        mpv = "🎵";
+      };
+      status-icons = { paused = "⏸"; };
+      ignored-players = [ "zen-beta" ];
     };
 
     "group/power" = {
