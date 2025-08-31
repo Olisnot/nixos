@@ -23,7 +23,7 @@ in {
     }
 
     #mpris {
-      max-width: 50px;
+      width: 50px;
       text-overflow: ellipsis;
       overflow: hidden;
       white-space: nowrap;
