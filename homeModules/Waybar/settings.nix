@@ -31,8 +31,9 @@
     };
 
     "mpris" = {
-      format =
-        "{status_icon} {album:.20}{album:>21?…} - {title:.20}{title:>21?…}";
+      format = "{status_icon} {album} - {title}";
+      album-len = 20;
+      title-len = 20;
       status-icons = {
         paused = "▶";
         playing = "⏸";
