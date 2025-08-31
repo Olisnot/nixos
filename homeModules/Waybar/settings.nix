@@ -32,11 +32,12 @@
 
     "mpris" = {
       format = "{status_icon} {album} - {title}";
-      format-len = 20;
+      format-len = 5;
       status-icons = {
         paused = "▶";
         playing = "⏸";
       };
+      tooltip-format = "{artist} - {album} - {title}";
       ignored-players = [ "firefox.instance_1_9" ];
     };
 
