@@ -31,14 +31,9 @@
     };
 
     "mpris" = {
-      format = "{player_icon} {dynamic}";
-      format-paused = "{status_icon} <i>{dynamic}</i>";
-      player-icons = {
-        default = "▶";
-        mpv = "🎵";
-      };
+      format = "{status_icon} {album} - {title}";
       status-icons = { paused = "⏸"; };
-      ignored-players = [ "zen-beta" ];
+      ignored-players = [ "firefox.instance_1_9" ];
     };
 
     "group/power" = {
