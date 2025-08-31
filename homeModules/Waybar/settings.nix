@@ -32,7 +32,7 @@
 
     "mpris" = {
       format =
-        "{status_icon} {album:.20}{title:>21?…} - {title:.20}{artist:>21?…}";
+        "{status_icon} {album:.20}{album:>21?…} - {title:.20}{title:>21?…}";
       status-icons = {
         paused = "▶";
         playing = "⏸";
