@@ -26,33 +26,40 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nixcord = {
-      url = "github:kaylorben/nixcord";
-    };
+    nixcord = { url = "github:kaylorben/nixcord"; };
 
     lsfg-vk-flake = {
       url = "github:pabloaul/lsfg-vk-flake/main";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-  };
 
-  outputs = { nixpkgs, nixpkgsStable, lsfg-vk-flake, ... } @inputs:
-  let
-    system = "x86_64-linux";
-    overlay-stable = final: prev: { stable = import nixpkgsStable { inherit system; config.allowUnfree = true;}; };
-  in
-  {
-    nixosConfigurations = {
-      laptop = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs; };
-        modules = [
-          ./Systems/Laptop/configuration.nix
-          ({ ... }: { nixpkgs.overlays = [ overlay-stable ]; })
-          inputs.home-manager.nixosModules.default
-          inputs.stylix.nixosModules.stylix
-          lsfg-vk-flake.nixosModules.default
-        ];
-      };
+    minimal-tmux = {
+      url = "github:niksingh710/minimal-tmux-status";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
+
+  outputs = { nixpkgs, nixpkgsStable, lsfg-vk-flake, ... }@inputs:
+    let
+      system = "x86_64-linux";
+      overlay-stable = final: prev: {
+        stable = import nixpkgsStable {
+          inherit system;
+          config.allowUnfree = true;
+        };
+      };
+    in {
+      nixosConfigurations = {
+        laptop = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs; };
+          modules = [
+            ./Systems/Laptop/configuration.nix
+            ({ ... }: { nixpkgs.overlays = [ overlay-stable ]; })
+            inputs.home-manager.nixosModules.default
+            inputs.stylix.nixosModules.stylix
+            lsfg-vk-flake.nixosModules.default
+          ];
+        };
+      };
+    };
 }
