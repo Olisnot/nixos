@@ -21,6 +21,7 @@
           '';
         }
         { plugin = inputs.minimal-tmux.packages.${pkgs.system}.default; }
+        { plugin = tmux-floax; }
       ];
       extraConfig = ''
         set -g default-terminal "tmux-256color"
