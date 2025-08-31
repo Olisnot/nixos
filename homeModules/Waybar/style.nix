@@ -22,13 +22,6 @@ in {
       font-size: 12px;
     }
 
-    #mpris {
-      width: 50px;
-      text-overflow: ellipsis;
-      overflow: hidden;
-      white-space: nowrap;
-    }
-
     #custom-poweroff:hover,
     #custom-restart:hover,
     #custom-nixos:hover {
