@@ -35,6 +35,7 @@
   dunst.enable = true;
   hyprlandConfig.enable = true;
   hyprlockConfig.enable = true;
+  nwg-dock.enable = true;
 
   services.hyprpaper.enable = lib.mkForce false;
 
