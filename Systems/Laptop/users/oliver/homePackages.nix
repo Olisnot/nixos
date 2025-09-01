@@ -10,6 +10,7 @@
     ncspot
     nicotine-plus
     tauon
+    lollypop
     #Tools
     obsidian
     gimp3
