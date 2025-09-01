@@ -1,9 +1,9 @@
 { pkgs, lib, config, ... }:
 
 {
-  options.nwg-dock = { enable = lib.mkEnableOption "nwg-dock"; };
+  options = { nwg-dock.enable = lib.mkEnableOption "nwg-dock"; };
 
-  config = lib.mkIf config.enable {
+  config = lib.mkIf config.nwg-dock.enable {
     home.packages = [ pkgs.nwg-dock-hyprland ];
     # home.file."dock_style.css" = {
     #   enable = true;
