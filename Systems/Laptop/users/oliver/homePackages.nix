@@ -9,6 +9,7 @@
     amberol
     spotify
     ncspot
+    nicotine-plus
     #Tools
     obsidian
     gimp3
