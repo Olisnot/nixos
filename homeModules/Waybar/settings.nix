@@ -21,7 +21,7 @@
     };
 
     clock = {
-      format = "{:%I:%M %p}";
+      format = " | {:%I:%M %p}";
       tooltip = false;
     };
 
@@ -31,7 +31,7 @@
     };
 
     "mpris" = {
-      format = "{status_icon} {album} - {title}";
+      format = " | {status_icon} {album} - {title}";
       album-len = 20;
       title-len = 20;
       status-icons = {
