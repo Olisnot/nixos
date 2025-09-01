@@ -6,10 +6,10 @@
     mpv
     stremio
     playerctl
-    amberol
     spotify
     ncspot
     nicotine-plus
+    tauon
     #Tools
     obsidian
     gimp3
