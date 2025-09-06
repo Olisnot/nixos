@@ -20,7 +20,7 @@
       enable = true;
       settings = {
         submission = {
-          token_file = "$XDG_CONFIG_HOME/listenbrainz-mpd/token";
+          token_file = "/home/oliver/.config/listenbrainz-mpd/token";
         };
       };
     };
