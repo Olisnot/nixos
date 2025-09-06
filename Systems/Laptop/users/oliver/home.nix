@@ -35,6 +35,8 @@
   dunst.enable = true;
   hyprlandConfig.enable = true;
   hyprlockConfig.enable = true;
+  mpd.enable = true;
+  rmpc.enable = true;
 
   services.hyprpaper.enable = lib.mkForce false;
 

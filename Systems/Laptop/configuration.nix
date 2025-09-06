@@ -92,6 +92,7 @@
           (adi1090x-plymouth-themes.override { selected_themes = [ "lone" ]; })
         ];
     };
+    loader.timeout = 0;
   };
 
   systemd.tpm2.enable = false;
