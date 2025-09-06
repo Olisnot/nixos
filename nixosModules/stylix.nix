@@ -55,5 +55,7 @@
       name = "Capitaine Cursors";
       size = 24;
     };
+
+    targets.plymouth.enable = false;
   };
 }
