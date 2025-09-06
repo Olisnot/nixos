@@ -24,6 +24,6 @@
         };
       };
     };
-    home.packages = with pkgs; [ mpd-notification ];
+    home.packages = with pkgs; [ mpd-notification plattenalbum ];
   };
 }
