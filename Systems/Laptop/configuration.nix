@@ -86,8 +86,11 @@
     plymouth = {
       enable = true;
       font = "${pkgs.hack-font}/share/fonts/truetype/Hack-Regular.ttf";
-      logo =
-        "${pkgs.nixos-icons}/share/icons/hicolor/128x128/apps/nix-snowflake.png";
+      theme = "lone";
+      themePackages = with pkgs;
+        [
+          (adi1090x-plymouth-themes.override { selected_themes = [ "lone" ]; })
+        ];
     };
   };
 
