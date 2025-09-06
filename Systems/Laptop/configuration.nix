@@ -86,7 +86,7 @@
     plymouth = {
       enable = true;
       font = "${pkgs.hack-font}/share/fonts/truetype/Hack-Regular.ttf";
-      theme = "lone";
+      theme = lib.mkDefault "lone";
       themePackages = with pkgs;
         [
           (adi1090x-plymouth-themes.override { selected_themes = [ "lone" ]; })
