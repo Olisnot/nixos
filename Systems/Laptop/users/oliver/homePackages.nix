@@ -6,8 +6,6 @@
     mpv
     stremio
     playerctl
-    spotify
-    ncspot
     nicotine-plus
     lollypop
     #Tools
@@ -24,6 +22,5 @@
     filen-cli
     filen-desktop
     wofi
-    nwg-dock-hyprland
   ];
 }

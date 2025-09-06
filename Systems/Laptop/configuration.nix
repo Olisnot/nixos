@@ -54,14 +54,44 @@
   };
 
   # Bootloader.
-  boot.loader = {
-    systemd-boot.enable = true;
-    efi.canTouchEfiVariables = true;
-    systemd-boot.configurationLimit = 10;
+  boot = {
+    consoleLogLevel = 3;
+    initrd.verbose = false;
+    initrd.systemd.enable = true;
+
+    loader = {
+      systemd-boot.enable = true;
+      efi.canTouchEfiVariables = true;
+      systemd-boot.configurationLimit = 10;
+    };
+
+    initrd.systemd.tpm2.enable = false;
+
+    extraModprobeConfig = ''
+      options nvidia_modset vblank_sem_control=0
+    '';
+
+    # Kernel parameters
+    kernelParams = [
+      "nvidia-drm.modeset=1"
+      "resume_offset=79960064"
+      "quiet"
+      "splash"
+      "intremap=on"
+      "boot.shell_on_fail"
+      "udev.log_priority=3"
+      "rd.systemd.show_status=auto"
+    ];
+
+    plymouth = {
+      enable = true;
+      font = "${pkgs.hack-font}/share/fonts/truetype/Hack-Regular.ttf";
+      logo =
+        "${pkgs.nixos-icons}/share/icons/hicolor/128x128/apps/nix-snowflake.png";
+    };
   };
 
   systemd.tpm2.enable = false;
-  boot.initrd.systemd.tpm2.enable = false;
 
   # Garbage collector
   nix.gc = {
@@ -76,10 +106,6 @@
 
   powerManagement.enable = true;
 
-  boot.extraModprobeConfig = ''
-    options nvidia_modset vblank_sem_control=0
-  '';
-
   system.autoUpgrade = {
     enable = true;
     flake = inputs.self.outPath;
@@ -92,9 +118,6 @@
 
   networking.hostName = "zeus"; # Define your hostname.
   # networking.wireless.enable = true;  #Enables wireless support via wpa_supplicant.
-
-  # Kernel parameters
-  boot.kernelParams = [ "nvidia-drm.modeset=1" "resume_offset=79960064" ];
 
   networking.networkmanager.enable = true;
 

@@ -21,6 +21,5 @@
     ./waypaper.nix
     ./niri.nix
     ./dunst.nix
-    ./nwg-dock.nix
   ];
 }
