@@ -18,7 +18,11 @@
     };
     services.listenbrainz-mpd = {
       enable = true;
-      settings = { token_file = "$XDG_CONFIG_HOME/listenbrainz-mpd/token"; };
+      settings = {
+        submission = {
+          token_file = "$XDG_CONFIG_HOME/listenbrainz-mpd/token";
+        };
+      };
     };
     home.packages = with pkgs; [ mpd-notification ];
   };
