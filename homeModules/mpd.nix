@@ -16,7 +16,10 @@
       network.listenAddress = "any";
       network.startWhenNeeded = true;
     };
-    services.listenbrainz-mpd.enable = true;
+    services.listenbrainz-mpd = {
+      enable = true;
+      settings = { token_file = "$XDG_CONFIG_HOME/listenbrainz-mpd/token"; };
+    };
     home.packages = with pkgs; [ mpd-notification ];
   };
 }
