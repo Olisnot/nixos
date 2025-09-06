@@ -16,9 +16,6 @@
       network.listenAddress = "any";
       network.startWhenNeeded = true;
     };
-    environment.systemPackages = with pkgs; [
-      listenbrainz-mpd
-      mpd-notification
-    ];
+    home.packages = with pkgs; [ listenbrainz-mpd mpd-notification ];
   };
 }
