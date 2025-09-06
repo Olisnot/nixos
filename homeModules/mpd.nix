@@ -16,6 +16,7 @@
       network.listenAddress = "any";
       network.startWhenNeeded = true;
     };
-    home.packages = with pkgs; [ listenbrainz-mpd mpd-notification ];
+    services.listenbrainz-mpd.enable = true;
+    home.packages = with pkgs; [ mpd-notification ];
   };
 }
