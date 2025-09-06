@@ -18,7 +18,7 @@
     };
     environment.systemPackages = with pkgs; [
       listenbrainz-mpd
-      mpd-mpd-notification
+      mpd-notification
     ];
   };
 }
