@@ -1,5 +1,5 @@
 { ... }:
 
 {
-  imports = [ ./settings.nix ./style.nix ./powerMenu.nix ];
+  imports = [ ./settings.nix ./style.nix ./powerScript.nix ];
 }
