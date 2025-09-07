@@ -14,6 +14,7 @@ in {
         hide_scroll = true;
         no_actions = false;
         width = "30%";
+        insensitive = true;
       };
 
       style = ''
