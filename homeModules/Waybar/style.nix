@@ -8,8 +8,8 @@ in {
     }
 
     window#waybar {
-      background: rgba(33, 33, 33, 0.8);
-      box-shadow: 0 4px 8px rgba(76, 76, 76, 0.2);
+      background: ${colors.base00};
+      border-radius: 25px;
     }
 
     .modules-left,
