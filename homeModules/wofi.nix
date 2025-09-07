@@ -17,34 +17,11 @@
       style = ''
         /* The name of the window itself */
         #window {
-          box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
           border-radius: 1rem;
           font-size: 1.2rem;
-          /* The name of the box that contains everything */
-        }
-        #window #outer-box {
-          /* The name of the search bar */
-          /* The name of the scrolled window containing all of the entries */
         }
         #window #outer-box #input {
-          border: none;
-          padding: 0.8rem 1rem;
-          font-size: 1.5rem;
           border-radius: 1rem 1rem 0 0;
-        }
-        #window #outer-box #input:focus, #window #outer-box #input:focus-visible, #window #outer-box #input:active {
-          border: none;
-          outline-offset: 2px;
-        }
-        #window #outer-box #scroll #inner-box #entry {
-          padding: 0.6rem 1rem;
-        }
-        #window #outer-box #scroll #inner-box #entry #img {
-          width: 1rem;
-          margin-right: 0.5rem;
-        }
-        #window #outer-box #scroll #inner-box #entry:selected {
-          outline: none;
         }
       '';
     };
