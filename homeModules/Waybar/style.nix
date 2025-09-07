@@ -35,6 +35,7 @@ in {
 
     #clock,
     #tray,
+    #mpd,
     #group-power,
     #custom-poweroff,
     #custom-restart,
