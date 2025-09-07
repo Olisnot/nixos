@@ -8,6 +8,7 @@
     ./Zed
     ./Hypr
     ./Waybar
+    ./Wofi
     ./tmux.nix
     ./fastfetch.nix
     ./starship.nix
@@ -21,6 +22,5 @@
     ./waypaper.nix
     ./niri.nix
     ./dunst.nix
-    ./wofi.nix
   ];
 }
