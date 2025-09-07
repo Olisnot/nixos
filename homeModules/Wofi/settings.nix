@@ -3,7 +3,6 @@
 {
   options = { wofi.enable = lib.mkEnableOption "wofi"; };
 
-  home.packages = [ import ./powerScript.nix { inherit pkgs; } ];
   config = lib.mkIf config.wofi.enable {
     programs.wofi = {
       enable = true;
@@ -15,5 +14,6 @@
         insensitive = true;
       };
     };
+    home.packages = [ import ./powerScript.nix { inherit pkgs; } ];
   };
 }
