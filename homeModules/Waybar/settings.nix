@@ -8,7 +8,7 @@
     margin-top = 10;
     margin-left = 10;
     margin-right = 10;
-    modules-left = [ "group/power" "mpd" ];
+    modules-left = [ "mpd" ];
     modules-center = [ "hyprland/workspaces" ];
     modules-right = [ "tray" "clock" ];
 
