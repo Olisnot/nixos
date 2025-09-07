@@ -6,7 +6,7 @@
     position = "top";
     height = 1;
     margin-top = 0;
-    modules-left = [ "group/power" "mpris" ];
+    modules-left = [ "group/power" "mpd" ];
     modules-center = [ "hyprland/workspaces" ];
     modules-right = [ "tray" "clock" ];
 
@@ -30,16 +30,19 @@
       spacing = 10;
     };
 
-    "mpris" = {
-      format = " | {status_icon} {album} - {title}";
+    "mpd" = {
+      format = "{stateIcon} {album} - {title}";
+      format-disconnected = "Disconnected ";
+      format-stopped = "Stopped ";
       album-len = 20;
       title-len = 20;
-      status-icons = {
-        paused = "▶";
-        playing = "⏸";
+      interval = 10;
+      state-icons = {
+        paused = "";
+        playing = "";
       };
       tooltip-format = "{artist} - {album} - {title}";
-      ignored-players = [ "firefox.instance_1_9" ];
+      tooltip-format-disconnected = "MPD (disconnected)";
     };
 
     "group/power" = {
