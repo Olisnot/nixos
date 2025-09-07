@@ -14,6 +14,6 @@
         insensitive = true;
       };
     };
-    home.packages = [ import ./powerScript.nix { inherit pkgs; } ];
+    home.packages = [ (import ./powerScript.nix { inherit pkgs; }) ];
   };
 }
