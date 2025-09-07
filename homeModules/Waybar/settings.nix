@@ -6,6 +6,8 @@
     position = "top";
     height = 1;
     margin-top = 10;
+    margin-left = 10;
+    margin-right = 10;
     modules-left = [ "group/power" "mpd" ];
     modules-center = [ "hyprland/workspaces" ];
     modules-right = [ "tray" "clock" ];
