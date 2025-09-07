@@ -13,6 +13,7 @@ in {
         allow_images = true;
         hide_scroll = true;
         no_actions = false;
+        width = "20%";
       };
 
       style = ''
