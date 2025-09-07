@@ -1,4 +1,4 @@
-{ config, lib, ... }:
+{ config, lib, pkgs, ... }:
 
 {
   options = { wofi.enable = lib.mkEnableOption "wofi"; };
@@ -14,6 +14,6 @@
         insensitive = true;
       };
     };
-    home.packages = [ import ./powerScript.nix ];
+    home.packages = [ import ./powerScript.nix { inherit pkgs; } ];
   };
 }
