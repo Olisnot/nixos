@@ -55,6 +55,8 @@
 
   # Bootloader.
   boot = {
+    kernelPackages = pkgs.linuxPackages_latest;
+
     consoleLogLevel = 3;
     initrd.verbose = false;
     initrd.systemd.enable = true;
