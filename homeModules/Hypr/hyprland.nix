@@ -126,6 +126,7 @@
           "$mainMod, E, exec, $fileManager"
           "$mainMod, V, togglefloating,"
           "$mainMod, Space, exec, $menu"
+          "$mainMod ALT, Space, exec, power_menu"
           "$mainMod, J, togglesplit,"
           "$mainMod, F, fullscreen"
           "$mainMod SHIFT, L, exec, hyprlock"
