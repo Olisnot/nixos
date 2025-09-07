@@ -22,6 +22,5 @@
     filen-cli
     filen-desktop
     wofi
-    lmstudio
   ];
 }
