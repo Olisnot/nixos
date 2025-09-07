@@ -31,6 +31,11 @@
       };
       languages = { };
       vim_mode = true;
+      vim = {
+        use_system_clipboard = "never";
+        toggle_relative_line_numbers = true;
+      };
+
       load_direnv = "shell_hook";
       base_keymap = "VSCode";
       show_whitespaces = "all";

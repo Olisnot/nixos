@@ -21,5 +21,6 @@
     ./waypaper.nix
     ./niri.nix
     ./dunst.nix
+    ./wofi.nix
   ];
 }

@@ -37,6 +37,7 @@
   hyprlockConfig.enable = true;
   mpd.enable = true;
   rmpc.enable = true;
+  wofi.enable = true;
 
   services.hyprpaper.enable = lib.mkForce false;
 

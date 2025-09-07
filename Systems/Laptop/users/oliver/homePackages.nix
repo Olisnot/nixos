@@ -21,6 +21,5 @@
     hydralauncher
     filen-cli
     filen-desktop
-    wofi
   ];
 }
