@@ -8,10 +8,10 @@ pkgs.writeShellApplication {
       action=""
 
       case "$choice" in
-          ⏻ Shutdown)
+          "⏻ Shutdown")
               action="systemctl poweroff"
               ;;
-           Reboot)
+          " Reboot")
               action="systemctl reboot"
               ;;
           *)
