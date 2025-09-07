@@ -1,6 +1,7 @@
 { config, lib, ... }:
 
-{
+let colors = config.lib.stylix.colors.withHashtag;
+in {
   options = { wofi.enable = lib.mkEnableOption "wofi"; };
 
   config = lib.mkIf config.wofi.enable {
@@ -17,7 +18,7 @@
       style = ''
         /* The name of the window itself */
         #window {
-          background-color: rgba(30, 30, 46, 0.8);
+          background-color: ${colors.base00};
           box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
           border-radius: 1rem;
           font-size: 1.2rem;
@@ -28,7 +29,7 @@
           /* The name of the scrolled window containing all of the entries */
         }
         #window #outer-box #input {
-          background-color: rgba(24, 24, 24, 0.6);
+          background-color: ${colors.base00};
           color: #f2f2f2;
           border: none;
           border-bottom: 1px solid rgba(24, 24, 24, 0.2);
@@ -50,8 +51,8 @@
           /* entries with multiple actions */
         }
         #window #outer-box #scroll #inner-box #entry {
-          color: #fff;
-          background-color: rgba(24, 24, 24, 0.1);
+          color: ${colors.base03};
+          background-color: ${colors.base00};
           padding: 0.6rem 1rem;
           /* The name of all images in entries displayed in image mode */
           /* The name of all the text in entries */
@@ -61,8 +62,8 @@
           margin-right: 0.5rem;
         }
         #window #outer-box #scroll #inner-box #entry:selected {
-          color: #fff;
-          background-color: rgba(255, 255, 255, 0.1);
+          color: ${colors.base03};
+          background-color: ${colors.base00};
           outline: none;
         }
       '';
