@@ -27,7 +27,7 @@
 
         "$terminal" = "ghostty";
         "$fileManager" = "nautilus";
-        "$menu" = "wofi --show drun -a";
+        "$menu" = "wofi --show drun -a --prompt select";
 
         #################
         ### AUTOSTART ###
