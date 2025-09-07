@@ -44,6 +44,7 @@
       tooltip-format = "{artist} - {album} - {title}";
       tooltip-format-disconnected = "MPD (disconnected)";
       on-click = "rmpc togglepause";
+      on-click-right = "rmpc next";
     };
 
     "group/power" = {
