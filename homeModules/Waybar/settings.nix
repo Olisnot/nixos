@@ -5,7 +5,7 @@
     layer = "top";
     position = "top";
     height = 1;
-    margin-top = 0;
+    margin-top = 10;
     modules-left = [ "group/power" "mpd" ];
     modules-center = [ "hyprland/workspaces" ];
     modules-right = [ "tray" "clock" ];
@@ -21,7 +21,7 @@
     };
 
     clock = {
-      format = " | {:%I:%M %p}";
+      format = "{:%I:%M %p}";
       tooltip = false;
     };
 
