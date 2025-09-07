@@ -14,12 +14,7 @@
         ### MONITORS ###
         ################
 
-        monitor = [
-          "HDMI-A-1,2560x1080,0x0,1"
-          #"eDP-1,1920x1080,0x0,1"
-          "eDP-1, disable"
-          "Unknown-1, disable"
-        ];
+        monitor = [ ",highres,0x0,1" "eDP-1, disable" "Unknown-1, disable" ];
 
         ###################
         ### MY PROGRAMS ###
