@@ -14,7 +14,8 @@
         ### MONITORS ###
         ################
 
-        monitor = [ ",preffered,0x0,1" "eDP-1, disable" "Unknown-1, disable" ];
+        monitor =
+          [ ",preffered,auto,auto" "eDP-1, disable" "Unknown-1, disable" ];
 
         ###################
         ### MY PROGRAMS ###
@@ -174,9 +175,9 @@
           # Pin floating window
           "$mainMod, P, pin"
 
-          "$mainMod SHIFT, P, exec, curl -X 'POST' 'http://localhost:47836/player/playpause' -H 'accept: text/plain' -d ''"
-          "$mainMod SHIFT, N, exec, curl -X 'POST' 'http://localhost:47836/player/next' -H 'accept: text/plain' -d ''"
-          "$mainMod SHIFT, T, exec, curl -X 'POST' 'http://localhost:47836/player/previous' -H 'accept: text/plain' -d ''"
+          "$mainMod SHIFT, P, exec, rmpc togglepause"
+          "$mainMod SHIFT, N, exec, rmpc next"
+          "$mainMod SHIFT, T, exec, rmpc prev"
 
           ##############################
           ### WINDOWS AND WORKSPACES ###
