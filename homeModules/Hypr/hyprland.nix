@@ -14,8 +14,7 @@
         ### MONITORS ###
         ################
 
-        monitor =
-          [ ",preffered,auto,auto" "eDP-1, disable" "Unknown-1, disable" ];
+        monitor = [ ",preffered,auto,auto,mirror,eDP-1" "Unknown-1, disable" ];
 
         ###################
         ### MY PROGRAMS ###
