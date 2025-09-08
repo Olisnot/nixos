@@ -208,6 +208,13 @@
           "$mainMod SHIFT, F, layoutmsg, colresize 1.0"
         ];
 
+        bindl = [
+          ''
+            , switch:on:Lid Switch, exec, hyprctl keyword monitor "eDP-1, disable"''
+          ''
+            , switch:off:Lid Switch, exec, hyprctl keyword monitor "eDP-1, preffered, 0x0, 1"''
+        ];
+
         bindm = [
           "$mainMod, mouse:272, movewindow"
           "$mainMod, mouse:273, resizewindow"
