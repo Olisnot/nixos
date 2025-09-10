@@ -8,7 +8,7 @@
     margin-top = 10;
     margin-left = 10;
     margin-right = 10;
-    modules-left = [ "mpd" ];
+    modules-left = [ "custom/browser" "custom/terminal" "custom/notes" "mpd" ];
     modules-center = [ "hyprland/workspaces" ];
     modules-right = [ "tray" "clock" ];
 
@@ -74,6 +74,21 @@
       format = "";
       on-click = "reboot";
       tooltip = false;
+    };
+
+    "custom/browser" = {
+      format = "";
+      on-click = "zen-beta";
+    };
+
+    "custom/terminal" = {
+      format = "";
+      on-click = "ghostty";
+    };
+
+    "custom/notes" = {
+      format = "󰎚";
+      on-click = "obsidian";
     };
   }];
 }
