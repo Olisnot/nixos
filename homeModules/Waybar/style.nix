@@ -51,5 +51,11 @@ in {
     #custom-nixos {
       font-size: 16px;
     }
+
+    #tray > .active,
+    #tray > .passive,
+    #tray > .needs-attention {
+      color: black;
+    }
   '';
 }
