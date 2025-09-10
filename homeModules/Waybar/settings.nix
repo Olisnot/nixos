@@ -8,7 +8,7 @@
     margin-top = 10;
     margin-left = 10;
     margin-right = 10;
-    modules-left = [ "custom/browser" "custom/terminal" "custom/notes" "mpd" ];
+    modules-left = [ "custom/nixos" "mpd" ];
     modules-center = [ "hyprland/workspaces" ];
     modules-right = [ "tray" "clock" ];
 
@@ -49,46 +49,10 @@
       on-click-right = "rmpc next";
     };
 
-    "group/power" = {
-      orientation = "horizontal";
-      "drawer" = {
-        "transition-duration" = 500;
-        "children-class" = "not-power";
-        "transition-left-to-right" = true;
-      };
-      modules = [ "custom/nixos" "custom/poweroff" "custom/restart" ];
-    };
-
     "custom/nixos" = {
       format = "";
+      on-click = "power_menu";
       tooltip = false;
-    };
-
-    "custom/poweroff" = {
-      format = "󰐥";
-      on-click = "poweroff";
-      tooltip = false;
-    };
-
-    "custom/restart" = {
-      format = "";
-      on-click = "reboot";
-      tooltip = false;
-    };
-
-    "custom/browser" = {
-      format = "";
-      on-click = "zen-beta";
-    };
-
-    "custom/terminal" = {
-      format = "";
-      on-click = "ghostty";
-    };
-
-    "custom/notes" = {
-      format = "󰎚";
-      on-click = "obsidian";
     };
   }];
 }
