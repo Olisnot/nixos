@@ -51,12 +51,5 @@ in {
     #custom-nixos {
       font-size: 16px;
     }
-
-    #tray {
-      background: black;
-      border-radius: 25px;
-      padding-top: 10px;
-      padding-bottom: 10px;
-    }
   '';
 }
