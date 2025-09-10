@@ -55,6 +55,8 @@ in {
     #tray {
       background: black;
       border-radius: 25px;
+      margin-top: 10px;
+      margin-bottom: 10px;
     }
   '';
 }
