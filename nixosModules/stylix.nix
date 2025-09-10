@@ -4,7 +4,7 @@
   stylix = {
     enable = true;
     image = "${inputs.wallpapers}/clay-banks-u27Rrbs9Dwc-unsplash.jpg";
-    polarity = "dark";
+    polarity = "light";
     base16Scheme = {
       base00 = "#FAFAFA";
       base01 = "#E7EAEC";
