@@ -121,7 +121,7 @@
           "$mainMod ALT, Space, exec, power_menu"
           "$mainMod, J, togglesplit,"
           "$mainMod, F, fullscreen"
-          "$mainMod SHIFT, L, exec, hyprlock"
+          "$mainMod SHIFT, return, exec, hyprlock"
 
           # Screen Capture
           "$mainMod, S, exec, hyprshot -m region -o ~/Pictures/Screenshots"
