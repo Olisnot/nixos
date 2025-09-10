@@ -133,10 +133,10 @@
           "$mainMod, j, movefocus, d"
 
           # Move window with mainMod + Shift + arrow keys
-          "$mainMod SHIFT, h, movewindow, l"
-          "$mainMod SHIFT, l, movewindow, r"
-          "$mainMod SHIFT, k, movewindow, u"
-          "$mainMod SHIFT, j, movewindow, d"
+          "$mainMod SHIFT, h, movewindowto, l"
+          "$mainMod SHIFT, l, movewindowto, r"
+          "$mainMod SHIFT, k, movewindowto, u"
+          "$mainMod SHIFT, j, movewindowto, d"
 
           # Resize window with mainMod + Alt + arrow keys
           "$mainMod ALT, l, resizeactive, 10 0"
