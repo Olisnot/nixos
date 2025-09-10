@@ -52,13 +52,9 @@ in {
       font-size: 16px;
     }
 
-    #tray > .active,
-    #tray > .passive,
-    #tray > .needs-attention {
+    #tray {
       background: black;
       border-radius: 25px;
-      margin-right: 10px;
-      margin-left: 10px;
     }
   '';
 }
