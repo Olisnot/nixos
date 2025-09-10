@@ -56,6 +56,7 @@ in {
     #tray > .passive,
     #tray > .needs-attention {
       background: black;
+      border-radius: 25px;
     }
   '';
 }
