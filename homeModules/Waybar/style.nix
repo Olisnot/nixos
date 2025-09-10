@@ -55,7 +55,7 @@ in {
     #tray > .active,
     #tray > .passive,
     #tray > .needs-attention {
-      color: black;
+      color: rgb(0, 0, 0);
     }
   '';
 }
