@@ -9,15 +9,9 @@
     ./ai.nix
   ];
 
-  options = {
-    zed-editor = {
-      enable = lib.mkEnableOption "zed-editor";
-    };
-  };
+  options = { zed-editor = { enable = lib.mkEnableOption "zed-editor"; }; };
 
   config = lib.mkIf config.zed-editor.enable {
-    programs.zed-editor = {
-      enable = true;
-    };
+    programs.zed-editor = { enable = true; };
   };
 }

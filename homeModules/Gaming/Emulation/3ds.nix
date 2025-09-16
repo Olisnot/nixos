@@ -2,7 +2,8 @@
 
 {
   options = {
-    gaming.emulation.three-ds.enable = lib.mkEnableOption "Enable 3DS emulation";
+    gaming.emulation.three-ds.enable =
+      lib.mkEnableOption "Enable 3DS emulation";
   };
 
   config = lib.mkIf config.gaming.emulation.three-ds.enable {

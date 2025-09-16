@@ -9,9 +9,9 @@
     programs.fish = {
       enable = true;
       interactiveShellInit = ''
-      set fish_greeting # Disable greeting
-      zoxide init fish | source
-      starship init fish | source
+        set fish_greeting # Disable greeting
+        zoxide init fish | source
+        starship init fish | source
       '';
 
       shellAliases = {

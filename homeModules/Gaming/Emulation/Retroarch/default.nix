@@ -1,7 +1,5 @@
 { ... }:
 
 {
-  imports = [
-    ./retroarch.nix
-  ];
+  imports = [ ./retroarch.nix ];
 }

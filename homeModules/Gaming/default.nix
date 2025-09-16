@@ -1,9 +1,5 @@
 { ... }:
 
 {
-  imports = [
-    ./Emulation
-    ./mangohud.nix
-    ./minecraft.nix
-  ];
+  imports = [ ./Emulation ./mangohud.nix ./minecraft.nix ];
 }

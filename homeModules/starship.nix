@@ -11,22 +11,22 @@
       enableFishIntegration = true;
       settings = {
         format = lib.concatStrings [
-          ''[](base03)''
-          ''$os''
-          ''$directory''
-          ''$git_branch''
-          ''$nix_shell''
-          ''$c''
-          ''$python''
-          ''$golang''
-          ''$rust''
-          ''$zig''
-          ''$haskell''
-          ''$dotnet''
-          ''[ ](bg:base01)''
-          ''[](base01)''
-          ''$line_break''
-          ''$character''
+          "[](base03)"
+          "$os"
+          "$directory"
+          "$git_branch"
+          "$nix_shell"
+          "$c"
+          "$python"
+          "$golang"
+          "$rust"
+          "$zig"
+          "$haskell"
+          "$dotnet"
+          "[ ](bg:base01)"
+          "[](base01)"
+          "$line_break"
+          "$character"
         ];
 
         os = {

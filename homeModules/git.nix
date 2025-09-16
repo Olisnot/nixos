@@ -1,21 +1,21 @@
 { ... }:
 
 {
-	programs.git = {
-		enable = true;
-		userName = "Olisnot";
-		userEmail = "oliverpm2007@gmail.com";
-	};
+  programs.git = {
+    enable = true;
+    userName = "Olisnot";
+    userEmail = "oliverpm2007@gmail.com";
+  };
 
-        programs.fish.shellAliases = {
-          gd = "git diff";
-          ga = "git add";
-          gc = "git commit";
-          gp = "git push";
-          gu = "git pull";
-          gl = "git log";
-          gb = "git branch";
-          gcl = "git clone";
-        };
+  programs.fish.shellAliases = {
+    gd = "git diff";
+    ga = "git add";
+    gc = "git commit";
+    gp = "git push";
+    gu = "git pull";
+    gl = "git log";
+    gb = "git branch";
+    gcl = "git clone";
+  };
 }
 

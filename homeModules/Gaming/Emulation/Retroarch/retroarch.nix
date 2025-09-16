@@ -6,22 +6,22 @@
   };
 
   config = lib.mkIf config.gaming.emulation.retroarch.enable {
-    home.packages = with pkgs; [ 
-      (retroarch-bare.overrideAttrs {
-        cores = with libretro; [
-          fceumm
-          snes9x
-          gambatte
-          mgba
-          melonds
-          mupen64plus
-          ppsspp
-          blastem
-          flycast
-          yabause
-        ];
-      }
-      )
-    ];
+    home.packages = with pkgs;
+      [
+        (retroarch-bare.overrideAttrs {
+          cores = with libretro; [
+            fceumm
+            snes9x
+            gambatte
+            mgba
+            melonds
+            mupen64plus
+            ppsspp
+            blastem
+            flycast
+            yabause
+          ];
+        })
+      ];
   };
 }

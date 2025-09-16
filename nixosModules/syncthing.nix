@@ -1,9 +1,7 @@
-{lib, config, ...}:
+{ lib, config, ... }:
 
 {
-  options = {
-    syncthing.enable = lib.mkEnableOption "Enable Syncthing";
-  };
+  options = { syncthing.enable = lib.mkEnableOption "Enable Syncthing"; };
 
   config = lib.mkIf config.syncthing.enable {
     services = {

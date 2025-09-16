@@ -2,7 +2,8 @@
 
 {
   options = {
-    gaming.emulation.enable = lib.mkEnableOption "Enable emulation related programs";
+    gaming.emulation.enable =
+      lib.mkEnableOption "Enable emulation related programs";
   };
 
   config = lib.mkIf config.gaming.emulation.enable {

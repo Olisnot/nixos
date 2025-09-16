@@ -1,10 +1,6 @@
 { ... }:
 
 {
-  imports = [
-    ./opentabletdriver.nix
-    ./virt-manager.nix
-    ./keymapp.nix
-    ./ollama.nix
-  ];
+  imports =
+    [ ./opentabletdriver.nix ./virt-manager.nix ./keymapp.nix ./ollama.nix ];
 }
