@@ -1,6 +1,7 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
-{
+let nvim = inputs.nixvim.packages."x86_64-linux".default;
+in {
   environment.systemPackages = with pkgs; [
     #tools
     btop
@@ -23,6 +24,7 @@
     mullvad-vpn
     xwayland-satellite
     networkmanagerapplet
+    nvim
 
     #Utils
     uutils-coreutils-noprefix
