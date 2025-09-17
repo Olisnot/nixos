@@ -476,11 +476,11 @@
         "nixvim": "nixvim_2"
       },
       "locked": {
-        "lastModified": 1758033038,
-        "narHash": "sha256-nZ1dbkM3l8PL80HR2HtVYPsSULkRvEOtZ5ddOm0ZpSM=",
+        "lastModified": 1758135562,
+        "narHash": "sha256-F8tcCrRGdWtzDphEyVJn4ZaXtnYTikWEFGR9cTX9RmI=",
         "ref": "refs/heads/main",
-        "rev": "e76b3166cbb562ba21e749c38d012736dc0b85ea",
-        "revCount": 66,
+        "rev": "384cf50c6db3e1e940a5d0a6f1e235373dad32f1",
+        "revCount": 67,
         "type": "git",
         "url": "https://codeberg.org/Olisnot/NixVimConfig"
       },
