@@ -13,6 +13,7 @@
       stable.lutris
       steam-run
       heroic
+      comet-gog
       protonup-qt
       mangohud
       vulkan-tools
