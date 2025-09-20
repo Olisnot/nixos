@@ -229,6 +229,7 @@
           "workspace 5 silent, class:steam"
           "workspace 5 silent, class:heroic"
           "workspace 5 silent, class:lutris"
+          "float, class:waypaper"
         ];
 
         workspace = [
