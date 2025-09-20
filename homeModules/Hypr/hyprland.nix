@@ -123,6 +123,7 @@
           "$mainMod, J, togglesplit,"
           "$mainMod, F, fullscreen"
           "$mainMod SHIFT, return, exec, hyprlock"
+          "$mainMod, W, exec, waypaper"
 
           # Screen Capture
           "$mainMod, S, exec, hyprshot -m region -o ~/Pictures/Screenshots"
