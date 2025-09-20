@@ -125,6 +125,7 @@
           "$mainMod SHIFT, return, exec, hyprlock"
           "$mainMod, W, exec, waypaper"
           "$mainMod, Z, exec, pwvucontrol"
+          "$mainMod, B, exec, blueman-manager"
 
           # Screen Capture
           "$mainMod, S, exec, hyprshot -m region -o ~/Pictures/Screenshots"
@@ -233,6 +234,7 @@
           "workspace 5 silent, class:lutris"
           "float, class:waypaper"
           "float, class:com.saivert.pwvucontrol"
+          "float, class:.blueman-manager-wrapped"
         ];
 
         workspace = [
