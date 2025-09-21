@@ -6,6 +6,8 @@
     ./hardware-configuration.nix
     ./packages.nix
     ./fonts.nix
+    ./boot.nix
+    ./sound.nix
     ./users/oliver/user.nix
     ../../nixosModules
     ./scripts
@@ -51,50 +53,6 @@
       pasv_min_port=51000
       pasv_max_port=51999
     '';
-  };
-
-  # Bootloader.
-  boot = {
-    kernelPackages = pkgs.linuxPackages_latest;
-
-    consoleLogLevel = 3;
-    initrd.verbose = false;
-    initrd.systemd.enable = true;
-
-    loader = {
-      systemd-boot.enable = true;
-      efi.canTouchEfiVariables = true;
-      systemd-boot.configurationLimit = 10;
-    };
-
-    initrd.systemd.tpm2.enable = false;
-
-    extraModprobeConfig = ''
-      options nvidia_modset vblank_sem_control=0
-    '';
-
-    # Kernel parameters
-    kernelParams = [
-      "nvidia-drm.modeset=1"
-      "resume_offset=79960064"
-      "quiet"
-      "splash"
-      "intremap=on"
-      "boot.shell_on_fail"
-      "udev.log_priority=3"
-      "rd.systemd.show_status=auto"
-    ];
-
-    plymouth = {
-      enable = true;
-      font = "${pkgs.hack-font}/share/fonts/truetype/Hack-Regular.ttf";
-      theme = lib.mkDefault "lone";
-      themePackages = with pkgs;
-        [
-          (adi1090x-plymouth-themes.override { selected_themes = [ "lone" ]; })
-        ];
-    };
-    loader.timeout = 0;
   };
 
   systemd.tpm2.enable = false;
@@ -183,16 +141,6 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
-  # Enable sound with pipewire.
-  security.rtkit.enable = true;
-  services.pulseaudio.enable = false;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-    jack.enable = true;
-  };
 
   # Enable Bluetooth
   bluetooth.enable = true;
