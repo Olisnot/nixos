@@ -6,7 +6,11 @@ pkgs.writeShellApplication {
     ''
       cd /home/oliver/nixos  || exit
       git add .
-      git commit -m "rebuild-$(date +"%d-%m-%Y %H:%M:%S")"
+      if ! git diff --cached --quiet; then
+        git commit -m "rebuild-$(date +"%d-%m-%Y %H:%M:%S")"
+      else
+        echo "No changes to commit."
+      fi
       sudo nixos-rebuild switch --impure --flake /home/oliver/nixos#legiony540
     '';
 }
