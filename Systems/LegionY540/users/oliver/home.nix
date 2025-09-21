@@ -1,7 +1,13 @@
-{ pkgs, lib, ... }:
+{ ... }:
 
 {
-  imports = [ ../../../../homeModules ./homePackages.nix ];
+  imports = [
+    ../../../../homeModules
+    ./homePackages.nix
+    ./stylix.nix
+    ./virt-manager.nix
+    ./fishAliases.nix
+  ];
   home.username = "oliver";
   home.homeDirectory = "/home/oliver";
 
@@ -39,46 +45,7 @@
   rmpc.enable = true;
   wofi.enable = true;
 
-  services.hyprpaper.enable = lib.mkForce false;
-
-  home.sessionVariables = { EDITOR = "hx"; };
-
-  programs.fish.shellAliases = {
-    c = "clear";
-    sudovim = "sudo -E nvim .";
-    vim = "nvim .";
-    tb = "cd /mnt/1tb";
-    zed = "zeditor .";
-  };
-
-  stylix = {
-    targets.hyprpaper.enable = lib.mkForce false;
-    targets.waybar.enable = false;
-    targets.helix.enable = true;
-    targets.nixcord.enable = false;
-    targets.vesktop.enable = false;
-    targets.vencord.enable = false;
-
-    targets.zen-browser.profileNames = [ "Default Profile" ];
-
-    targets.gtk.extraCss = ''
-      opacity: 0.8;
-    '';
-
-    iconTheme = {
-      enable = true;
-      package = pkgs.whitesur-icon-theme;
-      dark = "WhiteSur";
-    };
-  };
-
-  #virt-manager
-  dconf.settings = {
-    "org/virt-manager/virt-manager/connections" = {
-      autoconnect = [ "qemu:///system" ];
-      uris = [ "qemu:///system" ];
-    };
-  };
+  home.sessionVariables = { EDITOR = "nvim"; };
 
   nixpkgs = { config = { allowUnfree = true; }; };
 

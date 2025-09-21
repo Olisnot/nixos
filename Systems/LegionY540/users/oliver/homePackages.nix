@@ -21,5 +21,6 @@
     hydralauncher
     filen-cli
     filen-desktop
+    tutanota-desktop
   ];
 }
