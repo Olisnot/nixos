@@ -16,6 +16,7 @@ in {
     wl-clipboard
     gparted
     zip
+    rar
     ffmpeg
     unzip
     bat

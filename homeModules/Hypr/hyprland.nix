@@ -236,6 +236,7 @@
           "float, class:waypaper"
           "float, class:com.saivert.pwvucontrol"
           "float, class:.blueman-manager-wrapped"
+          "float, class:localsend_app"
         ];
 
         workspace = [
