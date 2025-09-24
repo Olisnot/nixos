@@ -12,7 +12,7 @@ let
         + lib.substring 1 (lib.stringLength id - 1) id);
       url = app.url;
       extraArgs = app.extraArgs or [ ];
-      profileDir = app.profileDir or "${config.xdg.dataHome}/webapps/${id}";
+      if app.profileDir == null then "${config.xdg.dataHome}/webapps/${id}" else app.profileDir;
       categories = app.categories or [ "Network" "Utility" ];
       argsStr =
         concatStringsSep " \\\n          " (cfg.commonArgs ++ extraArgs);
@@ -20,7 +20,7 @@ let
       script = pkgs.writeShellScriptBin "${id}-webapp" ''
         exec ${browserBin} \
           --app=${url} \
-          --user-data-dir="${profileDir}" \
+          --user-data-dir=${escapeShellArg profileDir} \
           --class=${escapeShellArg name} \
           --name=${escapeShellArg name} \
           ${argsStr} \
@@ -34,7 +34,7 @@ let
         type = "Application";
         categories = categories;
         settings = { startupWMClass = name; };
-      } // optionalAttrs (app.icon != null) { icon = "${app.icon}"; };
+      } // optionalAttrs (app.icon != null) { icon = app.icon; };
     in {
       inherit script;
       desktopEntry = {
