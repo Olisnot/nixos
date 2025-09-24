@@ -8,7 +8,7 @@
   config = lib.mkIf config.hyprlandConfig.enable {
     wayland.windowManager.hyprland = {
       enable = true;
-      plugins = with pkgs.hyprlandPlugins; [ hyprscrolling ];
+      # plugins = with pkgs.hyprlandPlugins; [ hyprscrolling ];
       settings = {
         monitor = [ ",preffered,auto,auto" "Unknown-1, disable" ];
 
@@ -138,10 +138,15 @@
           "$mainMod, j, movefocus, d"
 
           # Move window with mainMod + Shift + arrow keys
-          "$mainMod SHIFT, h, layoutmsg, movewindowto l"
-          "$mainMod SHIFT, l, layoutmsg, movewindowto r"
-          "$mainMod SHIFT, k, layoutmsg, movewindowto u"
-          "$mainMod SHIFT, j, layoutmsg, movewindowto d"
+          "$mainMod SHIFT, h, movewindow, l"
+          "$mainMod SHIFT, l, movewindow, r"
+          "$mainMod SHIFT, k, movewindow, u"
+          "$mainMod SHIFT, j, movewindow, d"
+
+          # "$mainMod SHIFT, h, layoutmsg, movewindowto l"
+          # "$mainMod SHIFT, l, layoutmsg, movewindowto r"
+          # "$mainMod SHIFT, k, layoutmsg, movewindowto u"
+          # "$mainMod SHIFT, j, layoutmsg, movewindowto d"
 
           # Resize window with mainMod + Alt + arrow keys
           "$mainMod ALT, l, resizeactive, 10 0"
@@ -206,8 +211,8 @@
           "$mainMod SHIFT, 9, movetoworkspace, 9"
           "$mainMod SHIFT, 0, movetoworkspace, 10"
 
-          "$mainMod, R, layoutmsg, colresize +conf"
-          "$mainMod SHIFT, F, layoutmsg, colresize 1.0"
+          # "$mainMod, R, layoutmsg, colresize +conf"
+          # "$mainMod SHIFT, F, layoutmsg, colresize 1.0"
         ];
 
         bindl = [
