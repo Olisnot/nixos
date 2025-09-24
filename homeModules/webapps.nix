@@ -13,7 +13,7 @@ let
       url = app.url;
       extraArgs = app.extraArgs or [ ];
       profileDir = if app.profileDir == null then "${config.xdg.dataHome}/webapps/${id}" else app.profileDir;
-      categories = app.categories or [ "Network" "Utility" ];
+      categories = app.categories or [ "Network" "WebBrowser" ];
       argsStr =
         concatStringsSep " \\\n          " (cfg.commonArgs ++ extraArgs);
       browserBin = "${cfg.browserPackage}/bin/${cfg.browserBinary}";
@@ -111,7 +111,7 @@ in {
           };
           categories = mkOption {
             type = types.listOf types.str;
-            default = [ "Network" "Utility" ];
+            default = [ "Network" "WebBrowser" ];
             description = "Desktop entry categories.";
           };
           icon = mkOption {
