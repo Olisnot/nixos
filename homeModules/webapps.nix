@@ -33,7 +33,7 @@ let
         terminal = false;
         type = "Application";
         categories = app.categories or ["Network" "WebBrowser"];
-        settings = { startupWMClass = name; };
+        settings = { StartupWMClass = name; };
       } // optionalAttrs (app.icon != null) { icon = app.icon; };
     in {
       inherit script;
