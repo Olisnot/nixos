@@ -22,5 +22,6 @@
     ./waypaper.nix
     ./niri.nix
     ./dunst.nix
+    ./webapps.nix
   ];
 }

@@ -7,6 +7,7 @@
     ./stylix.nix
     ./virt-manager.nix
     ./fishAliases.nix
+    ./webapps.nix
   ];
   home.username = "oliver";
   home.homeDirectory = "/home/oliver";
