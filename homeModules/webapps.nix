@@ -33,7 +33,7 @@ let
         terminal = false;
         type = "Application";
         categories = categories;
-        startupWMClass = name;
+        settings = { startupWMClass = name; };
       } // optionalAttrs (app.icon != null) { icon = "${app.icon}"; };
     in {
       inherit script;
