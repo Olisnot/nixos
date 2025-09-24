@@ -116,7 +116,6 @@
         bind = [
           "$mainMod, return, exec, $terminal"
           "$mainMod, C, killactive,"
-          "$mainMod, M, exit,"
           "$mainMod, E, exec, $fileManager"
           "$mainMod, V, togglefloating,"
           "$mainMod, Space, exec, $menu"
@@ -127,6 +126,9 @@
           "$mainMod, W, exec, waypaper"
           "$mainMod, Z, exec, pwvucontrol"
           "$mainMod, B, exec, blueman-manager"
+          "$mainMod, M, exec, tutanota-desktop"
+
+          "$mainMod SHIFT ALT, M, exit,"
 
           # Screen Capture
           "$mainMod, S, exec, hyprshot -m region -o ~/Pictures/Screenshots"
