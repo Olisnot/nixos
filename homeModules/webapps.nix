@@ -32,7 +32,7 @@ let
         exec = "${id}-webapp";
         terminal = false;
         type = "Application";
-        categories = categories;
+        categories = app.categories or ["Network" "WebBrowser"];
         settings = { startupWMClass = name; };
       } // optionalAttrs (app.icon != null) { icon = app.icon; };
     in {
