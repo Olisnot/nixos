@@ -12,8 +12,10 @@ let
         + lib.substring 1 (lib.stringLength id - 1) id);
       url = app.url;
       extraArgs = app.extraArgs or [ ];
-      profileDir = if app.profileDir == null then "${config.xdg.dataHome}/webapps/${id}" else app.profileDir;
-      categories = app.categories or [ "Network" "WebBrowser" ];
+      profileDir = if app.profileDir == null then
+        "${config.xdg.dataHome}/webapps/${id}"
+      else
+        app.profileDir;
       argsStr =
         concatStringsSep " \\\n          " (cfg.commonArgs ++ extraArgs);
       browserBin = "${cfg.browserPackage}/bin/${cfg.browserBinary}";
@@ -32,7 +34,7 @@ let
         exec = "${id}-webapp";
         terminal = false;
         type = "Application";
-        categories = app.categories or ["Network" "WebBrowser"];
+        categories = app.categories or [ "Network" "WebBrowser" ];
         settings = { StartupWMClass = name; };
       } // optionalAttrs (app.icon != null) { icon = app.icon; };
     in {
