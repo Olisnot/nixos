@@ -31,6 +31,7 @@
           "waybar"
           "mullvad-vpn"
           "kdeconnect-indicator"
+          "altus"
           ''hyprctl dispatch exec "[workspace 1]" obsidian''
           ''hyprctl dispatch exec "[workspace 2]" zen-beta''
           ''hyprctl dispatch exec "[workspace 3]" ghostty''
