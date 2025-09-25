@@ -6,8 +6,8 @@
     position = "top";
     height = 1;
     margin-top = 10;
-    margin-left = 10;
-    margin-right = 10;
+    margin-left = 15;
+    margin-right = 15;
     modules-left = [ "custom/nixos" "mpd" ];
     modules-center = [ "hyprland/workspaces" ];
     modules-right = [ "tray" "clock" ];
