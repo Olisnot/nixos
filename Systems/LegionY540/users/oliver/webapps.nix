@@ -12,6 +12,10 @@
         name = "Invidious";
         url = "https://inv.nadeko.net";
       };
+      duolingo = {
+        name = "Duolingo";
+        url = "https://www.duolingo.com";
+      };
     };
   };
 }
