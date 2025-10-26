@@ -29,15 +29,10 @@
           "nm-applet"
           "blueman-applet"
           "waybar"
-          "mullvad-vpn"
           "kdeconnect-indicator"
           "altus"
-          ''hyprctl dispatch exec "[workspace 1]" obsidian''
-          ''hyprctl dispatch exec "[workspace 2]" zen-beta''
           ''hyprctl dispatch exec "[workspace 3]" ghostty''
           ''hyprctl dispatch exec "[workspace 4]" tutanota-desktop''
-          ''hyprctl dispatch exec "[workspace 8]" ghostty -e rmpc''
-          ''hyprctl dispatch exec "[workspace 9]" equibop''
         ];
 
         xwayland = { force_zero_scaling = true; };

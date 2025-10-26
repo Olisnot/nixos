@@ -22,32 +22,18 @@ in {
       font-size: 12px;
     }
 
-    #custom-poweroff:hover,
-    #custom-restart:hover,
-    #custom-nixos:hover {
-      background: ${colors.base03};
-      border-radius: 20px;
-    }
-
     #clock {
-      font-size: 14px;
     }
 
     #clock,
     #tray,
     #mpd,
-    #group-power,
-    #custom-poweroff,
-    #custom-restart,
     #custom-nixos,
     #workspaces {
       padding-right: 10px;
       padding-left: 10px;
     }
 
-    #group-power,
-    #custom-poweroff,
-    #custom-restart,
     #custom-nixos {
       font-size: 16px;
     }

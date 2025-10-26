@@ -22,8 +22,6 @@ in {
     bat
     eza
     zoxide
-    mullvad-vpn
-    xwayland-satellite
     networkmanagerapplet
     nvim
 

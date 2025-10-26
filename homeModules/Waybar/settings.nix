@@ -5,10 +5,7 @@
     layer = "top";
     position = "top";
     height = 1;
-    margin-top = 10;
-    margin-left = 17;
-    margin-right = 17;
-    modules-left = [ "custom/nixos" "mpd" ];
+    modules-left = [ "custom/nixos" ];
     modules-center = [ "hyprland/workspaces" ];
     modules-right = [ "tray" "clock" ];
 
@@ -28,25 +25,8 @@
     };
 
     tray = {
-      icon-size = 15;
-      spacing = 10;
-    };
-
-    "mpd" = {
-      format = "{stateIcon} {album} - {title}";
-      format-disconnected = "Disconnected ";
-      format-stopped = "Stopped ";
-      album-len = 20;
-      title-len = 20;
-      interval = 10;
-      state-icons = {
-        paused = "";
-        playing = "";
-      };
-      tooltip-format = "{artist} - {album} - {title}";
-      tooltip-format-disconnected = "MPD (disconnected)";
-      on-click = "rmpc togglepause";
-      on-click-right = "rmpc next";
+      icon-size = 12;
+      spacing = 8;
     };
 
     "custom/nixos" = {

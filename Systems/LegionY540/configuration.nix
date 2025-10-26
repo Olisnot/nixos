@@ -103,8 +103,6 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-  services.mullvad-vpn.enable = true;
-
   services.xserver.dpi = 96;
   environment.variables = {
     EDITOR = "nvim";
@@ -137,7 +135,6 @@
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
-
 
   # Enable Bluetooth
   bluetooth.enable = true;
