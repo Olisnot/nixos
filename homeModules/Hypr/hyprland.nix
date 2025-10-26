@@ -111,7 +111,7 @@
 
         bind = [
           "$mainMod, return, exec, $terminal"
-          "$mainMod, C, killactive,"
+          "$mainMod, W, killactive,"
           "$mainMod, E, exec, $fileManager"
           "$mainMod, V, togglefloating,"
           "$mainMod, Space, exec, $menu"
@@ -119,9 +119,10 @@
           "$mainMod, J, togglesplit,"
           "$mainMod, F, fullscreen"
           "$mainMod SHIFT, return, exec, hyprlock"
-          "$mainMod, W, exec, waypaper"
+          "$mainMod, C, exec, waypaper"
           "$mainMod, Z, exec, pwvucontrol"
-          "$mainMod, B, exec, blueman-manager"
+          "$mainMod, B, exec, chromium"
+          "$mainMod SHIFT, B, exec, blueman-manager"
           "$mainMod, M, exec, tutanota-desktop"
 
           "$mainMod SHIFT ALT, M, exit,"
@@ -140,11 +141,6 @@
           "$mainMod SHIFT, l, movewindow, r"
           "$mainMod SHIFT, k, movewindow, u"
           "$mainMod SHIFT, j, movewindow, d"
-
-          # "$mainMod SHIFT, h, layoutmsg, movewindowto l"
-          # "$mainMod SHIFT, l, layoutmsg, movewindowto r"
-          # "$mainMod SHIFT, k, layoutmsg, movewindowto u"
-          # "$mainMod SHIFT, j, layoutmsg, movewindowto d"
 
           # Resize window with mainMod + Alt + arrow keys
           "$mainMod ALT, l, resizeactive, 10 0"
@@ -237,6 +233,7 @@
           "workspace 5 silent, class:heroic"
           "workspace 5 silent, class:lutris"
           "float, class:waypaper"
+          "float, class:steam"
           "float, class:com.saivert.pwvucontrol"
           "float, class:.blueman-manager-wrapped"
           "float, class:localsend_app"
