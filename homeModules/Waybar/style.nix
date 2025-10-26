@@ -9,7 +9,6 @@ in {
 
     window#waybar {
       background: ${colors.base00};
-      border-radius: 25px;
     }
 
     .modules-left,
@@ -19,7 +18,6 @@ in {
     }
 
     #workspaces {
-      font-size: 12px;
     }
 
     #clock {
@@ -35,7 +33,7 @@ in {
     }
 
     #custom-nixos {
-      font-size: 16px;
+      font-size: 14px;
     }
   '';
 }
