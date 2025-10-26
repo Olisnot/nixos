@@ -19,8 +19,8 @@
 
     iconTheme = {
       enable = true;
-      package = pkgs.whitesur-icon-theme;
-      dark = "WhiteSur";
+      package = pkgs.nordzy-icon-theme;
+      dark = "Nordzy";
     };
   };
 }
