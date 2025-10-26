@@ -40,6 +40,8 @@
     to = 51999;
   }];
 
+  services.tailscale.enable = true;
+
   services.vsftpd = {
     enable = true;
     writeEnable = true;
