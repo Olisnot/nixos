@@ -8,6 +8,7 @@
     ./Waybar
     ./Wofi
     ./tmux.nix
+    ./chromium.nix
     ./fastfetch.nix
     ./starship.nix
     ./git.nix

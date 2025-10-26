@@ -24,11 +24,10 @@
   # Custom home modules
   bash.enable = true;
   fish.enable = true;
+  chromium.enable = true;
   fastfetch.enable = true;
   starship.enable = true;
-  gaming = {
-    mangohud.enable = true;
-  };
+  gaming = { mangohud.enable = true; };
   tmux.enable = true;
   ghostty.enable = true;
   waypaper.enable = true;
