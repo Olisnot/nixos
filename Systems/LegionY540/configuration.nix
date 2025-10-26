@@ -34,7 +34,7 @@
     autoLogin.user = "oliver";
   };
 
-  networking.firewall = { allowedTCPPorts = [ 20 21 ]; };
+  networking.firewall = { allowedTCPPorts = [ 20 21 4533 ]; };
   networking.firewall.allowedTCPPortRanges = [{
     from = 51000;
     to = 51999;
