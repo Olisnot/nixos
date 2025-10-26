@@ -18,6 +18,7 @@ in {
     }
 
     #workspaces {
+      font-size: 8px;
     }
 
     #clock {
