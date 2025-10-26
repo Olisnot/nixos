@@ -4,8 +4,6 @@
   imports = [
     ./Gaming
     ./Shells
-    ./RMPC
-    ./Zed
     ./Hypr
     ./Waybar
     ./Wofi
@@ -15,12 +13,8 @@
     ./git.nix
     ./opentabletdriver.nix
     ./ghostty.nix
-    ./mpd.nix
-    ./zen.nix
-    ./helix.nix
     ./nixcord.nix
     ./waypaper.nix
-    ./niri.nix
     ./dunst.nix
     ./webapps.nix
   ];

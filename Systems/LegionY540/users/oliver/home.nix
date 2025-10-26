@@ -26,24 +26,17 @@
   fish.enable = true;
   fastfetch.enable = true;
   starship.enable = true;
-  otd.kamvas13.enable = true;
   gaming = {
     mangohud.enable = true;
-    minecraft.enable = true;
   };
   tmux.enable = true;
   ghostty.enable = true;
-  zen-browser.enable = true;
-  helix.enable = true;
-  zed-editor.enable = true;
   waypaper.enable = true;
   nixcord.enable = true;
   waybarConfig.enable = true;
   dunst.enable = true;
   hyprlandConfig.enable = true;
   hyprlockConfig.enable = true;
-  mpd.enable = true;
-  rmpc.enable = true;
   wofi.enable = true;
 
   home.sessionVariables = { EDITOR = "nvim"; };

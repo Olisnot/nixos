@@ -15,13 +15,11 @@
     gpauth
     mupdf
     waypaper
-    bottles
     gucharmap
     localsend
-    hydralauncher
     filen-cli
     filen-desktop
     tutanota-desktop
-    altus
+    ungoogled-chromium
   ];
 }

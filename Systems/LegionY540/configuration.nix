@@ -17,12 +17,9 @@
   nvidia.enable = true;
   gaming.enable = true;
   gaming.steam.enable = true;
-  opentabletdriverudev.enable = true;
-  ollama.enable = true;
   keymapp.enable = true;
   virt-manager.setup = true;
   fish.enable = true;
-  #nextdns.enable = true;
   syncthing.enable = true;
 
   #Nix settings
