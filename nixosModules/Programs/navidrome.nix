@@ -8,7 +8,7 @@
       enable = true;
       openFirewall = true;
       user = "oliver";
-      settings = { MusicFolder = "/mnt/1tb/Music/"; };
+      settings = { Address = "0.0.0.0"; MusicFolder = "/mnt/1tb/Music/"; };
     };
   };
 }
