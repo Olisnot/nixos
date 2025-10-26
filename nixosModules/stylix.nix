@@ -49,10 +49,8 @@
     };
 
     cursor = {
-      # package = pkgs.whitesur-cursors;
-      # name = "WhiteSur Cursors";
-      package = pkgs.capitaine-cursors-themed;
-      name = "Capitaine Cursors";
+      package = pkgs.nordzy-cursor-theme;
+      name = "Nordzy-cursors";
       size = 24;
     };
 
