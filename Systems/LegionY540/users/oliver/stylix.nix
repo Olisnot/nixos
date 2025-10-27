@@ -10,6 +10,7 @@
     targets.nixcord.enable = false;
     targets.vesktop.enable = false;
     targets.vencord.enable = false;
+    targets.btop.enable = true;
 
     targets.zen-browser.profileNames = [ "Default Profile" ];
 
