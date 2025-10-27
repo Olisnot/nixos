@@ -37,6 +37,7 @@
   hyprlandConfig.enable = true;
   hyprlockConfig.enable = true;
   wofi.enable = true;
+  btop.enable = true;
 
   home.sessionVariables = { EDITOR = "nvim"; };
 
