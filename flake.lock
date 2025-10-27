@@ -736,11 +736,11 @@
     "wallpapers": {
       "flake": false,
       "locked": {
-        "lastModified": 1755411538,
-        "narHash": "sha256-NDeWgBhwmYGCsghGfHkmxmuoQd7q3/xkYBzNTcP5YW4=",
+        "lastModified": 1761580178,
+        "narHash": "sha256-OL+dVLfhKr6R7nC8+fOwaj9zjKMmw9OhFlc4AUgfSf0=",
         "owner": "olmods",
         "repo": "wallpapers",
-        "rev": "8ff96f13397494ef30c1e9878efbb6c11c098c7f",
+        "rev": "5c0d8fb1ff597bf417ea04911eafe32d176e3de9",
         "type": "github"
       },
       "original": {
