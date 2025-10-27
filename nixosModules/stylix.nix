@@ -50,7 +50,7 @@
 
     cursor = {
       package = pkgs.nordzy-cursor-theme;
-      name = "Nordzy-cursors";
+      name = "Nordzy-cursors-lefthand";
       size = 24;
     };
 
