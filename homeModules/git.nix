@@ -4,7 +4,7 @@
   programs.git = {
     enable = true;
     userName = "Olisnot";
-    userEmail = "oliverpm2007@gmail.com";
+    userEmail = "oliver@opmsonline.org";
   };
 
   programs.fish.shellAliases = {
