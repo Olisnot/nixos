@@ -24,7 +24,8 @@
     # Kernel parameters
     kernelParams = [
       "nvidia-drm.modeset=1"
-      "resume_offset=79960064"
+      # "resume_offset=79960064"
+      "resume=/dev/disk/by-uuid/8a5c0ac5-fca9-4460-8a27-c17c73c2a3b2"
       "quiet"
       "splash"
       "intremap=on"
