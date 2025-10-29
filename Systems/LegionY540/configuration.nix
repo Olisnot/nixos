@@ -92,17 +92,6 @@
     '';
   };
 
-  services.logind = {
-    lidSwitch = "suspend-then-hibernate";
-    extraConfig = ''
-    HandlePowerKey=suspend-then-hibernate
-    IdleAction=suspend-then-hibernate
-    IdleActionSec=10m
-    '';
-  };
-
-  systemd.sleep.extraConfig = "HibernateDelaySec=2h";
-
   networking.hostName = "zeus"; # Define your hostname.
   # networking.wireless.enable = true;  #Enables wireless support via wpa_supplicant.
 
