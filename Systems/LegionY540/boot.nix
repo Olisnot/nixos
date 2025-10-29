@@ -10,9 +10,9 @@
     initrd.systemd.enable = true;
 
     loader = {
-      systemd-boot.enable = true;
+      limine.enable = true;
+      limine.maxGenerations = 10;
       efi.canTouchEfiVariables = true;
-      systemd-boot.configurationLimit = 10;
     };
 
     initrd.systemd.tpm2.enable = false;
@@ -42,6 +42,6 @@
           (adi1090x-plymouth-themes.override { selected_themes = [ "lone" ]; })
         ];
     };
-    loader.timeout = 0;
+    # loader.timeout = 0;
   };
 }
