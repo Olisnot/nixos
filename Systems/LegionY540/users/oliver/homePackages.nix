@@ -17,9 +17,6 @@
     waypaper
     gucharmap
     localsend
-    filen-cli
-    filen-desktop
-    tutanota-desktop
     ungoogled-chromium
   ];
 }

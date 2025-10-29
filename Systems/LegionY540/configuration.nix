@@ -21,7 +21,6 @@
   virt-manager.setup = true;
   fish.enable = true;
   syncthing.enable = true;
-  navidrome.enable = true;
 
   #Nix settings
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
