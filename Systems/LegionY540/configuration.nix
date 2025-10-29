@@ -34,14 +34,11 @@
     autoLogin.user = "oliver";
   };
 
-  networking.firewall = { allowedTCPPorts = [ 20 21 4533 ]; };
+  networking.firewall = { allowedTCPPorts = [ 20 21 ]; };
   networking.firewall.allowedTCPPortRanges = [{
     from = 51000;
     to = 51999;
   }];
-
-  services.tailscale.enable = true;
-  services.tailscale.useRoutingFeatures = "server";
 
   services.vsftpd = {
     enable = true;
