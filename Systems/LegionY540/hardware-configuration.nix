@@ -17,8 +17,12 @@
     fsType = "xfs";
   };
 
-  boot.initrd.luks.devices."luks-07ec4bc1-b3e9-4eb7-a849-640a960ef9c1".device =
-    "/dev/disk/by-uuid/07ec4bc1-b3e9-4eb7-a849-640a960ef9c1";
+  boot.initrd.luks.devices = {
+    "luks-07ec4bc1-b3e9-4eb7-a849-640a960ef9c1".device =
+      "/dev/disk/by-uuid/07ec4bc1-b3e9-4eb7-a849-640a960ef9c1";
+    "luks-4ae59e00-5710-42fb-a260-6667f49bc4cb".device =
+      "/dev/disk/by-uuid/8a5c0ac5-fca9-4460-8a27-c17c73c2a3b2";
+  };
 
   fileSystems."/boot" = {
     device = "/dev/disk/by-uuid/90BE-CF06";
