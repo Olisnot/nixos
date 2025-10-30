@@ -41,7 +41,7 @@
       themePackages = with pkgs;
         [
           (adi1090x-plymouth-themes.override {
-            selected_themes = [ "abstract rings" ];
+            selected_themes = [ "abstract_ring" ];
           })
         ];
     };
