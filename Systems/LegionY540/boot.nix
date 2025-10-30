@@ -37,7 +37,7 @@
     plymouth = {
       enable = true;
       font = "${pkgs.hack-font}/share/fonts/truetype/Hack-Regular.ttf";
-      theme = lib.mkDefault "lone";
+      theme = lib.mkDefault "abstract_ring";
       themePackages = with pkgs;
         [
           (adi1090x-plymouth-themes.override {
