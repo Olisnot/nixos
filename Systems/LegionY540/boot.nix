@@ -40,7 +40,9 @@
       theme = lib.mkDefault "lone";
       themePackages = with pkgs;
         [
-          (adi1090x-plymouth-themes.override { selected_themes = [ "lone" ]; })
+          (adi1090x-plymouth-themes.override {
+            selected_themes = [ "abstract rings" ];
+          })
         ];
     };
     # loader.timeout = 0;
