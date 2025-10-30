@@ -10,8 +10,20 @@
     initrd.systemd.enable = true;
 
     loader = {
-      limine.enable = true;
-      limine.maxGenerations = 10;
+      limine = {
+        enable = true;
+        maxGenerations = 10;
+        extraEntries = ''
+        /Gentoo
+        //Gentoo OS
+          protocol: linux
+          kernel_path: boot():/vmlinuz-6.12.47-gentoo-dist
+          module_path: boot():/initramfs-6.12.47-gentoo-dist.img
+          cmdline: root=UUID=68e233c6-92b3-43c9-9f40-2c93d37760c0 rw rootfstype=xfs
+          comment: Boot Gentoo Linux!
+        '';
+      };
+
       efi.canTouchEfiVariables = true;
     };
 
