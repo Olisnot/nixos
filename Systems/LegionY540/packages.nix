@@ -9,7 +9,6 @@ in {
     pwvucontrol
     tree
     ripgrep
-    blueman
     skim
     fd
     filezilla
@@ -22,7 +21,6 @@ in {
     bat
     eza
     zoxide
-    networkmanagerapplet
     nvim
 
     #Utils
@@ -33,7 +31,6 @@ in {
     util-linux
 
     #General
-    yazi
     nautilus
 
     #Coding
