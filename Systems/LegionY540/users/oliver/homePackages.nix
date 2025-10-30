@@ -18,7 +18,5 @@
     gucharmap
     localsend
     ungoogled-chromium
-    alacritty
-    st
   ];
 }
