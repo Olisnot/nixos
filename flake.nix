@@ -29,7 +29,7 @@
     };
   };
 
-  outputs = { nixpkgs, nixpkgsStable, lsfg-vk-flake, ... }@inputs:
+  outputs = { nixpkgsStable, ... }@inputs:
     let
       system = "x86_64-linux";
       overlay-stable = final: prev: {
