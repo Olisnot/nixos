@@ -15,9 +15,7 @@
     ./git.nix
     ./opentabletdriver.nix
     ./ghostty.nix
-    ./nixcord.nix
     ./waypaper.nix
     ./dunst.nix
-    ./webapps.nix
   ];
 }

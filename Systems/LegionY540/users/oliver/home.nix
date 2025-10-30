@@ -7,7 +7,6 @@
     ./stylix.nix
     ./virt-manager.nix
     ./fishAliases.nix
-    ./webapps.nix
   ];
   home.username = "oliver";
   home.homeDirectory = "/home/oliver";
@@ -31,7 +30,6 @@
   tmux.enable = true;
   ghostty.enable = true;
   waypaper.enable = true;
-  nixcord.enable = true;
   waybarConfig.enable = true;
   dunst.enable = true;
   hyprlandConfig.enable = true;
@@ -41,7 +39,7 @@
 
   home.sessionVariables = { EDITOR = "nvim"; };
 
-  nixpkgs = { config = { allowUnfree = true; }; };
+  nixpkgs.config.allowUnfree = true;
 
   # Let Home Manager install and manage itself.
   programs.home-manager = { enable = true; };

@@ -23,18 +23,6 @@
       flake = false;
     };
 
-    zen-browser = {
-      url = "github:0xc000022070/zen-browser-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    nixcord = { url = "github:kaylorben/nixcord"; };
-
-    lsfg-vk-flake = {
-      url = "github:pabloaul/lsfg-vk-flake/main";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     minimal-tmux = {
       url = "github:niksingh710/minimal-tmux-status";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -59,7 +47,6 @@
             ({ ... }: { nixpkgs.overlays = [ overlay-stable ]; })
             inputs.home-manager.nixosModules.default
             inputs.stylix.nixosModules.stylix
-            lsfg-vk-flake.nixosModules.default
           ];
         };
       };

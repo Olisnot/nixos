@@ -226,7 +226,7 @@
         windowrulev2 = [
           "suppressevent maximize, class:.* "
           "workspace 1 silent, class:obsidian"
-          "workspace 2 silent, class:zen-beta"
+          "workspace 2 silent, class:chromium-browser"
           "workspace 3 silent, class:dev.zed.Zed"
           "workspace 4 silent, class:vesktop"
           "workspace 5 silent, class:steam"
