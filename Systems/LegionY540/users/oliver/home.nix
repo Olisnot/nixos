@@ -29,6 +29,7 @@
   gaming = { mangohud.enable = true; };
   tmux.enable = true;
   ghostty.enable = true;
+  foot.enable = true;
   waypaper.enable = true;
   waybarConfig.enable = true;
   dunst.enable = true;
