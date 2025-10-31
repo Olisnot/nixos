@@ -16,7 +16,7 @@
         ### MY PROGRAMS ###
         ###################
 
-        "$terminal" = "ghostty";
+        "$terminal" = "foot";
         "$fileManager" = "nautilus";
         "$menu" = "wofi --show drun -a --prompt select";
 
@@ -31,7 +31,7 @@
           "waybar"
           "kdeconnect-indicator"
           "altus"
-          ''hyprctl dispatch exec "[workspace 3]" ghostty''
+          ''hyprctl dispatch exec "[workspace 3]" foot''
           ''hyprctl dispatch exec "[workspace 4]" tutanota-desktop''
         ];
 
