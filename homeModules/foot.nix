@@ -4,13 +4,6 @@
   options.foot.enable = lib.mkEnableOption "Enable the foot terminal emulator";
 
   config = lib.mkIf config.foot.enable {
-    programs.foot = {
-      enable = true;
-      settings = {
-        main = {
-          font = "Fira Code:size=10";
-        };
-      };
-    };
+    programs.foot = { enable = true; };
   };
 }
