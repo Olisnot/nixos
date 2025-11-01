@@ -4,7 +4,7 @@ pkgs.writeShellApplication {
   name = "power_menu";
   text = # bash
     ''
-      choice=$(printf "⏻ Shutdown\n Reboot\n󰤄 Suspend" | wofi --show dmenu --prompt "" -W 15% -H 20%)
+      choice=$(printf "⏻ Shutdown\n Reboot\n󰤄 Suspend\n󰤄 Hibernate" | wofi --show dmenu --prompt "" -W 15% -H 20%)
       action=""
 
       case "$choice" in
@@ -16,6 +16,9 @@ pkgs.writeShellApplication {
               ;;
           "󰤄 Suspend")
               action="systemctl suspend"
+              ;;
+          "󰤄 Hibernate")
+              action="systemctl hibernate"
               ;;
           *)
               exit 0
