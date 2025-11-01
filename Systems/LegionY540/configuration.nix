@@ -28,11 +28,6 @@
 
   nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
 
-  services.displayManager = {
-    autoLogin.enable = true;
-    autoLogin.user = "oliver";
-  };
-
   networking.firewall = { allowedTCPPorts = [ 20 21 ]; };
   networking.firewall.allowedTCPPortRanges = [{
     from = 51000;
@@ -144,7 +139,15 @@
 
   # Enable Hyprland
   hyprland.enable = true;
-  services.displayManager.defaultSession = "hyprland";
+  services.displayManager = {
+    sddm = {
+      enable = true;
+      autoLogin.relogin = true;
+    };
+    defaultSession = "hyprland";
+    autoLogin.enable = true;
+    autoLogin.user = "oliver";
+  };
 
   # Set Laptop lid
   services.logind.settings.Login.HandleLidSwitchExternalPower = "ignore";
