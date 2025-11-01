@@ -14,13 +14,13 @@
         enable = true;
         maxGenerations = 10;
         extraEntries = ''
-        /Gentoo
-        //Gentoo OS
-          protocol: linux
-          kernel_path: boot():/vmlinuz-6.12.47-gentoo-dist
-          module_path: boot():/initramfs-6.12.47-gentoo-dist.img
-          cmdline: root=UUID=68e233c6-92b3-43c9-9f40-2c93d37760c0 rw rootfstype=xfs
-          comment: Boot Gentoo Linux!
+          /Gentoo
+          //Gentoo OS
+            protocol: linux
+            kernel_path: boot():/vmlinuz-6.12.47-gentoo-dist
+            module_path: boot():/initramfs-6.12.47-gentoo-dist.img
+            cmdline: root=UUID=68e233c6-92b3-43c9-9f40-2c93d37760c0 rw rootfstype=xfs
+            comment: Boot Gentoo Linux!
         '';
       };
 
@@ -44,7 +44,7 @@
       "boot.shell_on_fail"
       "udev.log_priority=3"
       "rd.systemd.show_status=auto"
-      "plymouth.use-simpledrm=0"
+      "plymouth.use-simpledrm=1"
     ];
 
     plymouth = {
