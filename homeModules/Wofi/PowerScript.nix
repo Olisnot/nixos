@@ -14,6 +14,9 @@ pkgs.writeShellApplication {
           " Reboot")
               action="systemctl reboot"
               ;;
+          "󰤄eSuspend
+              action="systemctl suspend"
+              ;;
           *)
               exit 0
               ;;
