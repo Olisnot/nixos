@@ -18,5 +18,6 @@
     gucharmap
     localsend
     yazi
+    imagemagick
   ];
 }
