@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, lib, inputs, ... }:
 
 {
   # Bootloader.
@@ -22,6 +22,8 @@
             cmdline: root=UUID=68e233c6-92b3-43c9-9f40-2c93d37760c0 rw rootfstype=xfs
             comment: Boot Gentoo Linux!
         '';
+
+        style = { wallpapers = [ "${inputs.wallpapers}/11356529.jpg" ]; };
       };
 
       efi.canTouchEfiVariables = true;
