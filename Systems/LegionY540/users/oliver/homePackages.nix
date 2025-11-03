@@ -8,8 +8,8 @@
     playerctl
     nicotine-plus
     lollypop
+    picard
     #Tools
-    obsidian
     gimp3
     keymapp
     gpauth
@@ -17,6 +17,6 @@
     waypaper
     gucharmap
     localsend
-    ungoogled-chromium
+    yazi
   ];
 }
