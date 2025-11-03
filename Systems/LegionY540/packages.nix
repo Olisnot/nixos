@@ -14,6 +14,7 @@ in {
     filezilla
     wl-clipboard
     gparted
+    dust
     zip
     rar
     ffmpeg
