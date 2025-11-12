@@ -3,8 +3,12 @@
 {
   programs.git = {
     enable = true;
-    userName = "Olisnot";
-    userEmail = "oliver@opmsonline.org";
+    settings = {
+      user = {
+        name = "Olisnot";
+        email = "oliver@opmsonline.org";
+      };
+    };
   };
 
   programs.fish.shellAliases = {

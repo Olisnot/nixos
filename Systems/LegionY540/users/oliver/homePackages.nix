@@ -4,7 +4,6 @@
   home.packages = with pkgs; [
     #Media
     mpv
-    stremio
     playerctl
     nicotine-plus
     lollypop
