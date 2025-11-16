@@ -64,5 +64,11 @@ in {
     #zig
     zig
     zls
+
+    #python
+    python3
+
+    #Go
+    go
   ];
 }
