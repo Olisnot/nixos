@@ -28,7 +28,7 @@
 
   nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
 
-  networking.firewall = { allowedTCPPorts = [ 20 21 ]; };
+  networking.firewall = { allowedTCPPorts = [ 20 21 8000 ]; };
   networking.firewall.allowedTCPPortRanges = [{
     from = 51000;
     to = 51999;
