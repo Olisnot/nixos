@@ -6,8 +6,8 @@
 
     iconTheme = {
       enable = true;
-      package = pkgs.nordzy-icon-theme;
-      dark = "Nordzy";
+      package = pkgs.arashi;
+      dark = "Arashi";
     };
   };
 }
