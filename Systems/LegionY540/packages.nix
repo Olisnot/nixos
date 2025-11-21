@@ -1,6 +1,9 @@
-{ pkgs, inputs, ... }:
+{ pkgs, inputs, lib, config, ... }:
 
-let nvim = inputs.nixvim.packages."x86_64-linux".default;
+let
+  nvim = inputs.nixvim.packages."x86_64-linux".default.extend {
+    plugins.colorschemes.base16 = lib.mkDefault config.stylix.base16Scheme;
+  };
 in {
   environment.systemPackages = with pkgs; [
     #tools
