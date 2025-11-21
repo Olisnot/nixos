@@ -90,6 +90,25 @@ let
     Catppuccin = "${inputs.wallpapers}/catppuccin.jpg";
     TokyoNight = "${inputs.wallpapers}/tokyo.png";
   };
+
+  themeCursor = {
+    Nord = {
+      package = pkgs.capitaine-cursors-themed;
+      name = "Capitaine Nord";
+    };
+    Gruvbox = {
+      package = pkgs.capitaine-cursors-themed;
+      name = "Capitaine Gruvbox";
+    };
+    Catppuccin = {
+      package = pkgs.catppuccin-cursors;
+      name = "Catppuccin frappe DARK";
+    };
+    TokyoNight = {
+      package = pkgs.capitaine-cursors-themed;
+      name = "Capitaine Palenight";
+    };
+  };
 in {
   options = {
     theme = lib.mkOption {
@@ -131,8 +150,8 @@ in {
       };
 
       cursor = {
-        package = pkgs.nordzy-cursor-theme;
-        name = "Nordzy-cursors-lefthand";
+        package = themeCursor.package;
+        name = themeCursor.name;
         size = 24;
       };
 

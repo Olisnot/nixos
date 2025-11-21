@@ -1,6 +1,14 @@
-{ pkgs, lib, inputs, ... }:
+{ pkgs, lib, inputs, config, ... }:
 
-{
+let
+  theme = config.theme;
+  themeWallpaper = {
+    Nord = "${inputs.wallpapers}/nord.jpg";
+    Gruvbox = "${inputs.wallpapers}/gruvbox.jpg";
+    Catppuccin = "${inputs.wallpapers}/catppuccin.jpg";
+    TokyoNight = "${inputs.wallpapers}/tokyo.png";
+  };
+in {
   # Bootloader.
   boot = {
     kernelPackages = pkgs.linuxPackages_latest;
@@ -23,7 +31,7 @@
             comment: Boot Gentoo Linux!
         '';
 
-        style = { wallpapers = [ "${inputs.wallpapers}/nord.jpg" ]; };
+        style = { wallpapers = [ themeWallpaper.${theme} ]; };
       };
 
       efi.canTouchEfiVariables = true;
