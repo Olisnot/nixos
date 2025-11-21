@@ -609,11 +609,11 @@
     "wallpapers": {
       "flake": false,
       "locked": {
-        "lastModified": 1761580178,
-        "narHash": "sha256-OL+dVLfhKr6R7nC8+fOwaj9zjKMmw9OhFlc4AUgfSf0=",
+        "lastModified": 1763756349,
+        "narHash": "sha256-JifdhtWf4R0b7+T7dAjhIyOARzoDvV/0QvA12XgCgj0=",
         "owner": "olmods",
         "repo": "wallpapers",
-        "rev": "5c0d8fb1ff597bf417ea04911eafe32d176e3de9",
+        "rev": "8fa69fc07aa6f2b6ec09057a1ad6cdcd38b92846",
         "type": "github"
       },
       "original": {
