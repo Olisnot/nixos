@@ -2,7 +2,7 @@
 
 let
   nvim = inputs.nixvim.packages."x86_64-linux".default.extend {
-    colorschemes.base16.colorscheme = lib.mkDefault config.stylix.base16Scheme;
+    colorschemes.base16.colorscheme = lib.mkOverride config.stylix.base16Scheme;
   };
 in {
   environment.systemPackages = with pkgs; [
