@@ -22,6 +22,8 @@
   fish.enable = true;
   syncthing.enable = true;
 
+  theme = "Gruvbox";
+
   #Nix settings
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nix.settings.auto-optimise-store = true;
