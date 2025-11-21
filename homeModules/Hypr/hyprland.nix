@@ -96,8 +96,6 @@
           touchpad = { natural_scroll = false; };
         };
 
-        gestures = { workspace_swipe = false; };
-
         device = {
           name = "epic-mouse-v1";
           sensitivity = -0.5;
