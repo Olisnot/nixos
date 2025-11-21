@@ -1,7 +1,7 @@
 { pkgs, inputs, config, lib, types, ... }:
 
 let
-  theme = config.stylix.theme;
+  theme = config.theme;
 
   base16Theme = {
     Nord = {
@@ -90,7 +90,7 @@ let
   };
 in {
   options = {
-    stylix.theme = lib.mkOption {
+    theme = lib.mkOption {
       type = types.enum [ "Nord" "Gruvbox" "Catppuccin" "TokyoNight" ];
       default = "Nord";
       description = "Select a theme";
