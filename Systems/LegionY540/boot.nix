@@ -23,7 +23,7 @@
             comment: Boot Gentoo Linux!
         '';
 
-        style = { wallpapers = [ "${inputs.wallpapers}/11356529.jpg" ]; };
+        style = { wallpapers = [ "${inputs.wallpapers}/nord.jpg" ]; };
       };
 
       efi.canTouchEfiVariables = true;
