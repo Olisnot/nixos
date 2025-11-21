@@ -22,7 +22,7 @@
   fish.enable = true;
   syncthing.enable = true;
 
-  theme = "Gruvbox";
+  theme = "TokyoNight";
 
   #Nix settings
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
