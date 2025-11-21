@@ -94,11 +94,11 @@ let
   themeCursor = {
     Nord = {
       package = pkgs.capitaine-cursors-themed;
-      name = "Capitaine Nord";
+      name = "Capitaine Cursors (Nord)";
     };
     Gruvbox = {
       package = pkgs.capitaine-cursors-themed;
-      name = "Capitaine Gruvbox";
+      name = "Capitaine Cursors (Gruvbox)";
     };
     Catppuccin = {
       package = pkgs.catppuccin-cursors;
@@ -106,7 +106,7 @@ let
     };
     TokyoNight = {
       package = pkgs.capitaine-cursors-themed;
-      name = "Capitaine Palenight";
+      name = "Capitaine Cursors (Palenight)";
     };
   };
 in {
