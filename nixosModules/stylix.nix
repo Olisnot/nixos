@@ -150,8 +150,8 @@ in {
       };
 
       cursor = {
-        package = themeCursor.package;
-        name = themeCursor.name;
+        package = themeCursor.${theme}.package;
+        name = themeCursor.${theme}.name;
         size = 24;
       };
 
