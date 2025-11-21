@@ -22,8 +22,6 @@
   fish.enable = true;
   syncthing.enable = true;
 
-  theme = "TokyoNight";
-
   #Nix settings
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nix.settings.auto-optimise-store = true;
