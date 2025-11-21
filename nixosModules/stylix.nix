@@ -97,42 +97,44 @@ in {
     };
   };
 
-  stylix = {
-    enable = true;
-    image = themeWallpaper.${theme};
-    polarity = "dark";
-    base16Scheme = base16Theme.${theme};
+  config = {
+    stylix = {
+      enable = true;
+      image = themeWallpaper.${theme};
+      polarity = "dark";
+      base16Scheme = base16Theme.${theme};
 
-    fonts = {
-      serif = {
-        package = pkgs.dejavu_fonts;
-        name = "DejaVu Serif";
+      fonts = {
+        serif = {
+          package = pkgs.dejavu_fonts;
+          name = "DejaVu Serif";
+        };
+
+        sansSerif = {
+          package = pkgs.dejavu_fonts;
+          name = "DejaVu Serif";
+        };
+
+        monospace = {
+          package = pkgs.fira-code;
+          name = "FiraCode Nerd Font Propo";
+        };
+
+        sizes = {
+          applications = 10;
+          terminal = 10;
+          desktop = 10;
+          popups = 10;
+        };
       };
 
-      sansSerif = {
-        package = pkgs.dejavu_fonts;
-        name = "DejaVu Serif";
+      cursor = {
+        package = pkgs.nordzy-cursor-theme;
+        name = "Nordzy-cursors-lefthand";
+        size = 24;
       };
 
-      monospace = {
-        package = pkgs.fira-code;
-        name = "FiraCode Nerd Font Propo";
-      };
-
-      sizes = {
-        applications = 10;
-        terminal = 10;
-        desktop = 10;
-        popups = 10;
-      };
+      targets.plymouth.enable = false;
     };
-
-    cursor = {
-      package = pkgs.nordzy-cursor-theme;
-      name = "Nordzy-cursors-lefthand";
-      size = 24;
-    };
-
-    targets.plymouth.enable = false;
   };
 }
