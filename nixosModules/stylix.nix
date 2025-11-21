@@ -1,6 +1,8 @@
 { pkgs, inputs, config, lib, ... }:
 
 let
+  inherit (lib) mkOption types;
+
   theme = config.theme;
 
   base16Theme = {
