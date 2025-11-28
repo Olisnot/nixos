@@ -18,5 +18,6 @@
     localsend
     yazi
     imagemagick
+    vesktop
   ];
 }
