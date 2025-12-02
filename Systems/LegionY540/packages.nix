@@ -26,6 +26,8 @@ in {
     eza
     zoxide
     nvim
+    filen-cli
+    filen-desktop
 
     #Utils
     uutils-coreutils-noprefix
