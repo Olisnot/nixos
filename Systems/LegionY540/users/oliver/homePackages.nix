@@ -8,6 +8,7 @@
     nicotine-plus
     lollypop
     picard
+    youtube-music
     #Tools
     gimp3
     keymapp
