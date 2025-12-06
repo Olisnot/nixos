@@ -9,7 +9,7 @@
     modules-center = [ "hyprland/workspaces" ];
     modules-right = [ "tray" "clock" ];
 
-    "hyprland/workspaces" = {
+    "niri/workspaces" = {
       format = "{icon}";
       on-click = "activate";
       format-icons = {
