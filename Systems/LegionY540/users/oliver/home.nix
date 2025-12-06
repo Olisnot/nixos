@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   imports = [
@@ -38,7 +38,15 @@
   niri.config.enable = true;
 
   home.sessionVariables = { EDITOR = "nvim"; };
-  stylix.targets.waybar.enable = false;
+
+  stylix = {
+    targets.waybar.enable = false;
+    iconTheme = {
+      enable = true;
+      package = pkgs.whitesur-icon-theme;
+      dark = "WhiteSur";
+    };
+  };
 
   nixpkgs.config.allowUnfree = true;
 
