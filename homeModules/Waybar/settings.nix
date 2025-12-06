@@ -6,18 +6,16 @@
     position = "top";
     height = 1;
     modules-left = [ "custom/nixos" ];
-    modules-center = [ "hyprland/workspaces" ];
+    modules-center = [ "niri/workspaces" ];
     modules-right = [ "tray" "clock" ];
 
     "niri/workspaces" = {
-      "format" = "{icon}";
-      "format-icons" = {
-        "browser" = "";
-        "discord" = "";
-        "chat" = "<b></b>";
-
+      format = "{icon}";
+      on-click = "activate";
+      format-icons = {
         "active" = "";
         "default" = "";
+        "browser" = "a";
       };
     };
 
