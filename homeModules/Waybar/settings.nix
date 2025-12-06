@@ -10,12 +10,14 @@
     modules-right = [ "tray" "clock" ];
 
     "niri/workspaces" = {
-      format = "{icon}";
-      on-click = "activate";
-      format-icons = {
+      "format" = "{icon}";
+      "format-icons" = {
+        "browser" = "";
+        "discord" = "";
+        "chat" = "<b></b>";
+
         "active" = "";
         "default" = "";
-        "browser" = "a";
       };
     };
 
