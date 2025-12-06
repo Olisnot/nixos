@@ -157,9 +157,8 @@ in {
 
       icons = {
         enable = true;
-        package = pkgs.arashi;
-        dark = "Arashi";
-        light = "Arashi";
+        package = pkgs.whitesur-icon-theme;
+        dark = "WhiteSur";
       };
 
       targets.plymouth.enable = false;
