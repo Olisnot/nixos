@@ -142,14 +142,14 @@
   # Enable Hyprland
   # hyprland.enable = true;
 
-  river.enable = true;
+  programs.niri.enable = true;
   services.displayManager = {
     sddm = {
       enable = true;
       autoLogin.relogin = true;
       wayland.enable = true;
     };
-    defaultSession = "river";
+    defaultSession = "niri";
     autoLogin.enable = true;
     autoLogin.user = "oliver";
   };

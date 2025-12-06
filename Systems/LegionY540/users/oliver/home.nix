@@ -35,6 +35,7 @@
   # hyprlockConfig.enable = true;
   wofi.enable = true;
   btop.enable = true;
+  niri.config.enable = true;
 
   home.sessionVariables = { EDITOR = "nvim"; };
   stylix.targets.waybar.enable = false;

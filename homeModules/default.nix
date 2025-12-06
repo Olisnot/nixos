@@ -18,5 +18,6 @@
     ./foot.nix
     ./waypaper.nix
     ./dunst.nix
+    ./niri.nix
   ];
 }

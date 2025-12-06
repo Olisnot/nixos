@@ -10,6 +10,5 @@
     ./syncthing.nix
     ./stylix.nix
     ./hyprland.nix
-    ./river.nix
   ];
 }
