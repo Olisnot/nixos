@@ -1,4 +1,4 @@
-{ lib, config, ... }:
+{ lib, config, pkgs, ... }:
 
 let colors = config.lib.stylix.colors.withHashtag;
 in {
@@ -132,7 +132,7 @@ in {
             Mod+Shift+Slash { show-hotkey-overlay; }
 
             Mod+return { spawn "foot"; }
-            Mod+Space { spawn "anyrun"; }
+            Mod+Space { spawn "wofi" "--show" "drun" "-a" "--prompt" "select"; }
             Super+Alt+L { spawn "gtklock"; }
 
             XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }
@@ -277,6 +277,7 @@ in {
         }
       '';
     };
+    home.packages = [ pkgs.xwayland-satellite ];
   };
 }
 
