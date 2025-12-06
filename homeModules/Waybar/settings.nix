@@ -15,8 +15,14 @@
       format-icons = {
         "active" = "";
         "default" = "";
-        "browser" = "a";
+        "media" = "";
+        "browser" = "";
+        "terminal" = "";
+        "gaming" = "󰊴";
+        "social" = "";
       };
+      "sort-by-number" = true;
+      "current-only" = true;
     };
 
     clock = {
