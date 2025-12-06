@@ -137,21 +137,19 @@
     xdg-desktop-portal-gtk
     xdg-desktop-portal-wlr
     # xdg-desktop-portal-hyprland
-    xdg-desktop-portal-cosmic
   ];
 
   # Enable Hyprland
   # hyprland.enable = true;
 
-  #Enable Cosmic
-  cosmic.enable = true;
+  river.enable = true;
   services.displayManager = {
     sddm = {
       enable = true;
       autoLogin.relogin = true;
       wayland.enable = true;
     };
-    defaultSession = "cosmic";
+    defaultSession = "river";
     autoLogin.enable = true;
     autoLogin.user = "oliver";
   };

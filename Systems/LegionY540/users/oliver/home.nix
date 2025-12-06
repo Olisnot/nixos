@@ -27,14 +27,13 @@
   starship.enable = true;
   gaming = { mangohud.enable = true; };
   tmux.enable = true;
-  ghostty.enable = true;
   foot.enable = true;
   waypaper.enable = true;
-  # waybarConfig.enable = true;
-  # dunst.enable = true;
+  waybarConfig.enable = true;
+  dunst.enable = true;
   # hyprlandConfig.enable = true;
   # hyprlockConfig.enable = true;
-  # # wofi.enable = true;
+  wofi.enable = true;
   btop.enable = true;
 
   home.sessionVariables = { EDITOR = "nvim"; };

@@ -10,6 +10,6 @@
     ./syncthing.nix
     ./stylix.nix
     ./hyprland.nix
-    ./cosmic.nix
+    ./river.nix
   ];
 }

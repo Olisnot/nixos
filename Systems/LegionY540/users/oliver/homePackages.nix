@@ -20,5 +20,6 @@
     yazi
     imagemagick
     vesktop
+    alacritty
   ];
 }
