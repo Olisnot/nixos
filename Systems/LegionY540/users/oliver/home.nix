@@ -4,7 +4,6 @@
   imports = [
     ../../../../homeModules
     ./homePackages.nix
-    ./stylix.nix
     ./virt-manager.nix
     ./fishAliases.nix
   ];
@@ -31,14 +30,15 @@
   ghostty.enable = true;
   foot.enable = true;
   waypaper.enable = true;
-  waybarConfig.enable = true;
-  dunst.enable = true;
-  hyprlandConfig.enable = true;
-  hyprlockConfig.enable = true;
-  wofi.enable = true;
+  # waybarConfig.enable = true;
+  # dunst.enable = true;
+  # hyprlandConfig.enable = true;
+  # hyprlockConfig.enable = true;
+  # # wofi.enable = true;
   btop.enable = true;
 
   home.sessionVariables = { EDITOR = "nvim"; };
+  stylix.targets.waybar.enable = false;
 
   nixpkgs.config.allowUnfree = true;
 

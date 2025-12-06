@@ -155,6 +155,13 @@ in {
         size = 24;
       };
 
+      icons = {
+        enable = true;
+        package = pkgs.arashi;
+        dark = "Arashi";
+        light = "Arashi";
+      };
+
       targets.plymouth.enable = false;
     };
   };
