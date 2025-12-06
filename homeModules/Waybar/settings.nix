@@ -19,10 +19,9 @@
         "browser" = "";
         "terminal" = "";
         "gaming" = "󰊴";
-        "social" = "";
+        "social" = "";
       };
       "sort-by-number" = true;
-      "current-only" = true;
     };
 
     clock = {
