@@ -17,7 +17,6 @@
         "default" = "";
         "browser" = "a";
       };
-      "sort-by-number" = true;
     };
 
     clock = {
