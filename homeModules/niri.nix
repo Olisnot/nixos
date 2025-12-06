@@ -13,12 +13,8 @@
         workspace "media"
         workspace "browser"
         workspace "terminal"
-        workspace "obsidian"
-        workspace "gaming"
         workspace "social"
-        workspace "extern-monitor" {
-                open-on-output "HDMI-A-1"
-        }
+        workspace "gaming"
 
         input {
             keyboard {
@@ -218,13 +214,13 @@
             Mod+1 { focus-workspace "media"; }
             Mod+2 { focus-workspace "browser"; }
             Mod+3 { focus-workspace "terminal"; }
-            Mod+4 { focus-workspace "obsidian"; }
+            Mod+4 { focus-workspace "social"; }
             Mod+5 { focus-workspace "gaming"; }
-            Mod+6 { focus-workspace  "social"; }
+            Mod+6 { focus-workspace 6; }
             Mod+7 { focus-workspace 7; }
             Mod+8 { focus-workspace 8; }
             Mod+9 { focus-workspace 9; }
-            Mod+0 { focus-workspace "extern-monitor"; }
+            Mod+0 { focus-workspace 10; }
             Mod+Shift+1 { move-column-to-workspace "media"; }
             Mod+Shift+2 { move-column-to-workspace "browser"; }
             Mod+Shift+3 { move-column-to-workspace "terminal"; }
