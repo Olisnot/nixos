@@ -37,6 +37,7 @@ in {
 
     #General
     nautilus
+    arashi
 
     #Coding
     git
