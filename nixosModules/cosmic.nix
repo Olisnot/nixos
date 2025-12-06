@@ -1,4 +1,4 @@
-{ config, lib, ... }:
+{ config, lib, pkgs, ... }:
 
 {
   options.cosmic.enable =
@@ -6,5 +6,11 @@
 
   config = lib.mkIf config.cosmic.enable {
     services.desktopManager.cosmic.enable = true;
+    environment.cosmic.excludePackages = with pkgs; [
+      cosmic-player
+      cosmic-edit
+      cosmic-icons
+      cosmic-term
+    ];
   };
 }
