@@ -154,6 +154,8 @@
     autoLogin.user = "oliver";
   };
 
+  gtklock.enable = true;
+
   # Set Laptop lid
   services.logind.settings.Login.HandleLidSwitchExternalPower = "ignore";
 

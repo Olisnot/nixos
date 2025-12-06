@@ -10,5 +10,6 @@
     ./syncthing.nix
     ./stylix.nix
     ./hyprland.nix
+    ./gtklock.nix
   ];
 }
