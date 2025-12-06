@@ -1,6 +1,7 @@
 { lib, config, ... }:
 
-{
+let colors = config.lib.stylix.colors.withHashtag;
+in {
   options = {
     niri.config.enable = lib.mkEnableOption "enable niri configuration";
   };
@@ -74,8 +75,8 @@
             border {
                 off
                 width 4
-                active-color "#ffc87f"
-                inactive-color "#505050"
+                active-color "${colors.base01}"
+                inactive-color "${colors.base00}"
             }
 
             shadow {
