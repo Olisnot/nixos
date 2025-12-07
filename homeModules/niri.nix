@@ -111,14 +111,9 @@ in {
             open-maximized true
         }
 
-        // Browser rules
-        window-rule {
-            match app-id=r#"chromium$"#
-            open-on-workspace "browser"
-        }
-
         window-rule {
             match app-id=r#"chromium$"# at-startup=true
+            default-column-width {}
             open-on-workspace "browser"
             open-maximized true
         }
