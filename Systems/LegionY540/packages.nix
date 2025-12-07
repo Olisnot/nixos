@@ -27,6 +27,7 @@ in {
     zoxide
     nvim
     filen-cli
+    godot
 
     #Utils
     uutils-coreutils-noprefix
