@@ -23,6 +23,13 @@
       flake = false;
     };
 
+    elephant.url = "github:abenz1267/elephant";
+
+    walker = {
+      url = "github:abenz1267/walker";
+      inputs.elephant.follows = "elephant";
+    };
+
     minimal-tmux = {
       url = "github:niksingh710/minimal-tmux-status";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -47,6 +54,7 @@
             ({ ... }: { nixpkgs.overlays = [ overlay-stable ]; })
             inputs.home-manager.nixosModules.default
             inputs.stylix.nixosModules.stylix
+            inputs.walker.homeManagerModules.default
           ];
         };
       };
