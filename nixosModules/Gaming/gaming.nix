@@ -17,6 +17,8 @@
       protonup-qt
       mangohud
       vulkan-tools
+      lsfg-vk
+      lsfg-vk-ui
     ];
   };
 }
