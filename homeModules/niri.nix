@@ -92,7 +92,6 @@ in {
 
         spawn-at-startup "swww-daemon"
         spawn-at-startup "xwayland-satellite"
-        spawn-at-startup "filen" "mount" "~/filen/"
         spawn-at-startup "waybar"
         spawn-at-startup "chromium"
         spawn-at-startup "foot"
