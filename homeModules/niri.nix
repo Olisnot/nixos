@@ -92,6 +92,7 @@ in {
 
         spawn-at-startup "swww-daemon"
         spawn-at-startup "xwayland-satellite"
+        spawn-at-startup "filen mount ~/filen/"
         spawn-at-startup "waybar"
         spawn-at-startup "chromium"
         spawn-at-startup "foot"
@@ -132,6 +133,7 @@ in {
 
             Mod+return { spawn "foot"; }
             Mod+Space { spawn "wofi" "--show" "drun" "-a" "--prompt" "select"; }
+            Mod+Alt+Space { spawn "power_menu" }
             Super+Alt+L { spawn "gtklock"; }
 
             XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }
