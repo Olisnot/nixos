@@ -19,6 +19,7 @@
       vulkan-tools
       lsfg-vk
       lsfg-vk-ui
+      ludusavi
     ];
   };
 }

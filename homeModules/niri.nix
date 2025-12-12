@@ -132,7 +132,6 @@ in {
 
             Mod+return { spawn "foot"; }
             Mod+Space { spawn "wofi" "--show" "drun" "-a" "--prompt" "select"; }
-            Mod+Alt+Space { spawn "power_menu" }
             Super+Alt+L { spawn "gtklock"; }
 
             XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }
@@ -225,9 +224,9 @@ in {
             Mod+Shift+1 { move-column-to-workspace "media"; }
             Mod+Shift+2 { move-column-to-workspace "browser"; }
             Mod+Shift+3 { move-column-to-workspace "terminal"; }
-            Mod+Shift+4 { move-column-to-workspace "obsidian"; }
+            Mod+Shift+4 { move-column-to-workspace  "social"; }
             Mod+Shift+5 { move-column-to-workspace "gaming"; }
-            Mod+Shift+6 { move-column-to-workspace  "social"; }
+            Mod+Shift+6 { move-column-to-workspace 6; }
             Mod+Shift+7 { move-column-to-workspace 7; }
             Mod+Shift+8 { move-column-to-workspace 8; }
             Mod+Shift+9 { move-column-to-workspace 9; }
