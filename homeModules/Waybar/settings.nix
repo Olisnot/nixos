@@ -32,6 +32,7 @@
 
     "niri/window" = {
       format = "{title}";
+      icon = true;
     };
 
     "custom/nixos" = {
