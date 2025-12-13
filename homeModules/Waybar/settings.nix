@@ -6,7 +6,7 @@
     position = "top";
     height = 1;
     modules-left = [ "custom/nixos" "mpris" ];
-    modules-center = [];
+    modules-center = [ "niri/window" ];
     modules-right = [ "tray" "clock" ];
 
     clock = {
@@ -28,6 +28,10 @@
         paused = "⏸";
         playing = "▶";
       };
+    };
+
+    "niri/window" = {
+      format = "{title}";
     };
 
     "custom/nixos" = {
