@@ -11,8 +11,7 @@ in {
       background: ${colors.base00};
     }
 
-    .modules-left,
-    .modules-right {
+    .modules-left {
       padding-right: 10px;
       padding-left: 10px;
     }
@@ -24,6 +23,7 @@ in {
       padding-left: 10px;
     }
 
+    .modules-right,
     #mpris,
     #window {
       background: ${colors.base01};
