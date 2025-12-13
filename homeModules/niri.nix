@@ -124,14 +124,14 @@ in {
         }
 
         window-rule {
-            match app-id=r#"chromium$"# at-startup=true
+            match app-id=r#"Chromium$"# at-startup=true
             default-column-width {}
             open-on-workspace "2"
             open-maximized true
         }
 
         window-rule {
-            match app-id=r#"chromium$"# title="^Picture-in-Picture$"
+            match app-id=r#"Chromium$"# title="^Picture-in-Picture$"
             open-floating true
         }
 
