@@ -92,6 +92,8 @@ in {
 
         spawn-at-startup "swww-daemon"
         spawn-at-startup "xwayland-satellite"
+        spawn-at-startup "swayidle" "-w" "timeout" "600" "'systemctl suspend'" "before-sleep" "'gtklock'"
+
         spawn-at-startup "waybar"
         spawn-at-startup "chromium"
         spawn-at-startup "foot"
@@ -276,7 +278,7 @@ in {
         }
       '';
     };
-    home.packages = with pkgs; [ xwayland-satellite ];
+    home.packages = with pkgs; [ xwayland-satellite swayidle ];
   };
 }
 
