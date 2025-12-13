@@ -19,12 +19,12 @@ in {
 
     #clock,
     #tray,
-    #mpris,
     #custom-nixos {
       padding-right: 10px;
       padding-left: 10px;
     }
 
+    #mpris,
     #window {
       background: ${colors.base01};
       border-radius: 1rem;
