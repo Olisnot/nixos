@@ -32,6 +32,11 @@ in {
       padding-left: 10px;
     }
 
+    #workspaces button {
+      padding-left: 1px;
+      padding-right: 1px;
+    }
+
 
     #custom-nixos {
       font-size: 14px;
