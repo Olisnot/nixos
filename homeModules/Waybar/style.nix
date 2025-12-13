@@ -25,6 +25,9 @@ in {
       padding-left: 10px;
     }
 
+    #window {
+      background: ${colors.base01};
+    }
 
     #custom-nixos {
       font-size: 14px;
