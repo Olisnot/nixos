@@ -38,6 +38,7 @@ in {
 
     #workspaces button.active {
       font-size: 16px;
+      transform: scale(2, 1);
     }
 
 
