@@ -19,6 +19,8 @@ in {
 
     #workspaces {
       font-size: 8px;
+      background: ${colors.base01};
+      border-radius: 1rem;
     }
 
     #clock {
