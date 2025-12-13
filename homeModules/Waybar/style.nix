@@ -17,12 +17,6 @@ in {
       padding-left: 10px;
     }
 
-    #workspaces {
-      font-size: 8px;
-      background: ${colors.base01};
-      border-radius: 1rem;
-    }
-
     #clock,
     #tray,
     #mpd,
@@ -30,20 +24,6 @@ in {
       padding-right: 10px;
       padding-left: 10px;
     }
-
-    #workspaces button {
-      padding-left: 0px;
-      padding-right: 0px;
-    }
-
-    #workspaces button.active {
-      background: ${colors.base06};
-      border-top: 10px;
-      border-bottom: 10px;
-      padding-left: 20px;
-      padding-right: 20px;
-    }
-
 
     #custom-nixos {
       font-size: 14px;

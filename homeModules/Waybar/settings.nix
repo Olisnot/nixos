@@ -6,18 +6,8 @@
     position = "top";
     height = 1;
     modules-left = [ "custom/nixos" ];
-    modules-center = [ "niri/workspaces" ];
+    modules-center = [];
     modules-right = [ "tray" "clock" ];
-
-    "niri/workspaces" = {
-      format = "{icon}";
-      on-click = "activate";
-      format-icons = {
-        "default" = "";
-        "active"= " ";
-      };
-      "sort-by-number" = true;
-    };
 
     clock = {
       format = "{:%a %b %d %I:%M%p}";
