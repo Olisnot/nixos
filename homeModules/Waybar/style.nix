@@ -34,8 +34,8 @@ in {
       padding-right: 5px;
     }
 
-    window#waybar.empty {
-      background: ${colors.base00};
+    window#waybar.empty #window {
+      background-color: transparent;
     }
 
     #custom-nixos {
