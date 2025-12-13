@@ -11,20 +11,20 @@ in {
       background: ${colors.base00};
     }
 
+    .modules-right,
     .modules-left {
       padding-right: 10px;
       padding-left: 10px;
     }
 
-    #clock,
-    #tray,
     #custom-nixos {
       padding-right: 10px;
       padding-left: 10px;
     }
 
-    .modules-right,
     #mpris,
+    #tray,
+    #clock,
     #window {
       background: ${colors.base01};
       border-radius: 1rem;
