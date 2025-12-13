@@ -27,6 +27,7 @@ in {
 
     #window {
       background: ${colors.base01};
+      border-radius: 1rem;
     }
 
     #custom-nixos {
