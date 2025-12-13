@@ -21,6 +21,7 @@
 
     mpris = {
       format = "{status_icon} {title}";
+      title-len = 30;
       player-icons = {
         default = "▶";
       };
