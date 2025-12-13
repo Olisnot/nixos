@@ -38,7 +38,7 @@ in {
 
     #workspaces button.active {
       background: ${colors.base06};
-      background-size: 200% 20%;
+      background-size: 50% 120%;
     }
 
 
