@@ -1,7 +1,7 @@
-{ inputs, config, lib, ... }:
+{ config, lib, ... }:
 
 {
-  imports = [ inputs.walker.homeManagerModules.default ./themes.nix ];
+  imports = [ ./themes.nix ];
 
   options.walker.enable =
     lib.mkEnableOption "Enable walker application launcher";
