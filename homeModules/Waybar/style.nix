@@ -23,9 +23,6 @@ in {
       border-radius: 1rem;
     }
 
-    #clock {
-    }
-
     #clock,
     #tray,
     #mpd,
@@ -40,7 +37,7 @@ in {
     }
 
     #workspaces button.active {
-      font-stretch: expanded;
+      font-size: 16px;
     }
 
 
