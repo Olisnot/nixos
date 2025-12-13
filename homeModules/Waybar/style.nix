@@ -34,6 +34,10 @@ in {
       padding-right: 5px;
     }
 
+    window#waybar.empty {
+      background: ${colors.base00};
+    }
+
     #custom-nixos {
       font-size: 14px;
     }
