@@ -33,8 +33,8 @@ in {
     }
 
     #workspaces button {
-      padding-left: 1px;
-      padding-right: 1px;
+      padding-left: 0px;
+      padding-right: 0px;
     }
 
 
