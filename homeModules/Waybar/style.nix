@@ -39,6 +39,11 @@ in {
       padding-right: 0px;
     }
 
+    #workspaces button.active {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+
 
     #custom-nixos {
       font-size: 14px;
