@@ -37,8 +37,9 @@ in {
     }
 
     #workspaces button.active {
-      font-size: 16px;
-      transform: scale(2, 1);
+      background: ${colors.base06};
+      margin-right: 20px;
+      margin-left: 20px;
     }
 
 
