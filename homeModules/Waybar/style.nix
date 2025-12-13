@@ -38,7 +38,10 @@ in {
 
     #workspaces button.active {
       background: ${colors.base06};
-      background-size: 50% 120%;
+      border-top: 10px;
+      border-bottom: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
     }
 
 
