@@ -26,7 +26,7 @@
       };
       status-icons = {
         paused = "⏸";
-        playing = "▶"
+        playing = "▶";
       };
     };
 
