@@ -134,6 +134,7 @@ in {
 
             Mod+return { spawn "foot"; }
             Mod+Space { spawn "wofi" "--show" "drun" "-a" "--prompt" "select"; }
+            Super+Alt+Space { spawn "power_menu"; }
             Super+Alt+L { spawn "gtklock"; }
 
             XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }
