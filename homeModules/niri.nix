@@ -11,11 +11,8 @@ in {
       enable = true;
       target = "/home/oliver/.config/niri/config.kdl";
       text = ''
-        workspace "media"
         workspace "browser"
         workspace "terminal"
-        workspace "social"
-        workspace "gaming"
 
         input {
             keyboard {
@@ -215,26 +212,26 @@ in {
             Mod+Ctrl+Shift+WheelScrollDown { move-column-right; }
             Mod+Ctrl+Shift+WheelScrollUp   { move-column-left; }
 
-            Mod+1 { focus-workspace "media"; }
+            Mod+1 { focus-workspace 1; }
             Mod+2 { focus-workspace "browser"; }
             Mod+3 { focus-workspace "terminal"; }
-            Mod+4 { focus-workspace "social"; }
-            Mod+5 { focus-workspace "gaming"; }
+            Mod+4 { focus-workspace 4; }
+            Mod+5 { focus-workspace 5; }
             Mod+6 { focus-workspace 6; }
             Mod+7 { focus-workspace 7; }
             Mod+8 { focus-workspace 8; }
             Mod+9 { focus-workspace 9; }
             Mod+0 { focus-workspace 10; }
-            Mod+Shift+1 { move-column-to-workspace "media"; }
+            Mod+Shift+1 { move-column-to-workspace 1; }
             Mod+Shift+2 { move-column-to-workspace "browser"; }
             Mod+Shift+3 { move-column-to-workspace "terminal"; }
-            Mod+Shift+4 { move-column-to-workspace  "social"; }
-            Mod+Shift+5 { move-column-to-workspace "gaming"; }
+            Mod+Shift+4 { move-column-to-workspace 4; }
+            Mod+Shift+5 { move-column-to-workspace 5; }
             Mod+Shift+6 { move-column-to-workspace 6; }
             Mod+Shift+7 { move-column-to-workspace 7; }
             Mod+Shift+8 { move-column-to-workspace 8; }
             Mod+Shift+9 { move-column-to-workspace 9; }
-            Mod+Shift+0 { move-column-to-workspace "extern-monitor"; }
+            Mod+Shift+0 { move-column-to-workspace 10; }
 
             Mod+BracketLeft  { consume-or-expel-window-left; }
             Mod+BracketRight { consume-or-expel-window-right; }
