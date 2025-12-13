@@ -27,11 +27,11 @@ in {
     #clock,
     #tray,
     #mpd,
-    #custom-nixos,
-    #workspaces {
+    #custom-nixos {
       padding-right: 10px;
       padding-left: 10px;
     }
+
 
     #custom-nixos {
       font-size: 14px;
