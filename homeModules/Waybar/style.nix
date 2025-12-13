@@ -28,7 +28,8 @@ in {
     #window {
       background: ${colors.base01};
       border-radius: 1rem;
-      padding: 5px;
+      padding-left: 5px;
+      padding-right: 5px;
     }
 
     #custom-nixos {
