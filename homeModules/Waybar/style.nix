@@ -42,6 +42,7 @@ in {
     #workspaces button.active {
       padding-left: 5px;
       padding-right: 5px;
+      width: 120%;
     }
 
 
