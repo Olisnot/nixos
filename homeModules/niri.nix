@@ -139,7 +139,7 @@ in {
             Mod+Shift+Slash { show-hotkey-overlay; }
 
             Mod+return { spawn "foot"; }
-            Mod+Space { spawn "wofi" "--show" "drun" "-a" "--prompt" "select"; }
+            Mod+Space { spawn "walker"; }
             Super+Alt+Space { spawn "power_menu"; }
             Super+Alt+L { spawn "gtklock"; }
 
