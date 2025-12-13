@@ -131,7 +131,7 @@ in {
         }
 
         window-rule {
-            match app-id="chromium" title="Picture-in-Picture"
+            match title="Picture-in-Picture"
             open-floating true
         }
 
