@@ -33,6 +33,9 @@
     "niri/window" = {
       format = "{title}";
       icon = true;
+      rewrite = {
+        "(.*) - Chromium" = "Chromium";
+      };
     };
 
     "custom/nixos" = {
