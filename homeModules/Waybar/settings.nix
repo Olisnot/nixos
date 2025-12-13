@@ -14,6 +14,7 @@
       on-click = "activate";
       format-icons = {
         "default" = "";
+        "active"= "";
       };
       "sort-by-number" = true;
     };
