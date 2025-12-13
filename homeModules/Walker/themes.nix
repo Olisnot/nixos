@@ -9,7 +9,7 @@ in {
         style = ''
           @define-color window_bg_color ${colors.base00};
           @define-color accent_bg_color ${colors.base01};
-          @define-color theme_fg_color ${colors.base02};
+          @define-color theme_fg_color ${colors.base06};
           @define-color error_bg_color ${colors.base03};
           @define-color error_fg_color ${colors.base08};
 
