@@ -13,13 +13,8 @@
       format = "{icon}";
       on-click = "activate";
       format-icons = {
-        "active" = "";
-        "default" = "";
-        "media" = "";
-        "browser" = "";
-        "terminal" = "";
-        "gaming" = "󰊴";
-        "social" = "";
+        "active" = "";
+        "default" = "|";
       };
       "sort-by-number" = true;
     };
