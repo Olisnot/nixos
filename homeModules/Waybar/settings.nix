@@ -27,7 +27,6 @@
       status-icons = {
         paused = "⏸";
       };
-      ignored-players = ["chromium"];
     };
 
     "custom/nixos" = {
