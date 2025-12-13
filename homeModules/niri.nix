@@ -93,6 +93,7 @@ in {
         spawn-at-startup "swww-daemon"
         spawn-at-startup "xwayland-satellite"
         spawn-at-startup "swayidle" "-w" "timeout" "600" "'systemctl suspend'" "before-sleep" "'gtklock'"
+        spawn-at-startup "filen" "mount" "~/filen/"
 
         spawn-at-startup "waybar"
         spawn-at-startup "chromium"
