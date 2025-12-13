@@ -13,8 +13,7 @@
       format = "{icon}";
       on-click = "activate";
       format-icons = {
-        "active" = "";
-        "default" = "|";
+        "default" = "";
       };
       "sort-by-number" = true;
     };
