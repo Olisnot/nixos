@@ -5,7 +5,7 @@
     layer = "top";
     position = "top";
     height = 1;
-    modules-left = [ "custom/nixos" ];
+    modules-left = [ "custom/nixos" "mpris" ];
     modules-center = [];
     modules-right = [ "tray" "clock" ];
 
@@ -17,6 +17,17 @@
     tray = {
       icon-size = 12;
       spacing = 8;
+    };
+
+    mpris = {
+      format = "{status_icon} {title}";
+      player-icons = {
+        default = "▶";
+      };
+      status-icons = {
+        paused = "⏸";
+      };
+      ignored-players = ["chromium"];
     };
 
     "custom/nixos" = {
