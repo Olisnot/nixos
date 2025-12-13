@@ -36,6 +36,7 @@
       icon = true;
       rewrite = {
         "(.*) - Chromium" = "Chromium";
+        "(.*) - YouTube Music" = "YouTube Music";
       };
     };
 
