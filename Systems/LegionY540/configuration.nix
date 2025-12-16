@@ -163,7 +163,7 @@
   services.printing.enable = true;
 
   # Enable Bluetooth
-  # bluetooth.enable = true;
+  bluetooth.enable = true;
 
   # programs.kdeconnect.enable = true;
 
