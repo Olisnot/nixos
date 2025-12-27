@@ -23,6 +23,7 @@
   bash.enable = true;
   fish.enable = true;
   chromium.enable = true;
+  librewolf.enable = true;
   fastfetch.enable = true;
   starship.enable = true;
   gaming = { mangohud.enable = true; };

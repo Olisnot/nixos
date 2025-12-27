@@ -11,6 +11,7 @@
     ./tmux.nix
     ./btop.nix
     ./chromium.nix
+    ./librewolf.nix
     ./fastfetch.nix
     ./starship.nix
     ./git.nix

@@ -20,6 +20,5 @@
     yazi
     imagemagick
     vesktop
-    librewolf-bin
   ];
 }
