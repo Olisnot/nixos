@@ -8,13 +8,12 @@
       enable = true;
       package = pkgs.librewolf-bin;
       profiles."default" = {
+        name = "default";
+        id = 0;
         extensions = {
           packages = with pkgs.nur.repos.rycee.firefox-addons; [
-            vimium
             bitwarden
-            youtube-recommended-videos
-            libredirect
-            proton-vpn
+            vimium
           ];
         };
       };
