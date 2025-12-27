@@ -20,6 +20,6 @@
     yazi
     imagemagick
     vesktop
-    alacritty
+    librewolf-bin
   ];
 }
