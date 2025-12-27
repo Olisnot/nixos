@@ -19,7 +19,11 @@
             proton-vpn
           ];
         };
-        settings = { "extensions.autoDisableScopes" = 0; };
+        settings = {
+          "extensions.autoDisableScopes" = 0;
+          "sidebar.verticalTabs" = true;
+          "sidebar.verticalTabs.dragToPinPromo.dismissed" = true;
+        };
       };
     };
 
