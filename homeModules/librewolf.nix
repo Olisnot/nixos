@@ -8,5 +8,10 @@
       enable = true;
       package = pkgs.librewolf-bin;
     };
+
+    stylix.targets.librewolf = {
+      enable = true;
+      profileNames = [ "default" ];
+    };
   };
 }
