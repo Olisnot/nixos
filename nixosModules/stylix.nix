@@ -127,8 +127,8 @@ in {
 
       fonts = {
         monospace = {
-          package = pkgs.nerd-fonts.zed-mono;
-          name = "ZedMono Nerd Font Propo";
+          package = pkgs.nerd-fonts.jetbrains-mono;
+          name = "JetBrainsMono Nerd Font Propo";
         };
 
         sizes = {
