@@ -18,6 +18,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nur = {
+      url = "github:nix-community/NUR";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     wallpapers = {
       url = "github:olmods/wallpapers";
       flake = false;
@@ -36,7 +41,7 @@
     };
   };
 
-  outputs = { nixpkgsStable, ... }@inputs:
+  outputs = { nixpkgsStable, nur, ... }@inputs:
     let
       system = "x86_64-linux";
       overlay-stable = final: prev: {
@@ -45,13 +50,14 @@
           config.allowUnfree = true;
         };
       };
+      nur-overlay = final: prev: { nur = import nur { inherit system; }; };
     in {
       nixosConfigurations = {
         legiony540 = inputs.nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs; };
           modules = [
             ./Systems/LegionY540/configuration.nix
-            ({ ... }: { nixpkgs.overlays = [ overlay-stable ]; })
+            ({ ... }: { nixpkgs.overlays = [ overlay-stable nur-overlay ]; })
             inputs.home-manager.nixosModules.default
             inputs.stylix.nixosModules.stylix
           ];
