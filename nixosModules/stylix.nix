@@ -126,16 +126,6 @@ in {
       base16Scheme = base16Theme.${theme};
 
       fonts = {
-        serif = {
-          package = pkgs.dejavu_fonts;
-          name = "DejaVu Serif";
-        };
-
-        sansSerif = {
-          package = pkgs.dejavu_fonts;
-          name = "DejaVu Serif";
-        };
-
         monospace = {
           package = pkgs.nerd-fonts.zed-mono;
           name = "ZedMono Nerd Font Mono";
