@@ -50,14 +50,13 @@
           config.allowUnfree = true;
         };
       };
-      nur-overlay = final: prev: { nur = import nur { inherit system; }; };
     in {
       nixosConfigurations = {
         legiony540 = inputs.nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs; };
           modules = [
             ./Systems/LegionY540/configuration.nix
-            ({ ... }: { nixpkgs.overlays = [ overlay-stable nur-overlay ]; })
+            ({ ... }: { nixpkgs.overlays = [ overlay-stable nur.overlay ]; })
             inputs.home-manager.nixosModules.default
             inputs.stylix.nixosModules.stylix
           ];
