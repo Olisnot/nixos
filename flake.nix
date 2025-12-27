@@ -56,7 +56,9 @@
           specialArgs = { inherit inputs; };
           modules = [
             ./Systems/LegionY540/configuration.nix
-            ({ ... }: { nixpkgs.overlays = [ overlay-stable nur.overlay ]; })
+            ({ ... }: {
+              nixpkgs.overlays = [ overlay-stable nur.overlays.default ];
+            })
             inputs.home-manager.nixosModules.default
             inputs.stylix.nixosModules.stylix
           ];
