@@ -137,8 +137,8 @@ in {
         };
 
         monospace = {
-          package = pkgs.fira-code;
-          name = "FiraCode Nerd Font Propo";
+          package = pkgs.nerd-fonts.zed-mono;
+          name = "ZedMono Nerd Font Mono";
         };
 
         sizes = {

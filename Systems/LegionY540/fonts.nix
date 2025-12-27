@@ -1,5 +1,5 @@
 { pkgs, ... }:
 
 {
-  fonts.packages = with pkgs; [ nerd-fonts.zed-mono ];
+  fonts.packages = with pkgs; [ nerd-fonts.zed-mono vegur ];
 }
