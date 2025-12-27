@@ -64,7 +64,7 @@
         };
 
         character = {
-          success_symbol = "[](base06)";
+          success_symbol = "[base06)";
           error_symbol = "[](base08)";
         };
 
