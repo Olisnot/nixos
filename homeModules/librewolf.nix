@@ -14,8 +14,12 @@
           packages = with pkgs.nur.repos.rycee.firefox-addons; [
             bitwarden
             vimium
+            libredirect
+            youtube-recommended-videos
+            proton-vpn
           ];
         };
+        settings = { "extensions.autoDisableScopes" = 0; };
       };
     };
 
