@@ -20,9 +20,21 @@
           ];
         };
         settings = {
+          "browser.toolbars.bookmarks.visibility" = "never";
           "extensions.autoDisableScopes" = 0;
           "sidebar.verticalTabs" = true;
           "sidebar.verticalTabs.dragToPinPromo.dismissed" = true;
+        };
+        search = {
+          default = "ecosia";
+          engines = {
+            ecosia = {
+              name = "ecosia";
+              urls = [{
+                template = "https://www.ecosia.org/search?q={searchTerms}";
+              }];
+            };
+          };
         };
       };
     };
