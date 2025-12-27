@@ -127,18 +127,18 @@ in {
 
       fonts = {
         serif = {
-          package = pkgs.nerd-fonts.zed-mono;
-          name = "Zed Mono";
+          package = pkgs.dejavu_fonts;
+          name = "DejaVu Serif";
         };
 
         sansSerif = {
-          package = pkgs.nerd-fonts.zed-mono;
-          name = "Zed Mono";
+          package = pkgs.dejavu_fonts;
+          name = "DejaVu Serif";
         };
 
         monospace = {
-          package = pkgs.nerd-fonts.zed-mono;
-          name = "Zed Mono";
+          package = pkgs.fira-code;
+          name = "FiraCode Nerd Font Propo";
         };
 
         sizes = {
