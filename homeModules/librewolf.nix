@@ -10,12 +10,12 @@
       profiles."default" = {
         name = "default";
         id = 0;
-        # extensions = {
-        #   packages = with pkgs.nur.repos.rycee.firefox-addons; [
-        #     bitwarden
-        #     vimium
-        #   ];
-        # };
+        extensions = {
+          packages = with pkgs.nur.repos.rycee.firefox-addons; [
+            bitwarden
+            vimium
+          ];
+        };
       };
     };
 
