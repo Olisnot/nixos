@@ -10,6 +10,13 @@
       profiles."default" = {
         name = "default";
         id = 0;
+        settings = {
+          "browser.startup.page" = 3;
+          "browser.toolbars.bookmarks.visibility" = "never";
+          "extensions.autoDisableScopes" = 0;
+          "sidebar.verticalTabs" = true;
+          "sidebar.verticalTabs.dragToPinPromo.dismissed" = true;
+        };
         extensions = {
           packages = with pkgs.nur.repos.rycee.firefox-addons; [
             bitwarden
@@ -18,12 +25,8 @@
             youtube-recommended-videos
             proton-vpn
           ];
-        };
-        settings = {
-          "browser.toolbars.bookmarks.visibility" = "never";
-          "extensions.autoDisableScopes" = 0;
-          "sidebar.verticalTabs" = true;
-          "sidebar.verticalTabs.dragToPinPromo.dismissed" = true;
+
+          settings = { "uBlock0@raymondhill.net".settings = { }; };
         };
         search = {
           default = "ecosia";
