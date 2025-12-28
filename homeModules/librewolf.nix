@@ -16,6 +16,7 @@
           "extensions.autoDisableScopes" = 0;
           "sidebar.verticalTabs" = true;
           "sidebar.verticalTabs.dragToPinPromo.dismissed" = true;
+          "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
         };
         extensions = {
           packages = with pkgs.nur.repos.rycee.firefox-addons; [
@@ -42,12 +43,9 @@
       };
     };
 
-    stylix.targets = {
-      firefox.enable = true;
-      librewolf = {
-        enable = true;
-        profileNames = [ "default" ];
-      };
+    stylix.targets.librewolf = {
+      enable = true;
+      profileNames = [ "default" ];
     };
   };
 }
