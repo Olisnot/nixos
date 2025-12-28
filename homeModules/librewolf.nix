@@ -42,9 +42,12 @@
       };
     };
 
-    stylix.targets.librewolf = {
-      enable = true;
-      profileNames = [ "default" ];
+    stylix.targets = {
+      firefox.enable = true;
+      librewolf = {
+        enable = true;
+        profileNames = [ "default" ];
+      };
     };
   };
 }
