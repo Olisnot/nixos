@@ -42,11 +42,6 @@
       };
     };
 
-    xdg.configFile."librewolf/default/search.json.mozlz4" = {
-      source = ./search.json.mozlz4;
-      force = true;
-    };
-
     stylix.targets.librewolf = {
       enable = true;
       profileNames = [ "default" ];
