@@ -43,6 +43,7 @@
       };
     };
 
+
     stylix.targets.librewolf = {
       enable = true;
       profileNames = [ "default" ];
