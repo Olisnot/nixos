@@ -42,6 +42,7 @@
       };
     };
 
+    xdg.configFile."mimeapps.list".force = true;
 
     stylix.targets.librewolf = {
       enable = true;
