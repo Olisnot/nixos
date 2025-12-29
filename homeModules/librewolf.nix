@@ -6,7 +6,6 @@
   config = lib.mkIf config.librewolf.enable {
     programs.librewolf = {
       enable = true;
-      package = pkgs.librewolf-bin;
       profiles."default" = {
         name = "default";
         id = 0;
