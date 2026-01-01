@@ -35,7 +35,7 @@
       rewrite = {
         "(.*) - Chromium" = "Chromium";
         "(.*) - YouTube Music" = "YouTube Music";
-        "(.*) - LibreWolf" = "LibreWolf";
+        "(.*) LibreWolf" = "LibreWolf";
       };
     };
 
