@@ -22,9 +22,7 @@
     mpris = {
       format = "{status_icon} {title}";
       title-len = 30;
-      player-icons = {
-        default = "▶";
-      };
+      player-icons = { default = "▶"; };
       status-icons = {
         paused = "⏸";
         playing = "▶";
@@ -37,6 +35,7 @@
       rewrite = {
         "(.*) - Chromium" = "Chromium";
         "(.*) - YouTube Music" = "YouTube Music";
+        "(.*) - LibreWolf" = "LibreWolf";
       };
     };
 
