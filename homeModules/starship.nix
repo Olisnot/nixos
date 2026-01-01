@@ -39,14 +39,8 @@
           NixOS = " ";
           Arch = " ";
           Gentoo = " ";
-          Debian = " ";
-          Ubuntu = " ";
-          Mint = " ";
           Fedora = " ";
           FreeBSD = " ";
-          Kali = " ";
-          Macos = " ";
-          Windows = " ";
         };
 
         directory = {
@@ -84,7 +78,7 @@
 
         golang = {
           format = "[ $symbol $version]($style)";
-          symbol = "";
+          symbol = "";
           style = "bg:base01";
         };
 
@@ -96,7 +90,7 @@
 
         rust = {
           format = "[ $symbol $version]($style)";
-          symbol = "";
+          symbol = "";
           style = "bg:base01";
         };
 
