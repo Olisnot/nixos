@@ -27,7 +27,10 @@
   fastfetch.enable = true;
   starship.enable = true;
   gaming = {
-    emulation.enable = true;
+    emulation = {
+      enable = true;
+      retroarch.enable = true;
+    };
     mangohud.enable = true;
   };
   tmux.enable = true;
