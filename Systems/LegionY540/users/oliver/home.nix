@@ -26,7 +26,10 @@
   librewolf.enable = true;
   fastfetch.enable = true;
   starship.enable = true;
-  gaming = { mangohud.enable = true; };
+  gaming = {
+    emulation.enable = true;
+    mangohud.enable = true;
+  };
   tmux.enable = true;
   foot.enable = true;
   waypaper.enable = true;
