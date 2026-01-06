@@ -8,7 +8,7 @@
   config = lib.mkIf config.gaming.emulation.retroarch.enable {
     home.packages = with pkgs;
       [
-        (retroarch-bare.overrideAttrs {
+        (retroarch.overrideAttrs {
           cores = with libretro; [
             fceumm
             snes9x
