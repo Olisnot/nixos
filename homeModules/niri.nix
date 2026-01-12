@@ -95,6 +95,12 @@ in {
             }
         }
 
+        gestures {
+          hot-corners {
+            off
+          }
+        }
+
         spawn-at-startup "swww-daemon"
         spawn-at-startup "xwayland-satellite"
         spawn-at-startup "swayidle" "-w" "timeout" "3600" "'systemctl suspend'" "before-sleep" "'gtklock'"
