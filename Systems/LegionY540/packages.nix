@@ -46,7 +46,7 @@ in {
 
     texlab
     nixd
-    nixfmt-classic
+    nixfmt
 
     #Coding Languages
     lldb

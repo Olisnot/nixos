@@ -41,7 +41,7 @@
 
   stylix = {
     targets.waybar.enable = false;
-    iconTheme = {
+    icons = {
       enable = true;
       package = pkgs.whitesur-icon-theme;
       dark = "WhiteSur";
