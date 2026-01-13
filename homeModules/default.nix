@@ -16,7 +16,7 @@
     ./starship.nix
     ./git.nix
     ./opentabletdriver.nix
-    ./ghostty.nix
+    ./opencode.nix
     ./foot.nix
     ./waypaper.nix
     ./dunst.nix

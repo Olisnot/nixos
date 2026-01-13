@@ -35,6 +35,7 @@
   btop.enable = true;
   niri.config.enable = true;
   walker.enable = true;
+  opencode.enable = true;
 
   home.sessionVariables = { EDITOR = "nvim"; };
 

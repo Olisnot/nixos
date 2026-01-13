@@ -44,8 +44,6 @@ in {
     git
     git-credential-manager
 
-    opencode
-
     texlab
     nixd
     nixfmt-classic
