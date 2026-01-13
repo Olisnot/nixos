@@ -44,7 +44,7 @@ in {
     git
     git-credential-manager
 
-    codex
+    opencode
 
     texlab
     nixd
