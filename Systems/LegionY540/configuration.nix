@@ -163,7 +163,7 @@
       autoLogin.relogin = true;
       wayland.enable = true;
     };
-    defaultSession = "niri";
+    defaultSession = "plasma";
     autoLogin.enable = true;
     autoLogin.user = "oliver";
   };
