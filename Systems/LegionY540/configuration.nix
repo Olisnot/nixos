@@ -1,4 +1,9 @@
-{ pkgs, inputs, lib, ... }:
+{
+  pkgs,
+  inputs,
+  lib,
+  ...
+}:
 
 {
   imports = [
@@ -25,16 +30,27 @@
   theme = "Nord";
 
   #Nix settings
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
   nix.settings.auto-optimise-store = true;
 
   nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
 
-  networking.firewall = { allowedTCPPorts = [ 20 21 8000 ]; };
-  networking.firewall.allowedTCPPortRanges = [{
-    from = 51000;
-    to = 51999;
-  }];
+  networking.firewall = {
+    allowedTCPPorts = [
+      20
+      21
+      8000
+    ];
+  };
+  networking.firewall.allowedTCPPortRanges = [
+    {
+      from = 51000;
+      to = 51999;
+    }
+  ];
 
   services.vsftpd = {
     enable = true;
@@ -67,7 +83,10 @@
   system.autoUpgrade = {
     enable = true;
     flake = inputs.self.outPath;
-    flags = [ "--print-build-logs" "--impure" ];
+    flags = [
+      "--print-build-logs"
+      "--impure"
+    ];
     dates = "02:00";
     randomizedDelaySec = "45min";
   };
@@ -76,18 +95,17 @@
   security.protectKernelImage = false;
 
   environment.etc = {
-    "/polkit-1/localauthority/50-local.d/com.ubuntu.enable-hibernate.pkla".text =
-      ''
-        [Re-enable hibernate by default in upower]
-        Identity=unix-user:*
-        Action=org.freedesktop.upower.hibernate
-        ResultActive=yes
+    "/polkit-1/localauthority/50-local.d/com.ubuntu.enable-hibernate.pkla".text = ''
+      [Re-enable hibernate by default in upower]
+      Identity=unix-user:*
+      Action=org.freedesktop.upower.hibernate
+      ResultActive=yes
 
-        [Re-enable hibernate by default in logind]
-        Identity=unix-user:*
-        Action=org.freedesktop.login1.hibernate;org.freedesktop.login1.handle-hibernate-key;org.freedesktop.login1;org.freedesktop.login1.hibernate-multiple-sessions;org.freedesktop.login1.hibernate-ignore-inhibit
-        ResultActive=yes
-      '';
+      [Re-enable hibernate by default in logind]
+      Identity=unix-user:*
+      Action=org.freedesktop.login1.hibernate;org.freedesktop.login1.handle-hibernate-key;org.freedesktop.login1;org.freedesktop.login1.hibernate-multiple-sessions;org.freedesktop.login1.hibernate-ignore-inhibit
+      ResultActive=yes
+    '';
   };
 
   networking.hostName = "zeus"; # Define your hostname.
@@ -136,13 +154,9 @@
     xdg-desktop-portal
     xdg-desktop-portal-gtk
     xdg-desktop-portal-wlr
-    # xdg-desktop-portal-hyprland
   ];
 
-  # Enable Hyprland
-  # hyprland.enable = true;
-
-  programs.niri.enable = true;
+  services.desktopManager.plasma6.enable = true;
   services.displayManager = {
     sddm = {
       enable = true;
