@@ -156,17 +156,23 @@
     xdg-desktop-portal-wlr
   ];
 
-  services.desktopManager.plasma6.enable = true;
+  services.desktopManager.cosmic.enable = true;
   services.displayManager = {
     sddm = {
       enable = true;
       autoLogin.relogin = true;
       wayland.enable = true;
     };
-    defaultSession = "plasma";
+    defaultSession = "cosmic";
     autoLogin.enable = true;
     autoLogin.user = "oliver";
   };
+
+  environment.cosmic.excludePackages = with pkgs; [
+    cosmic-player
+    cosmic-term
+    cosmic-edit
+  ];
 
   gtklock.enable = true;
 
