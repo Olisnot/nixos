@@ -50,23 +50,13 @@
     };
   };
 
-  xdg.desktopEntries.pear-desktop = {
-    name = "Pear Desktop";
-    exec = "${pkgs.pear-desktop}/bin/pear-desktop";
-    terminal = false;
+  xdg.desktopEntries."com.github.th_ch.youtube_music" = {
+    name = "com.github.th_ch.youtube_music";
+    exec = "${pkgs.pear-desktop}/bin/pear-desktop %u";
+    desktopName = "YouTube Music";
     icon = "${pkgs.whitesur-icon-theme}/share/icons/WhiteSur-dark/apps/scalable/app.ytmdesktop.ytmdesktop.svg";
+    categories = [ "AudioVideo" ];
   };
-
-  home.file.".local/share/applications/yourapp.desktop".text = ''
-  [Desktop Entry]
-  Type=Application
-  Name=YouTube Music
-  Exec=${pkgs.pear-desktop}/bin/pear-desktop %U
-  Icon=${pkgs.whitesur-icon-theme}/share/icons/WhiteSur-dark/apps/scalable/app.ytmdesktop.ytmdesktop.svg
-  Categories=Utility;
-  Terminal=false
-  '';
-
 
   # nixpkgs.config.allowUnfree = true;
 
