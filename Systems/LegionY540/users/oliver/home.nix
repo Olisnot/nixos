@@ -37,7 +37,9 @@
   walker.enable = true;
   opencode.enable = true;
 
-  home.sessionVariables = { EDITOR = "nvim"; };
+  home.sessionVariables = {
+    EDITOR = "nvim";
+  };
 
   stylix = {
     targets.waybar.enable = false;
@@ -48,8 +50,17 @@
     };
   };
 
+  xdg.desktopEntries.pear-desktop = {
+    name = "Pear Desktop";
+    exec = "${pkgs.pear-desktop}/bin/pear-desktop";
+    terminal = false;
+    icon = "${pkgs.whitesur-icon-theme}/share/icons/WhiteSur-dark/apps/scalable/app.ytmdesktop.ytmdesktop.svg";
+  };
+
   # nixpkgs.config.allowUnfree = true;
 
   # Let Home Manager install and manage itself.
-  programs.home-manager = { enable = true; };
+  programs.home-manager = {
+    enable = true;
+  };
 }
