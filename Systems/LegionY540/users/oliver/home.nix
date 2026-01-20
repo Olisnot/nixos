@@ -51,7 +51,7 @@
   };
 
   xdg.desktopEntries."com.github.th_ch.youtube_music" = {
-    name = "com.github.th_ch.youtube_music";
+    name = "YouTube Music";
     exec = "${pkgs.pear-desktop}/bin/pear-desktop %u";
     icon = "${pkgs.whitesur-icon-theme}/share/icons/WhiteSur-dark/apps/scalable/app.ytmdesktop.ytmdesktop.svg";
     categories = [ "AudioVideo" ];
