@@ -173,7 +173,6 @@
     cosmic-term
     cosmic-edit
     cosmic-files
-    cosmic-icons
   ];
 
   gtklock.enable = true;
