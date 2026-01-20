@@ -156,7 +156,11 @@
     xdg-desktop-portal-wlr
   ];
 
-  services.desktopManager.cosmic.enable = true;
+  services.desktopManager.cosmic = {
+    enable = true;
+    showExcludedPkgsWarning = false;
+  };
+
   services.displayManager = {
     sddm = {
       enable = true;
@@ -173,6 +177,7 @@
     cosmic-term
     cosmic-edit
     cosmic-files
+    cosmic-icons
   ];
 
   gtklock.enable = true;
