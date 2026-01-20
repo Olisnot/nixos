@@ -57,6 +57,17 @@
     icon = "${pkgs.whitesur-icon-theme}/share/icons/WhiteSur-dark/apps/scalable/app.ytmdesktop.ytmdesktop.svg";
   };
 
+  home.file.".local/share/applications/yourapp.desktop".text = ''
+  [Desktop Entry]
+  Type=Application
+  Name=YouTube Music
+  Exec=${pkgs.pear-desktop}/bin/pear-desktop %U
+  Icon=${pkgs.whitesur-icon-theme}/share/icons/WhiteSur-dark/apps/scalable/app.ytmdesktop.ytmdesktop.svg
+  Categories=Utility;
+  Terminal=false
+  '';
+
+
   # nixpkgs.config.allowUnfree = true;
 
   # Let Home Manager install and manage itself.
