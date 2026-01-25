@@ -1,4 +1,9 @@
-{ lib, config, pkgs, ... }:
+{
+  lib,
+  config,
+  pkgs,
+  ...
+}:
 
 {
   options.librewolf.enable = lib.mkEnableOption "librewolf web browser";
@@ -23,19 +28,22 @@
             vimium
             libredirect
             youtube-recommended-videos
-            proton-vpn
           ];
 
-          settings = { "uBlock0@raymondhill.net".settings = { }; };
+          settings = {
+            "uBlock0@raymondhill.net".settings = { };
+          };
         };
         search = {
           default = "ecosia";
           engines = {
             ecosia = {
               name = "ecosia";
-              urls = [{
-                template = "https://www.ecosia.org/search?q={searchTerms}";
-              }];
+              urls = [
+                {
+                  template = "https://www.ecosia.org/search?q={searchTerms}";
+                }
+              ];
             };
           };
         };
