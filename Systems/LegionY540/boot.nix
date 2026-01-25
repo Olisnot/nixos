@@ -1,4 +1,10 @@
-{ pkgs, lib, inputs, config, ... }:
+{
+  pkgs,
+  lib,
+  inputs,
+  config,
+  ...
+}:
 
 let
   theme = config.theme;
@@ -8,7 +14,8 @@ let
     Catppuccin = "${inputs.wallpapers}/catppuccin.jpg";
     TokyoNight = "${inputs.wallpapers}/tokyo.png";
   };
-in {
+in
+{
   # Bootloader.
   boot = {
     kernelPackages = pkgs.linuxPackages_latest;
@@ -21,17 +28,10 @@ in {
       limine = {
         enable = true;
         maxGenerations = 10;
-        extraEntries = ''
-          /Gentoo
-          //Gentoo OS
-            protocol: linux
-            kernel_path: boot():/vmlinuz-6.12.47-gentoo-dist
-            module_path: boot():/initramfs-6.12.47-gentoo-dist.img
-            cmdline: root=UUID=68e233c6-92b3-43c9-9f40-2c93d37760c0 rw rootfstype=xfs
-            comment: Boot Gentoo Linux!
-        '';
-
-        style = { wallpapers = [ themeWallpaper.${theme} ]; };
+        style = {
+          wallpapers = [ themeWallpaper.${theme} ];
+          graphicalTerminal.background = "00FFFFFF";
+        };
       };
 
       efi.canTouchEfiVariables = true;
@@ -61,12 +61,11 @@ in {
       enable = true;
       font = "${pkgs.hack-font}/share/fonts/truetype/Hack-Regular.ttf";
       theme = lib.mkDefault "abstract_ring";
-      themePackages = with pkgs;
-        [
-          (adi1090x-plymouth-themes.override {
-            selected_themes = [ "abstract_ring" ];
-          })
-        ];
+      themePackages = with pkgs; [
+        (adi1090x-plymouth-themes.override {
+          selected_themes = [ "abstract_ring" ];
+        })
+      ];
     };
     # loader.timeout = 0;
   };
