@@ -9,6 +9,7 @@
     lollypop
     picard
     pear-desktop
+    gpodder
     #Tools
     gimp3
     keymapp
