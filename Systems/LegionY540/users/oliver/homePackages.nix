@@ -21,5 +21,6 @@
     yazi
     imagemagick
     vesktop
+    tor-browser
   ];
 }
