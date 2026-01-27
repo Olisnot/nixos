@@ -16,7 +16,6 @@
     ./git.nix
     ./opentabletdriver.nix
     ./opencode.nix
-    ./foot.nix
     ./ghostty.nix
     ./waypaper.nix
     ./dunst.nix
