@@ -27,7 +27,7 @@
   fish.enable = true;
   syncthing.enable = true;
 
-  theme = "Nord";
+  theme = "Black";
 
   #Nix settings
   nix.settings.experimental-features = [

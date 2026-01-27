@@ -654,11 +654,11 @@
     "wallpapers": {
       "flake": false,
       "locked": {
-        "lastModified": 1763756349,
-        "narHash": "sha256-JifdhtWf4R0b7+T7dAjhIyOARzoDvV/0QvA12XgCgj0=",
+        "lastModified": 1769536834,
+        "narHash": "sha256-twRCfS/pc1vpB/Q0Eb43XYjCJe5Q/+l82PVonviniCM=",
         "owner": "olmods",
         "repo": "wallpapers",
-        "rev": "8fa69fc07aa6f2b6ec09057a1ad6cdcd38b92846",
+        "rev": "83098de609f4c6321c05b0e84311cb7a5647fb1c",
         "type": "github"
       },
       "original": {

@@ -13,6 +13,7 @@ let
     Gruvbox = "${inputs.wallpapers}/gruvbox.jpg";
     Catppuccin = "${inputs.wallpapers}/catppuccin.jpg";
     TokyoNight = "${inputs.wallpapers}/tokyo.png";
+    Black = "${inputs.wallpapers}/black.jpg";
   };
 in
 {

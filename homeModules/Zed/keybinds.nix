@@ -7,7 +7,7 @@
         "bindings" = {
           "ctrl-t" = "terminal_panel::ToggleFocus";
           "space e" = "workspace::ToggleLeftDock";
-          "space space" = "file_finder:toggle";
+          "space space" = "file_finder:Toggle";
         };
       }
       {

@@ -1,4 +1,10 @@
-{ pkgs, inputs, config, lib, ... }:
+{
+  pkgs,
+  inputs,
+  config,
+  lib,
+  ...
+}:
 
 let
   inherit (lib) mkOption types;
@@ -82,6 +88,24 @@ let
       base0E = "#BB9AF7";
       base0F = "#F7768E";
     };
+    Black = {
+      base00 = "#000000";
+      base01 = "#121212";
+      base02 = "#222222";
+      base03 = "#333333";
+      base04 = "#999999";
+      base05 = "#c1c1c1";
+      base06 = "#999999";
+      base07 = "#c1c1c1";
+      base08 = "#5f8787";
+      base09 = "#aaaaaa";
+      base0A = "#e78a53";
+      base0B = "#fbcb97";
+      base0C = "#aaaaaa";
+      base0D = "#888888";
+      base0E = "#999999";
+      base0F = "#444444";
+    };
   };
 
   themeWallpaper = {
@@ -89,6 +113,7 @@ let
     Gruvbox = "${inputs.wallpapers}/gruvbox.jpg";
     Catppuccin = "${inputs.wallpapers}/catppuccin.jpg";
     TokyoNight = "${inputs.wallpapers}/tokyo.png";
+    Black = "${inputs.wallpapers}/black.jpg";
   };
 
   themeCursor = {
@@ -108,11 +133,22 @@ let
       package = pkgs.capitaine-cursors-themed;
       name = "Capitaine Cursors (Palenight)";
     };
+    Black = {
+      package = pkgs.volantes-cursors;
+      name = "volantes-cursors";
+    };
   };
-in {
+in
+{
   options = {
     theme = lib.mkOption {
-      type = types.enum [ "Nord" "Gruvbox" "Catppuccin" "TokyoNight" ];
+      type = types.enum [
+        "Nord"
+        "Gruvbox"
+        "Catppuccin"
+        "TokyoNight"
+        "Black"
+      ];
       default = "Nord";
       description = "Select a theme";
     };
