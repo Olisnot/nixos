@@ -6,8 +6,6 @@
     ./Shells
     ./Hypr
     ./Waybar
-    ./Wofi
-    ./Walker
     ./tmux.nix
     ./btop.nix
     ./chromium.nix

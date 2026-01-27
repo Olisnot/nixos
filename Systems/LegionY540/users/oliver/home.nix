@@ -31,10 +31,7 @@
   waypaper.enable = true;
   waybarConfig.enable = true;
   dunst.enable = true;
-  wofi.enable = true;
   btop.enable = true;
-  niri.config.enable = true;
-  walker.enable = true;
   opencode.enable = true;
 
   home.sessionVariables = {

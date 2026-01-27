@@ -28,20 +28,14 @@
       flake = false;
     };
 
-    elephant.url = "github:abenz1267/elephant";
-
-    walker = {
-      url = "github:abenz1267/walker";
-      inputs.elephant.follows = "elephant";
-    };
-
     minimal-tmux = {
       url = "github:niksingh710/minimal-tmux-status";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { nixpkgsStable, nur, ... }@inputs:
+  outputs =
+    { nixpkgsStable, nur, ... }@inputs:
     let
       system = "x86_64-linux";
       overlay-stable = final: prev: {
@@ -50,15 +44,22 @@
           config.allowUnfree = true;
         };
       };
-    in {
+    in
+    {
       nixosConfigurations = {
         legiony540 = inputs.nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs; };
           modules = [
             ./Systems/LegionY540/configuration.nix
-            ({ ... }: {
-              nixpkgs.overlays = [ overlay-stable nur.overlays.default ];
-            })
+            (
+              { ... }:
+              {
+                nixpkgs.overlays = [
+                  overlay-stable
+                  nur.overlays.default
+                ];
+              }
+            )
             inputs.home-manager.nixosModules.default
             inputs.stylix.nixosModules.stylix
           ];
