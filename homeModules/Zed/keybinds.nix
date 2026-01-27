@@ -1,9 +1,13 @@
-{ ... }: {
+{ ... }:
+{
   programs.zed-editor = {
     userKeymaps = [
       {
         "context" = "Workspace";
-        "bindings" = { "ctrl-t" = "terminal_panel::ToggleFocus"; };
+        "bindings" = {
+          "ctrl-t" = "terminal_panel::ToggleFocus";
+          "space e" = "ToggleLeftDock";
+        };
       }
       {
         "context" = "Terminal";
