@@ -33,6 +33,7 @@
   dunst.enable = true;
   btop.enable = true;
   opencode.enable = true;
+  zed-editor.enable = true;
 
   home.sessionVariables = {
     EDITOR = "nvim";

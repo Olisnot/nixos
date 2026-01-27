@@ -5,6 +5,7 @@
     ./Gaming
     ./Shells
     ./Hypr
+    ./Zed
     ./Waybar
     ./tmux.nix
     ./btop.nix
