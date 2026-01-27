@@ -180,8 +180,6 @@
     cosmic-icons
   ];
 
-  gtklock.enable = true;
-
   # Set Laptop lid
   services.logind.settings.Login.HandleLidSwitchExternalPower = "ignore";
 
