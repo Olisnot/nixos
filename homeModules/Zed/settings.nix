@@ -5,6 +5,7 @@
     userSettings = {
       hour_format = "hour24";
       auto_update = false;
+      disable_ai = true;
       terminal = {
         alternate_scroll = "off";
         blinking = "off";
@@ -22,7 +23,7 @@
           };
         };
         env = {
-          TERM = "foot";
+          TERM = "ghostty";
         };
         # font_family = "FiraCode Nerd Font";
         line_height = "comfortable";
