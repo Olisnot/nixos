@@ -15,6 +15,7 @@
           "ss08"
           "ss02"
         ];
+        window-decoration = false;
       };
     };
   };
