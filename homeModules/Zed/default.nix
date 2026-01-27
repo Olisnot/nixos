@@ -6,6 +6,7 @@
     #./languages.nix
     ./settings.nix
     ./extensions.nix
+    ./tasks.nix
     # ./ai.nix
   ];
 
