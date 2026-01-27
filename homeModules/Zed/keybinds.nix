@@ -6,7 +6,7 @@
         "context" = "Workspace";
         "bindings" = {
           "ctrl-t" = "terminal_panel::ToggleFocus";
-          "space e" = "ToggleLeftDock";
+          "space e" = "workspace::ToggleLeftDock";
         };
       }
       {
