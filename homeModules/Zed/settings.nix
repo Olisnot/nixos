@@ -25,6 +25,7 @@
           TERM = "foot";
         };
         # font_family = "FiraCode Nerd Font";
+        font_size = 16;
         line_height = "comfortable";
         option_as_meta = false;
         button = false;
