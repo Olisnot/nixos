@@ -21,8 +21,6 @@
           "sidebar.verticalTabs" = true;
           "sidebar.verticalTabs.dragToPinPromo.dismissed" = true;
           "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
-          "layout.css.devPixelsPerPx" = "1.25";
-          # "font.minimum-size.x-western" = 16;
         };
         extensions = {
           packages = with pkgs.nur.repos.rycee.firefox-addons; [
