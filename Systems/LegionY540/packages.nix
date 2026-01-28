@@ -43,9 +43,6 @@ in
     inetutils
     util-linux
 
-    #General
-    nautilus
-
     #Coding
     git
     git-credential-manager
