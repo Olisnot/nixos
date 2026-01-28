@@ -44,15 +44,15 @@
     targets.waybar.enable = false;
     icons = {
       enable = true;
-      package = pkgs.whitesur-icon-theme;
-      dark = "WhiteSur";
+      package = pkgs.numix-icon-theme-square;
+      dark = "Numix Square";
     };
   };
 
   xdg.desktopEntries."com.github.th_ch.youtube_music" = {
     name = "YouTube Music";
     exec = "${pkgs.pear-desktop}/bin/pear-desktop %u";
-    icon = "${pkgs.whitesur-icon-theme}/share/icons/WhiteSur-dark/apps/scalable/app.ytmdesktop.ytmdesktop.svg";
+    icon = "${pkgs.numix-icon-theme-square}/share/icons/WhiteSur-dark/apps/scalable/app.ytmdesktop.ytmdesktop.svg";
     categories = [ "AudioVideo" ];
   };
 
