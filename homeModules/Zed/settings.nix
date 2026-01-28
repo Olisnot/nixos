@@ -47,7 +47,14 @@
           };
         };
       };
-      languages = { };
+      languages = {
+        nix = {
+          language_servers = [
+            "nixd"
+            "!nil"
+          ];
+        };
+      };
       vim_mode = true;
       vim = {
         use_system_clipboard = "never";
