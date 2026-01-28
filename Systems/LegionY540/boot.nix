@@ -31,7 +31,7 @@ in
         maxGenerations = 10;
         style = {
           wallpapers = [ themeWallpaper.${theme} ];
-          graphicalTerminal.background = lib.mkDefault "002e3440";
+          graphicalTerminal.background = lib.mkDefault "FF2e3440";
         };
       };
 
