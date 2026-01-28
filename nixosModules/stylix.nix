@@ -138,8 +138,6 @@ let
       name = "volantes_cursors";
     };
   };
-
-  yamis = pkgs.callPackage ./Icons/yamis.nix { };
 in
 {
   options = {
@@ -185,8 +183,8 @@ in
 
       icons = {
         enable = true;
-        package = yamis;
-        dark = "yet-another-monochrome-icon-set";
+        package = pkgs.numix-icon-theme-square;
+        dark = "Numix Square";
       };
 
       targets.plymouth.enable = false;
