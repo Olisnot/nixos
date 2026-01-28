@@ -176,8 +176,8 @@
     cosmic-player
     cosmic-term
     cosmic-edit
-    # cosmic-files
     cosmic-icons
+    cosmic-reader
   ];
 
   # Set Laptop lid

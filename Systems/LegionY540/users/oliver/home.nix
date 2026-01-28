@@ -28,9 +28,6 @@
   gaming.mangohud.enable = true;
   tmux.enable = true;
   ghostty.enable = true;
-  waypaper.enable = true;
-  waybarConfig.enable = true;
-  dunst.enable = true;
   btop.enable = true;
   opencode.enable = true;
   zed-editor.enable = true;
