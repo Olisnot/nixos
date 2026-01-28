@@ -138,6 +138,8 @@ let
       name = "volantes_cursors";
     };
   };
+
+  yamis = pkgs.callPackage ./Icons/yamis.nix { };
 in
 {
   options = {
@@ -183,8 +185,8 @@ in
 
       icons = {
         enable = true;
-        package = pkgs.whitesur-icon-theme;
-        dark = "WhiteSur";
+        package = yamis;
+        dark = "yet-another-monochrome-icon-set";
       };
 
       targets.plymouth.enable = false;
