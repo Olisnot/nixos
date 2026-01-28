@@ -15,7 +15,6 @@
     keymapp
     gpauth
     mupdf
-    waypaper
     gucharmap
     localsend
     yazi
