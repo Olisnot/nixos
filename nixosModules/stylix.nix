@@ -135,7 +135,7 @@ let
     };
     Black = {
       package = pkgs.volantes-cursors;
-      name = "volantes-cursors";
+      name = "volantes_cursors";
     };
   };
 in
