@@ -20,5 +20,6 @@
     ./waypaper.nix
     ./dunst.nix
     ./niri.nix
+    ./helix.nix
   ];
 }
