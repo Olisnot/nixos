@@ -176,7 +176,7 @@
     cosmic-player
     cosmic-term
     cosmic-edit
-    cosmic-files
+    # cosmic-files
     cosmic-icons
   ];
 
