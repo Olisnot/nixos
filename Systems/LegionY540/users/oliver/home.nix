@@ -52,7 +52,7 @@
   xdg.desktopEntries."com.github.th_ch.youtube_music" = {
     name = "YouTube Music";
     exec = "${pkgs.pear-desktop}/bin/pear-desktop %u";
-    icon = "${pkgs.numix-icon-theme-square}/share/icons/WhiteSur-dark/apps/scalable/app.ytmdesktop.ytmdesktop.svg";
+    icon = "${pkgs.numix-icon-theme-square}/share/icons/Numix-Square/48/apps/youtube-to-mp3.svg";
     categories = [ "AudioVideo" ];
   };
 
