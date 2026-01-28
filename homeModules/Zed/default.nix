@@ -3,7 +3,6 @@
 {
   imports = [
     ./keybinds.nix
-    #./languages.nix
     ./settings.nix
     ./extensions.nix
     ./tasks.nix

@@ -31,7 +31,6 @@
   btop.enable = true;
   opencode.enable = true;
   zed-editor.enable = true;
-  helix.enable = true;
 
   home.sessionVariables = {
     EDITOR = "nvim";
