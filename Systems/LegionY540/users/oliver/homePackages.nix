@@ -22,5 +22,6 @@
     imagemagick
     vesktop
     tor-browser
+    bitwarden
   ];
 }
