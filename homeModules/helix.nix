@@ -21,6 +21,7 @@
         };
         keys.normal = {
           Z.Z = ":wq";
+          space.space = "file_picker";
         };
       };
       languages = {

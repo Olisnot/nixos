@@ -1,10 +1,17 @@
-{ pkgs, inputs, lib, config, ... }:
+{
+  pkgs,
+  inputs,
+  lib,
+  config,
+  ...
+}:
 
 let
   nvim = inputs.nixvim.packages."x86_64-linux".default.extend {
     colorschemes.base16.colorscheme = lib.mkForce config.stylix.base16Scheme;
   };
-in {
+in
+{
   environment.systemPackages = with pkgs; [
     #tools
     btop
@@ -38,7 +45,6 @@ in {
 
     #General
     nautilus
-    arashi
 
     #Coding
     git
