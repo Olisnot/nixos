@@ -34,7 +34,7 @@ in
     zoxide
     nvim
     filen-cli
-    godot
+    opensnitch
 
     #Utils
     uutils-coreutils-noprefix
