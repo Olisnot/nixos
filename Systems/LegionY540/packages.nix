@@ -35,6 +35,7 @@ in
     nvim
     filen-cli
     opensnitch
+    keepassxc
 
     #Utils
     uutils-coreutils-noprefix
