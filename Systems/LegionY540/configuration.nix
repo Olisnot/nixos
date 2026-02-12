@@ -7,7 +7,6 @@
 
 {
   imports = [
-    inputs.home-manager.nixosModules.default
     ./hardware-configuration.nix
     ./packages.nix
     ./fonts.nix

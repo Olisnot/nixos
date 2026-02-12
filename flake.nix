@@ -6,31 +6,14 @@
 
     nixpkgsStable.url = "github:nixos/nixpkgs/nixos-24.05";
 
-    home-manager = {
-      url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    nixvim.url = "git+https://codeberg.org/Olisnot/NixVimConfig";
-
     stylix = {
       url = "github:danth/stylix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    nur = {
-      url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     wallpapers = {
       url = "github:olmods/wallpapers";
       flake = false;
-    };
-
-    minimal-tmux = {
-      url = "github:niksingh710/minimal-tmux-status";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
@@ -60,7 +43,6 @@
                 ];
               }
             )
-            inputs.home-manager.nixosModules.default
             inputs.stylix.nixosModules.stylix
           ];
         };
