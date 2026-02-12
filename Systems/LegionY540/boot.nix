@@ -6,16 +6,6 @@
   ...
 }:
 
-let
-  theme = config.theme;
-  themeWallpaper = {
-    Nord = "${inputs.wallpapers}/nord.jpg";
-    Gruvbox = "${inputs.wallpapers}/gruvbox.jpg";
-    Catppuccin = "${inputs.wallpapers}/catppuccin.jpg";
-    TokyoNight = "${inputs.wallpapers}/tokyo.png";
-    Black = "${inputs.wallpapers}/black.jpg";
-  };
-in
 {
   # Bootloader.
   boot = {
@@ -29,9 +19,6 @@ in
       limine = {
         enable = true;
         maxGenerations = 10;
-        style = {
-          wallpapers = [ themeWallpaper.${theme} ];
-        };
       };
 
       efi.canTouchEfiVariables = true;
@@ -47,7 +34,7 @@ in
     kernelParams = [
       "nvidia-drm.modeset=1"
       # "resume_offset=79960064"
-      "resume=/dev/disk/by-uuid/8a5c0ac5-fca9-4460-8a27-c17c73c2a3b2"
+      "resume=/dev/disk/by-uuid/0262d9b8-4da5-4ce9-8d67-92f19172185b"
       "quiet"
       "splash"
       "intremap=on"

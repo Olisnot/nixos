@@ -1,63 +1,66 @@
 {
   pkgs,
-  inputs,
-  lib,
-  config,
   ...
 }:
 
-let
-  nvim = inputs.nixvim.packages."x86_64-linux".default.extend {
-    colorschemes.base16.colorscheme = lib.mkForce config.stylix.base16Scheme;
-  };
-in
 {
   environment.systemPackages = with pkgs; [
-    #Media
-    mpv
-    playerctl
-    nicotine-plus
-    lollypop
-    picard
-    pear-desktop
-    gpodder
-
     #Tools
-    gimp3
-    keymapp
-    gpauth
-    mupdf
-    gucharmap
-    localsend
-    yazi
-    imagemagick
-    vesktop
-    tor-browser
-    bitwarden-desktop
+	    ##General
+	    yazi
+	    unzip
+	    bat
+	    eza
+	    stow
+	    wofi
+	    gparted
+	    dust
+	    zip
+	    rar
+	    keymapp
+	    zathura
+	    lxappearance
+	    obsidian
 
-    #tools
-    btop
-    lshw
-    pwvucontrol
-    tree
-    ripgrep
-    skim
-    fd
-    filezilla
-    wl-clipboard
-    gparted
-    dust
-    zip
-    rar
-    ffmpeg
-    unzip
-    bat
-    eza
-    zoxide
-    nvim
-    filen-cli
-    opensnitch
-    keepassxc
+	    numix-icon-theme-square
+	    volantes-cursors
+	    swww
+
+	    ##Media
+	    mpv
+	    mpd
+	    rmpc
+	    nicotine-plus
+	    gpodder
+	    ffmpeg
+	    ani-cli
+
+	    ##Creative
+	    gimp3
+	    imagemagick
+
+	    ##Internet
+	    ungoogled-chromium
+	    tor-browser
+	    keepassxc
+
+	    gpauth
+	    mupdf
+	    vesktop
+	    ghostty
+	    btop
+	    lshw
+	    pwvucontrol
+	    tree
+	    ripgrep
+	    fzf
+	    fd
+	    filezilla
+	    wl-clipboard
+	    zoxide
+	    neovim
+	    filen-cli
+	    starship
 
     #Utils
     uutils-coreutils-noprefix
@@ -76,29 +79,29 @@ in
 
     #Coding Languages
     lldb
-    #C
-    gcc
-    clang
-    llvmPackages_20.clang-unwrapped
-    bear
+	    ##C
+	    gcc
+	    clang
+	    llvmPackages_20.clang-unwrapped
+	    bear
 
-    #Rust
-    cargo
-    stable.rust-analyzer
-    rustc
-    rustfmt
-    bacon
-    rusty-man
-    clippy
+	    ##Rust
+	    cargo
+	    stable.rust-analyzer
+	    rustc
+	    rustfmt
+	    bacon
+	    rusty-man
+	    clippy
 
-    #zig
-    zig
-    zls
+	    ##zig
+	    zig
+	    zls
 
-    #python
-    python3
+	    ##python
+	    python3
 
-    #Go
-    go
+	    ##Go
+	    go
   ];
 }

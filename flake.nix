@@ -6,11 +6,6 @@
 
     nixpkgsStable.url = "github:nixos/nixpkgs/nixos-24.05";
 
-    stylix = {
-      url = "github:danth/stylix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     wallpapers = {
       url = "github:olmods/wallpapers";
       flake = false;
@@ -18,7 +13,7 @@
   };
 
   outputs =
-    { nixpkgsStable, nur, ... }@inputs:
+    { nixpkgsStable, ... }@inputs:
     let
       system = "x86_64-linux";
       overlay-stable = final: prev: {
@@ -39,11 +34,9 @@
               {
                 nixpkgs.overlays = [
                   overlay-stable
-                  nur.overlays.default
                 ];
               }
             )
-            inputs.stylix.nixosModules.stylix
           ];
         };
       };

@@ -26,8 +26,6 @@
   fish.enable = true;
   syncthing.enable = true;
 
-  theme = "Black";
-
   #Nix settings
   nix.settings.experimental-features = [
     "nix-command"
@@ -155,10 +153,7 @@
     xdg-desktop-portal-wlr
   ];
 
-  services.desktopManager.cosmic = {
-    enable = true;
-    showExcludedPkgsWarning = false;
-  };
+  hyprland.enable = true;
 
   services.displayManager = {
     sddm = {
@@ -166,18 +161,10 @@
       autoLogin.relogin = true;
       wayland.enable = true;
     };
-    defaultSession = "cosmic";
+    defaultSession = "hyprland";
     autoLogin.enable = true;
     autoLogin.user = "oliver";
   };
-
-  environment.cosmic.excludePackages = with pkgs; [
-    cosmic-player
-    cosmic-term
-    cosmic-edit
-    cosmic-icons
-    cosmic-reader
-  ];
 
   # Set Laptop lid
   services.logind.settings.Login.HandleLidSwitchExternalPower = "ignore";
@@ -187,8 +174,6 @@
 
   # Enable Bluetooth
   bluetooth.enable = true;
-
-  # programs.kdeconnect.enable = true;
 
   services.gnome.gnome-keyring.enable = true;
 
