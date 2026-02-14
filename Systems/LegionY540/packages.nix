@@ -7,24 +7,27 @@
   environment.systemPackages = with pkgs; [
     #Tools
 	    ##General
-	    yazi
-	    unzip
-	    bat
-	    eza
 	    stow
+	    neovim
+	    yazi
+	    nemo
 	    wofi
-	    gparted
-	    dust
-	    zip
-	    rar
 	    keymapp
 	    zathura
-	    lxappearance
 	    obsidian
+	    waybar
+	    mupdf
+	    dunst
+	    vesktop
+	    pwvucontrol
+	    filezilla
 
+	    ## Appearance
 	    numix-icon-theme-square
 	    volantes-cursors
 	    swww
+	    tinty
+	    nwg-look
 
 	    ##Media
 	    mpv
@@ -44,30 +47,33 @@
 	    tor-browser
 	    keepassxc
 
+	    ##Admin
 	    gpauth
-	    mupdf
-	    vesktop
 	    ghostty
+	    starship
+	    gparted
+
+	    ##Utils
+	    zoxide
 	    btop
-	    lshw
-	    pwvucontrol
 	    tree
 	    ripgrep
 	    fzf
 	    fd
-	    filezilla
+	    dust
+	    zip
+	    rar
+	    unzip
+	    bat
+	    eza
+	    fastfetch
+	    lshw
+	    uutils-coreutils-noprefix
 	    wl-clipboard
-	    zoxide
-	    neovim
-	    filen-cli
-	    starship
-
-    #Utils
-    uutils-coreutils-noprefix
-    usbutils
-    pciutils
-    inetutils
-    util-linux
+	    usbutils
+	    pciutils
+	    inetutils
+	    util-linux
 
     #Coding
     git
@@ -79,11 +85,6 @@
 
     #Coding Languages
     lldb
-	    ##C
-	    gcc
-	    clang
-	    llvmPackages_20.clang-unwrapped
-	    bear
 
 	    ##Rust
 	    cargo
@@ -94,14 +95,26 @@
 	    rusty-man
 	    clippy
 
+	    ##Go
+	    go
+	    gopls
+
 	    ##zig
 	    zig
 	    zls
 
 	    ##python
 	    python3
+	    ty
 
-	    ##Go
-	    go
+	    ##C
+	    gcc
+	    clang
+	    llvmPackages_20.clang-unwrapped
+	    bear
+
+	    ##C-sharp
+	    dotnet-sdk_8
+	    omnisharp-roslyn
   ];
 }
