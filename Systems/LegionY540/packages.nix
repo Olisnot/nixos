@@ -36,6 +36,7 @@
 	    rmpc
 	    nicotine-plus
 	    ffmpeg
+	    gpodder
 	    ani-cli
 
 	    ##Creative
