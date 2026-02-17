@@ -35,7 +35,6 @@
 	    mpd-notification
 	    rmpc
 	    nicotine-plus
-	    gpodder
 	    ffmpeg
 	    ani-cli
 
