@@ -9,5 +9,6 @@
     ./bluetooth.nix
     ./syncthing.nix
     ./hyprland.nix
+    ./navidrome.nix
   ];
 }

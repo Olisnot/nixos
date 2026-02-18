@@ -1,0 +1,14 @@
+{ lib, config, ... }:
+
+{
+  options.navidrome.enable = lib.mkEnableOption "Start Navidrome service";
+
+  config = lib.mkIf config.navidrome.enable {
+	services.navidrome = {
+		enable = true;
+		settings = {
+			MusicFolder = "/home/oliver/Music";
+		};
+	};
+  };
+}
