@@ -62,6 +62,8 @@
     '';
   };
 
+  services.tailscale.enable = true;
+
   systemd.tpm2.enable = false;
 
   # Garbage collector
