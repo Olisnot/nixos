@@ -40,6 +40,7 @@
     allowedTCPPorts = [
       20
       21
+      4533
       8000
     ];
   };
