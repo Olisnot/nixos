@@ -7,7 +7,7 @@
 	services.navidrome = {
 		enable = true;
 		settings = {
-			MusicFolder = "/home/oliver/Music";
+			MusicFolder = "/mnt/1tb/Music";
 		};
 	};
   };
