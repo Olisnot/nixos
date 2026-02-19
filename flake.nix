@@ -34,6 +34,22 @@
             )
           ];
         };
+
+        odin = inputs.nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs; };
+          modules = [
+            ./Systems/Odin/configuration.nix
+            (
+              { ... }:
+              {
+                nixpkgs.overlays = [
+                  overlay-stable
+                ];
+              }
+            )
+          ];
+        };
+
       };
     };
 }
