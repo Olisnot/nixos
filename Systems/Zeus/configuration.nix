@@ -14,7 +14,7 @@
     ./sound.nix
     ./users/oliver/user.nix
     ../../nixosModules
-    ./scripts
+    ../../scripts
   ];
 
   #Custom module options

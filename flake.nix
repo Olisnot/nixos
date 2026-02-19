@@ -5,11 +5,6 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     nixpkgsStable.url = "github:nixos/nixpkgs/nixos-24.05";
-
-    wallpapers = {
-      url = "github:olmods/wallpapers";
-      flake = false;
-    };
   };
 
   outputs =
@@ -25,10 +20,10 @@
     in
     {
       nixosConfigurations = {
-        legiony540 = inputs.nixpkgs.lib.nixosSystem {
+        zeus = inputs.nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs; };
           modules = [
-            ./Systems/LegionY540/configuration.nix
+            ./Systems/Zeus/configuration.nix
             (
               { ... }:
               {
