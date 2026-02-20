@@ -157,7 +157,7 @@
     xdg-desktop-portal-wlr
   ];
 
-  hyprland.enable = true;
+  niri.enable = true;
 
   services.displayManager = {
     sddm = {
@@ -165,7 +165,7 @@
       autoLogin.relogin = true;
       wayland.enable = true;
     };
-    defaultSession = "hyprland";
+    defaultSession = "niri";
     autoLogin.enable = true;
     autoLogin.user = "oliver";
   };
