@@ -7,74 +7,73 @@
 {
   environment.systemPackages = with pkgs; [
     #Tools
-	    ##General
-	    stow
-	    neovim
-	    yazi
-	    nemo
-	    wofi
-	    keymapp
-	    zathura
-	    obsidian
-	    waybar
-	    mupdf
-	    dunst
-	    vesktop
-	    pwvucontrol
-	    filezilla
+    ##General
+    stow
+    neovim
+    yazi
+    wofi
+    keymapp
+    zathura
+    obsidian
+    waybar
+    mupdf
+    dunst
+    vesktop
+    pwvucontrol
+    filezilla
 
-	    ## Appearance
-	    numix-icon-theme-square
-	    volantes-cursors
-	    swww
-	    nwg-look
+    ## Appearance
+    numix-icon-theme-square
+    volantes-cursors
+    swww
+    nwg-look
 
-	    ##Media
-	    mpv
-	    mpd
-	    mpd-notification
-	    rmpc
-	    nicotine-plus
-	    ffmpeg
-	    ani-cli
+    ##Media
+    mpv
+    mpd
+    mpd-notification
+    rmpc
+    nicotine-plus
+    ffmpeg
+    ani-cli
 
-	    ##Creative
-	    gimp3
-	    imagemagick
+    ##Creative
+    gimp3
+    imagemagick
 
-	    ##Internet
-	    ungoogled-chromium
-	    inputs.zen-browser.packages."${system}".default
-	    tor-browser
-	    keepassxc
+    ##Internet
+    ungoogled-chromium
+    inputs.zen-browser.packages."${system}".default
+    tor-browser
+    keepassxc
 
-	    ##Admin
-	    gpauth
-	    ghostty
-	    starship
-	    gparted
+    ##Admin
+    gpauth
+    ghostty
+    starship
+    gparted
 
-	    ##Utils
-	    zoxide
-	    btop
-	    tree
-	    ripgrep
-	    fzf
-	    fd
-	    dust
-	    zip
-	    rar
-	    unzip
-	    bat
-	    eza
-	    fastfetch
-	    lshw
-	    uutils-coreutils-noprefix
-	    wl-clipboard
-	    usbutils
-	    pciutils
-	    inetutils
-	    util-linux
+    ##Utils
+    zoxide
+    btop
+    tree
+    ripgrep
+    fzf
+    fd
+    dust
+    zip
+    rar
+    unzip
+    bat
+    eza
+    fastfetch
+    lshw
+    uutils-coreutils-noprefix
+    wl-clipboard
+    usbutils
+    pciutils
+    inetutils
+    util-linux
 
     #Coding
     git
@@ -87,42 +86,46 @@
     #Coding Languages
     lldb
 
-	    ##Rust
-	    cargo
-	    stable.rust-analyzer
-	    rustc
-	    rustfmt
-	    bacon
-	    rusty-man
-	    clippy
+    ##Rust
+    cargo
+    stable.rust-analyzer
+    rustc
+    rustfmt
+    bacon
+    rusty-man
+    clippy
 
-	    ##Go
-	    go
-	    gopls
+    ##Go
+    go
+    gopls
+    gofumpt
 
-	    ##zig
-	    zig
-	    zls
+    ##zig
+    zig
+    zls
 
-	    ##python
-	    python3
-	    ty
+    ##python
+    python3
+    ty
+    black
 
-	    ##C
-	    gcc
-	    clang
-	    llvmPackages_20.clang-unwrapped
-	    bear
+    ##C
+    gcc
+    clang
+    llvmPackages_20.clang-unwrapped
+    bear
 
-	    ##C-sharp
-	    dotnet-sdk_8
-	    omnisharp-roslyn
+    ##C-sharp
+    dotnet-sdk_8
+    omnisharp-roslyn
+    csharpier
 
-	    ##Lua
-	    lua
-	    lua-language-server
+    ##Lua
+    lua
+    lua-language-server
+    stylua
 
-	    ##Markdown
-	    marksman
+    ##Markdown
+    marksman
   ];
 }
