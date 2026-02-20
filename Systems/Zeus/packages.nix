@@ -26,7 +26,6 @@
 	    numix-icon-theme-square
 	    volantes-cursors
 	    swww
-	    tinty
 	    nwg-look
 
 	    ##Media
@@ -116,5 +115,12 @@
 	    ##C-sharp
 	    dotnet-sdk_8
 	    omnisharp-roslyn
+
+	    ##Lua
+	    lua
+	    lua-language-server
+
+	    ##Markdown
+	    marksman
   ];
 }
