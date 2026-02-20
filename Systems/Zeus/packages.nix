@@ -1,5 +1,6 @@
 {
   pkgs,
+  inputs,
   ...
 }:
 
@@ -43,6 +44,7 @@
 
 	    ##Internet
 	    ungoogled-chromium
+	    inputs.zen-browser.packages."${system}".default
 	    tor-browser
 	    keepassxc
 
