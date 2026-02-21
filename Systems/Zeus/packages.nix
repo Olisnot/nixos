@@ -78,6 +78,7 @@
     #Coding
     git
     git-credential-manager
+    opencode
 
     texlab
     nixd
