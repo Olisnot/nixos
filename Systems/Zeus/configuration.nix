@@ -65,10 +65,6 @@
   };
 
   services.tailscale.enable = true;
-  services.sunshine = {
-    enable = true;
-    openFirewall = true;
-  };
 
   systemd.tpm2.enable = false;
 
