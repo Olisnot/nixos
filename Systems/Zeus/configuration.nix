@@ -65,6 +65,10 @@
   };
 
   services.tailscale.enable = true;
+  services.sunshine = {
+    enable = true;
+    openFirewall = true;
+  };
 
   systemd.tpm2.enable = false;
 
@@ -155,6 +159,7 @@
     xdg-desktop-portal
     xdg-desktop-portal-gtk
     xdg-desktop-portal-wlr
+    xdg-desktop-portal-gnome
   ];
 
   niri.enable = true;
