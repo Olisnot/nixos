@@ -1,5 +1,6 @@
 {
   pkgs,
+  inputs,
   ...
 }:
 
@@ -33,16 +34,6 @@
     nicotine-plus
     ffmpeg
     ani-cli
-
-    #Gaming
-    emulationstation-de
-    retroarch-full
-    dolphin-emu
-    duckstation
-    pcsx2-bin
-    ryubing
-    rpcs3
-    azahar
 
     ##Creative
     gimp3

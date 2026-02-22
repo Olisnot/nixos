@@ -15,5 +15,6 @@
     };
     steamos.useSteamOSConfig = true;
     decky-loader.enable = true;
+    hardware.has.amd.gpu = true;
   };
 }
