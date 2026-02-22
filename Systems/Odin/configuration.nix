@@ -13,6 +13,7 @@
     ./boot.nix
     ./sound.nix
     ./users/oliver/user.nix
+    ./jovian.nix
     ../../nixosModules
     ../../scripts
   ];
@@ -129,7 +130,6 @@
 
   hardware = {
     graphics.enable = true;
-    nvidia.modesetting.enable = true;
   };
 
   xdg.portal.enable = true;
@@ -141,16 +141,16 @@
 
   hyprland.enable = true;
 
-  services.displayManager = {
-    sddm = {
-      enable = true;
-      autoLogin.relogin = true;
-      wayland.enable = true;
-    };
-    defaultSession = "hyprland";
-    autoLogin.enable = true;
-    autoLogin.user = "oliver";
-  };
+  # services.displayManager = {
+  #   sddm = {
+  #     enable = true;
+  #     autoLogin.relogin = true;
+  #     wayland.enable = true;
+  #   };
+  #   # defaultSession = "hyprland";
+  #   autoLogin.enable = true;
+  #   autoLogin.user = "oliver";
+  # };
 
   # Enable Bluetooth
   bluetooth.enable = true;

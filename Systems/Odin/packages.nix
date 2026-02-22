@@ -6,78 +6,85 @@
 {
   environment.systemPackages = with pkgs; [
     #Tools
-	    ##General
-	    stow
-	    neovim
-	    yazi
-	    nemo
-	    wofi
-	    keymapp
-	    zathura
-	    obsidian
-	    waybar
-	    mupdf
-	    dunst
-	    vesktop
-	    pwvucontrol
-	    filezilla
+    ##General
+    stow
+    neovim
+    yazi
+    nemo
+    wofi
+    keymapp
+    zathura
+    obsidian
+    mupdf
+    vesktop
+    pwvucontrol
+    filezilla
 
-	    ## Appearance
-	    numix-icon-theme-square
-	    volantes-cursors
-	    swww
-	    tinty
-	    nwg-look
+    ## Appearance
+    numix-icon-theme-square
+    volantes-cursors
+    nwg-look
 
-	    ##Media
-	    mpv
-	    mpd
-	    mpd-notification
-	    rmpc
-	    nicotine-plus
-	    ffmpeg
-	    ani-cli
+    ##Media
+    mpv
+    mpd
+    mpd-notification
+    rmpc
+    nicotine-plus
+    ffmpeg
+    ani-cli
 
-	    ##Creative
-	    gimp3
-	    imagemagick
+    #Gaming
+    emulationstation-de
+    retroarch-full
+    dolphin-emu
+    duckstation
+    pcsx2-bin
+    ryubing
+    rpcs3
+    azahar
 
-	    ##Internet
-	    ungoogled-chromium
-	    tor-browser
-	    keepassxc
+    ##Creative
+    gimp3
+    imagemagick
 
-	    ##Admin
-	    gpauth
-	    ghostty
-	    starship
-	    gparted
+    ##Internet
+    inputs.zen-browser.packages."${system}".default
+    tor-browser
+    keepassxc
 
-	    ##Utils
-	    zoxide
-	    btop
-	    tree
-	    ripgrep
-	    fzf
-	    fd
-	    dust
-	    zip
-	    rar
-	    unzip
-	    bat
-	    eza
-	    fastfetch
-	    lshw
-	    uutils-coreutils-noprefix
-	    wl-clipboard
-	    usbutils
-	    pciutils
-	    inetutils
-	    util-linux
+    ##Admin
+    gpauth
+    ghostty
+    starship
+    gparted
+
+    ##Utils
+    zoxide
+    btop
+    tree
+    ripgrep
+    fzf
+    fd
+    dust
+    zip
+    rar
+    unzip
+    bat
+    eza
+    fastfetch
+    lshw
+    uutils-coreutils-noprefix
+    wl-clipboard
+    usbutils
+    pciutils
+    inetutils
+    util-linux
 
     #Coding
     git
     git-credential-manager
+    opencode
 
     texlab
     nixd
@@ -86,35 +93,35 @@
     #Coding Languages
     lldb
 
-	    ##Rust
-	    cargo
-	    stable.rust-analyzer
-	    rustc
-	    rustfmt
-	    bacon
-	    rusty-man
-	    clippy
+    ##Rust
+    cargo
+    stable.rust-analyzer
+    rustc
+    rustfmt
+    bacon
+    rusty-man
+    clippy
 
-	    ##Go
-	    go
-	    gopls
+    ##Go
+    go
+    gopls
 
-	    ##zig
-	    zig
-	    zls
+    ##zig
+    zig
+    zls
 
-	    ##python
-	    python3
-	    ty
+    ##python
+    python3
+    ty
 
-	    ##C
-	    gcc
-	    clang
-	    llvmPackages_20.clang-unwrapped
-	    bear
+    ##C
+    gcc
+    clang
+    llvmPackages_20.clang-unwrapped
+    bear
 
-	    ##C-sharp
-	    dotnet-sdk_8
-	    omnisharp-roslyn
+    ##C-sharp
+    dotnet-sdk_8
+    omnisharp-roslyn
   ];
 }

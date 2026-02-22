@@ -5,10 +5,14 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     nixpkgsStable.url = "github:nixos/nixpkgs/nixos-24.05";
+    jovian = {
+      url = "github:Jovian-Experiments/Jovian-NixOS";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     zen-browser = {
-	    url = "github:0xc000022070/zen-browser-flake";
-	    inputs.nixpkgs.follows = "nixpkgs";
-	  };
+      url = "github:0xc000022070/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -43,6 +47,7 @@
           specialArgs = { inherit inputs; };
           modules = [
             ./Systems/Odin/configuration.nix
+            inputs.jovian-nixos.nixosModules.default
             (
               { ... }:
               {

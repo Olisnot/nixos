@@ -15,6 +15,7 @@
       waybar
       xwayland-satellite
       swww
+      dunst
     ];
   };
 }
