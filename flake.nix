@@ -47,7 +47,7 @@
           specialArgs = { inherit inputs; };
           modules = [
             ./Systems/Odin/configuration.nix
-            inputs.jovian-nixos.nixosModules.default
+            inputs.jovian.nixosModules.default
             (
               { ... }:
               {
