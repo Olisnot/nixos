@@ -27,6 +27,7 @@
     volantes-cursors
     swww
     nwg-look
+    quickshell
 
     ##Media
     mpv
