@@ -17,7 +17,6 @@
     zathura
     obsidian
     mupdf
-    vesktop
     pwvucontrol
     filezilla
 
@@ -42,7 +41,6 @@
     ##Internet
     inputs.zen-browser.packages."${system}".default
     tor-browser
-    keepassxc
 
     ##Admin
     gpauth
