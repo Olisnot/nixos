@@ -14,7 +14,10 @@
       enableGyroDsuService = true;
     };
     steamos.useSteamOSConfig = true;
-    decky-loader.enable = true;
+    decky-loader = {
+      enable = true;
+      user = "oliver";
+    };
     hardware.has.amd.gpu = true;
   };
 }
