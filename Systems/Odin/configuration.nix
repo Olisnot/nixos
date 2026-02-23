@@ -51,8 +51,6 @@
 
   systemd.tpm2.enable = false;
 
-  services.mpd.enable = true;
-
   # Garbage collector
   nix.gc = {
     automatic = true;

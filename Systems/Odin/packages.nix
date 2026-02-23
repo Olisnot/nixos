@@ -27,7 +27,6 @@
 
     ##Media
     mpv
-    mpd
     mpd-notification
     rmpc
     nicotine-plus
