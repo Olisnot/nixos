@@ -10,36 +10,46 @@
 }:
 
 {
-  imports = [ (modulesPath + "/installer/scan/not-detected.nix") ];
+  imports = [
+    (modulesPath + "/installer/scan/not-detected.nix")
+  ];
 
   boot.initrd.availableKernelModules = [
     "xhci_pci"
     "ahci"
     "nvme"
-    "usbhid"
     "usb_storage"
+    "usbhid"
     "sd_mod"
   ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
-  boot.initrd.luks.devices = {
-    "luks-8915a924-2423-4f44-b4c8-bef5b10c2f77".device =
-      "/dev/disk/by-uuid/8915a924-2423-4f44-b4c8-bef5b10c2f77";
-    "luks-c2745045-5f35-4521-910a-c5c18e0138db".device =
-      "/dev/disk/by-uuid/c2745045-5f35-4521-910a-c5c18e0138db";
-    "luks-e4207a40-ffcf-4a0e-8e85-c5e9710d1cc4".device =
-      "/dev/disk/by-uuid/e4207a40-ffcf-4a0e-8e85-c5e9710d1cc4";
+  fileSystems."/" = {
+    device = "/dev/mapper/luks-2dc51a3c-c552-46df-946f-32604f1a14c1";
+    fsType = "btrfs";
+    options = [ "subvol=@" ];
   };
 
-  fileSystems."/" = {
-    device = "/dev/disk/by-uuid/fa935fab-6e41-45c2-8f82-853d6730080d";
-    fsType = "xfs";
+  #root
+  boot.initrd.luks.devices."luks-2dc51a3c-c552-46df-946f-32604f1a14c1".device =
+    "/dev/disk/by-uuid/2dc51a3c-c552-46df-946f-32604f1a14c1";
+  #swap
+  boot.initrd.luks.devices."luks-fc5d5e22-1901-416a-8164-5341e0866c69".device =
+    "/dev/disk/by-uuid/fc5d5e22-1901-416a-8164-5341e0866c69";
+  #1tb
+  boot.initrd.luks.devices."luks-e4207a40-ffcf-4a0e-8e85-c5e9710d1cc4".device =
+    "/dev/disk/by-uuid/e4207a40-ffcf-4a0e-8e85-c5e9710d1cc4";
+
+  fileSystems."/home" = {
+    device = "/dev/mapper/luks-2dc51a3c-c552-46df-946f-32604f1a14c1";
+    fsType = "btrfs";
+    options = [ "subvol=@home" ];
   };
 
   fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/F7BD-BC3B";
+    device = "/dev/disk/by-uuid/6165-5ACD";
     fsType = "vfat";
     options = [
       "fmask=0077"
@@ -47,22 +57,14 @@
     ];
   };
 
-  swapDevices = [ { device = "/dev/disk/by-uuid/0262d9b8-4da5-4ce9-8d67-92f19172185b"; } ];
-
   fileSystems."/mnt/1tb" = {
-    device = "/dev/disk/by-uuid/f351648c-fed0-4178-92f1-94e7993e2ede";
+    device = "/dev/mapper/luks-e4207a40-ffcf-4a0e-8e85-c5e9710d1cc4";
     fsType = "xfs";
   };
 
-
-  # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
-  # (the default) this is the recommended approach. When using systemd-networkd it's
-  # still possible to use this option, but it's recommended to use it in conjunction
-  # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
-  networking.useDHCP = lib.mkDefault true;
-  # networking.interfaces.enp0s20f0u2u4c2.useDHCP = lib.mkDefault true;
-  # networking.interfaces.enp7s0.useDHCP = lib.mkDefault true;
-  # networking.interfaces.wlp0s20f3.useDHCP = lib.mkDefault true;
+  swapDevices = [
+    { device = "/dev/mapper/luks-fc5d5e22-1901-416a-8164-5341e0866c69"; }
+  ];
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;

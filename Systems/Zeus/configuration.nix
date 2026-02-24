@@ -66,6 +66,8 @@
 
   services.tailscale.enable = true;
 
+  services.mpd.enable = true;
+
   systemd.tpm2.enable = false;
 
   # Garbage collector
