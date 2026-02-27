@@ -2,6 +2,7 @@
   lib,
   config,
   inputs,
+  pkgs,
   ...
 }:
 
@@ -21,6 +22,10 @@
     hardware.bluetooth.enable = true;
     services.power-profiles-daemon.enable = true;
     services.upower.enable = true;
+
+    environment.systemPackages = with pkgs; [
+      xwayland-satellite
+    ];
 
     environment.variables = {
       QT_QPA_PLATFORMTHEME = "gtk3";
