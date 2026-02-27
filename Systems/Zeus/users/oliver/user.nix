@@ -5,6 +5,10 @@
   users.users.oliver = {
     isNormalUser = true;
     description = "Oliver";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "video"
+    ];
   };
 }
