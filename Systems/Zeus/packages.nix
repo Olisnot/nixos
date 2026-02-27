@@ -11,6 +11,7 @@
     stow
     neovim
     yazi
+    nemo
     wofi
     keymapp
     zathura
