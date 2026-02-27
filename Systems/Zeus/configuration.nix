@@ -66,6 +66,8 @@
 
   services.tailscale.enable = true;
 
+  programs.kdeconnect.enable = true;
+
   systemd.tpm2.enable = false;
 
   # Garbage collector

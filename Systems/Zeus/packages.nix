@@ -34,6 +34,8 @@
     mpd
     mpd-notification
     rmpc
+    ncspot
+    spotify
     nicotine-plus
     ffmpeg
     ani-cli
