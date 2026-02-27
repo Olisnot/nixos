@@ -30,6 +30,7 @@
     quickshell
 
     ##Media
+    playerctl
     mpv
     mpd
     mpd-notification
