@@ -10,6 +10,7 @@
     ./syncthing.nix
     ./hyprland.nix
     ./niri.nix
+    ./plasma.nix
     ./navidrome.nix
   ];
 }

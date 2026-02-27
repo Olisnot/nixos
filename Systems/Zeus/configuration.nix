@@ -157,10 +157,9 @@
     xdg-desktop-portal
     xdg-desktop-portal-gtk
     xdg-desktop-portal-wlr
-    xdg-desktop-portal-gnome
   ];
 
-  niri.enable = true;
+  kde.enable = true;
 
   services.displayManager = {
     sddm = {
@@ -168,7 +167,7 @@
       autoLogin.relogin = true;
       wayland.enable = true;
     };
-    defaultSession = "niri";
+    defaultSession = "plasma";
     autoLogin.enable = true;
     autoLogin.user = "oliver";
   };
