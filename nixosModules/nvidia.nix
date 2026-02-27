@@ -19,7 +19,6 @@
     };
 
     services.xserver.videoDrivers = [
-      "modesetting"
       "nvidia"
     ];
 
@@ -28,7 +27,7 @@
       modesetting.enable = true;
 
       powerManagement.enable = true;
-      powerManagement.finegrained = true;
+      powerManagement.finegrained = false;
 
       open = false;
 
@@ -37,10 +36,6 @@
       package = config.boot.kernelPackages.nvidiaPackages.stable;
 
       prime = {
-        offload = {
-          enable = true;
-          enableOffloadCmd = true;
-        };
         intelBusId = "PCI:0:2:0";
         nvidiaBusId = "PCI:1:0:0";
       };
