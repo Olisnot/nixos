@@ -28,7 +28,7 @@
     volantes-cursors
     swww
     nwg-look
-    quickshell
+    matugen
 
     ##Media
     playerctl
