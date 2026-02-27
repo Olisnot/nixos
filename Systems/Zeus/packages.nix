@@ -10,6 +10,7 @@
     ##General
     stow
     neovim
+    evil-helix
     yazi
     nemo
     wofi
