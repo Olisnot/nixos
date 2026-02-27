@@ -1,7 +1,14 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
-  options = { nvidia.enable = lib.mkEnableOption "Enables Nvidia Drivers"; };
+  options = {
+    nvidia.enable = lib.mkEnableOption "Enables Nvidia Drivers";
+  };
 
   config = lib.mkIf config.nvidia.enable {
     environment.systemPackages = with pkgs; [ nvtopPackages.nvidia ];
@@ -12,7 +19,10 @@
     };
 
     # Load nvidia driver for Xorg and Wayland
-    services.xserver.videoDrivers = [ "nvidia" ];
+    services.xserver.videoDrivers = [
+      "modesetting"
+      "nvidia"
+    ];
 
     hardware.nvidia = {
 
@@ -50,8 +60,13 @@
 
       prime = {
         # Make sure to use the correct Bus ID values for your system!
-        intelBusId = "PCI:00:02.0";
-        nvidiaBusId = "PCI:01:00.0";
+        intelBusId = "PCI:0:2:0";
+        nvidiaBusId = "PCI:01:00:0";
+
+        offload = {
+          enable = true;
+          enableOffloadCmd = true;
+        };
       };
     };
   };
