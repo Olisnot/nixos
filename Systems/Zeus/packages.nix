@@ -28,7 +28,9 @@
     numix-icon-theme-square
     volantes-cursors
     swww
+    matugen
     nwg-look
+    spicetify-cli
 
     ##Media
     playerctl
