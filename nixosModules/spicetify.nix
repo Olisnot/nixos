@@ -2,7 +2,6 @@
   lib,
   config,
   inputs,
-  pkgs,
   ...
 }:
 
@@ -14,13 +13,6 @@
   options.spicetify.enable = lib.mkEnableOption "Enable spicetify the spotify client";
 
   config = lib.mkIf config.spicetify.enable {
-    programs.spicetify =
-      let
-        spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.hostPlatform.system};
-      in
-      {
-        enable = true;
-        theme = spicePkgs.themes.comfy;
-      };
+    programs.spicetify.enable = true;
   };
 }
