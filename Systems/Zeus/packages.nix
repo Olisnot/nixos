@@ -29,7 +29,6 @@
     volantes-cursors
     swww
     nwg-look
-    matugen
 
     ##Media
     playerctl
