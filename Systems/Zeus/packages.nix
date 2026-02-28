@@ -30,7 +30,6 @@
     swww
     matugen
     nwg-look
-    spicetify-cli
 
     ##Media
     playerctl

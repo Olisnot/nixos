@@ -26,6 +26,7 @@
   fish.enable = true;
   syncthing.enable = true;
   navidrome.enable = true;
+  spicetify.enable = true;
 
   #Nix settings
   nix.settings.experimental-features = [

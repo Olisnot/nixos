@@ -2,6 +2,7 @@
   lib,
   config,
   inputs,
+  pkgs,
   ...
 }:
 
@@ -14,5 +15,8 @@
 
   config = lib.mkIf config.spicetify.enable {
     programs.spicetify.enable = true;
+    environment.systemPackages = with pkgs; [
+      spicetify-cli
+    ];
   };
 }
