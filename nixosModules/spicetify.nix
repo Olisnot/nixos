@@ -20,7 +20,8 @@
       in
       {
         enable = true;
-        theme = spicePkgs.themes.flow;
+        theme = spicePkgs.themes.comfy;
+        colorScheme = "Mono";
       };
   };
 }
