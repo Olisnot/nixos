@@ -12,6 +12,5 @@
     ./niri.nix
     ./plasma.nix
     ./navidrome.nix
-    ./spicetify.nix
   ];
 }
