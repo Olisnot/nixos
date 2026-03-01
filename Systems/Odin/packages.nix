@@ -19,6 +19,7 @@
     mupdf
     pwvucontrol
     filezilla
+    wvkbd
 
     ## Appearance
     numix-icon-theme-square
