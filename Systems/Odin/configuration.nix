@@ -23,6 +23,7 @@
   gaming.steam.enable = true;
   fish.enable = true;
   syncthing.enable = true;
+  spicetify.enable = true;
 
   #Nix settings
   nix.settings.experimental-features = [
