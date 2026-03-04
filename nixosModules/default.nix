@@ -13,5 +13,6 @@
     ./plasma.nix
     ./navidrome.nix
     ./spicetify.nix
+    ./iwd.nix
   ];
 }
