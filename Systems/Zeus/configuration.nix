@@ -44,6 +44,7 @@
       4533
       8000
     ];
+    checkReversePath = "loose";
   };
   networking.firewall.allowedTCPPortRanges = [
     {
