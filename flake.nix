@@ -18,7 +18,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
-    millennium.url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
   };
 
   outputs =
@@ -43,7 +42,6 @@
               {
                 nixpkgs.overlays = [
                   overlay-stable
-		  inputs.millennium.overlays.default
                 ];
               }
             )
