@@ -10,6 +10,7 @@
     ##General
     stow
     neovim
+    zed-editor
     evil-helix
     yazi
     nemo
