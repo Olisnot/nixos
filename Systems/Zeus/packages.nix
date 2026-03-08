@@ -84,7 +84,7 @@
     #Coding
     git
     git-credential-manager
-    opencode
+    codex
 
     texlab
     nixd
