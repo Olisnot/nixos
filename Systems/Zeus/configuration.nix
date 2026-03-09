@@ -27,6 +27,7 @@
   syncthing.enable = true;
   navidrome.enable = true;
   spicetify.enable = true;
+  arr.enable = true;
 
   #Nix settings
   nix.settings.experimental-features = [

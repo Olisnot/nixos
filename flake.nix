@@ -14,10 +14,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+    nixarr.url = "github:nix-media-server/nixarr";
   };
 
   outputs =
-    { nixpkgsStable, ... }@inputs:
+    { nixpkgsStable, nixarr, ... }@inputs:
     let
       system = "x86_64-linux";
       overlay-stable = final: prev: {
@@ -33,6 +34,7 @@
           specialArgs = { inherit inputs; };
           modules = [
             ./Systems/Zeus/configuration.nix
+            nixarr.nixosModules.default
             (
               { ... }:
               {
