@@ -18,5 +18,7 @@
       sonarr.enable = true;
       jellyseerr.enable = true;
     };
+    services.flaresolverr.enable = true;
+    services.qbittorrent.enable = true;
   };
 }
