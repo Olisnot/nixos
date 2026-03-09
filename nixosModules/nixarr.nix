@@ -19,6 +19,9 @@
       jellyseerr.enable = true;
     };
     services.flaresolverr.enable = true;
-    services.deluge.enable = true;
+    services.deluge = {
+      enable = true;
+      web.enable = true;
+    };
   };
 }
