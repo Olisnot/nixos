@@ -9,7 +9,10 @@
       mediaDir = "/data/media";
       stateDir = "/data/media/.state/nixarr";
 
-      jellyfin.enable = true;
+      jellyfin = {
+        enable = true;
+        openFirewall = true;
+      };
       bazarr.enable = true;
       lidarr.enable = true;
       prowlarr.enable = true;
