@@ -17,12 +17,8 @@
       readarr.enable = true;
       sonarr.enable = true;
       jellyseerr.enable = true;
-    };
-    services.flaresolverr.enable = true;
-    services.deluge = {
-      enable = true;
-      web.enable = true;
-      dataDir = "/data/downloads";
+
+      sabnzbd.enable = true;
     };
   };
 }
