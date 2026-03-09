@@ -23,5 +23,10 @@
 
       sabnzbd.enable = true;
     };
+    services.deluge = {
+      enable = true;
+      web.enable = true;
+      dataDir = "/Data/downloads";
+    };
   };
 }
