@@ -23,10 +23,7 @@
 
       sabnzbd.enable = true;
     };
-    services.deluge = {
-      enable = true;
-      web.enable = true;
-      dataDir = "/data/downloads";
-    };
+
+    services.qbittorrent.enable = true;
   };
 }
