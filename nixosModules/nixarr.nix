@@ -26,7 +26,7 @@
     services.deluge = {
       enable = true;
       web.enable = true;
-      dataDir = "/Data/downloads";
+      dataDir = "/data/downloads";
     };
   };
 }
