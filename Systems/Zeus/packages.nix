@@ -20,7 +20,6 @@
     obsidian
     waybar
     mupdf
-    dunst
     vesktop
     pwvucontrol
     filezilla
