@@ -19,6 +19,6 @@
       jellyseerr.enable = true;
     };
     services.flaresolverr.enable = true;
-    services.qbittorrent.enable = true;
+    services.deluge.enable = true;
   };
 }
