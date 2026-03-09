@@ -23,7 +23,7 @@
 
       sabnzbd.enable = true;
     };
-
+    services.flaresolverr.enable = true;
     services.qbittorrent.enable = true;
   };
 }
