@@ -1,4 +1,9 @@
-{ lib, config, ... }:
+{
+  lib,
+  config,
+  inputs,
+  ...
+}:
 
 {
   options = {
@@ -10,6 +15,15 @@
       enable = true;
       xwayland.enable = true;
     };
-    programs.hyprlock.enable = true;
+    services.noctalia-shell.enable = true;
+
+    networking.networkmanager.enable = true;
+    hardware.bluetooth.enable = true;
+    services.power-profiles-daemon.enable = true;
+    services.upower.enable = true;
+
+    environment.variables = {
+      QT_QPA_PLATFORMTHEME = "gtk3";
+    };
   };
 }
