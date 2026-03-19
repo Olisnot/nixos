@@ -26,6 +26,7 @@
 
     ## Appearance
     numix-icon-theme-square
+    whitesur-icon-theme
     volantes-cursors
     swww
     matugen
