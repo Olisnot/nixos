@@ -18,7 +18,6 @@
     keymapp
     zathura
     obsidian
-    waybar
     mupdf
     vesktop
     pwvucontrol
@@ -28,7 +27,6 @@
     numix-icon-theme-square
     whitesur-icon-theme
     volantes-cursors
-    swww
     matugen
     nwg-look
 
@@ -84,7 +82,7 @@
     #Coding
     git
     git-credential-manager
-    codex
+    opencode
 
     texlab
     nixd
