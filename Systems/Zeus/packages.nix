@@ -11,10 +11,8 @@
     stow
     neovim
     zed-editor
-    evil-helix
     yazi
     nemo
-    wofi
     keymapp
     zathura
     obsidian
@@ -33,11 +31,7 @@
     ##Media
     playerctl
     mpv
-    mpd
-    mpd-notification
-    rmpc
-    ncspot
-    spicetify-cli
+    youtube-music
     nicotine-plus
     ffmpeg
     ani-cli
@@ -49,7 +43,6 @@
     ##Internet
     inputs.zen-browser.packages."${system}".default
     tor-browser
-    keepassxc
 
     ##Admin
     gpauth
@@ -82,7 +75,6 @@
     #Coding
     git
     git-credential-manager
-    opencode
 
     texlab
     nixd
@@ -112,6 +104,7 @@
     ##python
     python3
     ty
+    uv
     black
 
     ##C
