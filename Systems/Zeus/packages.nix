@@ -23,7 +23,6 @@
     localsend
 
     ## Appearance
-    numix-icon-theme-square
     whitesur-icon-theme
     volantes-cursors
     matugen
@@ -32,10 +31,8 @@
     ##Media
     playerctl
     mpv
-    youtube-music
-    nicotine-plus
+    pear-desktop
     ffmpeg
-    ani-cli
 
     ##Creative
     gimp3
@@ -43,7 +40,6 @@
 
     ##Internet
     inputs.zen-browser.packages."${system}".default
-    tor-browser
 
     ##Admin
     gpauth
@@ -72,6 +68,7 @@
     pciutils
     inetutils
     util-linux
+    gnupg
 
     #Coding
     git
