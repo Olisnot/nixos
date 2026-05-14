@@ -3,6 +3,7 @@
 let
   rebuild = import ./Rebuild.nix { inherit pkgs; };
 
-in {
+in
+{
   environment.systemPackages = [ rebuild ];
 }

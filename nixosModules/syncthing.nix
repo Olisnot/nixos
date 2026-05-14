@@ -1,7 +1,9 @@
 { lib, config, ... }:
 
 {
-  options = { syncthing.enable = lib.mkEnableOption "Enable Syncthing"; };
+  options = {
+    syncthing.enable = lib.mkEnableOption "Enable Syncthing";
+  };
 
   config = lib.mkIf config.syncthing.enable {
     services = {
@@ -13,7 +15,13 @@
         configDir = "/home/oliver/Documents/.config/syncthing";
       };
     };
-    networking.firewall.allowedTCPPorts = [ 8384 22000 ];
-    networking.firewall.allowedUDPPorts = [ 22000 21027 ];
+    networking.firewall.allowedTCPPorts = [
+      8384
+      22000
+    ];
+    networking.firewall.allowedUDPPorts = [
+      22000
+      21027
+    ];
   };
 }
