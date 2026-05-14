@@ -11,9 +11,15 @@
   };
 
   config = lib.mkIf config.fish.enable {
-    programs.fish.enable = true;
+    programs.fish = {
+      enable = true;
+      interactiveShellInit = ''
+        set -gx GPG_TTY (tty)
+      '';
+    };
     programs.bash = {
       interactiveShellInit = ''
+        export GPG_TTY=$(tty)
         if [[ $(${pkgs.procps}/bin/ps --no-header --pid=$PPID --format=comm) != "fish" && -z ''${BASH_EXECUTION_STRING} ]]
         then
           shopt -q login_shell && LOGIN_OPTION='--login' || LOGIN_OPTION=""
