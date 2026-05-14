@@ -68,8 +68,6 @@
     pciutils
     inetutils
     util-linux
-    gnupg
-    pinentry-curses
 
     #Coding
     git
