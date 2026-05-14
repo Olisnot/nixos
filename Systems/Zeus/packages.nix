@@ -20,6 +20,7 @@
     vesktop
     pwvucontrol
     filezilla
+    localsend
 
     ## Appearance
     numix-icon-theme-square

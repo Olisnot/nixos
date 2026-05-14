@@ -33,7 +33,7 @@
     # Kernel parameters
     kernelParams = [
       "nvidia-drm.modeset=1"
-      "resume=/dev/mapper/luks-fc5d5e22-1901-416a-8164-5341e0866c69"
+      "resume=/dev/mapper/luks-cae60b6c-dadd-43fe-9d70-85db748ed516"
       "quiet"
       "splash"
       "intremap=on"
