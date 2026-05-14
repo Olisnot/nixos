@@ -44,6 +44,10 @@
       21
       4533
       8000
+      53317
+    ];
+    allowedUDPPorts = [
+      53317
     ];
     checkReversePath = "loose";
   };
