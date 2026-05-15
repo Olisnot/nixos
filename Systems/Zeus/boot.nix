@@ -41,6 +41,7 @@
       "udev.log_priority=3"
       "rd.systemd.show_status=auto"
       "plymouth.use-simpledrm=1"
+      "pcie_aspm=off"
     ];
 
     plymouth = {
