@@ -17,7 +17,7 @@
     zathura
     obsidian
     mupdf
-    vesktop
+    discord
     pwvucontrol
     filezilla
     localsend
