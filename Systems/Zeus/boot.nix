@@ -42,6 +42,7 @@
       "rd.systemd.show_status=auto"
       "plymouth.use-simpledrm=1"
       "pcie_aspm=off"
+      "usbcore.autosuspend=-1"
     ];
 
     plymouth = {

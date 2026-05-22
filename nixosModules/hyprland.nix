@@ -1,7 +1,7 @@
 {
   lib,
   config,
-  inputs,
+  pkgs,
   ...
 }:
 
@@ -15,12 +15,15 @@
       enable = true;
       xwayland.enable = true;
     };
-    services.noctalia-shell.enable = true;
 
     networking.networkmanager.enable = true;
     hardware.bluetooth.enable = true;
     services.power-profiles-daemon.enable = true;
     services.upower.enable = true;
+
+    environment.systemPackages = with pkgs; [
+      noctalia-shell
+    ];
 
     environment.variables = {
       QT_QPA_PLATFORMTHEME = "gtk3";
