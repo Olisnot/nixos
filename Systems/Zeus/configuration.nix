@@ -69,6 +69,11 @@
     '';
   };
 
+  environment.sessionVariables = {
+    XCURSOR_THEME = "volantes_cursors";
+    XCURSOR_SIZE = "24";
+  };
+
   services.tailscale.enable = true;
 
   programs.kdeconnect.enable = true;

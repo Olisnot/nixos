@@ -25,7 +25,6 @@
     ## Appearance
     whitesur-icon-theme
     volantes-cursors
-    matugen
     nwg-look
 
     ##Media
