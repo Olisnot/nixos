@@ -21,6 +21,7 @@
     pwvucontrol
     filezilla
     localsend
+    qbittorrent
 
     ## Appearance
     whitesur-icon-theme
