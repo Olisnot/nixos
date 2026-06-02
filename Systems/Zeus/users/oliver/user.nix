@@ -9,6 +9,7 @@
       "networkmanager"
       "wheel"
       "video"
+      "librepods"
     ];
   };
 }

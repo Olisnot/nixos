@@ -26,6 +26,7 @@
   fish.enable = true;
   syncthing.enable = true;
   gnupg.enable = true;
+  programs.librepods.enable = true;
 
   #Nix settings
   nix.settings.experimental-features = [
