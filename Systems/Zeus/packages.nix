@@ -22,6 +22,7 @@
     filezilla
     localsend
     qbittorrent
+    tutanota-desktop
 
     ## Appearance
     whitesur-icon-theme
