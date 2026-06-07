@@ -34,8 +34,6 @@
     mpv
     pear-desktop
     ffmpeg
-    grim
-    satty
 
     ##Creative
     gimp3
@@ -67,6 +65,9 @@
     lshw
     uutils-coreutils-noprefix
     wl-clipboard
+    grim
+    slurp
+    satty
     usbutils
     pciutils
     inetutils
