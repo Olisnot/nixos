@@ -34,6 +34,8 @@
     mpv
     pear-desktop
     ffmpeg
+    grim
+    satty
 
     ##Creative
     gimp3
