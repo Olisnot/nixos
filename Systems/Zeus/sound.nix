@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ ... }:
 
 {
   # Enable sound with pipewire.
@@ -11,7 +11,4 @@
     pulse.enable = true;
     jack.enable = true;
   };
-  environment.systemPackages = with pkgs; [
-    pulseaudio
-  ];
 }
