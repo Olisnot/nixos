@@ -81,7 +81,7 @@
     nixd
     nixfmt
 
-    pi-coding-agent
+    opencode
 
     #Coding Languages
     lldb
