@@ -168,7 +168,7 @@
     xdg-desktop-portal-wlr
   ];
 
-  hyprland.enable = true;
+  kde.enable = true;
 
   services.displayManager = {
     sddm = {
@@ -176,7 +176,7 @@
       autoLogin.relogin = true;
       wayland.enable = true;
     };
-    defaultSession = "hyprland";
+    defaultSession = "plasma";
     autoLogin.enable = true;
     autoLogin.user = "oliver";
   };
