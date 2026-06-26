@@ -10,6 +10,7 @@
       "wheel"
       "video"
       "librepods"
+      "dialout"
     ];
   };
 }
