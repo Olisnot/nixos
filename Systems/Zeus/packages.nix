@@ -23,6 +23,7 @@
     localsend
     qbittorrent
     tutanota-desktop
+    zmk-studio
 
     ## Appearance
     whitesur-icon-theme
