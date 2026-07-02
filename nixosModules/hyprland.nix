@@ -23,6 +23,10 @@
 
     environment.systemPackages = with pkgs; [
       noctalia-shell
+      waybar
+      awww
+      mako
+      wofi
     ];
 
     environment.variables = {
