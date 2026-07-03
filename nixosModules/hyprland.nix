@@ -20,10 +20,10 @@
     hardware.bluetooth.enable = true;
     services.power-profiles-daemon.enable = true;
     services.upower.enable = true;
+    services.hypridle.enable = true;
 
     environment.systemPackages = with pkgs; [
       hyprlock
-      hypridle
       waybar
       awww
       mako
