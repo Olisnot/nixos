@@ -23,6 +23,7 @@
 
     environment.systemPackages = with pkgs; [
       hyprlock
+      hypridle
       waybar
       awww
       mako
