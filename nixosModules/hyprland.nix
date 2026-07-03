@@ -22,7 +22,7 @@
     services.upower.enable = true;
 
     environment.systemPackages = with pkgs; [
-      noctalia-shell
+      hyprlock
       waybar
       awww
       mako
