@@ -15,5 +15,6 @@
     ./spicetify.nix
     ./iwd.nix
     ./gnupg.nix
+    ./nixarr.nix
   ];
 }
