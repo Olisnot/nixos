@@ -15,6 +15,10 @@
     };
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     nixarr.url = "github:nix-media-server/nixarr";
+    wallpapers = {
+      url = "git+https://codeberg.org/Olisnot/Wallpapers.git";
+      flake = false;
+    };
   };
 
   outputs =

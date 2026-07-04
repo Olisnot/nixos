@@ -110,6 +110,7 @@
         "nixpkgsStable": "nixpkgsStable",
         "silentSDDM": "silentSDDM",
         "spicetify-nix": "spicetify-nix",
+        "wallpapers": "wallpapers",
         "zen-browser": "zen-browser"
       }
     },
@@ -201,6 +202,22 @@
         "owner": "Maroka-chan",
         "repo": "VPN-Confinement",
         "type": "github"
+      }
+    },
+    "wallpapers": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1783185321,
+        "narHash": "sha256-BRK+U6joWzksKWhMK7JD5NmZIsksgEtItGALGH58oPE=",
+        "ref": "refs/heads/main",
+        "rev": "71e1d4b6341e37e67adde376cca6d0775b0f49b0",
+        "revCount": 1,
+        "type": "git",
+        "url": "https://codeberg.org/Olisnot/Wallpapers.git"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://codeberg.org/Olisnot/Wallpapers.git"
       }
     },
     "website-builder": {

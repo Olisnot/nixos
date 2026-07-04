@@ -179,9 +179,21 @@
     autoLogin.user = lib.mkDefault "oliver";
   };
   programs.silentSDDM = {
-        enable = true;
-        theme = "default";
-        # settings = { ... }; see example in module
+    enable = true;
+    theme = "default";
+    backgrounds = {
+      "2114" = inputs.wallpapers + "/2114.jpg";
+      "IMG_0001" = inputs.wallpapers + "/IMG_0001.JPG";
+      windows-11-black = inputs.wallpapers + "/wallpaperswide.com-windows-11-black-background-wallpaper-2560x1440.jpg";
+    };
+    settings = {
+      LoginScreen.background = "2114.jpg";
+      LockScreen.background = "2114.jpg";
+    };
+    profileIcons.oliver = builtins.path {
+      path = /home/oliver/repos/nixos/Systems/Zeus/users/oliver/.face;
+      name = "oliver-face";
+    };
   };
 
   # Set Laptop lid
