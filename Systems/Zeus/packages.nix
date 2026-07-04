@@ -24,6 +24,8 @@
     qbittorrent
     tutanota-desktop
     zmk-studio
+    bluetui
+    wifitui
 
     ## Appearance
     whitesur-icon-theme
