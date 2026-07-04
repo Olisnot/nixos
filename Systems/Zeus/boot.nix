@@ -12,6 +12,12 @@
     consoleLogLevel = 3;
     initrd.verbose = false;
     initrd.systemd.enable = true;
+    initrd.kernelModules = [
+      "nvidia"
+      "nvidia_modeset"
+      "nvidia_uvm"
+      "nvidia_drm"
+    ];
 
     loader = {
       limine = {
@@ -38,7 +44,8 @@
       "boot.shell_on_fail"
       "udev.log_priority=3"
       "rd.systemd.show_status=auto"
-      "plymouth.use-simpledrm=1"
+      "plymouth.use-simpledrm=0"
+      "nvidia-drm.fbdev=1"
       "pcie_aspm=off"
       "usbcore.autosuspend=-1"
     ];
