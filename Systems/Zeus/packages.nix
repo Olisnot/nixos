@@ -41,7 +41,7 @@
     imagemagick
 
     ##Internet
-    inputs.zen-browser.packages."${system}".default
+    inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
 
     ##Admin
     gpauth
@@ -73,6 +73,7 @@
     pciutils
     inetutils
     util-linux
+    tree-sitter
 
     #Coding
     git

@@ -14,6 +14,7 @@
     programs.hyprland = {
       enable = true;
       xwayland.enable = true;
+      withUWSM = true;
     };
 
     networking.networkmanager.enable = true;
