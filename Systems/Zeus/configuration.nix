@@ -171,7 +171,7 @@
   services.displayManager = {
     sddm = {
       enable = true;
-      autoLogin.relogin = true;
+      autoLogin.relogin = false;
       wayland.enable = true;
     };
     defaultSession = "hyprland-uwsm";
