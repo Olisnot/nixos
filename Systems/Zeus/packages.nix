@@ -27,6 +27,9 @@
 
     ## Appearance
     whitesur-icon-theme
+    papirus-icon-theme
+    tela-icon-theme
+    numix-icon-theme-square
     volantes-cursors
     nwg-look
 
