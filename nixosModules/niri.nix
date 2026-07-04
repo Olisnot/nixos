@@ -1,22 +1,15 @@
 {
   lib,
   config,
-  inputs,
   pkgs,
   ...
 }:
 
 {
-  imports = [
-    inputs.noctalia.nixosModules.default
-  ];
-
   options.niri.enable = lib.mkEnableOption "use niri as wayland compositor";
 
   config = lib.mkIf config.niri.enable {
     programs.niri.enable = true;
-
-    services.noctalia-shell.enable = true;
 
     networking.networkmanager.enable = true;
     hardware.bluetooth.enable = true;

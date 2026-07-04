@@ -15,6 +15,7 @@
     ./users/oliver/user.nix
     ../../nixosModules
     ../../scripts
+    inputs.silentSDDM.nixosModules.default
   ];
 
   #Custom module options
@@ -170,13 +171,17 @@
 
   services.displayManager = {
     sddm = {
-      enable = true;
-      autoLogin.relogin = false;
-      wayland.enable = true;
+      autoLogin.relogin = lib.mkDefault false;
+      wayland.enable = lib.mkDefault true;
     };
-    defaultSession = "hyprland-uwsm";
-    autoLogin.enable = true;
-    autoLogin.user = "oliver";
+    defaultSession = lib.mkDefault "hyprland-uwsm";
+    autoLogin.enable = lib.mkDefault true;
+    autoLogin.user = lib.mkDefault "oliver";
+  };
+  programs.silentSDDM = {
+        enable = true;
+        theme = "default";
+        # settings = { ... }; see example in module
   };
 
   # Set Laptop lid
