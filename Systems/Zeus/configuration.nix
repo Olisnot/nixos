@@ -74,6 +74,7 @@
   environment.sessionVariables = {
     XCURSOR_THEME = "volantes_cursors";
     XCURSOR_SIZE = "24";
+    WIFITUI_THEME = /home/oliver/.config/wifitui/theme.toml;
   };
 
   services.tailscale.enable = true;
