@@ -35,6 +35,10 @@ let
       enable = config.services.qbittorrent.enable;
       port = 8080;
     };
+    sabnzbd = {
+      enable = config.nixarr.sabnzbd.enable;
+      port = config.nixarr.sabnzbd.guiPort;
+    };
   };
 
   caddyHosts = lib.mapAttrs' (name: service: {
@@ -64,6 +68,7 @@ in
       radarr.enable = true;
       sonarr.enable = true;
       seerr.enable = true;
+      sabnzbd.enable = true;
     };
     services.flaresolverr.enable = true;
     services.qbittorrent.enable = true;
