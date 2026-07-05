@@ -21,7 +21,6 @@
     pwvucontrol
     filezilla
     localsend
-    qbittorrent
     tutanota-desktop
     zmk-studio
     bluetui
