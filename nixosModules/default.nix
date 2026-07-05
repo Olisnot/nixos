@@ -16,5 +16,6 @@
     ./iwd.nix
     ./gnupg.nix
     ./nixarr.nix
+    ./caddy.nix
   ];
 }

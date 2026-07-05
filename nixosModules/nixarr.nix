@@ -23,6 +23,11 @@
     services.flaresolverr.enable = true;
     services.qbittorrent.enable = true;
 
+    caddyReverseProxy = {
+      enable = true;
+      hosts."jellyfin.asgard.local".upstream = "127.0.0.1:8096";
+    };
+
     networking.firewall = {
       allowedTCPPorts = [
         8096

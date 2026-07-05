@@ -187,7 +187,8 @@
     backgrounds = {
       "2114" = inputs.wallpapers + "/2114.jpg";
       "IMG_0001" = inputs.wallpapers + "/IMG_0001.JPG";
-      windows-11-black = inputs.wallpapers + "/wallpaperswide.com-windows-11-black-background-wallpaper-2560x1440.jpg";
+      windows-11-black =
+        inputs.wallpapers + "/wallpaperswide.com-windows-11-black-background-wallpaper-2560x1440.jpg";
     };
     settings = {
       LoginScreen.background = "2114.jpg";
