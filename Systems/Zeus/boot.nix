@@ -53,10 +53,10 @@
     plymouth = {
       enable = true;
       font = "${pkgs.hack-font}/share/fonts/truetype/Hack-Regular.ttf";
-      theme = lib.mkDefault "abstract_ring";
+      theme = lib.mkDefault "hexagon_dots";
       themePackages = with pkgs; [
         (adi1090x-plymouth-themes.override {
-          selected_themes = [ "abstract_ring" ];
+          selected_themes = [ "hexagon_dots" ];
         })
       ];
     };
