@@ -18,9 +18,16 @@
       prowlarr.enable = true;
       radarr.enable = true;
       sonarr.enable = true;
-      jellyseerr.enable = true;
+      seerr.enable = true;
     };
     services.flaresolverr.enable = true;
     services.qbittorrent.enable = true;
+
+    networking.firewall = {
+      allowedTCPPorts = [
+        8096
+      ];
+      checkReversePath = "loose";
+    };
   };
 }
