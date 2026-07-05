@@ -67,6 +67,7 @@ in
     };
     services.flaresolverr.enable = true;
     services.qbittorrent.enable = true;
+    users.users.qbittorrent.extraGroups = [ "media" ];
 
     caddyReverseProxy = {
       enable = true;
