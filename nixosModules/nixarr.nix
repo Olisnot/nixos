@@ -25,7 +25,7 @@
 
     caddyReverseProxy = {
       enable = true;
-      hosts."jellyfin.zeus.ts.net" = {
+      hosts."jellyfin.opmsonline.org" = {
         upstream = "127.0.0.1:8096";
         useInternalTls = true;
       };
