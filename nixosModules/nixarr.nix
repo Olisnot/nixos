@@ -25,7 +25,10 @@
 
     caddyReverseProxy = {
       enable = true;
-      hosts."jellyfin.asgard.local".upstream = "127.0.0.1:8096";
+      hosts."jellyfin.zeus.ts.net" = {
+        upstream = "127.0.0.1:8096";
+        useInternalTls = true;
+      };
     };
 
     networking.firewall = {
