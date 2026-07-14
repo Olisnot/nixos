@@ -34,6 +34,7 @@ in
         Address = "0.0.0.0";
         Port = cfg.port;
         MusicFolder = cfg.musicFolder;
+        Scanner.PurgeMissing = "full";
       };
     };
   };
