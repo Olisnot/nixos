@@ -12,6 +12,7 @@ let
   ];
 
   mediaDirs = [
+    "library"
     "MusicVideos"
     "Movies"
     "TV"
@@ -41,6 +42,12 @@ in
       type = lib.types.str;
       default = "/data/media";
       description = "Host directory used for SoulSync media output bind mounts.";
+    };
+
+    musicDir = lib.mkOption {
+      type = lib.types.str;
+      default = "/data/media/library/music";
+      description = "Host directory mounted as SoulSync's music transfer output.";
     };
 
     uid = lib.mkOption {
@@ -140,6 +147,7 @@ in
         "${cfg.stateDir}/downloads:/app/downloads"
         "${cfg.stateDir}/Staging:/app/Staging"
         "${cfg.stateDir}/scripts:/app/scripts"
+        "${cfg.musicDir}:/app/Transfer"
         "${cfg.mediaDir}/MusicVideos:/app/MusicVideos"
         "${cfg.mediaDir}/Movies:/media/movies"
         "${cfg.mediaDir}/TV:/media/tv"
@@ -163,7 +171,8 @@ in
 
     systemd.tmpfiles.rules =
       (map (dir: "d ${cfg.stateDir}/${dir} 0755 ${owner} ${group} -") stateDirs)
-      ++ (map (dir: "d ${cfg.mediaDir}/${dir} 0755 ${owner} ${group} -") mediaDirs);
+      ++ (map (dir: "d ${cfg.mediaDir}/${dir} 0755 ${owner} ${group} -") mediaDirs)
+      ++ [ "d ${cfg.musicDir} 0755 ${owner} ${group} -" ];
 
     networking.firewall.allowedTCPPorts = lib.mkIf cfg.openFirewall [
       cfg.webPort

@@ -30,6 +30,9 @@
   gnupg.enable = true;
   programs.librepods.enable = true;
   arr.enable = true;
+  navidrome.enable = true;
+  slskd.enable = true;
+  slskd.environmentFile = "/etc/slskd.env";
   soulsync.enable = true;
 
   #Nix settings
