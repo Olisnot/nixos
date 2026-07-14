@@ -38,6 +38,7 @@
     playerctl
     mpv
     pear-desktop
+    gelly
     ffmpeg
 
     ##Creative
