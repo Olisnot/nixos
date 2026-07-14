@@ -30,6 +30,7 @@
   gnupg.enable = true;
   programs.librepods.enable = true;
   arr.enable = true;
+  soulsync.enable = true;
 
   #Nix settings
   nix.settings.experimental-features = [

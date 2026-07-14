@@ -3,5 +3,6 @@
 {
   imports = [
     ./nixarr
+    ./soulsync.nix
   ];
 }
