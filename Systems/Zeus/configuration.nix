@@ -34,6 +34,12 @@
   slskd.enable = true;
   slskd.environmentFile = "/etc/slskd.env";
   soulsync.enable = true;
+  romm = {
+    enable = true;
+    environmentFile = "/etc/romm.env";
+    libraryDir = "/mnt/1tb/Emulation/roms";
+    webPort = 8081;
+  };
 
   #Nix settings
   nix.settings.experimental-features = [
