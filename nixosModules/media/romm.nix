@@ -1,4 +1,9 @@
-{ lib, config, ... }:
+{
+  lib,
+  config,
+  pkgs,
+  ...
+}:
 
 let
   cfg = config.romm;
@@ -210,6 +215,23 @@ in
           echo "Timed out waiting for romm-db to become healthy" >&2
           exit 1
         '';
+      };
+
+      romm-env-restart = {
+        description = "Restart RomM after its environment file changes";
+        serviceConfig.Type = "oneshot";
+        script = ''
+          ${pkgs.systemd}/bin/systemctl restart docker-romm.service
+        '';
+      };
+    };
+
+    systemd.paths.romm-env-restart = {
+      description = "Watch RomM environment file for changes";
+      wantedBy = [ "multi-user.target" ];
+      pathConfig = {
+        PathChanged = cfg.environmentFile;
+        Unit = "romm-env-restart.service";
       };
     };
 
