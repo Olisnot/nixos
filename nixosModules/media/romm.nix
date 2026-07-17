@@ -34,8 +34,8 @@ in
 
     libraryDir = lib.mkOption {
       type = lib.types.str;
-      default = "/mnt/1tb/Emulation/roms";
-      description = "Host directory containing the ROM library.";
+      default = "/mnt/1tb/Emulation";
+      description = "Host directory mounted as the RomM library root.";
     };
 
     assetsDir = lib.mkOption {

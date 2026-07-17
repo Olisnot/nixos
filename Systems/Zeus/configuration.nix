@@ -37,7 +37,7 @@
   romm = {
     enable = true;
     environmentFile = "/etc/romm.env";
-    libraryDir = "/mnt/1tb/Emulation/roms";
+    libraryDir = "/mnt/1tb/Emulation";
     webPort = 8081;
   };
 
