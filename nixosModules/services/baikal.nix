@@ -13,12 +13,6 @@ in
       example = "baikal.example.org";
     };
 
-    internalHost = lib.mkOption {
-      type = lib.types.str;
-      default = "baikal.internal";
-      description = "Internal nginx virtual host name used by Baikal.";
-    };
-
     backendPort = lib.mkOption {
       type = lib.types.port;
       default = 8082;
@@ -29,10 +23,10 @@ in
   config = lib.mkIf cfg.enable {
     services.baikal = {
       enable = true;
-      virtualHost = cfg.internalHost;
+      virtualHost = cfg.hostName;
     };
 
-    services.nginx.virtualHosts.${cfg.internalHost}.listen = [
+    services.nginx.virtualHosts.${cfg.hostName}.listen = [
       {
         addr = "127.0.0.1";
         port = cfg.backendPort;
@@ -46,9 +40,6 @@ in
       cloudflareDns.enable = true;
       hosts.${cfg.hostName} = {
         upstream = "127.0.0.1:${toString cfg.backendPort}";
-        reverseProxyExtraConfig = ''
-          header_up Host ${cfg.internalHost}
-        '';
       };
     };
 
