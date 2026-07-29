@@ -97,7 +97,10 @@
     WIFITUI_THEME = /home/oliver/.config/wifitui/theme.toml;
   };
 
-  services.tailscale.enable = true;
+  services.tailscale = {
+    enable = true;
+    extraSetFlags = [ "--exit-node-allow-lan-access=true" ];
+  };
 
   programs.kdeconnect.enable = true;
 
