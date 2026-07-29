@@ -40,6 +40,7 @@
     libraryDir = "/mnt/1tb/Emulation";
     webPort = 8081;
   };
+  baikal.enable = true;
 
   #Nix settings
   nix.settings.experimental-features = [
