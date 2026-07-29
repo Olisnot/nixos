@@ -42,7 +42,7 @@
   };
   baikal = {
     enable = true;
-    hostName = "zeus.tail91b45d.ts.net";
+    hostName = "baikal.opmsonline.org";
   };
 
   #Nix settings

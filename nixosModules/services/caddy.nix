@@ -62,6 +62,12 @@ in
                 default = "";
                 description = "Extra Caddy directives for this virtual host.";
               };
+
+              reverseProxyExtraConfig = lib.mkOption {
+                type = lib.types.lines;
+                default = "";
+                description = "Extra Caddy directives for this virtual host's reverse_proxy block.";
+              };
             };
           }
         )
@@ -90,7 +96,16 @@ in
               resolvers 1.1.1.1 1.0.0.1 8.8.8.8
             }
           ''}
-          reverse_proxy ${proxy.upstream}
+          ${
+            if proxy.reverseProxyExtraConfig == "" then
+              "reverse_proxy ${proxy.upstream}"
+            else
+              ''
+                reverse_proxy ${proxy.upstream} {
+                  ${proxy.reverseProxyExtraConfig}
+                }
+              ''
+          }
           ${proxy.extraConfig}
         '';
       }) cfg.hosts;

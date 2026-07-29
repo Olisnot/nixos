@@ -9,8 +9,8 @@ in
 
     hostName = lib.mkOption {
       type = lib.types.str;
-      description = "Tailscale MagicDNS hostname Caddy should serve Baikal on.";
-      example = "zeus.tailnet-name.ts.net";
+      description = "Hostname Caddy should serve Baikal on.";
+      example = "baikal.example.org";
     };
 
     internalHost = lib.mkOption {
@@ -39,24 +39,21 @@ in
       }
     ];
 
-    services.caddy = {
+    caddyReverseProxy = {
       enable = true;
-      virtualHosts.${cfg.hostName}.extraConfig = ''
-        tls {
-          get_certificate tailscale
-        }
-
-        reverse_proxy 127.0.0.1:${toString cfg.backendPort} {
+      openFirewall = false;
+      tailscaleOnly = true;
+      cloudflareDns.enable = true;
+      hosts.${cfg.hostName} = {
+        upstream = "127.0.0.1:${toString cfg.backendPort}";
+        reverseProxyExtraConfig = ''
           header_up Host ${cfg.internalHost}
-        }
-      '';
+        '';
+      };
     };
 
     services.tailscale = {
       enable = true;
-      permitCertUid = "caddy";
     };
-
-    networking.firewall.interfaces.tailscale0.allowedTCPPorts = [ 443 ];
   };
 }
