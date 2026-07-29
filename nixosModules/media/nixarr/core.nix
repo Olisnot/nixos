@@ -21,6 +21,8 @@
       recyclarr.enable = true;
     };
 
+    services.sabnzbd.settings.misc.host_whitelist = lib.mkForce "zeus,sabnzbd.opmsonline.org";
+
     services.flaresolverr.enable = true;
     services.qbittorrent.enable = true;
     users.users.qbittorrent.extraGroups = [ "media" ];
