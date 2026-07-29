@@ -11,10 +11,6 @@ let
       enable = config.nixarr.bazarr.enable;
       port = config.nixarr.bazarr.port;
     };
-    lidarr = {
-      enable = config.nixarr.lidarr.enable;
-      port = config.nixarr.lidarr.port;
-    };
     prowlarr = {
       enable = config.nixarr.prowlarr.enable;
       port = config.nixarr.prowlarr.port;
@@ -38,6 +34,14 @@ let
     sabnzbd = {
       enable = config.nixarr.sabnzbd.enable;
       port = config.nixarr.sabnzbd.guiPort;
+    };
+    romm = {
+      enable = config.romm.enable;
+      port = config.romm.webPort;
+    };
+    soulsync = {
+      enable = config.soulsync.enable;
+      port = config.soulsync.webPort;
     };
   };
 
