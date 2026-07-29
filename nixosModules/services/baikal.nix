@@ -42,6 +42,10 @@ in
     services.caddy = {
       enable = true;
       virtualHosts.${cfg.hostName}.extraConfig = ''
+        tls {
+          get_certificate tailscale
+        }
+
         reverse_proxy 127.0.0.1:${toString cfg.backendPort} {
           header_up Host ${cfg.internalHost}
         }

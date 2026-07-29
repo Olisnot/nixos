@@ -85,6 +85,9 @@ in
           ${lib.optionalString (cfg.cloudflareDns.enable && !proxy.useInternalTls) ''
             tls {
               dns cloudflare {env.CLOUDFLARE_API_TOKEN}
+              propagation_delay 30s
+              propagation_timeout 10m
+              resolvers 1.1.1.1 8.8.8.8
             }
           ''}
           reverse_proxy ${proxy.upstream}
