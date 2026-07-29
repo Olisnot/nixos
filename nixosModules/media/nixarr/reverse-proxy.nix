@@ -45,7 +45,6 @@ let
     name = "${name}.${caddyDomain}";
     value = {
       upstream = "127.0.0.1:${toString service.port}";
-      useInternalTls = true;
     };
   }) (lib.filterAttrs (_name: service: service.enable) caddyServices);
 in
@@ -53,6 +52,9 @@ in
   config = lib.mkIf config.arr.enable {
     caddyReverseProxy = {
       enable = true;
+      openFirewall = false;
+      tailscaleOnly = true;
+      cloudflareDns.enable = true;
       hosts = caddyHosts;
     };
   };

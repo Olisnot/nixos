@@ -40,7 +40,10 @@
     libraryDir = "/mnt/1tb/Emulation";
     webPort = 8081;
   };
-  baikal.enable = true;
+  baikal = {
+    enable = true;
+    hostName = "zeus.tail91b45d.ts.net";
+  };
 
   #Nix settings
   nix.settings.experimental-features = [
