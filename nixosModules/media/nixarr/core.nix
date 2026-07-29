@@ -17,11 +17,17 @@
       radarr.enable = true;
       sonarr.enable = true;
       seerr.enable = true;
-      sabnzbd.enable = true;
+      sabnzbd = {
+        enable = true;
+        whitelistHostnames = [
+          "zeus"
+          "sabnzbd.opmsonline.org"
+        ];
+      };
       recyclarr.enable = true;
     };
 
-    services.sabnzbd.settings.misc.host_whitelist = lib.mkForce "zeus,sabnzbd.opmsonline.org";
+    services.sabnzbd.configFile = lib.mkForce null;
 
     services.flaresolverr.enable = true;
     services.qbittorrent.enable = true;
