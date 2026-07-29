@@ -55,6 +55,10 @@
   nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
 
   networking.firewall = {
+    trustedInterfaces = [
+      "docker0"
+      "br+"
+    ];
     allowedTCPPorts = [
       20
       21
