@@ -25,6 +25,7 @@
     zmk-studio
     bluetui
     wifitui
+    gnome-calendar
 
     ## Appearance
     whitesur-icon-theme
