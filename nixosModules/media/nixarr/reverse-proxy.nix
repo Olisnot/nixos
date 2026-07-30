@@ -7,6 +7,10 @@ let
       enable = config.nixarr.jellyfin.enable;
       port = config.nixarr.jellyfin.port;
     };
+    navidrome = {
+      enable = config.navidrome.enable;
+      port = config.navidrome.port;
+    };
     bazarr = {
       enable = config.nixarr.bazarr.enable;
       port = config.nixarr.bazarr.port;
