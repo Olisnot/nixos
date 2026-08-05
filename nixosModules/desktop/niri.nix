@@ -18,6 +18,7 @@
 
     environment.systemPackages = with pkgs; [
       xwayland-satellite
+      noctalia-shell
     ];
 
     environment.variables = {

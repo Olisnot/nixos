@@ -192,6 +192,7 @@
   ];
 
   hyprland.enable = true;
+  niri.enable = true;
 
   services.displayManager = {
     sddm = {
