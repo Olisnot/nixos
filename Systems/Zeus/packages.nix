@@ -93,6 +93,7 @@
     nixfmt
 
     opencode
+    pi-coding-agent
 
     #Coding Languages
     lldb
