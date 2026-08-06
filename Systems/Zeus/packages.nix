@@ -10,6 +10,7 @@
     ##General
     stow
     neovim
+    helix
     zed-editor
     yazi
     nemo
@@ -48,6 +49,8 @@
 
     ##Internet
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
+    ungoogled-chromium
+    tor-browser
 
     ##Admin
     gpauth

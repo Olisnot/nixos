@@ -191,7 +191,6 @@
     xdg-desktop-portal-gtk
   ];
 
-  hyprland.enable = true;
   niri.enable = true;
 
   services.displayManager = {
@@ -200,7 +199,7 @@
       settings.General.MinimumVT = 1;
       wayland.enable = lib.mkDefault true;
     };
-    defaultSession = lib.mkDefault "hyprland-uwsm";
+    defaultSession = lib.mkDefault "niri";
     autoLogin.enable = lib.mkDefault true;
     autoLogin.user = lib.mkDefault "oliver";
   };
