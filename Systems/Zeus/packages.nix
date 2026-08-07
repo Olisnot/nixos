@@ -14,7 +14,6 @@
     zed-editor
     yazi
     nemo
-    keymapp
     zathura
     obsidian
     mupdf
@@ -22,16 +21,12 @@
     pwvucontrol
     filezilla
     localsend
-    tutanota-desktop
     zmk-studio
     bluetui
     wifitui
-    gnome-calendar
 
     ## Appearance
     whitesur-icon-theme
-    papirus-icon-theme
-    tela-icon-theme
     numix-icon-theme-square
     volantes-cursors
     nwg-look
@@ -39,8 +34,7 @@
     ##Media
     playerctl
     mpv
-    pear-desktop
-    gelly
+    feishin
     ffmpeg
 
     ##Creative
@@ -49,7 +43,6 @@
 
     ##Internet
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
-    ungoogled-chromium
     tor-browser
 
     ##Admin
@@ -86,14 +79,11 @@
 
     #Coding
     git
-    git-credential-manager
 
-    texlab
     nixd
     nixfmt
 
-    opencode
-    pi-coding-agent
+    codex
 
     #Coding Languages
     lldb
@@ -104,39 +94,7 @@
     rustc
     rustfmt
     bacon
-    rusty-man
     clippy
-
-    ##Go
-    go
-    gopls
-    gofumpt
-
-    ##zig
-    zig
-    zls
-
-    ##python
-    python3
-    ty
-    uv
-    black
-
-    ##C
-    gcc
-    clang
-    llvmPackages_20.clang-unwrapped
-    bear
-
-    ##C-sharp
-    dotnet-sdk_8
-    omnisharp-roslyn
-    csharpier
-
-    ##Lua
-    lua
-    lua-language-server
-    stylua
 
     ##Markdown
     marksman
