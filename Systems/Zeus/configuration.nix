@@ -174,7 +174,7 @@
 
   services.xserver.dpi = 96;
   environment.variables = {
-    EDITOR = "nvim";
+    EDITOR = "hx";
     GDK_SCALE = "0.5";
     QT_STYLE_OVERRIDE = lib.mkDefault "kvantum";
     WLR_NO_HARDWARE_CURSORS = "1";

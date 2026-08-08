@@ -84,6 +84,7 @@
     nixfmt
 
     codex
+    herdr
 
     #Coding Languages
     lldb
