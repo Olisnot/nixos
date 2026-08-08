@@ -34,6 +34,7 @@
   slskd.enable = true;
   slskd.environmentFile = "/etc/slskd.env";
   soulsync.enable = true;
+  freshrss.enable = true;
   romm = {
     enable = true;
     environmentFile = "/etc/romm.env";
