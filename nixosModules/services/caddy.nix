@@ -47,8 +47,8 @@ in
           {
             options = {
               upstream = lib.mkOption {
-                type = lib.types.str;
-                description = "Upstream address Caddy should reverse proxy to.";
+                type = lib.types.nullOr lib.types.str;
+                description = "Upstream address Caddy should reverse proxy to, or null for a virtual host managed by another module.";
               };
 
               useInternalTls = lib.mkOption {
@@ -68,17 +68,19 @@ in
         )
       );
       default = { };
-      description = "Virtual hosts to reverse proxy.";
+      description = "Virtual hosts for Caddy to secure and optionally reverse proxy.";
     };
   };
 
   config = lib.mkIf cfg.enable {
     services.caddy = {
       enable = true;
-      package = lib.mkIf cfg.cloudflareDns.enable (pkgs.caddy.withPlugins {
-        plugins = [ "github.com/caddy-dns/cloudflare@v0.2.4" ];
-        hash = "sha256-7GoH8YLCoPmPExQxoga2FHB58zQDoZVf1BBwkVi0SsQ=";
-      });
+      package = lib.mkIf cfg.cloudflareDns.enable (
+        pkgs.caddy.withPlugins {
+          plugins = [ "github.com/caddy-dns/cloudflare@v0.2.4" ];
+          hash = "sha256-7GoH8YLCoPmPExQxoga2FHB58zQDoZVf1BBwkVi0SsQ=";
+        }
+      );
       environmentFile = lib.mkIf cfg.cloudflareDns.enable cfg.cloudflareDns.environmentFile;
       virtualHosts = lib.mapAttrs (_host: proxy: {
         extraConfig = ''
@@ -91,7 +93,7 @@ in
               resolvers 1.1.1.1 1.0.0.1 8.8.8.8
             }
           ''}
-          reverse_proxy ${proxy.upstream}
+          ${lib.optionalString (proxy.upstream != null) "reverse_proxy ${proxy.upstream}"}
           ${proxy.extraConfig}
         '';
       }) cfg.hosts;
@@ -103,7 +105,8 @@ in
     ];
 
     networking.firewall.interfaces.${cfg.tailscaleInterface}.allowedTCPPorts =
-      lib.mkIf cfg.tailscaleOnly [ 443 ];
+      lib.mkIf cfg.tailscaleOnly
+        [ 443 ];
 
     systemd.tmpfiles.rules = lib.mkIf cfg.cloudflareDns.enable [
       "d /etc/caddy 0750 root caddy -"

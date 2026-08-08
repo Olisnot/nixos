@@ -12,5 +12,13 @@
       passwordFile = "/etc/secrets/freshrss";
       api.enable = true;
     };
+
+    caddyReverseProxy = {
+      enable = true;
+      openFirewall = false;
+      tailscaleOnly = true;
+      cloudflareDns.enable = true;
+      hosts."freshrss.opmsonline.org".upstream = null;
+    };
   };
 }
