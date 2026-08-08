@@ -7,6 +7,7 @@
     services.freshrss = {
       enable = true;
       webserver = "caddy";
+      defaultUser = "admin";
       virtualHost = "freshrss.opmsonline.org";
       baseUrl = "https://freshrss.opmsonline.org";
       passwordFile = "/etc/secrets/freshrss";
