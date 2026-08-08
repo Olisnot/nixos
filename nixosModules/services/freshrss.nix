@@ -11,6 +11,18 @@
       baseUrl = "https://freshrss.opmsonline.org";
       passwordFile = "/etc/secrets/freshrss";
       api.enable = true;
+      user = "freshrss";
+    };
+
+    services.postgresql = {
+      enable = true;
+      ensureDatabases = [ "freshrss" ];
+      ensureUsers = [
+        {
+          name = "freshrss";
+          ensureDBOwnership = true;
+        }
+      ];
     };
 
     caddyReverseProxy = {
