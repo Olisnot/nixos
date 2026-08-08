@@ -47,6 +47,10 @@ let
       enable = config.soulsync.enable;
       port = config.soulsync.webPort;
     };
+    # freshrss = {
+    #   enable = config.freshrss.enable;
+    #   port = ;
+    # };
   };
 
   caddyHosts = lib.mapAttrs' (name: service: {

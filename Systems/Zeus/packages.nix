@@ -96,6 +96,11 @@
     bacon
     clippy
 
+    ##Zig
+    zig
+    zig-zlint
+    zls
+
     ##Markdown
     marksman
   ];
