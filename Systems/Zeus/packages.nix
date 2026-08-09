@@ -10,14 +10,12 @@
     ##General
     stow
     neovim
-    helix
-    zed-editor
     yazi
     nemo
     zathura
     obsidian
     mupdf
-    discord
+    vesktop
     pwvucontrol
     filezilla
     localsend
@@ -26,7 +24,6 @@
     wifitui
 
     ## Appearance
-    whitesur-icon-theme
     numix-icon-theme-square
     volantes-cursors
     nwg-look
@@ -82,9 +79,6 @@
 
     nixd
     nixfmt
-
-    codex
-    herdr
 
     #Coding Languages
     lldb
