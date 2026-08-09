@@ -40,6 +40,10 @@ in
       cloudflareDns.enable = true;
       hosts.${cfg.hostName} = {
         upstream = "127.0.0.1:${toString cfg.backendPort}";
+        extraConfig = ''
+          redir /.well-known/caldav /dav.php 308
+          redir /.well-known/carddav /dav.php 308
+        '';
       };
     };
 
