@@ -13,7 +13,6 @@
     yazi
     nemo
     zathura
-    obsidian
     mupdf
     vesktop
     pwvucontrol
@@ -56,8 +55,7 @@
     fzf
     fd
     dust
-    zip
-    rar
+    # zip
     unzip
     bat
     eza

@@ -6,7 +6,7 @@
   };
 
   config = lib.mkIf config.bluetooth.enable {
-    hardware.enableAllFirmware = true;
+    hardware.enableRedistributableFirmware = true;
     hardware.bluetooth = {
       enable = true;
       powerOnBoot = true;

@@ -38,5 +38,9 @@
       ];
       checkReversePath = "loose";
     };
+
+    nixpkgs.config.allowUnfreePackages = [
+      "unrar"
+    ];
   };
 }

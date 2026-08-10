@@ -26,6 +26,11 @@
         capSysNice = false;
       };
     };
+
+    nixpkgs.config.allowUnfreePackages = [
+      "steam"
+      "steam-unwrapped"
+    ];
   };
 
 }

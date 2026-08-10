@@ -40,5 +40,13 @@
         nvidiaBusId = "PCI:1:0:0";
       };
     };
+
+    nixpkgs.config.allowUnfreePackages = [
+      "nvidia-x11"
+      "nvidia-settings"
+      "nvidia-persistenced"
+      "cuda_nvml_dev"
+      "nvidia-kernel-modules"
+    ];
   };
 }
