@@ -40,6 +40,7 @@
 
     ##Internet
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
+    librewolf
     tor-browser
 
     ##Admin
