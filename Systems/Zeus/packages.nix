@@ -21,6 +21,7 @@
     zmk-studio
     bluetui
     wifitui
+    zk
 
     ## Appearance
     numix-icon-theme-square
