@@ -77,6 +77,7 @@
 
     #Coding
     git
+    opencode
 
     nixd
     nixfmt
