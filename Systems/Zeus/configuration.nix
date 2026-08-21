@@ -28,6 +28,7 @@
   fish.enable = true;
   syncthing.enable = true;
   gnupg.enable = true;
+  open-webui.enable = true;
   programs.librepods.enable = true;
   arr.enable = true;
   navidrome.enable = true;
@@ -95,8 +96,10 @@
   environment.sessionVariables = {
     XCURSOR_THEME = "volantes_cursors";
     XCURSOR_SIZE = "24";
-    WIFITUI_THEME = /home/oliver/.config/wifitui/theme.toml;
+    WIFITUI_THEME = "/etc/wifitui/theme.toml";
   };
+
+  environment.etc."wifitui/theme.toml".source = ./files/theme.toml;
 
   services.tailscale = {
     enable = true;
@@ -217,10 +220,12 @@
       LockScreen.background = "2114.jpg";
     };
     profileIcons.oliver = builtins.path {
-      path = /home/oliver/repos/nixos/Systems/Zeus/users/oliver/.face;
+      path = ./files/face.jpeg;
       name = "oliver-face";
     };
   };
+
+  # environment.etc."oliver/face.jpeg".source = ./files/face.jpeg;
 
   # Set Laptop lid
   services.logind.settings.Login.HandleLidSwitchExternalPower = "ignore";

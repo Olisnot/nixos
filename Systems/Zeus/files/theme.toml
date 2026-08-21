@@ -1,0 +1,39 @@
+# Default wifitui theme.
+# You can use this as a starting point for your own custom theme.
+# Colors can be a single hex string, or a pair of [light, dark] hex strings.
+
+# Primary color, used for selection highlights.
+Primary = ["#4A4A4A", "#CFCFCF"] # Monochrome highlight
+
+# Subtle color, used for less important text.
+Subtle = ["#8A8A8A", "#8A8A8A"] # Gray
+
+# Success color, used for active connections.
+Success = ["#303030", "#D0D0D0"] # Monochrome
+
+# Error color, used for error messages.
+Error = ["#111111", "#F0F0F0"] # Monochrome
+
+# Normal text color.
+Normal = ["#212121", "#EEEEEE"] # Black/White
+
+# Disabled color, used for hidden or out-of-range networks.
+Disabled = ["#D6D6D6", "#626262"] # Lighter/Darker Gray
+
+# Border color for UI elements.
+Border = ["#9A9A9A", "#6A6A6A"] # Gray
+
+# Signal color is a gradient from SignalHigh to SignalLow.
+SignalHigh = ["#1F1F1F", "#E6E6E6"]
+SignalLow = ["#A8A8A8", "#585858"]
+
+# Color for saved networks
+Saved = ["#383838", "#BEBEBE"]
+
+# Icons
+TitleIcon = ""
+NetworkSecureIcon = "[S] "
+NetworkOpenIcon = "[O] "
+NetworkUnknownIcon = "[?] "
+NetworkSavedIcon = "[*] "
+AccessPointIcon = "AP"
