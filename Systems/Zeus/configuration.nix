@@ -28,7 +28,6 @@
   fish.enable = true;
   syncthing.enable = true;
   gnupg.enable = true;
-  open-webui.enable = true;
   programs.librepods.enable = true;
   arr.enable = true;
   navidrome.enable = true;
@@ -45,6 +44,10 @@
   baikal = {
     enable = true;
     hostName = "baikal.opmsonline.org";
+  };
+  open-webui = {
+    enable = true;
+    hostName = "openwebui.opmsonline.org";
   };
 
   #Nix settings
