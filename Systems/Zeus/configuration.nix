@@ -125,7 +125,6 @@
     flake = inputs.self.outPath;
     flags = [
       "--print-build-logs"
-      "--impure"
     ];
     dates = "02:00";
     randomizedDelaySec = "45min";
