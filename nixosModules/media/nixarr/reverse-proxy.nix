@@ -47,6 +47,10 @@ let
       enable = config.soulsync.enable;
       port = config.soulsync.webPort;
     };
+    openwebui = {
+      enable = config.open-webui.enable;
+      port = config.services.open-webui.port;
+    };
     # freshrss = {
     #   enable = config.freshrss.enable;
     #   port = ;
