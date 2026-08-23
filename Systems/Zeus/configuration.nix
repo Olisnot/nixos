@@ -247,7 +247,7 @@
   };
 
   # Allow unfree packages
-  nixpkgs.config.allowUnfree = false;
+  nixpkgs.config.allowUnfree = true;
 
   # Enable flatpak
   services.flatpak.enable = true;

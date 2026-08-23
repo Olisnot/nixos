@@ -22,6 +22,7 @@
     bluetui
     wifitui
     zk
+    obsidian
 
     ## Appearance
     numix-icon-theme-square
