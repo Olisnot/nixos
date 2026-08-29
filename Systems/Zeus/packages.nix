@@ -79,6 +79,7 @@
     #Coding
     git
     opencode
+    pi-coding-agent
     herdr
 
     nixd

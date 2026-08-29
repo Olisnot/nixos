@@ -25,10 +25,7 @@
 
     environment.systemPackages = with pkgs; [
       hyprlock
-      waybar
-      awww
-      mako
-      wofi
+      noctalia
     ];
 
     environment.variables = {
