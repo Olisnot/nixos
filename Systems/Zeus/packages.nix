@@ -87,6 +87,7 @@
 
     #Coding Languages
     lldb
+    nodejs
 
     ##Rust
     cargo
