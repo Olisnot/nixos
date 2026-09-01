@@ -49,6 +49,7 @@
     enable = true;
     hostName = "openwebui.opmsonline.org";
   };
+  hermes.enable = true;
 
   #Nix settings
   nix.settings.experimental-features = [

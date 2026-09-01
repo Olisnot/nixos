@@ -4,6 +4,9 @@
   ...
 }:
 
+let
+  system = pkgs.stdenv.hostPlatform.system;
+in
 {
   environment.systemPackages = with pkgs; [
     #Tools
@@ -40,7 +43,7 @@
     imagemagick
 
     ##Internet
-    inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
+    inputs.zen-browser.packages.${system}.default
     ungoogled-chromium
     librewolf
     tor-browser
@@ -78,6 +81,8 @@
 
     #Coding
     git
+
+    ##AI
     opencode
     pi-coding-agent
     herdr

@@ -15,6 +15,7 @@
     };
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     nixarr.url = "github:nix-media-server/nixarr";
+    hermes-agent.url = "github:NousResearch/hermes-agent";
     wallpapers = {
       url = "git+https://codeberg.org/Olisnot/Wallpapers.git";
       flake = false;
@@ -22,7 +23,12 @@
   };
 
   outputs =
-    { nixpkgsStable, nixarr, ... }@inputs:
+    {
+      nixpkgsStable,
+      nixarr,
+      hermes-agent,
+      ...
+    }@inputs:
     let
       system = "x86_64-linux";
       overlay-stable = final: prev: {
@@ -38,6 +44,7 @@
           specialArgs = { inherit inputs; };
           modules = [
             ./Systems/Zeus/configuration.nix
+            hermes-agent.nixosModules.default
             nixarr.nixosModules.default
             (
               { ... }:
