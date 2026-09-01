@@ -5,10 +5,6 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     nixpkgsStable.url = "github:nixos/nixpkgs/nixos-24.05";
-    zen-browser = {
-      url = "github:0xc000022070/zen-browser-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     silentSDDM = {
       url = "github:uiriansan/SilentSDDM";
       inputs.nixpkgs.follows = "nixpkgs";

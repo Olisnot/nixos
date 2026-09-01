@@ -43,7 +43,6 @@ in
     imagemagick
 
     ##Internet
-    inputs.zen-browser.packages.${system}.default
     ungoogled-chromium
     librewolf
     tor-browser
