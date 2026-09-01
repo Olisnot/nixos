@@ -6,6 +6,7 @@
     services.hermes-agent = {
       enable = true;
       addToSystemPackages = true;
+      environmentFiles = [ "/var/lib/hermes/env" ];
     };
   };
 }
