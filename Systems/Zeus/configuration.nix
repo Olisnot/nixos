@@ -1,4 +1,5 @@
 {
+  config,
   pkgs,
   inputs,
   lib,
@@ -33,7 +34,11 @@
   navidrome.enable = true;
   slskd.enable = true;
   slskd.environmentFile = "/etc/slskd.env";
-  soulsync.enable = true;
+  soulsync = {
+    enable = true;
+    gid = config.users.groups.media.gid;
+    umask = "002";
+  };
   freshrss.enable = true;
   romm = {
     enable = true;
