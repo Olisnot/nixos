@@ -38,6 +38,7 @@
     enable = true;
     gid = config.users.groups.media.gid;
     umask = "002";
+    extraVolumes = [ "/data/media:/app/media" ];
   };
   freshrss.enable = true;
   romm = {
