@@ -113,7 +113,10 @@
 
   services.tailscale = {
     enable = true;
-    extraSetFlags = [ "--exit-node-allow-lan-access=true" ];
+    extraSetFlags = [
+      "--exit-node-allow-lan-access=true"
+      "--operator=oliver"
+    ];
   };
 
   programs.kdeconnect.enable = true;
