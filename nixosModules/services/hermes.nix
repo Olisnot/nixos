@@ -8,5 +8,9 @@
       addToSystemPackages = true;
       environmentFiles = [ "/var/lib/hermes/env" ];
     };
+
+    # The system-wide CLI uses the service's HERMES_HOME. Its state and
+    # generated .env are only accessible to the hermes user and group.
+    users.users.oliver.extraGroups = [ "hermes" ];
   };
 }
