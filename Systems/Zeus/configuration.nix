@@ -16,7 +16,6 @@
     ./users/oliver/user.nix
     ../../nixosModules
     ../../scripts
-    inputs.silentSDDM.nixosModules.default
   ];
 
   #Custom module options
@@ -189,7 +188,7 @@
 
   services.xserver.dpi = 96;
   environment.variables = {
-    EDITOR = "hx";
+    EDITOR = "nvim";
     GDK_SCALE = "0.5";
     QT_STYLE_OVERRIDE = lib.mkDefault "kvantum";
     WLR_NO_HARDWARE_CURSORS = "1";
@@ -210,35 +209,11 @@
   hyprland.enable = true;
 
   services.displayManager = {
-    sddm = {
-      autoLogin.relogin = lib.mkForce false;
-      settings.General.MinimumVT = 1;
-      wayland.enable = lib.mkDefault true;
-    };
+    gdm.enable = true;
     defaultSession = lib.mkDefault "hyprland-uwsm";
     autoLogin.enable = lib.mkDefault true;
     autoLogin.user = lib.mkDefault "oliver";
   };
-  programs.silentSDDM = {
-    enable = true;
-    theme = "default";
-    backgrounds = {
-      "2114" = inputs.wallpapers + "/2114.jpg";
-      "IMG_0001" = inputs.wallpapers + "/IMG_0001.JPG";
-      windows-11-black =
-        inputs.wallpapers + "/wallpaperswide.com-windows-11-black-background-wallpaper-2560x1440.jpg";
-    };
-    settings = {
-      LoginScreen.background = "2114.jpg";
-      LockScreen.background = "2114.jpg";
-    };
-    profileIcons.oliver = builtins.path {
-      path = ./files/face.jpeg;
-      name = "oliver-face";
-    };
-  };
-
-  # environment.etc."oliver/face.jpeg".source = ./files/face.jpeg;
 
   # Set Laptop lid
   services.logind.settings.Login.HandleLidSwitchExternalPower = "ignore";
@@ -253,7 +228,6 @@
   security.pam.services = {
     login.enableGnomeKeyring = true;
     gdm.enableGnomeKeyring = true;
-    sddm.enableGnomeKeyring = true;
   };
 
   # Allow unfree packages

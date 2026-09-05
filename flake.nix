@@ -5,10 +5,6 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     nixpkgsStable.url = "github:nixos/nixpkgs/nixos-24.05";
-    silentSDDM = {
-      url = "github:uiriansan/SilentSDDM";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     nixarr.url = "github:nix-media-server/nixarr";
     hermes-agent.url = "github:NousResearch/hermes-agent";

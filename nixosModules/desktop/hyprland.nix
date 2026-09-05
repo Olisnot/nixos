@@ -24,7 +24,6 @@
     services.hypridle.enable = true;
 
     environment.systemPackages = with pkgs; [
-      hyprlock
       noctalia
     ];
 
