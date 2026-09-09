@@ -31,14 +31,14 @@
   programs.librepods.enable = true;
   arr.enable = true;
   navidrome.enable = true;
-  slskd.enable = true;
-  slskd.environmentFile = "/etc/slskd.env";
-  soulsync = {
-    enable = true;
-    gid = config.users.groups.media.gid;
-    umask = "002";
-    extraVolumes = [ "/data/media:/app/media" ];
-  };
+  # slskd.enable = true;
+  # slskd.environmentFile = "/etc/slskd.env";
+  # soulsync = {
+  #   enable = true;
+  #   gid = config.users.groups.media.gid;
+  #   umask = "002";
+  #   extraVolumes = [ "/data/media:/app/media" ];
+  # };
   freshrss.enable = true;
   romm = {
     enable = true;
@@ -54,7 +54,6 @@
     enable = true;
     hostName = "openwebui.opmsonline.org";
   };
-  hermes.enable = true;
 
   #Nix settings
   nix.settings.experimental-features = [

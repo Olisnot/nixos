@@ -51,6 +51,17 @@ let
       enable = config.open-webui.enable;
       port = config.services.open-webui.port;
     };
+    sunshine = {
+      enable = config.gaming.sunshine.enable;
+      upstream = null;
+      extraConfig = ''
+        reverse_proxy https://127.0.0.1:47990 {
+          transport http {
+            tls_insecure_skip_verify
+          }
+        }
+      '';
+    };
     # freshrss = {
     #   enable = config.freshrss.enable;
     #   port = ;
@@ -60,7 +71,8 @@ let
   caddyHosts = lib.mapAttrs' (name: service: {
     name = "${name}.${caddyDomain}";
     value = {
-      upstream = "127.0.0.1:${toString service.port}";
+      upstream = service.upstream or "127.0.0.1:${toString service.port}";
+      extraConfig = service.extraConfig or "";
     };
   }) (lib.filterAttrs (_name: service: service.enable) caddyServices);
 in
