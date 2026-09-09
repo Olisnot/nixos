@@ -54,6 +54,8 @@ in
       autoStart = cfg.autoStart;
       capSysAdmin = cfg.capSysAdmin;
 
+      settings.csrf_allowed_origins = "https://sunshine.opmsonline.org";
+
       applications.apps = lib.mkIf cfg.steamBigPicture.enable [
         {
           name = "Desktop";
