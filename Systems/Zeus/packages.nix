@@ -1,18 +1,15 @@
 {
   pkgs,
-  inputs,
   ...
 }:
 
-let
-  system = pkgs.stdenv.hostPlatform.system;
-in
 {
   environment.systemPackages = with pkgs; [
     #Tools
     ##General
     stow
     neovim
+    helix
     yazi
     nemo
     zathura
@@ -24,7 +21,6 @@ in
     zmk-studio
     bluetui
     wifitui
-    zk
     obsidian
 
     ## Appearance

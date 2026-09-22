@@ -1,5 +1,4 @@
 {
-  config,
   pkgs,
   inputs,
   lib,
@@ -25,7 +24,7 @@
   gaming.sunshine.enable = true;
   keymapp.enable = true;
   virt-manager.setup = true;
-  fish.enable = true;
+  nu.enable = true;
   syncthing.enable = true;
   gnupg.enable = true;
   programs.librepods.enable = true;
