@@ -78,9 +78,7 @@
     git
 
     ##AI
-    opencode
     pi-coding-agent
-    herdr
 
     nixd
     nixfmt
