@@ -21,7 +21,6 @@
   nvidia.enable = true;
   gaming.enable = true;
   gaming.steam.enable = true;
-  gaming.sunshine.enable = true;
   keymapp.enable = true;
   virt-manager.setup = true;
   nu.enable = true;

@@ -24,7 +24,11 @@
     services.hypridle.enable = true;
 
     environment.systemPackages = with pkgs; [
-      noctalia
+      hyprlock
+      waybar
+      awww
+      mako
+      bemenu
     ];
 
     environment.variables = {
