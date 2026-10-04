@@ -23,7 +23,7 @@
   gaming.steam.enable = true;
   keymapp.enable = true;
   virt-manager.setup = true;
-  nu.enable = true;
+  fish.enable = true;
   syncthing.enable = true;
   gnupg.enable = true;
   programs.librepods.enable = true;
