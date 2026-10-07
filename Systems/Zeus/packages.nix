@@ -22,6 +22,7 @@
     bluetui
     wifitui
     obsidian
+    trilium-desktop
 
     ## Appearance
     numix-icon-theme-square
