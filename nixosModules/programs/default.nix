@@ -7,5 +7,6 @@
     ./gnupg.nix
     ./spicetify.nix
     ./virt-manager.nix
+    ./trilium.nix
   ];
 }

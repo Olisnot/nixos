@@ -47,6 +47,7 @@
     enable = true;
     hostName = "openwebui.opmsonline.org";
   };
+  trilium.enable = true;
 
   #Nix settings
   nix.settings.experimental-features = [
