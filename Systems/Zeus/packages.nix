@@ -57,7 +57,7 @@
     fzf
     fd
     dust
-    # zip
+    zip
     unzip
     bat
     eza
