@@ -51,6 +51,10 @@ let
       enable = config.open-webui.enable;
       port = config.services.open-webui.port;
     };
+    trilium = {
+      enable = config.trilium.enable;
+      port = config.services.trilium-server.port;
+    };
     sunshine = {
       enable = config.gaming.sunshine.enable;
       upstream = null;
