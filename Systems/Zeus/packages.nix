@@ -79,6 +79,7 @@
 
     ##AI
     pi-coding-agent
+    herdr
 
     nixd
     nixfmt
