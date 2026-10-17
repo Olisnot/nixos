@@ -79,6 +79,7 @@
 
     ##AI
     pi-coding-agent
+    opencode
     herdr
 
     nixd
