@@ -1,4 +1,9 @@
-{ lib, config, ... }:
+{
+  lib,
+  config,
+  pkgs,
+  ...
+}:
 
 {
   options.open-webui = {
@@ -14,6 +19,13 @@
     services.open-webui = {
       enable = true;
       openFirewall = true;
+      package = pkgs.open-webui.overrideAttrs (oldAttrs: {
+        makeWrapperArgs = [
+          "--set"
+          "FRONTEND_BUILD_DIR"
+          "${oldAttrs.passthru.frontend}/share/open-webui"
+        ];
+      });
       port = 8085;
     };
 
