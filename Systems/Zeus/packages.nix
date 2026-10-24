@@ -9,7 +9,6 @@
     ##General
     stow
     neovim
-    helix
     yazi
     nemo
     zathura
@@ -25,6 +24,7 @@
 
     ## Appearance
     numix-icon-theme-square
+    whitesur-icon-theme
     volantes-cursors
     nwg-look
 
