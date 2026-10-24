@@ -76,6 +76,7 @@
 
     #Coding
     git
+    gcc
 
     ##AI
     pi-coding-agent
