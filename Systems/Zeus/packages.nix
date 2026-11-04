@@ -58,6 +58,7 @@
     fd
     dust
     zip
+    rar
     unzip
     bat
     eza
