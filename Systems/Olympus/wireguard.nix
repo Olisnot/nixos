@@ -1,7 +1,10 @@
 { ... }:
 
 {
-  imports = [ ../../nixosModules/networking/wireguard-link.nix ];
+  imports = [
+    ../../nixosModules/networking/wireguard-link.nix
+    ./wireguard-mobile.nix
+  ];
 
   wireguardLink = {
     enable = true;

@@ -36,8 +36,19 @@
       };
     in
     {
+      packages.x86_64-linux.wireguard-enroll = import ./scripts/WireguardEnroll.nix {
+        pkgs = inputs.nixpkgs.legacyPackages.x86_64-linux;
+      };
+
       checks.x86_64-linux.olympus-proxy = import ./Systems/Olympus/proxy-check.nix {
         host = inputs.self.nixosConfigurations.olympus;
+      };
+      checks.x86_64-linux.wireguard-enroll = import ./scripts/WireguardEnrollCheck.nix {
+        pkgs = inputs.nixpkgs.legacyPackages.x86_64-linux;
+        enroll = inputs.self.packages.x86_64-linux.wireguard-enroll;
+      };
+      checks.x86_64-linux.wireguard-mobile = import ./Systems/Olympus/wireguard-mobile-check.nix {
+        pkgs = inputs.nixpkgs.legacyPackages.x86_64-linux;
       };
 
       nixosConfigurations = {

@@ -39,11 +39,23 @@ in
       default = null;
       description = "Fixed UDP listener port to open, or null for an outbound client.";
     };
+
+    extraAddresses = lib.mkOption {
+      type = lib.types.listOf lib.types.str;
+      default = [ ];
+      description = "Additional local tunnel addresses in CIDR notation.";
+    };
+
+    extraPeers = lib.mkOption {
+      type = lib.types.listOf lib.types.attrs;
+      default = [ ];
+      description = "Additional peers, using the NixOS wg-quick peer options.";
+    };
   };
 
   config = lib.mkIf cfg.enable {
     networking.wg-quick.interfaces.wg0 = {
-      address = [ "${cfg.address}/32" ];
+      address = [ "${cfg.address}/32" ] ++ cfg.extraAddresses;
       inherit (cfg) privateKeyFile listenPort;
       # Keys were generated on each host. Never silently replace a missing key.
       generatePrivateKeyFile = false;
@@ -54,7 +66,8 @@ in
           inherit (cfg) endpoint;
           persistentKeepalive = if cfg.endpoint != null then 25 else null;
         }
-      ];
+      ]
+      ++ cfg.extraPeers;
     };
 
     # Only the listener needs public UDP ingress. No application ports, trusted

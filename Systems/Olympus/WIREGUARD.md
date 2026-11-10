@@ -1,5 +1,10 @@
 # Olympus–Zeus WireGuard link
 
+For full-tunnel phones and QR enrollment, see
+[WIREGUARD-MOBILE.md](./WIREGUARD-MOBILE.md). That separate extension adds
+phone-specific NAT/forwarding and isolation; the original Zeus peer remains
+split-tunnel. The point-to-point setup described below predates that extension.
+
 Olympus is the VPS/server and will host the services. Zeus is the initiating
 client, not a media backend for Olympus. This change establishes only the link;
 it does not add applications or public HTTPS routes.
@@ -39,8 +44,9 @@ Expected: directory `700 root:root`, key `600 root:root`. Do not use
 `wg showconf`, `wg show all dump`, or paste private keys into diagnostics.
 
 In the Hetzner Cloud Firewall **attached to Olympus**, add inbound **UDP 51820**
-separately from TCP 22/80/443. Restrict its source to your home public IP if
-stable; otherwise allow the required source range. Keep existing SSH/web rules.
+separately from TCP 22/80/443. For Zeus alone, restrict its source to your home
+public IP if stable; for roaming phones, allow their mobile sources too as
+described in WIREGUARD-MOBILE.md. Keep existing SSH/web rules.
 The NixOS listener rule is supplied by the module. Zeus needs outbound UDP to
 the VPS, with established reply traffic allowed; no extra inbound port is opened
 on Zeus by this change.

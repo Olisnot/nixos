@@ -1,0 +1,6 @@
+{
+  "endpoint": "37.27.31.37:51820",
+  "externalInterface": "enp1s0",
+  "serverPublicKey": "ZAEdn9OvlAMOka7IuU2WnWn6l8TR9nYTZ6O08I/cqyM=",
+  "dns": ["1.1.1.1", "1.0.0.1"]
+}

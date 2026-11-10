@@ -1,6 +1,8 @@
 # Olympus
 
 See [WIREGUARD.md](./WIREGUARD.md) for the point-to-point link with Zeus.
+See [WIREGUARD-MOBILE.md](./WIREGUARD-MOBILE.md) for iPhone full-tunnel access
+and secure local QR-code enrollment.
 
 See [REVERSE-PROXY.md](./REVERSE-PROXY.md) for the prepared Caddy/Coraza HTTPS
 edge, public-route rollout, privacy, firewall requirements and validation.
