@@ -1,5 +1,10 @@
 # Olympus HTTPS edge and WAF
 
+**Current media deployment:** [MEDIA.md](./MEDIA.md) configures the approved
+Jellyfin and Seerr hostnames with first-run readiness gates. The preparation
+notes below describe the initial no-routes rollout; other example routes remain
+inactive. Private arr/download interfaces are available only over WireGuard.
+
 ## Scope and layout
 
 - `reverse-proxy.nix` enables only the reusable Caddy proxy module on Olympus.

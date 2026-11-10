@@ -48,6 +48,11 @@ in
           { name, ... }:
           {
             options = {
+              readyFile = lib.mkOption {
+                type = lib.types.nullOr lib.types.str;
+                default = null;
+                description = "Runtime marker required to publish this hostname; otherwise return 503 during initial setup.";
+              };
               waf = {
                 mode = lib.mkOption {
                   type = lib.types.enum [
@@ -109,6 +114,13 @@ in
       environmentFile = lib.mkIf cfg.cloudflareDns.enable cfg.cloudflareDns.environmentFile;
       virtualHosts = lib.mapAttrs (_host: proxy: {
         extraConfig = ''
+          ${lib.optionalString (proxy.readyFile != null) ''
+            @setupPending not file {
+              root ${builtins.toJSON (builtins.dirOf proxy.readyFile)}
+              try_files ${builtins.toJSON (builtins.baseNameOf proxy.readyFile)}
+            }
+            respond @setupPending "Service setup pending" 503
+          ''}
           ${lib.optionalString proxy.useInternalTls "tls internal"}
           ${lib.optionalString (cfg.cloudflareDns.enable && !proxy.useInternalTls) ''
             tls {

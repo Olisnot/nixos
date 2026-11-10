@@ -9,10 +9,17 @@
     openFirewall = true;
     waf.enable = true;
 
-    # Deliberately empty until backends and public exposure are approved.
-    # Real candidate hostnames from nixosModules/media/nixarr/reverse-proxy.nix:
-    # jellyfin.opmsonline.org and navidrome.opmsonline.org.
-    # Do not copy Zeus's 127.0.0.1 upstreams: they are local to Zeus, not Olympus.
-    hosts = { };
+    hosts = {
+      "jellyfin.opmsonline.org" = {
+        upstream = "127.0.0.1:8096";
+        waf.mode = "DetectionOnly";
+        readyFile = "/var/lib/caddy/public-ready/jellyfin";
+      };
+      "seerr.opmsonline.org" = {
+        upstream = "127.0.0.1:5055";
+        waf.mode = "DetectionOnly";
+        readyFile = "/var/lib/caddy/public-ready/seerr";
+      };
+    };
   };
 }

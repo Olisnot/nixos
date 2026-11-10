@@ -35,6 +35,11 @@ let
 in
 {
   options.olympusMobileVpn = {
+    allowedServicePorts = lib.mkOption {
+      type = lib.types.listOf lib.types.port;
+      default = [ ];
+      description = "Explicit private application TCP ports allowed on the VPS tunnel address for enrolled mobile peers.";
+    };
     clients = lib.mkOption {
       type = lib.types.listOf (
         lib.types.submodule {
@@ -124,6 +129,9 @@ in
         iptables -w -A wg-mobile-input -s 10.77.0.2/32 -j RETURN
         ${lib.concatMapStringsSep "\n" (address: ''
           iptables -w -A wg-mobile-input -s ${address}/32 -p tcp -m multiport --dports 80,443 -j ACCEPT
+          ${lib.concatMapStringsSep "\n" (port: ''
+            iptables -w -A wg-mobile-input -s ${address}/32 -d 10.77.0.1/32 -p tcp --dport ${toString port} -j ACCEPT
+          '') cfg.allowedServicePorts}
         '') addresses}
         iptables -w -A wg-mobile-input -j DROP
         ip6tables -w -A wg-mobile-input -j DROP

@@ -12,6 +12,7 @@ pkgs.testers.runNixOSTest {
     wireguardLink.peerPublicKey = "cgFioflbrw7Jp9BxZK0kEbxcuUaxVOecMpt7vDTgRR8=";
     olympusMobileVpn = {
       externalInterface = "uplink";
+      allowedServicePorts = [ 8989 ];
       clients = pkgs.lib.mkForce [
         {
           address = "10.77.0.3";
@@ -54,13 +55,20 @@ pkgs.testers.runNixOSTest {
     machine.succeed("ip netns exec home python -m http.server 8080 >/tmp/home.log 2>&1 &")
     machine.succeed("python -m http.server 80 >/tmp/web.log 2>&1 &")
     machine.succeed("python -m http.server 9090 >/tmp/admin.log 2>&1 &")
+    machine.succeed("python -m http.server 8989 >/tmp/arr.log 2>&1 &")
     machine.wait_until_succeeds("curl -fsS http://8.8.8.8:8080 >/dev/null")
     machine.wait_until_succeeds("curl -fsS http://10.77.0.2:8080 >/dev/null")
     machine.wait_until_succeeds("curl -fsS http://127.0.0.1:9090 >/dev/null")
+    machine.wait_until_succeeds("curl -fsS http://127.0.0.1:8989 >/dev/null")
     phone = "ip netns exec phone curl -fsS --connect-timeout 1 --max-time 2 "
     machine.succeed(phone + "http://8.8.8.8:8080 >/dev/null")
     machine.succeed("grep -F '192.168.100.1' /tmp/wan.log")
     machine.succeed(phone + "http://10.77.0.1 >/dev/null")
+    machine.succeed(phone + "http://10.77.0.1:8989 >/dev/null")
+    # Even an explicitly selected private UI port stays inaccessible on the
+    # public address from a phone, and from the public interface in general.
+    machine.fail(phone + "http://37.27.31.37:8989")
+    machine.fail("ip netns exec internet curl -fsS --connect-timeout 1 --max-time 2 http://192.168.100.1:8989")
     machine.fail(phone + "http://10.77.0.1:9090")
     machine.fail(phone + "http://37.27.31.37:9090")
     machine.fail(phone + "http://10.77.0.2:8080")

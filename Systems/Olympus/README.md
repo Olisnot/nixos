@@ -1,5 +1,11 @@
 # Olympus
 
+See [MULLVAD.md](./MULLVAD.md) for qBittorrent-only provider routing and leak
+protection, retaining the private WireGuard Web UI.
+
+See [MEDIA.md](./MEDIA.md) for the Jellyfin/Seerr public WAF routes, private
+WireGuard-only arr/download interfaces, and required first-run setup gates.
+
 See [STORAGEBOX.md](./STORAGEBOX.md) for the encrypted SMB media mount at
 `/srv/media` and future service mount dependencies.
 
@@ -11,8 +17,8 @@ See [REVERSE-PROXY.md](./REVERSE-PROXY.md) for the prepared Caddy/Coraza HTTPS
 edge, public-route rollout, privacy, firewall requirements and validation.
 
 Minimal NixOS configuration for an **x86-64 Hetzner Cloud VPS**, installed with
-nixos-anywhere. No desktop or application backends are enabled. Caddy is prepared
-separately, with public routes inactive until explicitly configured.
+nixos-anywhere. Media services are defined separately; public Jellyfin/Seerr
+routes stay gated until their first-run setup is explicitly completed.
 
 ## Before installation
 

@@ -1,5 +1,8 @@
 # Hetzner Storage Box media mount
 
+The [media stack](./MEDIA.md) now enables Jellyfin and the importing/downloading
+services, using the group and mount dependencies described here.
+
 `storagebox.nix` mounts `//u715484.your-storagebox.de/backup` at `/srv/media`
 using SMB/CIFS. This is the main account's **entire backup share**, not an
 isolated media sub-account. Only Olympus gets this mount.

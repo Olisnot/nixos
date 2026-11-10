@@ -1,4 +1,9 @@
-{ modulesPath, config, ... }:
+{
+  modulesPath,
+  config,
+  lib,
+  ...
+}:
 
 {
   imports = [
@@ -7,7 +12,11 @@
     ./reverse-proxy.nix
     ./wireguard.nix
     ./storagebox.nix
+    ./media
   ];
+
+  # SABnzbd's unpacker needs unrar; do not allow all unfree packages.
+  nixpkgs.config.allowUnfreePredicate = package: lib.getName package == "unrar";
 
   networking = {
     hostName = "olympus";

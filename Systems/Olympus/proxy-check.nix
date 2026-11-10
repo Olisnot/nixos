@@ -7,33 +7,40 @@ let
   testHost = host.extendModules {
     modules = [
       {
-        caddyReverseProxy.hosts = builtins.listToAttrs (
-          map
-            (fixture: {
-              name = "http://127.0.0.1:${fixture.port}";
-              value = {
-                upstream = "127.0.0.1:18082";
-                waf = {
-                  inherit (fixture) mode;
-                  beforeRules = ''
-                    SecRule REQUEST_URI "@beginsWith /waf-test" "id:1000001,phase:1,deny,status:403,log,msg:'fixture hit'"
-                  '';
+        caddyReverseProxy.hosts = pkgs.lib.mkForce (
+          builtins.listToAttrs (
+            map
+              (fixture: {
+                name = "http://127.0.0.1:${fixture.port}";
+                value = {
+                  upstream = "127.0.0.1:18082";
+                  readyFile = if fixture.port == "18083" then "{$CADDY_READY_DIR}/fixture" else null;
+                  waf = {
+                    inherit (fixture) mode;
+                    beforeRules = ''
+                      SecRule REQUEST_URI "@beginsWith /waf-test" "id:1000001,phase:1,deny,status:403,log,msg:'fixture hit'"
+                    '';
+                  };
                 };
-              };
-            })
-            [
-              {
-                port = "18080";
-                mode = "DetectionOnly";
-              }
-              {
-                port = "18081";
-                mode = "On";
-              }
-            ]
+              })
+              [
+                {
+                  port = "18080";
+                  mode = "DetectionOnly";
+                }
+                {
+                  port = "18081";
+                  mode = "On";
+                }
+                {
+                  port = "18083";
+                  mode = "DetectionOnly";
+                }
+              ]
+          )
         );
         services.caddy.virtualHosts =
-          pkgs.lib.genAttrs [ "http://127.0.0.1:18080" "http://127.0.0.1:18081" ]
+          pkgs.lib.genAttrs [ "http://127.0.0.1:18080" "http://127.0.0.1:18081" "http://127.0.0.1:18083" ]
             (_: {
               listenAddresses = [ "127.0.0.1" ];
             });
@@ -59,6 +66,7 @@ pkgs.runCommand "olympus-proxy-check"
     export HOME=$TMPDIR
     export XDG_DATA_HOME=$TMPDIR/data
     export XDG_CONFIG_HOME=$TMPDIR/config
+    export CADDY_READY_DIR=$TMPDIR/public-ready
     caddy list-modules > modules.txt
     # Upstream calls the module http.handlers.waf, not http.handlers.coraza_waf.
     grep -Fx http.handlers.waf modules.txt
@@ -79,6 +87,12 @@ pkgs.runCommand "olympus-proxy-check"
     done
     test "$(curl --silent --fail http://127.0.0.1:18080/)" = 'proxy fixture'
     test "$(curl --silent --fail http://127.0.0.1:18081/)" = 'proxy fixture'
+    test "$(curl --silent -o /dev/null -w '%{http_code}' http://127.0.0.1:18083/)" = 503
+    mkdir -p "$CADDY_READY_DIR"
+    touch "$CADDY_READY_DIR/fixture"
+    test "$(curl --silent --fail http://127.0.0.1:18083/)" = 'proxy fixture'
+    rm "$CADDY_READY_DIR/fixture"
+    test "$(curl --silent -o /dev/null -w '%{http_code}' http://127.0.0.1:18083/)" = 503
     test "$(curl --silent -o /dev/null -w '%{http_code}' \
       'http://127.0.0.1:18080/waf-test?api_key=DO_NOT_LOG_QUERY_SECRET' \
       -H 'Authorization: Bearer DO_NOT_LOG_HEADER_SECRET' \
