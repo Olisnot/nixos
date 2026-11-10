@@ -6,6 +6,7 @@
     ./disk-config.nix
     ./reverse-proxy.nix
     ./wireguard.nix
+    ./storagebox.nix
   ];
 
   networking = {

@@ -1,5 +1,8 @@
 # Olympus
 
+See [STORAGEBOX.md](./STORAGEBOX.md) for the encrypted SMB media mount at
+`/srv/media` and future service mount dependencies.
+
 See [WIREGUARD.md](./WIREGUARD.md) for the point-to-point link with Zeus.
 See [WIREGUARD-MOBILE.md](./WIREGUARD-MOBILE.md) for iPhone full-tunnel access
 and secure local QR-code enrollment.
