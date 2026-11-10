@@ -4,6 +4,11 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
+    disko = {
+      url = "github:nix-community/disko";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nixpkgsStable.url = "github:nixos/nixpkgs/nixos-24.05";
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     nixarr.url = "github:nix-media-server/nixarr";
@@ -32,6 +37,14 @@
     in
     {
       nixosConfigurations = {
+        olympus = inputs.nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            inputs.disko.nixosModules.disko
+            ./Systems/Olympus/configuration.nix
+          ];
+        };
+
         zeus = inputs.nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs; };
           modules = [
