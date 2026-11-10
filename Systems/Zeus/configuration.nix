@@ -12,6 +12,7 @@
     ./fonts.nix
     ./boot.nix
     ./sound.nix
+    ./wireguard.nix
     ./users/oliver/user.nix
     ../../nixosModules
     ../../scripts

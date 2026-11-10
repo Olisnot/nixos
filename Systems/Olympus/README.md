@@ -1,5 +1,7 @@
 # Olympus
 
+See [WIREGUARD.md](./WIREGUARD.md) for the point-to-point link with Zeus.
+
 See [REVERSE-PROXY.md](./REVERSE-PROXY.md) for the prepared Caddy/Coraza HTTPS
 edge, public-route rollout, privacy, firewall requirements and validation.
 

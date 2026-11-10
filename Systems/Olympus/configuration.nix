@@ -5,6 +5,7 @@
     (modulesPath + "/profiles/qemu-guest.nix")
     ./disk-config.nix
     ./reverse-proxy.nix
+    ./wireguard.nix
   ];
 
   networking = {

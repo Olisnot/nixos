@@ -10,8 +10,10 @@
 
 **No public virtual hosts are enabled yet**, as requested. Consequently Caddy
 does not serve a public site or request public certificates yet. The NixOS web
-firewall ports are prepared. Nothing here enables a media server, WireGuard,
-Seerr, or an admin service, and nothing changes Zeus's existing private proxies.
+firewall ports are prepared. The proxy module enables no media server, Seerr,
+or admin service and does not change Zeus's existing private proxies. The
+separate [WireGuard link](./WIREGUARD.md) connects Zeus as a client to Olympus;
+services are intended to run on Olympus, not on Zeus behind this tunnel.
 
 The lock file's nixpkgs revision `02c087f3fe673c9e317f206a627cb6b910336dbe`
 supplies Caddy 2.11.7 and `caddy.withPlugins { plugins;
@@ -85,10 +87,10 @@ Before activating a hostname:
    TCP 22 rule and its existing source restrictions. Do not replace that rule.
 3. NixOS opens TCP 80/443 via `caddyReverseProxy.openFirewall`. The existing
    OpenSSH module continues to open SSH. No backend ports are added.
-4. HTTP/3 is disabled: UDP 443 is not needed. A future WireGuard UDP listener
-   needs **its own** Hetzner and NixOS firewall rules on the chosen port, ideally
-   restricted to the home endpoint where feasible. No WireGuard port or peer
-   has been guessed or opened here.
+4. HTTP/3 is disabled: UDP 443 is not needed. The separately configured WireGuard
+   listener uses **UDP 51820**, with its own Hetzner and NixOS firewall rules;
+   see [WIREGUARD.md](./WIREGUARD.md). Restrict the Hetzner rule to the home
+   endpoint where feasible. This is unrelated to public web ingress.
 5. If outbound traffic is restricted at Hetzner, permit DNS, ACME HTTPS, and
    the selected private upstream/WireGuard traffic. Preserve required ICMP/
    ICMPv6 for network operation and path MTU discovery.
@@ -182,7 +184,7 @@ Hetzner firewall state, private backend reachability, and actual media-client
 behaviour cannot be certified by these local checks. Never rerun nixos-anywhere
 for this update: use a normal rebuild after approval.
 
-### Verification for this change (2026-11-10)
+### Verification for the initial proxy change (2026-11-10, before WireGuard)
 
 - Full `nixosConfigurations.olympus.config.system.build.toplevel` build passed.
 - Pinned dependency tree hash independently confirmed with `nix hash path`:
