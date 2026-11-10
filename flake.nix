@@ -36,6 +36,10 @@
       };
     in
     {
+      checks.x86_64-linux.olympus-proxy = import ./Systems/Olympus/proxy-check.nix {
+        host = inputs.self.nixosConfigurations.olympus;
+      };
+
       nixosConfigurations = {
         olympus = inputs.nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";

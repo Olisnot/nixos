@@ -1,7 +1,11 @@
 # Olympus
 
+See [REVERSE-PROXY.md](./REVERSE-PROXY.md) for the prepared Caddy/Coraza HTTPS
+edge, public-route rollout, privacy, firewall requirements and validation.
+
 Minimal NixOS configuration for an **x86-64 Hetzner Cloud VPS**, installed with
-nixos-anywhere. No desktop or application services are enabled.
+nixos-anywhere. No desktop or application backends are enabled. Caddy is prepared
+separately, with public routes inactive until explicitly configured.
 
 ## Before installation
 

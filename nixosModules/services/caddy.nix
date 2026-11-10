@@ -9,6 +9,8 @@ let
   cfg = config.caddyReverseProxy;
 in
 {
+  imports = [ ./caddy-coraza.nix ];
+
   options.caddyReverseProxy = {
     enable = lib.mkEnableOption "Enable Caddy reverse proxy";
 
@@ -46,6 +48,29 @@ in
           { name, ... }:
           {
             options = {
+              waf = {
+                mode = lib.mkOption {
+                  type = lib.types.enum [
+                    "DetectionOnly"
+                    "On"
+                  ];
+                  default = "DetectionOnly";
+                  description = "Coraza rule engine mode when the WAF is enabled.";
+                };
+
+                beforeRules = lib.mkOption {
+                  type = lib.types.lines;
+                  default = "";
+                  description = "Host-specific runtime exclusions inserted before CRS rules.";
+                };
+
+                afterRules = lib.mkOption {
+                  type = lib.types.lines;
+                  default = "";
+                  description = "Host-specific configure-time exclusions inserted after CRS rules.";
+                };
+              };
+
               upstream = lib.mkOption {
                 type = lib.types.nullOr lib.types.str;
                 description = "Upstream address Caddy should reverse proxy to, or null for a virtual host managed by another module.";
@@ -75,7 +100,7 @@ in
   config = lib.mkIf cfg.enable {
     services.caddy = {
       enable = true;
-      package = lib.mkIf cfg.cloudflareDns.enable (
+      package = lib.mkIf (cfg.cloudflareDns.enable && !cfg.waf.enable) (
         pkgs.caddy.withPlugins {
           plugins = [ "github.com/caddy-dns/cloudflare@v0.2.4" ];
           hash = "sha256-5a5cpFl90pEWt0lUC4ZJQ7g+1//ZvsRhee64Dt9vh5o=";
