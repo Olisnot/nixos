@@ -29,10 +29,6 @@
   gnupg.enable = true;
   programs.librepods.enable = true;
   arr.enable = true;
-  navidrome = {
-    enable = true;
-    musicFolder = "/mnt/1tb/Music/";
-  };
   freshrss.enable = true;
   romm = {
     enable = true;
@@ -66,7 +62,6 @@
     allowedTCPPorts = [
       20
       21
-      4533
       8000
       53317
     ];
