@@ -1,9 +1,12 @@
-{ lib, ... }:
+{ lib, pkgs, ... }:
 
 let
   musicFolder = "/srv/media/library/music";
 in
 {
+  # rsync over SSH needs the receiver installed on Olympus as well.
+  environment.systemPackages = [ pkgs.rsync ];
+
   services.navidrome = {
     enable = true;
     group = "media";

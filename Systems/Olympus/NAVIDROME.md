@@ -22,6 +22,36 @@ An empty library is expected until files are present and scanned. Do not put
 the database on the Storage Box, recursively chmod the share, enable anonymous
 access, or configure trusted proxy authentication headers to bypass login.
 
+### Upload from Zeus
+
+After rebuilding Olympus once to install its rsync receiver, run a local
+`rebuild` to install the `upload-music` command on Zeus:
+
+```sh
+upload-music --dry-run
+upload-music
+```
+
+The default source is Zeus's existing `/mnt/1tb/Music` directory. Override it
+with `upload-music "/path/to/Music"`, optionally with `--dry-run`. The contents
+of the selected directory go directly into the library, not an extra Music
+subdirectory. The command uses your existing `olympus` SSH alias as root.
+
+Only new/changed files are transferred. Same-name changed files are updated;
+remote-only files are **not deleted**. Ownership/permissions and directory
+timestamps are not copied because CIFS supplies them. Regular music/art/playlist
+files are included; symlinks are skipped rather than followed or recreated on
+the share. Partial transfers are kept in hidden `.rsync-partial` directories for
+resumption. Re-run the same command after an interruption.
+
+The receiver enters the library and checks that its filesystem is CIFS before
+starting rsync, so a missing mount cannot cause a local fallback upload. Uploads
+fail if the share is unavailable. No credentials are stored in the script.
+Trigger a Navidrome scan after uploading, or wait for its normal scan schedule.
+
+Without installing the local command, run from the repo root after staging new
+files: `nix run .#upload-music -- --dry-run` (omit `--dry-run` to upload).
+
 ## DNS, deployment and first admin account
 
 1. In Cloudflare create an **A** record: `navidrome` → **37.27.31.37**, **DNS
