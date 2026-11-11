@@ -1,5 +1,8 @@
 # Olympus
 
+See [NAVIDROME.md](./NAVIDROME.md) for public HTTPS music streaming, local
+database/cache, and safe first-run account setup.
+
 See [MULLVAD.md](./MULLVAD.md) for qBittorrent-only provider routing and leak
 protection, retaining the private WireGuard Web UI.
 
@@ -17,8 +20,8 @@ See [REVERSE-PROXY.md](./REVERSE-PROXY.md) for the prepared Caddy/Coraza HTTPS
 edge, public-route rollout, privacy, firewall requirements and validation.
 
 Minimal NixOS configuration for an **x86-64 Hetzner Cloud VPS**, installed with
-nixos-anywhere. Media services are defined separately; public Jellyfin/Seerr
-routes stay gated until their first-run setup is explicitly completed.
+nixos-anywhere. Media services are defined separately; public Jellyfin, Seerr
+and Navidrome routes stay gated until their first-run setup is completed.
 
 ## Before installation
 

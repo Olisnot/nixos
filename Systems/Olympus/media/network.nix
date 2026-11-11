@@ -10,7 +10,7 @@ in
   olympusMobileVpn.allowedServicePorts = privatePorts;
 
   # Fail evaluation if a future service module accidentally opens a backend
-  # globally. Only Caddy is the public entry point for Jellyfin and Seerr.
+  # globally. Only Caddy is the public entry point for public media services.
   assertions = [
     {
       assertion = lib.all (
@@ -21,6 +21,7 @@ in
           8096
           8920
           5055
+          4533
           8191
         ])
       ) privatePorts;
@@ -33,6 +34,7 @@ in
           8096
           8920
           5055
+          4533
           8191
           51413
         ]

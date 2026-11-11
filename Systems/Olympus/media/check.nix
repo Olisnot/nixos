@@ -49,12 +49,13 @@ testPkgs.testers.runNixOSTest {
       };
       systemd.services.media-layout.script = lib.mkForce ''
         findmnt --noheadings --types tmpfs --mountpoint /srv/media >/dev/null
-        mkdir -p /srv/media/library/{movies,shows} \
+        mkdir -p /srv/media/library/{movies,shows,music} \
           /srv/media/downloads/{torrents,usenet}/{complete,incomplete}
       '';
       caddyReverseProxy.hosts = {
         "jellyfin.opmsonline.org".useInternalTls = lib.mkForce true;
         "seerr.opmsonline.org".useInternalTls = lib.mkForce true;
+        "navidrome.opmsonline.org".useInternalTls = lib.mkForce true;
       };
       environment.systemPackages = [
         pkgs.curl
@@ -75,7 +76,7 @@ testPkgs.testers.runNixOSTest {
     start_all()
     server.wait_for_unit("wg-quick-wg0.service")
     server.wait_for_unit("media-layout.service")
-    for service in ["jellyfin", "seerr", "sonarr", "radarr", "prowlarr", "bazarr", "qbittorrent", "sabnzbd", "flaresolverr", "caddy"]:
+    for service in ["jellyfin", "navidrome", "seerr", "sonarr", "radarr", "prowlarr", "bazarr", "qbittorrent", "sabnzbd", "flaresolverr", "caddy"]:
         server.wait_for_unit(service + ".service")
     server_ip = json.loads(server.succeed("ip -j -4 addr show dev eth1"))[0]["addr_info"][0]["local"]
     server_key = server.succeed("wg show wg0 public-key").strip()
@@ -93,10 +94,11 @@ testPkgs.testers.runNixOSTest {
     server.wait_until_succeeds("curl -fsS http://127.0.0.1:8096/System/Info/Public >/dev/null")
     server.wait_until_succeeds("curl -fsS http://127.0.0.1:5055/api/v1/status >/dev/null")
     server.wait_until_succeeds("curl -fsS http://127.0.0.1:8191/health >/dev/null")
-    for port in [8096, 5055, 8191]:
+    server.wait_until_succeeds("curl -fsS http://127.0.0.1:4533/ping >/dev/null")
+    for port in [8096, 5055, 8191, 4533]:
         client.fail("curl -sS --connect-timeout 1 --max-time 2 -o /dev/null http://" + server_ip + ":" + str(port))
         client.fail("curl -sS --connect-timeout 1 --max-time 2 -o /dev/null http://10.77.0.1:" + str(port))
-    for app, endpoint in [("jellyfin", "/System/Info/Public"), ("seerr", "/api/v1/status")]:
+    for app, endpoint in [("jellyfin", "/System/Info/Public"), ("seerr", "/api/v1/status"), ("navidrome", "/ping")]:
         host = app + ".opmsonline.org"
         request = "curl -ksS --resolve " + host + ":443:" + server_ip + " -o /dev/null -w '%{http_code}' https://" + host + endpoint
         assert client.succeed(request).strip() == "503"
@@ -104,11 +106,16 @@ testPkgs.testers.runNixOSTest {
         assert client.succeed(request).strip() == "200"
     for user in ["jellyfin", "sonarr", "radarr", "bazarr", "qbittorrent", "sabnzbd"]:
         server.succeed("su -s /bin/sh " + user + " -c 'test -w /srv/media/library/movies'")
+    server.succeed("su -s /bin/sh navidrome -c 'test -r /srv/media/library/music'")
     server.fail("su -s /bin/sh jellyfin -c 'test -r /var/lib/qBittorrent/qBittorrent/config/qBittorrent.conf'")
     # Recyclarr must skip cleanly until runtime API keys are provisioned.
     server.succeed("systemctl start recyclarr.service")
     assert server.succeed("systemctl show recyclarr.service -p ConditionResult --value").strip() == "no"
     server.succeed("systemctl restart qbittorrent.service")
     server.wait_for_open_port(8080, "10.77.0.1")
+    server.succeed("systemctl restart media-layout.service")
+    for service in ["jellyfin", "navidrome", "sonarr", "radarr", "bazarr", "qbittorrent", "sabnzbd"]:
+        server.wait_for_unit(service + ".service")
+    server.wait_until_succeeds("curl -fsS http://127.0.0.1:4533/ping >/dev/null")
   '';
 }

@@ -8,6 +8,7 @@
 let
   libraryServices = [
     "jellyfin"
+    "navidrome"
     "sonarr"
     "radarr"
     "bazarr"
@@ -42,7 +43,7 @@ in
         ];
         script = ''
           findmnt --noheadings --types cifs --mountpoint /srv/media >/dev/null
-          mkdir -p /srv/media/library/movies /srv/media/library/shows \
+          mkdir -p /srv/media/library/movies /srv/media/library/shows /srv/media/library/music \
             /srv/media/downloads/torrents/complete /srv/media/downloads/torrents/incomplete \
             /srv/media/downloads/usenet/complete /srv/media/downloads/usenet/incomplete
         '';
@@ -51,6 +52,9 @@ in
     (lib.genAttrs libraryServices (_: {
       requires = [ "media-layout.service" ];
       after = [ "media-layout.service" ];
+      # Changing the layout (for example adding this music folder) must bring
+      # its dependent applications back up, not only stop them via Requires.
+      partOf = [ "media-layout.service" ];
       unitConfig.RequiresMountsFor = [ "/srv/media" ];
       serviceConfig = {
         UMask = lib.mkForce "0007";

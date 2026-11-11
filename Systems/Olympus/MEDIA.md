@@ -10,6 +10,7 @@ Web UI URL is unchanged. Other applications keep normal routing.
 | --- | --- | --- |
 | Jellyfin | `https://jellyfin.opmsonline.org`, Caddy + Coraza | loopback 8096 |
 | Seerr | `https://seerr.opmsonline.org`, Caddy + Coraza | loopback 5055 |
+| Navidrome | `https://navidrome.opmsonline.org`, Caddy + Coraza | loopback 4533 |
 | Sonarr | WireGuard `http://10.77.0.1:8989` | 8989 |
 | Radarr | WireGuard `http://10.77.0.1:7878` | 7878 |
 | Prowlarr | WireGuard `http://10.77.0.1:9696` | 9696 |
@@ -27,7 +28,7 @@ administrators can configure powerful download/proxy integrations, so this
 firewall policy is not a sandbox against misuse of those applications.
 
 Public ingress remains TCP 22/80/443 and WireGuard UDP 51820. Do **not** open
-the private UI ports, Jellyfin 8096/8920, Seerr 5055, FlareSolverr 8191, or
+the private UI ports, Jellyfin 8096/8920, Seerr 5055, Navidrome 4533, FlareSolverr 8191, or
 torrent peer port 51413 in Hetzner's public firewall. Discovery and UPnP are not
 needed on this VPS. The private UI listeners bind to the tunnel IPv4 address
 and are ordered after wg0. They restart with wg0 when its peer list changes.
@@ -38,7 +39,9 @@ Mullvad does not provide port forwarding. Outbound peer connections work, but
 inbound connectivity/seeding may be reduced. Recyclarr and FlareSolverr have no
 public/private human UI.
 
-Navidrome, Lidarr, Transmission and Hermes are not enabled on Olympus. Zeus's
+Navidrome is configured separately in [NAVIDROME.md](./NAVIDROME.md), including
+its private first-run setup and readiness marker. Lidarr, Transmission and Hermes
+are not enabled on Olympus. Zeus's
 existing services are unchanged: this is a fresh deployment, not a migration
 of its users, settings, queues or libraries.
 
@@ -60,11 +63,12 @@ only these folders with `mkdir -p` (no recursive chown/chmod):
 ```text
 /srv/media/library/movies
 /srv/media/library/shows
+/srv/media/library/music
 /srv/media/downloads/torrents/{complete,incomplete}
 /srv/media/downloads/usenet/{complete,incomplete}
 ```
 
-Existing files are not moved or deleted. Jellyfin, Sonarr, Radarr, Bazarr,
+Existing files are not moved or deleted. Jellyfin, Navidrome, Sonarr, Radarr, Bazarr,
 qBittorrent and SABnzbd run with the `media` group and require the mounted
 layout before starting. They will not run against an empty local fallback.
 Prowlarr, Seerr, FlareSolverr and Recyclarr do not need filesystem access to

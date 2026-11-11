@@ -10,6 +10,11 @@
     waf.enable = true;
 
     hosts = {
+      "navidrome.opmsonline.org" = {
+        upstream = "127.0.0.1:4533";
+        waf.mode = "DetectionOnly";
+        readyFile = "/var/lib/caddy/public-ready/navidrome";
+      };
       "jellyfin.opmsonline.org" = {
         upstream = "127.0.0.1:8096";
         waf.mode = "DetectionOnly";
