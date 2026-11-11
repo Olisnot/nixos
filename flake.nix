@@ -60,6 +60,9 @@
       checks.x86_64-linux.olympus-media = import ./Systems/Olympus/media/check.nix {
         pkgs = inputs.nixpkgs.legacyPackages.x86_64-linux;
       };
+      checks.x86_64-linux.olympus-romm = import ./Systems/Olympus/romm/check.nix {
+        pkgs = inputs.nixpkgs.legacyPackages.x86_64-linux;
+      };
       checks.x86_64-linux.qbittorrent-mullvad = import ./Systems/Olympus/media/mullvad-check.nix {
         pkgs = inputs.nixpkgs.legacyPackages.x86_64-linux;
       };

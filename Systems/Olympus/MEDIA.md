@@ -1,5 +1,8 @@
 # Olympus media stack
 
+RomM is now configured separately in [ROMM.md](./ROMM.md), with a fresh local
+database, ROM uploads on the Storage Box and public WAF access after setup.
+
 **qBittorrent egress update:** [MULLVAD.md](./MULLVAD.md) now confines qBittorrent
 to a dedicated provider namespace with kill-switch/DNS isolation. Its private
 Web UI URL is unchanged. Other applications keep normal routing.
@@ -41,9 +44,9 @@ public/private human UI.
 
 Navidrome is configured separately in [NAVIDROME.md](./NAVIDROME.md), including
 its private first-run setup and readiness marker. Lidarr, Transmission and Hermes
-are not enabled on Olympus. Zeus's
-existing services are unchanged: this is a fresh deployment, not a migration
-of its users, settings, queues or libraries.
+are not enabled on Olympus. Zeus's old arr/Navidrome/RomM services are disabled
+in its host configuration, without deleting data. Olympus is a fresh deployment,
+not a migration of Zeus's users, settings, queues or libraries.
 
 ## Storage and state
 

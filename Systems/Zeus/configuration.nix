@@ -31,7 +31,7 @@
   arr.enable = false;
   freshrss.enable = true;
   romm = {
-    enable = true;
+    enable = false;
     environmentFile = "/etc/romm.env";
     libraryDir = "/mnt/1tb/Emulation";
     webPort = 8081;

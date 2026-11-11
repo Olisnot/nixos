@@ -9,7 +9,8 @@
   config = lib.mkMerge [
     {
       environment.systemPackages = [ pkgs.cifs-utils ];
-      users.groups.media = { };
+      # Preserve Olympus's existing media GID, now also used inside RomM.
+      users.groups.media.gid = 993;
 
       fileSystems."/srv/media" = {
         device = "//u715484.your-storagebox.de/backup";

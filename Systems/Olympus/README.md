@@ -1,5 +1,8 @@
 # Olympus
 
+See [ROMM.md](./ROMM.md) for the fresh public RomM instance, new generated
+credentials and Storage Box ROM uploads (no state copied from Zeus).
+
 See [NAVIDROME.md](./NAVIDROME.md) for public HTTPS music streaming, local
 database/cache, and safe first-run account setup.
 

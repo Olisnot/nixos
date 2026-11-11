@@ -13,6 +13,7 @@
     ./wireguard.nix
     ./storagebox.nix
     ./media
+    ./romm
   ];
 
   # SABnzbd's unpacker needs unrar; do not allow all unfree packages.
