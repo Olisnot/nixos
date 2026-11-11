@@ -157,6 +157,13 @@ API key and categories in its UI. Use categories for Sonarr and Radarr with
 the declared complete download directory. Usenet provider/indexer credentials
 are not provided by this repository.
 
+Leave SABnzbd's **Permissions for completed downloads** blank. The CIFS mount
+already presents files as `0660` and directories as `0770`, with group `media`.
+Setting a Unix permissions mask makes SABnzbd attempt unsupported `chmod`
+operations on the Storage Box (including incomplete files), producing
+"Cannot change permissions" errors. The Nix configuration enforces an empty
+mask; do not work around these errors with recursive chmod/chown or mode 777.
+
 In Sonarr/Radarr configure root folders, quality profiles and download clients
 using `10.77.0.1:8080` and `10.77.0.1:8081`, with credentials/API keys and
 separate TV/movie categories. Prowlarr should sync the selected indexers to

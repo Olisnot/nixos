@@ -131,7 +131,9 @@ in
         inet_exposure = "api+web (auth needed)";
         download_dir = "/srv/media/downloads/usenet/incomplete";
         complete_dir = "/srv/media/downloads/usenet/complete";
-        permissions = "0770";
+        # CIFS supplies file_mode/dir_mode; do not attempt POSIX chmod on the
+        # Storage Box. An empty value disables SABnzbd's explicit permission pass.
+        permissions = "";
       };
     };
     # API helper only: no human-facing UI and no inbound firewall allowance.
