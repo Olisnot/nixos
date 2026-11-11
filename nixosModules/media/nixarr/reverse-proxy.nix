@@ -81,7 +81,10 @@ let
   }) (lib.filterAttrs (_name: service: service.enable) caddyServices);
 in
 {
-  config = lib.mkIf config.arr.enable {
+  # This list also includes unrelated apps (RomM, Open WebUI, etc.). Keep their
+  # existing private proxies when the arr stack is disabled; each host already
+  # follows the enable flag of its own service.
+  config = lib.mkIf (caddyHosts != { }) {
     caddyReverseProxy = {
       enable = true;
       openFirewall = false;

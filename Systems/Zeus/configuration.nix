@@ -28,7 +28,7 @@
   syncthing.enable = true;
   gnupg.enable = true;
   programs.librepods.enable = true;
-  arr.enable = true;
+  arr.enable = false;
   freshrss.enable = true;
   romm = {
     enable = true;
