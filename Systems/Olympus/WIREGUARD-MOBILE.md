@@ -1,5 +1,11 @@
 # iPhone enrollment by QR code
 
+**Current exit:** client internet is now configured to go through Mullvad,
+including Zeus after its local rebuild. See
+[WIREGUARD-MULLVAD.md](./WIREGUARD-MULLVAD.md). Existing phone profiles/keys do
+not need regeneration. The original direct-VPS NAT described below is disabled
+when this new gateway mode is enabled; private-access restrictions still apply.
+
 **Media access extension:** [MEDIA.md](./MEDIA.md) explicitly allows enrolled
 phones to reach the six private arr/download UI ports on `10.77.0.1`. The
 original web-only host policy described below is extended only by that allowlist;

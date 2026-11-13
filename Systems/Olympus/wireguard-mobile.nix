@@ -14,6 +14,10 @@ let
   clients = cfg.clients;
   addresses = map (client: client.address) clients;
   keys = map (client: client.publicKey) clients;
+  exitAddresses =
+    addresses
+    ++ lib.optional (cfg.mullvad.enable && cfg.mullvad.includeZeus) config.wireguardLink.peerAddress;
+  exitInterface = if cfg.mullvad.enable then "qbt-mv-host" else cfg.externalInterface;
   ipv6 = address: "fd77:77::${lib.last (lib.splitString "." address)}";
   # Includes LAN, tunnel, link-local/metadata, CGNAT, loopback and special-use space.
   deniedNetworks = [
@@ -35,6 +39,16 @@ let
 in
 {
   options.olympusMobileVpn = {
+    mullvad = {
+      enable = lib.mkEnableOption "routing access-VPN internet traffic through the isolated Mullvad gateway";
+      includeZeus = lib.mkEnableOption "permitting Zeus to use the Mullvad internet gateway";
+    };
+    egressIPv4Addresses = lib.mkOption {
+      type = lib.types.listOf lib.types.str;
+      readOnly = true;
+      default = exitAddresses;
+      description = "Exact access-VPN addresses authorized for internet forwarding.";
+    };
     allowedServicePorts = lib.mkOption {
       type = lib.types.listOf lib.types.port;
       default = [ ];
@@ -98,10 +112,11 @@ in
     };
 
     networking.nat = {
-      enable = clients != [ ];
+      enable = clients != [ ] && !cfg.mullvad.enable;
       externalInterface = cfg.externalInterface;
       internalIPs = map (address: "${address}/32") addresses;
-      # Do not NAT all of wg0: Zeus remains a split-tunnel peer.
+      # With Mullvad, SNAT happens only inside its isolated namespace, never
+      # through the VPS public interface. Legacy direct mode remains scoped.
       internalInterfaces = [ ];
       enableIPv6 = false;
     };
@@ -109,8 +124,8 @@ in
     # IPv6 is captured by client ::/0 and fails closed, not NATed or forwarded.
     # Olympus currently has no IPv6 default route.
     boot.kernel.sysctl = {
-      "net.ipv4.conf.all.forwarding" = lib.mkDefault (clients != [ ]);
-      "net.ipv4.conf.default.forwarding" = lib.mkDefault (clients != [ ]);
+      "net.ipv4.conf.all.forwarding" = lib.mkDefault (exitAddresses != [ ]);
+      "net.ipv4.conf.default.forwarding" = lib.mkDefault (exitAddresses != [ ]);
       "net.ipv6.conf.all.forwarding" = false;
     };
 
@@ -141,10 +156,11 @@ in
           iptables -w -A wg-mobile-forward -i wg0 -d ${network} -j DROP
         '') deniedNetworks}
         ${lib.concatMapStringsSep "\n" (address: ''
-          iptables -w -A wg-mobile-forward -i wg0 -o ${cfg.externalInterface} -s ${address}/32 -m conntrack --ctstate NEW,ESTABLISHED,RELATED -j ACCEPT
-          iptables -w -A wg-mobile-forward -i ${cfg.externalInterface} -o wg0 -d ${address}/32 -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
-        '') addresses}
-        # No phone-to-phone, phone-to-Zeus, Zeus internet exit, or inbound forwarding.
+          iptables -w -A wg-mobile-forward -i wg0 -o ${exitInterface} -s ${address}/32 -m conntrack --ctstate NEW,ESTABLISHED,RELATED -j ACCEPT
+          iptables -w -A wg-mobile-forward -i ${exitInterface} -o wg0 -d ${address}/32 -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
+        '') exitAddresses}
+        # No peer/LAN routing, unsolicited inbound forwarding, or fallback to
+        # the physical WAN when the selected Mullvad gateway is unavailable.
         for tool in iptables ip6tables; do
           $tool -w -A wg-mobile-forward -i wg0 -j DROP
           $tool -w -A wg-mobile-forward -o wg0 -j DROP

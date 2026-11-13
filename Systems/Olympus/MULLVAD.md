@@ -1,5 +1,10 @@
 # qBittorrent-only Mullvad egress
 
+**Access-VPN extension:** [WIREGUARD-MULLVAD.md](./WIREGUARD-MULLVAD.md) now shares
+this provider namespace with forwarded internet traffic from phones and Zeus.
+qBittorrent's local socket isolation remains; the namespace has an additional
+exact-client forwarding/NAT policy, not a second tunnel with the same key.
+
 `media/mullvad.nix` enables an isolated network namespace for qBittorrent. It
 uses the existing root-owned, mode-600 **`/etc/wireguard/mullvad.conf`** only at
 runtime through systemd credentials. Nix never reads the profile or copies its
@@ -27,8 +32,9 @@ private key into the store. Never put the profile or account number in Git.
 - Login, CSRF protection and authentication requirements are retained. The
   backend sees the proxy's management-link source rather than the original
   client IP; this is **not** an authentication bypass.
-- Jellyfin, Seerr, the arrs, SABnzbd, SSH, Caddy and phone internet egress keep
-  their existing routing. Host-mounted Storage Box I/O also keeps using the
+- Jellyfin, Seerr, the arrs, SABnzbd, SSH and Caddy keep their existing host
+  routing. Access-client egress now follows the gateway guide above.
+  Host-mounted Storage Box I/O also keeps using the
   host's encrypted CIFS connection, not Mullvad. This is torrent/socket
   confinement, not a claim that filesystem writes traverse the provider VPN.
 

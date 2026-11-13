@@ -57,6 +57,9 @@
       checks.x86_64-linux.wireguard-mobile = import ./Systems/Olympus/wireguard-mobile-check.nix {
         pkgs = inputs.nixpkgs.legacyPackages.x86_64-linux;
       };
+      checks.x86_64-linux.wireguard-mullvad = import ./Systems/Olympus/wireguard-mullvad-check.nix {
+        pkgs = inputs.nixpkgs.legacyPackages.x86_64-linux;
+      };
       checks.x86_64-linux.olympus-media = import ./Systems/Olympus/media/check.nix {
         pkgs = inputs.nixpkgs.legacyPackages.x86_64-linux;
       };

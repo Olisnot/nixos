@@ -78,6 +78,11 @@ in
       default = "wg-quick-wg0.service";
       description = "Service providing the private Web UI address, or null for an independently available address.";
     };
+    gatewayClients = lib.mkOption {
+      type = lib.types.listOf lib.types.str;
+      default = [ ];
+      description = "Exact IPv4 access-VPN clients forwarded/NATed through this same Mullvad tunnel.";
+    };
   };
 
   config = lib.mkIf cfg.enable {
@@ -99,8 +104,10 @@ in
         pkgs.iproute2
         pkgs.iptables
         pkgs.wireguard-tools
+        pkgs.procps
       ];
       environment.QBT_WEBUI_PORT = port;
+      environment.QBT_GATEWAY_CLIENTS = builtins.toJSON cfg.gatewayClients;
       serviceConfig = {
         Type = "oneshot";
         RemainAfterExit = true;

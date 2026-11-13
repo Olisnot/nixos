@@ -3,6 +3,7 @@
 import base64
 import configparser
 import ipaddress
+import json
 import os
 from pathlib import Path
 import subprocess
@@ -17,6 +18,22 @@ HOST_IP = "169.254.77.1"
 PEER_IP = "169.254.77.2"
 MARKER = Path("/run/qbt-mullvad/owned")
 DNS_DIR = Path("/etc/netns") / NS
+DENIED_NETWORKS = [
+    "0.0.0.0/8",
+    "10.0.0.0/8",
+    "100.64.0.0/10",
+    "127.0.0.0/8",
+    "169.254.0.0/16",
+    "172.16.0.0/12",
+    "192.0.0.0/24",
+    "192.0.2.0/24",
+    "192.168.0.0/16",
+    "198.18.0.0/15",
+    "198.51.100.0/24",
+    "203.0.113.0/24",
+    "224.0.0.0/4",
+    "240.0.0.0/4",
+]
 
 
 def run(*args, inside=False, data=None, optional=False):
@@ -137,6 +154,14 @@ def up():
             "Invalid Mullvad profile: expected one peer, literal-IP endpoint, full-tunnel AllowedIPs, addresses and DNS; private details suppressed."
         ) from None
     port = int(os.environ["QBT_WEBUI_PORT"])
+    clients = [
+        str(ipaddress.IPv4Address(value))
+        for value in json.loads(os.environ.get("QBT_GATEWAY_CLIENTS", "[]"))
+    ]
+    if len(clients) != len(set(clients)) or any(
+        not value.startswith("10.77.0.") for value in clients
+    ):
+        raise RuntimeError("Invalid access-VPN gateway client list")
     if not 1 <= port <= 65535:
         raise RuntimeError("Invalid Web UI port")
     if MARKER.exists() or Path(f"/run/netns/{NS}").exists() or DNS_DIR.exists():
@@ -225,6 +250,115 @@ def up():
         inside=True,
     )
     run("wg", "setconf", WG, "/dev/stdin", inside=True, data=secret_config)
+    if clients:
+        # Forwarded access-VPN clients share this one provider device/key with
+        # qBittorrent. Only their internet traffic may traverse the namespace;
+        # no host/LAN management traffic can use it as an alternate route.
+        run("sysctl", "-w", "net.ipv4.ip_forward=1", inside=True)
+        run(
+            "iptables",
+            "-w",
+            "-t",
+            "mangle",
+            "-A",
+            "FORWARD",
+            "-p",
+            "tcp",
+            "--tcp-flags",
+            "SYN,RST",
+            "SYN",
+            "-j",
+            "TCPMSS",
+            "--clamp-mss-to-pmtu",
+            inside=True,
+        )
+        for network in DENIED_NETWORKS:
+            run(
+                "iptables",
+                "-w",
+                "-A",
+                "FORWARD",
+                "-i",
+                PEER_VETH,
+                "-d",
+                network,
+                "-j",
+                "DROP",
+                inside=True,
+            )
+        for client in clients:
+            run(
+                "iptables",
+                "-w",
+                "-A",
+                "OUTPUT",
+                "-o",
+                PEER_VETH,
+                "-d",
+                f"{client}/32",
+                "-p",
+                "icmp",
+                "-m",
+                "conntrack",
+                "--ctstate",
+                "RELATED",
+                "-j",
+                "ACCEPT",
+                inside=True,
+            )
+            run(
+                "iptables",
+                "-w",
+                "-A",
+                "FORWARD",
+                "-i",
+                PEER_VETH,
+                "-o",
+                WG,
+                "-s",
+                f"{client}/32",
+                "-m",
+                "conntrack",
+                "--ctstate",
+                "NEW,ESTABLISHED,RELATED",
+                "-j",
+                "ACCEPT",
+                inside=True,
+            )
+            run(
+                "iptables",
+                "-w",
+                "-A",
+                "FORWARD",
+                "-i",
+                WG,
+                "-o",
+                PEER_VETH,
+                "-d",
+                f"{client}/32",
+                "-m",
+                "conntrack",
+                "--ctstate",
+                "ESTABLISHED,RELATED",
+                "-j",
+                "ACCEPT",
+                inside=True,
+            )
+            run(
+                "iptables",
+                "-w",
+                "-t",
+                "nat",
+                "-A",
+                "POSTROUTING",
+                "-s",
+                f"{client}/32",
+                "-o",
+                WG,
+                "-j",
+                "MASQUERADE",
+                inside=True,
+            )
     for address in addresses:
         run("ip", "-n", NS, "addr", "add", str(address), "dev", WG)
     run("ip", "-n", NS, "link", "set", WG, "mtu", str(mtu))
@@ -232,6 +366,19 @@ def up():
     run("ip", "-n", NS, "link", "set", WG, "up")
     run("ip", "-n", NS, "link", "set", PEER_VETH, "up")
     run("ip", "link", "set", HOST_VETH, "up")
+    for client in clients:
+        run(
+            "ip",
+            "-n",
+            NS,
+            "route",
+            "add",
+            f"{client}/32",
+            "via",
+            HOST_IP,
+            "dev",
+            PEER_VETH,
+        )
     run("ip", "-n", NS, "route", "add", "default", "dev", WG)
     if "::/0" in networks:
         run("ip", "-n", NS, "-6", "route", "add", "default", "dev", WG)

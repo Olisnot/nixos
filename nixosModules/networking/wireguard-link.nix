@@ -22,6 +22,12 @@ in
       description = "WireGuard public key of the other machine.";
     };
 
+    peerAllowedIPs = lib.mkOption {
+      type = lib.types.listOf lib.types.str;
+      default = [ "${cfg.peerAddress}/32" ];
+      description = "Routes/addresses assigned to the peer; defaults to its single IPv4 tunnel address.";
+    };
+
     privateKeyFile = lib.mkOption {
       type = lib.types.str;
       default = "/etc/wireguard/private.key";
@@ -62,7 +68,7 @@ in
       peers = [
         {
           publicKey = cfg.peerPublicKey;
-          allowedIPs = [ "${cfg.peerAddress}/32" ];
+          allowedIPs = cfg.peerAllowedIPs;
           inherit (cfg) endpoint;
           persistentKeepalive = if cfg.endpoint != null then 25 else null;
         }

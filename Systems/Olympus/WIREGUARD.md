@@ -1,5 +1,10 @@
 # Olympus–Zeus WireGuard link
 
+**Current routing:** Zeus is now configured as a full-tunnel client, and access
+devices exit through Mullvad. Follow [WIREGUARD-MULLVAD.md](./WIREGUARD-MULLVAD.md)
+for the server-first cutover and client lockdown. The setup below describes the
+original point-to-point link, not the current internet-egress policy.
+
 For full-tunnel phones and QR enrollment, see
 [WIREGUARD-MOBILE.md](./WIREGUARD-MOBILE.md). That separate extension adds
 phone-specific NAT/forwarding and isolation; the original Zeus peer remains
@@ -97,7 +102,8 @@ peer routes through wg0, and successful pings. Existing NixOS firewalls permit
 ping. `wg` is installed by the NixOS wg-quick module after deploying.
 `active (exited)` for the oneshot service is normal: a live handshake is the
 important connectivity check. Confirm `ip -4 route get 1.1.1.1` still uses the
-normal internet interface, not wg0.
+normal internet interface in the original split-tunnel setup. With the current
+full tunnel, expect wg0; use the Mullvad gateway verification guide instead.
 
 If no handshake appears, check the Hetzner rule is attached to this VPS, its
 source restriction matches the home public IP, the VPS endpoint is correct,

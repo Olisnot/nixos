@@ -1,5 +1,8 @@
 # Olympus
 
+See [WIREGUARD-MULLVAD.md](./WIREGUARD-MULLVAD.md) for Mullvad internet egress
+for access-VPN clients (including Zeus), deployment order and kill switches.
+
 See [ROMM.md](./ROMM.md) for the fresh public RomM instance, new generated
 credentials and Storage Box ROM uploads (no state copied from Zeus).
 
