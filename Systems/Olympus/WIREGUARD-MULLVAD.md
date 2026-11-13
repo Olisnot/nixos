@@ -77,9 +77,40 @@ VPN DNS. Ordinary multicast/private LAN access is not a promise that arbitrary
 globally addressed IPv6 LAN routes or other VPN configurations will still work.
 
 The lockdown remains active if you manually stop wg0: **Zeus's public internet
-then intentionally stops**. Local LAN management remains available. Changing
+then intentionally stops**, unless you explicitly enable the manual WAN
+override below. Local LAN management remains available. Changing
 the VPS endpoint requires updating both the WireGuard endpoint and the
 lockdown's endpoint exception. Do not disable the firewall as a workaround.
+
+### Manual emergency WAN access on Zeus
+
+After rebuilding Zeus, use these root-only commands from a local/LAN terminal:
+
+```sh
+sudo wg-wan enable   # Explicitly allow direct ISP internet and DNS
+sudo wg-wan status
+sudo wg-wan disable  # Restore VPN-only routing and kill switch
+```
+
+The override works both with wg0 disconnected and with wg0 still connected but
+Mullvad unavailable. It bypasses only the client egress lockdown, not the host's
+inbound firewall or Olympus's server-side protections. Public IPv4/IPv6 traffic
+and DNS may now use your normal connection and expose your ISP IP; VPN DNS
+addresses are retained but queried over WAN. It does not automatically select
+ISP-provided DNS or repair a failed WAN/DNS service. Pause privacy-sensitive
+applications before enabling it.
+
+Private Olympus host addresses remain routed through WireGuard when available;
+LAN/private-overlay routes are retained. The override survives firewall and
+WireGuard restarts, but **resets to VPN-only on reboot**. It never turns itself
+on because a connection fails. Disabling it immediately restores the public
+internet/DNS restrictions; internet requires working WireGuard and Mullvad again.
+Existing application connections may need reopening after either change.
+
+The override uses root-owned state under `/run/wg-client-wan` and reserves
+policy priorities **890–892**. Use the command rather than editing state/rules.
+On an iPhone, manually turning the WireGuard tunnel off already restores the
+phone's ordinary cellular/Wi-Fi WAN access.
 
 Services reached through Zeus's public-WAN/NAT port forwards may also lose
 their old return path. No public-WAN reply bypass is added here: use Olympus,

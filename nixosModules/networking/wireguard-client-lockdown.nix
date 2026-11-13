@@ -7,6 +7,18 @@
 
 let
   cfg = config.wireguardClientLockdown;
+  wanControl = pkgs.writeShellApplication {
+    name = "wg-wan";
+    runtimeInputs = [
+      pkgs.python3
+      pkgs.iproute2
+      pkgs.iptables
+    ];
+    text = ''
+      exec ${pkgs.python3}/bin/python3 ${./wireguard-wan.py} \
+        ${lib.escapeShellArg (builtins.toJSON cfg.privateVpsAddresses)} "$@"
+    '';
+  };
 in
 {
   options.wireguardClientLockdown = {
@@ -19,8 +31,17 @@ in
       type = lib.types.port;
       default = 51820;
     };
+    privateVpsAddresses = lib.mkOption {
+      type = lib.types.listOf lib.types.str;
+      default = [
+        "10.77.0.1/32"
+        "fd77:77::1/128"
+      ];
+      description = "Private VPS host addresses retained on WireGuard during explicit WAN override.";
+    };
   };
   config = lib.mkIf cfg.enable {
+    environment.systemPackages = [ wanControl ];
     assertions = [
       {
         assertion = config.networking.firewall.enable && !config.networking.nftables.enable;
@@ -56,6 +77,8 @@ in
             $tool -w -C "$chain" -j wg-client-output 2>/dev/null || $tool -w -I "$chain" 1 -j wg-client-output
           done
         done
+        # A root-only manual choice survives firewall reloads, never reboot.
+        ${wanControl}/bin/wg-wan restore
       '';
       extraStopCommands = lib.mkBefore ''
         for tool in iptables ip6tables; do

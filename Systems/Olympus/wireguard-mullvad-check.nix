@@ -24,8 +24,9 @@ let
         def log_message(self, *args): pass
     class V6(http.server.ThreadingHTTPServer):
         address_family = socket.AF_INET6
-    for server in [http.server.ThreadingHTTPServer(("0.0.0.0",8088),Handler), V6(("::",8089),Handler)]:
-        threading.Thread(target=server.serve_forever,daemon=True).start()
+    if not os.environ.get("SKIP_HTTP"):
+        for server in [http.server.ThreadingHTTPServer(("0.0.0.0",8088),Handler), V6(("::",8089),Handler)]:
+            threading.Thread(target=server.serve_forever,daemon=True).start()
     def serve_dns(address):
         dns=socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
         dns.bind((address,53))
@@ -178,7 +179,7 @@ pkgs.testers.runNixOSTest {
     gateway.wait_for_unit("wg-mullvad-egress.service")
     gateway.succeed("python ${./wireguard-mullvad-route.py} up") # idempotent owned rules
     gateway.succeed("mkdir -p /tmp/private-site; echo private-service > /tmp/private-site/index.html; python -m http.server 8087 --bind 10.77.0.1 --directory /tmp/private-site >/tmp/private-http.log 2>&1 &")
-    gateway.succeed("python ${responder} >/tmp/lan-dns.log 2>&1 &")
+    gateway.succeed("DNS_BIND_ADDRESSES=127.0.0.1,"+gateway_ip+" python ${responder} >/tmp/lan-dns.log 2>&1 &")
     gateway.wait_until_succeeds("dig +time=1 +tries=1 @127.0.0.1 vpn-only.test | grep -F 8.8.8.8")
     server_key=gateway.succeed("wg show wg0 public-key").strip()
     for client,address in [(zeus,"10.77.0.2"),(phone,"10.77.0.3")]:
@@ -206,6 +207,19 @@ pkgs.testers.runNixOSTest {
         client.fail("curl -4 -fsS --max-time 3 http://8.8.8.8:8088")
         client.fail("curl -4 -fsS --max-time 3 http://vpn-only.test:8088")
         client.succeed("test $(curl -fsS http://10.77.0.1:8087) = private-service")
+    # Explicit WAN recovery works while wg0 is up and the provider is down.
+    gateway.succeed("ip addr add 9.9.9.9/32 dev lo; ip addr add 1.1.1.1/32 dev lo; ip addr add 1.0.0.1/32 dev lo")
+    gateway.succeed("SKIP_HTTP=1 DNS_BIND_ADDRESSES=1.1.1.1,1.0.0.1 python ${responder} >/tmp/wan-dns.log 2>&1 &")
+    zeus.succeed("ip route replace default via "+gateway_ip)
+    zeus.fail("su nobody -s /bin/sh -c 'wg-wan enable'")
+    zeus.succeed("wg-wan status | grep -F 'VPN-only'; wg-wan enable; wg-wan enable")
+    zeus.succeed("getent ahostsv4 vpn-only.test | grep -F 8.8.8.8", "test $(curl -4 -fsS --max-time 4 http://9.9.9.9:8088) != 10.77.0.2")
+    zeus.succeed("test $(curl -fsS http://10.77.0.1:8087) = private-service")
+    zeus.succeed("systemctl restart firewall.service; wg-wan status | grep -F 'ENABLED'")
+    zeus.succeed("curl -4 -fsS --max-time 4 http://9.9.9.9:8088", "dig +time=1 +tries=1 @"+gateway_ip+" vpn-only.test")
+    zeus.succeed("wg-wan disable; wg-wan disable")
+    zeus.fail("curl -4 -fsS --max-time 3 http://8.8.8.8:8088")
+    gateway.succeed("ip addr del 1.1.1.1/32 dev lo; ip addr del 1.0.0.1/32 dev lo")
     gateway.succeed("ip -n provider link set wg-exit up; ip -n qbt-mullvad link del mullvad0")
     zeus.fail("curl -4 -fsS --max-time 3 http://8.8.8.8:8088")
     gateway.succeed("ip link del qbt-mv-host")
@@ -230,5 +244,16 @@ pkgs.testers.runNixOSTest {
     zeus.fail("curl -g -6 -fsS --max-time 3 'http://["+gateway_v6+"]:8089'")
     zeus.succeed("systemctl restart firewall.service")
     zeus.fail("curl -4 -fsS --max-time 3 http://8.8.8.8:8088")
+    zeus.succeed("wg-wan enable; curl -4 -fsS --max-time 3 http://9.9.9.9:8088")
+    zeus.succeed("curl -g -6 -fsS --max-time 3 'http://["+gateway_v6+"]:8089'")
+    zeus.succeed("systemctl start wg-quick-wg0; wg-wan status | grep -F 'ENABLED'; curl -4 -fsS --max-time 3 http://9.9.9.9:8088")
+    zeus.succeed("systemctl stop wg-quick-wg0; wg-wan disable")
+    zeus.fail("curl -4 -fsS --max-time 3 http://9.9.9.9:8088")
+    zeus.succeed("wg-wan enable")
+    zeus.shutdown()
+    zeus.start()
+    zeus.wait_for_unit("multi-user.target")
+    zeus.succeed("ip route replace 9.9.9.9/32 via "+gateway_ip+"; wg-wan status | grep -F 'VPN-only'; test ! -e /run/wg-client-wan/enabled.json")
+    zeus.fail("curl -4 -fsS --max-time 3 http://9.9.9.9:8088")
   '';
 }
