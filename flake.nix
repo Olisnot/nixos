@@ -66,6 +66,9 @@
       checks.x86_64-linux.olympus-romm = import ./Systems/Olympus/romm/check.nix {
         pkgs = inputs.nixpkgs.legacyPackages.x86_64-linux;
       };
+      checks.x86_64-linux.olympus-livesync = import ./Systems/Olympus/livesync/check.nix {
+        pkgs = inputs.nixpkgs.legacyPackages.x86_64-linux;
+      };
       checks.x86_64-linux.qbittorrent-mullvad = import ./Systems/Olympus/media/mullvad-check.nix {
         pkgs = inputs.nixpkgs.legacyPackages.x86_64-linux;
       };

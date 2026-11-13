@@ -14,6 +14,7 @@
     ./storagebox.nix
     ./media
     ./romm
+    ./livesync
   ];
 
   # SABnzbd's unpacker needs unrar; do not allow all unfree packages.
@@ -41,6 +42,11 @@
       PasswordAuthentication = false;
       KbdInteractiveAuthentication = false;
     };
+  };
+
+  olympusLiveSync = {
+    hostname = "obsidian.opmsonline.org";
+    access = "vpn";
   };
 
   users.users.root.openssh.authorizedKeys.keys = [

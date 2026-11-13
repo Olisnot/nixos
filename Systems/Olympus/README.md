@@ -1,5 +1,8 @@
 # Olympus
 
+See [LIVESYNC.md](./LIVESYNC.md) for native CouchDB/Obsidian LiveSync, the pending
+hostname/access decision, runtime credentials and encrypted client onboarding.
+
 See [WIREGUARD-MULLVAD.md](./WIREGUARD-MULLVAD.md) for Mullvad internet egress
 for access-VPN clients (including Zeus), deployment order and kill switches.
 
