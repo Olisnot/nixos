@@ -29,7 +29,8 @@
   gnupg.enable = true;
   programs.librepods.enable = true;
   arr.enable = false;
-  freshrss.enable = true;
+  # Migrated to Olympus; retain /var/lib/freshrss for rollback.
+  freshrss.enable = false;
   romm = {
     enable = false;
     environmentFile = "/etc/romm.env";

@@ -7,6 +7,9 @@ let
   testHost = host.extendModules {
     modules = [
       {
+        # This fixture replaces proxy hosts; also remove FreshRSS's separately
+        # generated PHP virtual host so it cannot introduce HTTPS listeners.
+        services.freshrss.enable = pkgs.lib.mkForce false;
         caddyReverseProxy.hosts = pkgs.lib.mkForce (
           builtins.listToAttrs (
             map

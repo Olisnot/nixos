@@ -1,5 +1,8 @@
 # Olympus
 
+See [FRESHRSS.md](./FRESHRSS.md) for the fresh FreshRSS instance, initial admin
+credentials and VPN-only HTTPS cutover from Zeus.
+
 See [LIVESYNC.md](./LIVESYNC.md) for native CouchDB/Obsidian LiveSync, the pending
 hostname/access decision, runtime credentials and encrypted client onboarding.
 
