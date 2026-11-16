@@ -19,6 +19,10 @@
           # Runtime secret, already provisioned on Olympus. Never import it into Nix.
           "credentials=/etc/storagebox/media.credentials"
           "seal"
+          # Concurrent reads of hard-linked torrent/library paths otherwise
+          # reproduce SMB lease conflicts (open() returns EINVAL). Preserve
+          # server inode identity; disable leases rather than hide hardlinks.
+          "nolease"
           "_netdev"
           "nofail"
           "x-systemd.automount"

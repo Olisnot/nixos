@@ -16,6 +16,7 @@
     ./romm
     ./livesync
     ./freshrss.nix
+    ./hermes.nix
   ];
 
   # SABnzbd's unpacker needs unrar; do not allow all unfree packages.

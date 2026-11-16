@@ -16,6 +16,11 @@ its directory root-owned with mode `700`. Do not print the file in diagnostics.
 
 - `seal` requires SMB encryption; the normal dialect negotiation can select
   SMB3. It must not silently fall back to an unencrypted connection.
+- `nolease` disables SMB leases/oplocks to avoid the reproduced `EINVAL` on
+  concurrent opens of hard-linked download and library paths. Server inode
+  identity and hard-link detection remain enabled. This reduces local caching
+  and may increase network I/O. Changing only `cache=none` did not fix the
+  concurrent-open failure in isolated read-only tests on kernel 6.18.57.
 - `_netdev`, `nofail` and `x-systemd.automount` make this a network automount.
   Unavailability does not make boot depend on a successful remote mount.
   Access to `/srv/media` triggers the real mount, with a 30-second mount-job
@@ -59,7 +64,7 @@ stat -c '%U:%G %a %n' /srv/media
 
 Expect the credentials file to be `600 root:root`, the real filesystem type to
 be `cifs`, the configured Storage Box source, `seal` in the options, and group
-`media` on the mount. Before the first directory access, an `autofs` entry is
+`media` on the mount, with `nolease` enabled. Before the first directory access, an `autofs` entry is
 normal and does not by itself prove the CIFS mount succeeded. A successful
 build also does not verify remote credentials, networking or SMB access.
 
@@ -69,6 +74,13 @@ If mounting fails, review:
 journalctl -u srv-media.mount -b --no-pager
 journalctl -k -b --no-pager | grep -i cifs
 ```
+
+When changing lease options on an active mount, stop the dependent media
+services and automount, unmount normally, and start the updated mount before
+restoring previously active services. Do not force/lazy-unmount it. A file probe
+alone is insufficient for this issue: verify both hard-linked paths can be
+opened/read simultaneously, then repeat after the downloader and Jellyfin are
+running. Do not delete/re-download media or break hardlinks to work around it.
 
 Do not paste credentials or unreviewed secret-bearing output into a report.
 Do not populate `/srv/media` while the remote mount is unavailable, and do not

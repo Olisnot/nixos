@@ -72,6 +72,22 @@
       checks.x86_64-linux.olympus-freshrss = import ./Systems/Olympus/freshrss-check.nix {
         pkgs = inputs.nixpkgs.legacyPackages.x86_64-linux;
       };
+      checks.x86_64-linux.olympus-hermes = import ./Systems/Olympus/hermes-check.nix {
+        pkgs = inputs.nixpkgs.legacyPackages.x86_64-linux;
+        nixpkgs = inputs.nixpkgs.outPath;
+      };
+      checks.x86_64-linux.olympus-hermes-cli =
+        let
+          pkgs = inputs.nixpkgs.legacyPackages.x86_64-linux;
+          hermes = inputs.hermes-agent.packages.x86_64-linux.default;
+        in
+        pkgs.runCommand "olympus-hermes-cli-smoke" { nativeBuildInputs = [ hermes ]; } ''
+          export HOME=$TMPDIR
+          export HERMES_HOME=$TMPDIR/hermes
+          hermes --version
+          hermes --help >/dev/null
+          touch $out
+        '';
       checks.x86_64-linux.qbittorrent-mullvad = import ./Systems/Olympus/media/mullvad-check.nix {
         pkgs = inputs.nixpkgs.legacyPackages.x86_64-linux;
       };
@@ -79,6 +95,7 @@
       nixosConfigurations = {
         olympus = inputs.nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
+          specialArgs = { inherit inputs; };
           modules = [
             inputs.disko.nixosModules.disko
             ./Systems/Olympus/configuration.nix

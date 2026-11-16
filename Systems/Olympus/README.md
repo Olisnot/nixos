@@ -1,5 +1,8 @@
 # Olympus
 
+See [HERMES.md](./HERMES.md) for the Hermes CLI's dedicated WireGuard-only SSH
+account and first-run provider setup. No web dashboard is exposed.
+
 See [FRESHRSS.md](./FRESHRSS.md) for the fresh FreshRSS instance, initial admin
 credentials and VPN-only HTTPS cutover from Zeus.
 
