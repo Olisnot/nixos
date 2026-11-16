@@ -21,6 +21,7 @@
     bluetui
     wifitui
     obsidian
+    qbittorrent
 
     ## Appearance
     numix-icon-theme-square
