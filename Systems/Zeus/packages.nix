@@ -78,6 +78,7 @@
 
     #Coding
     git
+    github-cli
     gcc
 
     ##AI
